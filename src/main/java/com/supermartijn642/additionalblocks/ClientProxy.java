@@ -16,8 +16,4 @@ public class ClientProxy {
     public static void setup(FMLClientSetupEvent e){
     }
 
-    public static String translate(String translationKey, Object... args){
-        return I18n.format(translationKey, args);
-    }
-
 }
