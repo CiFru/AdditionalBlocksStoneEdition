@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.Mod;
 /**
  * Created 7/7/2020 by SuperMartijn642
  */
-@Mod("scarecrowsterritory")
+@Mod("additionalblocks")
 public class AdditionalBlocks {
 
     public AdditionalBlocks(){
