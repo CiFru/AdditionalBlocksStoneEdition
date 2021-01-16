@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "additionalblocks:animated_side",
+    "top": "additionalblocks:animated_top",
+    "bottom": "additionalblocks:animated_bottom"
+  }
+}
