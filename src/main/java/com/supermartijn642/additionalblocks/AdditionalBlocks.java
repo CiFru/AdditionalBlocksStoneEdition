@@ -26,6 +26,8 @@ public class AdditionalBlocks {
     public static Block smooth_marble;
     @ObjectHolder("additionalblocks:stone_brick_block")
     public static Block stone_brick_block;
+    @ObjectHolder("additionalblocks:marble_bricks")
+    public static Block marble_bricks;
 
     public AdditionalBlocks(){
     }
@@ -37,6 +39,7 @@ public class AdditionalBlocks {
             e.getRegistry().register(new BasicBlock("marble", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
             e.getRegistry().register(new BasicBlock("smooth_marble", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
             e.getRegistry().register(new BasicBlock("stone_brick_block", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE)));
+            e.getRegistry().register(new BasicBlock("marble_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
         }
 
         @SubscribeEvent
@@ -48,6 +51,7 @@ public class AdditionalBlocks {
             e.getRegistry().register(new BlockItem(marble, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(marble.getRegistryName()));
             e.getRegistry().register(new BlockItem(smooth_marble, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(smooth_marble.getRegistryName()));
             e.getRegistry().register(new BlockItem(stone_brick_block, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(stone_brick_block.getRegistryName()));
+            e.getRegistry().register(new BlockItem(marble_bricks, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(marble_bricks.getRegistryName()));
         }
     }
 
