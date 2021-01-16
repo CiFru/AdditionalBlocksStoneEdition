@@ -2,6 +2,7 @@ package com.supermartijn642.additionalblocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.StateContainer;
 import net.minecraft.util.Direction;
 
@@ -13,6 +14,12 @@ public class AxisRotationBlock extends BasicBlock {
     public AxisRotationBlock(String registryName, Properties properties){
         super(registryName, properties);
         this.setDefaultState(this.getDefaultState().with(BlockProperties.AXIS, Direction.Axis.Y));
+    }
+
+    @Override
+    public BlockState getStateForPlacement(BlockItemUseContext context){
+        Direction facing = context.getPlacementHorizontalFacing();
+        return this.getDefaultState().with(BlockProperties.AXIS, facing.getAxis());
     }
 
     @Override
