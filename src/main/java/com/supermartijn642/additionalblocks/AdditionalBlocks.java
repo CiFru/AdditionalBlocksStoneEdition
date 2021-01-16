@@ -28,6 +28,12 @@ public class AdditionalBlocks {
     public static Block stone_brick_block;
     @ObjectHolder("additionalblocks:marble_bricks")
     public static Block marble_bricks;
+    @ObjectHolder("additionalblocks:diorite_bricks")
+    public static Block diorite_bricks;
+    @ObjectHolder("additionalblocks:andesite_bricks")
+    public static Block andesite_bricks;
+    @ObjectHolder("additionalblocks:granite_bricks")
+    public static Block granite_bricks;
     @ObjectHolder("additionalblocks:animated_block")
     public static Block animated_block;
 
@@ -42,6 +48,9 @@ public class AdditionalBlocks {
             e.getRegistry().register(new BasicBlock("smooth_marble", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
             e.getRegistry().register(new BasicBlock("stone_brick_block", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE)));
             e.getRegistry().register(new BasicBlock("marble_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
+            e.getRegistry().register(new BasicBlock("diorite_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.LIGHT_GRAY).sound(SoundType.STONE)));
+            e.getRegistry().register(new BasicBlock("andesite_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE)));
+            e.getRegistry().register(new BasicBlock("granite_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BROWN).sound(SoundType.STONE)));
             e.getRegistry().register(new BasicBlock("animated_block", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE)));
         }
 
@@ -55,6 +64,9 @@ public class AdditionalBlocks {
             e.getRegistry().register(new BlockItem(smooth_marble, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(smooth_marble.getRegistryName()));
             e.getRegistry().register(new BlockItem(stone_brick_block, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(stone_brick_block.getRegistryName()));
             e.getRegistry().register(new BlockItem(marble_bricks, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(marble_bricks.getRegistryName()));
+            e.getRegistry().register(new BlockItem(diorite_bricks, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(diorite_bricks.getRegistryName()));
+            e.getRegistry().register(new BlockItem(andesite_bricks, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(andesite_bricks.getRegistryName()));
+            e.getRegistry().register(new BlockItem(granite_bricks, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(granite_bricks.getRegistryName()));
             e.getRegistry().register(new BlockItem(animated_block, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(animated_block.getRegistryName()));
         }
     }

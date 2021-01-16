@@ -3,5 +3,8 @@
   "block.additionalblocks.smooth_marble": "Smooth Marble Block",
   "block.additionalblocks.stone_brick_block": "Stone Brick Block",
   "block.additionalblocks.marble_bricks": "Marble Bricks",
-  "block.additionalblocks.animated_block": "Animated Block"
+  "block.additionalblocks.animated_block": "Animated Block",
+  "block.additionalblocks.diorite_bricks": "Diorite Bricks",
+  "block.additionalblocks.andesite_bricks": "Andesite Bricks",
+  "block.additionalblocks.granite_bricks": "Granite Bricks"
 }
