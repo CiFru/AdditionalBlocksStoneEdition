@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "additionalblocks:smooth_black_marble"
+  }
+}
