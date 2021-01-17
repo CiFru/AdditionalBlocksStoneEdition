@@ -14,11 +14,17 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created 7/7/2020 by SuperMartijn642
  */
 @Mod("additionalblocks")
 public class AdditionalBlocks {
+
+    private static final List<Block> blocks = new ArrayList<>();
+    private static final List<Item> items = new ArrayList<>();
 
     @ObjectHolder("additionalblocks:marble")
     public static Block marble;
@@ -72,6 +78,9 @@ public class AdditionalBlocks {
 
         @SubscribeEvent
         public static void onItemRegistry(final RegistryEvent.Register<Item> e){
+            for(Block block : blocks)
+                registerItem(e, new BlockItem(block, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(block.getRegistryName()));
+
             e.getRegistry().register(new BlockItem(marble, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(marble.getRegistryName()));
             e.getRegistry().register(new BlockItem(smooth_marble, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(smooth_marble.getRegistryName()));
             e.getRegistry().register(new BlockItem(stone_brick_block, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(stone_brick_block.getRegistryName()));
@@ -85,6 +94,18 @@ public class AdditionalBlocks {
             e.getRegistry().register(new BlockItem(smooth_bloodstone, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(smooth_bloodstone.getRegistryName()));
             e.getRegistry().register(new BlockItem(bloodstone_bricks, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(bloodstone_bricks.getRegistryName()));
         }
+    }
+
+    public static <T extends Block> T registerBlock(RegistryEvent.Register<Block> e, T block){
+        e.getRegistry().register(block);
+        blocks.add(block);
+        return block;
+    }
+
+    public static <T extends Item> T registerItem(RegistryEvent.Register<Item> e, T item){
+        e.getRegistry().register(item);
+        items.add(item);
+        return item;
     }
 
 }
