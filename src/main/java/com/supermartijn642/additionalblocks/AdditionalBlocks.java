@@ -44,6 +44,16 @@ public class AdditionalBlocks {
     public static Block smooth_bloodstone;
     @ObjectHolder("additionalblocks:bloodstone_bricks")
     public static Block bloodstone_bricks;
+    @ObjectHolder("additionalblocks:black_marble")
+    public static Block black_marble;
+    @ObjectHolder("additionalblocks:smooth_black_marble")
+    public static Block smooth_black_marble;
+    @ObjectHolder("additionalblocks:black_marble_bricks")
+    public static Block black_marble_bricks;
+    @ObjectHolder("additionalblocks:mud")
+    public static Block mud;
+    @ObjectHolder("additionalblocks:brown_bricks")
+    public static Block brown_bricks;
 
     public AdditionalBlocks(){
     }
@@ -64,6 +74,11 @@ public class AdditionalBlocks {
             e.getRegistry().register(new AxisRotationBlock("bloodstone", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.STONE)));
             e.getRegistry().register(new AxisRotationBlock("smooth_bloodstone", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.STONE)));
             e.getRegistry().register(new AxisRotationBlock("bloodstone_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.STONE)));
+            e.getRegistry().register(new AxisRotationBlock("black_marble", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.STONE)));
+            e.getRegistry().register(new AxisRotationBlock("smooth_black_marble", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.STONE)));
+            e.getRegistry().register(new AxisRotationBlock("black_marble_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.STONE)));
+            e.getRegistry().register(new AxisRotationBlock("mud", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BROWN).sound(SoundType.WET_GRASS)));
+            e.getRegistry().register(new AxisRotationBlock("brown_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BROWN).sound(SoundType.NETHER_BRICK)));
         }
 
         @SubscribeEvent
@@ -84,6 +99,11 @@ public class AdditionalBlocks {
             e.getRegistry().register(new BlockItem(bloodstone, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(bloodstone.getRegistryName()));
             e.getRegistry().register(new BlockItem(smooth_bloodstone, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(smooth_bloodstone.getRegistryName()));
             e.getRegistry().register(new BlockItem(bloodstone_bricks, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(bloodstone_bricks.getRegistryName()));
+            e.getRegistry().register(new BlockItem(black_marble, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(black_marble.getRegistryName()));
+            e.getRegistry().register(new BlockItem(smooth_black_marble, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(smooth_black_marble.getRegistryName()));
+            e.getRegistry().register(new BlockItem(black_marble_bricks, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(black_marble_bricks.getRegistryName()));
+            e.getRegistry().register(new BlockItem(mud, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(mud.getRegistryName()));
+            e.getRegistry().register(new BlockItem(brown_bricks, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(brown_bricks.getRegistryName()));
         }
     }
 

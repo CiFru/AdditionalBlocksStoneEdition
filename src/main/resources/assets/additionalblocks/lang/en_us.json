@@ -8,7 +8,12 @@
   "block.additionalblocks.andesite_bricks": "Andesite Bricks",
   "block.additionalblocks.granite_bricks": "Granite Bricks",
   "block.additionalblocks.marble_pillar": "Marble Pillar",
-  "block.additionalblocks.bloodstone": "Bloodstone",
+  "block.additionalblocks.bloodstone": "Bloodstone Block",
   "block.additionalblocks.smooth_bloodstone": "Smooth Bloodstone",
-  "block.additionalblocks.bloodstone_bricks": "Bloodstone Bricks"
+  "block.additionalblocks.bloodstone_bricks": "Bloodstone Bricks",
+  "block.additionalblocks.black_marble": "Black Marble Block",
+  "block.additionalblocks.smooth_black_marble": "Smooth Black Marble",
+  "block.additionalblocks.black_marble_bricks": "Black Marble Bricks",
+  "block.additionalblocks.mud": "Mud Block",
+  "block.additionalblocks.brown_bricks": "Brown Bricks"
 }
