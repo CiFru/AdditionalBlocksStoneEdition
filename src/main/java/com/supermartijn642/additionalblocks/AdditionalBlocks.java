@@ -36,6 +36,12 @@ public class AdditionalBlocks {
     public static Block granite_bricks;
     @ObjectHolder("additionalblocks:animated_block")
     public static Block animated_block;
+    @ObjectHolder("additionalblocks:marble_pillar")
+    public static Block marble_pillar;
+    @ObjectHolder("additionalblocks:bloodstone")
+    public static Block bloodstone;
+    @ObjectHolder("additionalblocks:smooth_bloodstone")
+    public static Block smooth_bloodstone;
 
     public AdditionalBlocks(){
     }
@@ -52,6 +58,9 @@ public class AdditionalBlocks {
             e.getRegistry().register(new BasicBlock("andesite_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE)));
             e.getRegistry().register(new BasicBlock("granite_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BROWN).sound(SoundType.STONE)));
             e.getRegistry().register(new BasicBlock("animated_block", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE)));
+            e.getRegistry().register(new AxisRotationBlock("marble_pillar", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
+            e.getRegistry().register(new AxisRotationBlock("bloodstone", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.STONE)));
+            e.getRegistry().register(new AxisRotationBlock("smooth_bloodstone", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.STONE)));
         }
 
         @SubscribeEvent
@@ -68,6 +77,9 @@ public class AdditionalBlocks {
             e.getRegistry().register(new BlockItem(andesite_bricks, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(andesite_bricks.getRegistryName()));
             e.getRegistry().register(new BlockItem(granite_bricks, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(granite_bricks.getRegistryName()));
             e.getRegistry().register(new BlockItem(animated_block, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(animated_block.getRegistryName()));
+            e.getRegistry().register(new BlockItem(marble_pillar, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(marble_pillar.getRegistryName()));
+            e.getRegistry().register(new BlockItem(bloodstone, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(bloodstone.getRegistryName()));
+            e.getRegistry().register(new BlockItem(smooth_bloodstone, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(smooth_bloodstone.getRegistryName()));
         }
     }
 

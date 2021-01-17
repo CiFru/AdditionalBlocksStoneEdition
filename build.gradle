@@ -92,4 +92,6 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-1.16.3:7.6.0.51:api")
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-1.16.3:7.6.0.51")
+    // Block Renderer
+    runtimeOnly fg.deobf("curse.maven:block-renderer:3149419")
 }

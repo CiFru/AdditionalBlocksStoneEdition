@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "additionalblocks:block/marble_pillar",
+      "y": 90,
+      "x": 90
+    },
+    "axis=y": {
+      "model": "additionalblocks:block/marble_pillar"
+    },
+    "axis=z": {
+      "model": "additionalblocks:block/marble_pillar",
+      "x": 90
+    }
+  }
+}

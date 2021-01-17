@@ -1,0 +1,78 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "additionalblocks:block/bloodstone"
+      },
+      {
+        "model": "additionalblocks:block/bloodstone",
+        "x": 90
+      },
+      {
+        "model": "additionalblocks:block/bloodstone",
+        "x": 180
+      },
+      {
+        "model": "additionalblocks:block/bloodstone",
+        "x": 270
+      },
+      {
+        "model": "additionalblocks:block/bloodstone",
+        "y": 90
+      },
+      {
+        "model": "additionalblocks:block/bloodstone",
+        "y": 90,
+        "x": 90
+      },
+      {
+        "model": "additionalblocks:block/bloodstone",
+        "y": 90,
+        "x": 180
+      },
+      {
+        "model": "additionalblocks:block/bloodstone",
+        "y": 90,
+        "x": 270
+      },
+      {
+        "model": "additionalblocks:block/bloodstone",
+        "y": 180
+      },
+      {
+        "model": "additionalblocks:block/bloodstone",
+        "y": 180,
+        "x": 90
+      },
+      {
+        "model": "additionalblocks:block/bloodstone",
+        "y": 180,
+        "x": 180
+      },
+      {
+        "model": "additionalblocks:block/bloodstone",
+        "y": 180,
+        "x": 270
+      },
+      {
+        "model": "additionalblocks:block/bloodstone",
+        "y": 270
+      },
+      {
+        "model": "additionalblocks:block/bloodstone",
+        "y": 270,
+        "x": 90
+      },
+      {
+        "model": "additionalblocks:block/bloodstone",
+        "y": 270,
+        "x": 180
+      },
+      {
+        "model": "additionalblocks:block/bloodstone",
+        "y": 270,
+        "x": 270
+      }
+    ]
+  }
+}

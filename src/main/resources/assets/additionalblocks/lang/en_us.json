@@ -6,5 +6,8 @@
   "block.additionalblocks.animated_block": "Animated Block",
   "block.additionalblocks.diorite_bricks": "Diorite Bricks",
   "block.additionalblocks.andesite_bricks": "Andesite Bricks",
-  "block.additionalblocks.granite_bricks": "Granite Bricks"
+  "block.additionalblocks.granite_bricks": "Granite Bricks",
+  "block.additionalblocks.marble_pillar": "Marble Pillar",
+  "block.additionalblocks.bloodstone": "Bloodstone",
+  "block.additionalblocks.smooth_bloodstone": "Smooth Bloodstone"
 }

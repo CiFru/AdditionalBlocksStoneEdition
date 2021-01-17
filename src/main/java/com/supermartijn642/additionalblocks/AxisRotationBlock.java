@@ -18,7 +18,7 @@ public class AxisRotationBlock extends BasicBlock {
 
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context){
-        Direction facing = context.getPlacementHorizontalFacing();
+        Direction facing = context.getFace();
         return this.getDefaultState().with(BlockProperties.AXIS, facing.getAxis());
     }
 
