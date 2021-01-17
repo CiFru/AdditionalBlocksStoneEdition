@@ -17,5 +17,23 @@
   "block.additionalblocks.mud": "Mud Block",
   "block.additionalblocks.brown_bricks": "Brown Bricks",
   "block.additionalblocks.volcanic_stone": "Volcanic Stone",
-  "block.additionalblocks.volcanic_stone_bricks": "Volcanic Stone Bricks"
+  "block.additionalblocks.volcanic_stone_bricks": "Volcanic Stone Bricks",
+  "block.additionalblocks.marble_slab": "Marble Slab",
+  "block.additionalblocks.marble_stairs": "Marble Stairs",
+  "block.additionalblocks.andesite_bricks_stairs": "Andesite Brick Stairs",
+  "block.additionalblocks.black_marble_stairs": "Black Marble Stairs",
+  "block.additionalblocks.black_marble_bricks_stairs": "Black Marble Brick Stairs",
+  "block.additionalblocks.bloodstone_stairs": "Bloodstone Stairs",
+  "block.additionalblocks.bloodstone_bricks_stairs": "Bloodstone Brick Stairs",
+  "block.additionalblocks.brown_bricks_stairs": "Brown Brick Stairs",
+  "block.additionalblocks.diorite_bricks_stairs": "Diorite Brick Stairs",
+  "block.additionalblocks.granite_bricks_stairs": "Granite Brick Stairs",
+  "block.additionalblocks.marble_bricks_stairs": "Marble Brick Stairs",
+  "block.additionalblocks.smooth_black_marble_stairs": "Smooth Black Marble Stairs",
+  "block.additionalblocks.smooth_bloodstone_stairs": "Smooth Bloodstone Stairs",
+  "block.additionalblocks.smooth_marble_stairs": "Smooth Marble Stairs",
+  "block.additionalblocks.stone_brick_block_stairs": "Stone Brick Block Stairs",
+  "block.additionalblocks.volcanic_stone_stairs": "Volcanic Stone Stairs",
+  "block.additionalblocks.volcanic_stone_bricks_stairs": "Volcanic Stone Brick Stairs"
+
 }

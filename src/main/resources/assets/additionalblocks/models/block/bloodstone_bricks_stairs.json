@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "additionalblocks:bloodstone_bricks",
+    "top": "additionalblocks:bloodstone_bricks",
+    "side": "additionalblocks:bloodstone_bricks"
+  }
+}

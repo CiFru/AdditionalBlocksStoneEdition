@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "additionalblocks:marble"
+    },
+    "type=double": {
+      "model": "additionalblocks:marble"
+    },
+    "type=top": {
+      "model": "additionalblocks:marble"
+    }
+  }
+}

@@ -46,6 +46,24 @@ public class AdditionalBlocks {
     public static Block brown_bricks;
     public static Block volcanic_stone;
     public static Block volcanic_stone_bricks;
+    public static Block marble_slab;
+    public static Block marble_stairs;
+    public static Block andesite_bricks_stairs;
+    public static Block black_marble_stairs;
+    public static Block black_marble_bricks_stairs;
+    public static Block bloodstone_stairs;
+    public static Block bloodstone_bricks_stairs;
+    public static Block brown_bricks_stairs;
+    public static Block diorite_bricks_stairs;
+    public static Block granite_bricks_stairs;
+    public static Block marble_bricks_stairs;
+    public static Block smooth_black_marble_stairs;
+    public static Block smooth_bloodstone_stairs;
+    public static Block smooth_marble_stairs;
+    public static Block stone_brick_block_stairs;
+    public static Block volcanic_stone_stairs;
+    public static Block volcanic_stone_bricks_stairs;
+
 
     public AdditionalBlocks() {
     }
@@ -73,8 +91,23 @@ public class AdditionalBlocks {
             brown_bricks = registerBlock(e, new BasicBlock("brown_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BROWN).sound(SoundType.NETHER_BRICK)));
             volcanic_stone = registerBlock(e, new BasicBlock("volcanic_stone", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.NETHER_BRICK)));
             volcanic_stone_bricks = registerBlock(e, new BasicBlock("volcanic_stone_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.NETHER_BRICK)));
-            registerBlock(e, new StairBlock(marble,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
-            registerBlock(e, new SlabBlock(marble,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
+            marble_stairs = registerBlock(e, new StairBlock(marble,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
+            marble_slab = registerBlock(e, new SlabBlock(marble,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
+            andesite_bricks_stairs = registerBlock(e, new StairBlock(andesite_bricks,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE)));
+            black_marble_stairs = registerBlock(e, new StairBlock(black_marble_stairs,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
+            black_marble_bricks_stairs = registerBlock(e, new StairBlock(black_marble_bricks_stairs,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
+            bloodstone_stairs = registerBlock(e, new StairBlock(bloodstone_stairs,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
+            bloodstone_bricks_stairs = registerBlock(e, new StairBlock(bloodstone_bricks_stairs,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
+            brown_bricks_stairs = registerBlock(e, new StairBlock(brown_bricks_stairs,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
+            diorite_bricks_stairs = registerBlock(e, new StairBlock(diorite_bricks_stairs,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
+            granite_bricks_stairs = registerBlock(e, new StairBlock(granite_bricks_stairs,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
+            marble_bricks_stairs = registerBlock(e, new StairBlock(marble_bricks_stairs,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
+            smooth_black_marble_stairs = registerBlock(e, new StairBlock(smooth_black_marble_stairs,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
+            smooth_bloodstone_stairs = registerBlock(e, new StairBlock(smooth_bloodstone_stairs,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
+            smooth_marble_stairs = registerBlock(e, new StairBlock(smooth_marble_stairs,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
+            stone_brick_block_stairs = registerBlock(e, new StairBlock(stone_brick_block_stairs,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
+            volcanic_stone_stairs = registerBlock(e, new StairBlock(volcanic_stone_stairs,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
+            volcanic_stone_bricks_stairs = registerBlock(e, new StairBlock(volcanic_stone_bricks_stairs,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
         }
 
         @SubscribeEvent
