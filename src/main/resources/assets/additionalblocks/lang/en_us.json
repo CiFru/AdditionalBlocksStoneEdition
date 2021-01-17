@@ -15,5 +15,7 @@
   "block.additionalblocks.smooth_black_marble": "Smooth Black Marble",
   "block.additionalblocks.black_marble_bricks": "Black Marble Bricks",
   "block.additionalblocks.mud": "Mud Block",
-  "block.additionalblocks.brown_bricks": "Brown Bricks"
+  "block.additionalblocks.brown_bricks": "Brown Bricks",
+  "block.additionalblocks.volcanic_stone": "Volcanic Stone",
+  "block.additionalblocks.volcanic_stone_bricks": "Volcanic Stone Bricks"
 }
