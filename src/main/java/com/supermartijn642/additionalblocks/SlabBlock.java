@@ -9,6 +9,6 @@ public class SlabBlock extends net.minecraft.block.SlabBlock {
 
     public SlabBlock(Block block, Properties properties){
         super(properties);
-        this.setRegistryName(block.getRegistryName().getPath() + "_stairs");
+        this.setRegistryName(block.getRegistryName().getPath() + "_slab");
     }
 }
