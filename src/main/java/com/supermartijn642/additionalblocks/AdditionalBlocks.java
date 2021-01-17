@@ -42,6 +42,8 @@ public class AdditionalBlocks {
     public static Block bloodstone;
     @ObjectHolder("additionalblocks:smooth_bloodstone")
     public static Block smooth_bloodstone;
+    @ObjectHolder("additionalblocks:bloodstone_bricks")
+    public static Block bloodstone_bricks;
 
     public AdditionalBlocks(){
     }
@@ -61,6 +63,7 @@ public class AdditionalBlocks {
             e.getRegistry().register(new AxisRotationBlock("marble_pillar", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
             e.getRegistry().register(new AxisRotationBlock("bloodstone", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.STONE)));
             e.getRegistry().register(new AxisRotationBlock("smooth_bloodstone", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.STONE)));
+            e.getRegistry().register(new AxisRotationBlock("bloodstone_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.STONE)));
         }
 
         @SubscribeEvent
@@ -80,6 +83,7 @@ public class AdditionalBlocks {
             e.getRegistry().register(new BlockItem(marble_pillar, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(marble_pillar.getRegistryName()));
             e.getRegistry().register(new BlockItem(bloodstone, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(bloodstone.getRegistryName()));
             e.getRegistry().register(new BlockItem(smooth_bloodstone, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(smooth_bloodstone.getRegistryName()));
+            e.getRegistry().register(new BlockItem(bloodstone_bricks, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(bloodstone_bricks.getRegistryName()));
         }
     }
 
