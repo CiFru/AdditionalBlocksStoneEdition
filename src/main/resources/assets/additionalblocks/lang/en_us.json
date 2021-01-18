@@ -18,7 +18,6 @@
   "block.additionalblocks.brown_bricks": "Brown Bricks",
   "block.additionalblocks.volcanic_stone": "Volcanic Stone",
   "block.additionalblocks.volcanic_stone_bricks": "Volcanic Stone Bricks",
-  "block.additionalblocks.marble_slab": "Marble Slab",
   "block.additionalblocks.marble_stairs": "Marble Stairs",
   "block.additionalblocks.andesite_bricks_stairs": "Andesite Brick Stairs",
   "block.additionalblocks.black_marble_stairs": "Black Marble Stairs",
@@ -34,6 +33,6 @@
   "block.additionalblocks.smooth_marble_stairs": "Smooth Marble Stairs",
   "block.additionalblocks.stone_brick_block_stairs": "Stone Brick Block Stairs",
   "block.additionalblocks.volcanic_stone_stairs": "Volcanic Stone Stairs",
-  "block.additionalblocks.volcanic_stone_bricks_stairs": "Volcanic Stone Brick Stairs"
-
+  "block.additionalblocks.volcanic_stone_bricks_stairs": "Volcanic Stone Brick Stairs",
+  "block.additionalblocks.marble_slab": "Marble Slab"
 }
