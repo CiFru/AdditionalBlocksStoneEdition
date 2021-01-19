@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "additionalblocks:diorite_bricks"
+    }
+  },
+  "result": {
+    "item": "additionalblocks:diorite_bricks_stairs",
+    "count": 4
+  }
+}
