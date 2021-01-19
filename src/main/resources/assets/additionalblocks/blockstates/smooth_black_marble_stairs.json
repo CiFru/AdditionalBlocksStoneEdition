@@ -1,7 +1,7 @@
 {
   "variants": {
     "facing=east,half=bottom,shape=inner_left": {
-      "model": "additionalblocks:block/smooth_black_smooth_black_marble_stairs_inner",
+      "model": "additionalblocks:block/smooth_black_marble_stairs_inner",
       "y": 270,
       "uvlock": true
     },

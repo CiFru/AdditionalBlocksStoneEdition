@@ -1,5 +1,5 @@
 {
-  "parent": "additionalblocks:block/slab_top",
+  "parent": "minecraft:block/slab_top",
   "textures": {
     "bottom": "additionalblocks:marble",
     "top": "additionalblocks:marble",

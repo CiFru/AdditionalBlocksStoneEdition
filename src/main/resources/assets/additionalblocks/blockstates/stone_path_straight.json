@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "additionalblocks:block/stone_path_straight",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "additionalblocks:block/stone_path_straight",
+      "y": 0
+    },
+    "facing=west": {
+      "model": "additionalblocks:block/stone_path_straight",
+      "y": 90
+    },
+    "facing=east": {
+      "model": "additionalblocks:block/stone_path_straight",
+      "y": 270
+    }
+  }
+}

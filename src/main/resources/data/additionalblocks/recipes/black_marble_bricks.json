@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "additionalblocks:black_marble"
+    }
+  },
+  "result": {
+    "item": "additionalblocks:black_marble_bricks",
+    "count": 4
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "additionalblocks:block/smooth_black_marble_slab"
+    },
+    "type=double": {
+      "model": "additionalblocks:block/smooth_black_marble"
+    },
+    "type=top": {
+      "model": "additionalblocks:block/smooth_black_marble_slab_top"
+    }
+  }
+}

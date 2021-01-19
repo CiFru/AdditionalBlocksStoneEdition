@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "additionalblocks:marble"
+  },
+  "result": "additionalblocks:smooth_marble",
+  "experience": 0.2,
+  "cookingtime": 200
+}
