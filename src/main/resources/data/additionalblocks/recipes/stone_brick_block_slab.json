@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "additionalblocks:stone_brick_block"
+    }
+  },
+  "result": {
+    "item": "additionalblocks:stone_brick_block_slab",
+    "count": 6
+  }
+}

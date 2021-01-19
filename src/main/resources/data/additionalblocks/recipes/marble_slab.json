@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "additionalblocks:marble"
+    }
+  },
+  "result": {
+    "item": "additionalblocks:marble_slab",
+    "count": 6
+  }
+}
