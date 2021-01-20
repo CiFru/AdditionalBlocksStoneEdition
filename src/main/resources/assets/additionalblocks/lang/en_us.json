@@ -3,7 +3,7 @@
   "block.additionalblocks.smooth_marble": "Smooth Marble Block",
   "block.additionalblocks.stone_brick_block": "Stone Brick Block",
   "block.additionalblocks.marble_bricks": "Marble Bricks",
-  "block.additionalblocks.animated_block": "Animated Block",
+  "block.additionalblocks.water_stone": "Water Stone",
   "block.additionalblocks.diorite_bricks": "Diorite Bricks",
   "block.additionalblocks.andesite_bricks": "Andesite Bricks",
   "block.additionalblocks.granite_bricks": "Granite Bricks",
@@ -52,5 +52,8 @@
   "block.additionalblocks.volcanic_stone_bricks_slab": "Volcanic Stone Brick Slab",
   "block.additionalblocks.stone_path_curved": "Curved Stone Path",
   "block.additionalblocks.stone_path_straight": "Stone Path",
-  "block.additionalblocks.stone_pattern": "Stone Pattern"
+  "block.additionalblocks.stone_pattern": "Stone Pattern",
+  "block.additionalblocks.asphalt": "Asphalt",
+  "block.additionalblocks.limestone": "Limestone",
+  "block.additionalblocks.limestone_bricks": "Limestone_bricks"
 }

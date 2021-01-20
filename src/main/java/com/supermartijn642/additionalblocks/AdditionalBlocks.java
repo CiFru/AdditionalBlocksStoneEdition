@@ -34,7 +34,7 @@ public class AdditionalBlocks {
     public static Block diorite_bricks;
     public static Block andesite_bricks;
     public static Block granite_bricks;
-    public static Block animated_block;
+    public static Block water_stone;
     public static Block marble_pillar;
     public static Block bloodstone;
     public static Block smooth_bloodstone;
@@ -81,6 +81,9 @@ public class AdditionalBlocks {
     public static Block stone_path_curved;
     public static Block stone_path_straight;
     public static Block stone_pattern;
+    public static Block asphalt;
+    public static Block limestone;
+    public static Block limestone_bricks;
 
     public AdditionalBlocks() {
     }
@@ -96,7 +99,7 @@ public class AdditionalBlocks {
             diorite_bricks = registerBlock(e, new BasicBlock("diorite_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.LIGHT_GRAY).sound(SoundType.STONE)));
             andesite_bricks = registerBlock(e, new BasicBlock("andesite_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE)));
             granite_bricks = registerBlock(e, new BasicBlock("granite_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BROWN).sound(SoundType.STONE)));
-            animated_block = registerBlock(e, new BasicBlock("animated_block", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE)));
+            water_stone = registerBlock(e, new BasicBlock("water_stone", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE)));
             marble_pillar = registerBlock(e, new AxisRotationBlock("marble_pillar", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE)));
             bloodstone = registerBlock(e, new BasicBlock("bloodstone", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.STONE)));
             smooth_bloodstone = registerBlock(e, new BasicBlock("smooth_bloodstone", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.STONE)));
@@ -143,6 +146,9 @@ public class AdditionalBlocks {
             stone_path_straight = registerBlock(e, new HorizontalRotationBlock("stone_path_straight", true, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE)));
             stone_path_curved = registerBlock(e, new HorizontalRotationBlock("stone_path_curved", true, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE)));
             stone_pattern = registerBlock(e, new BasicBlock("stone_pattern", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.NETHER_BRICK)));
+            limestone = registerBlock(e, new BasicBlock("limestone", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.YELLOW).sound(SoundType.NETHER_BRICK)));
+            limestone_bricks = registerBlock(e, new BasicBlock("limestone_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.YELLOW).sound(SoundType.NETHER_BRICK)));
+            asphalt = registerBlock(e, new BasicBlock("asphalt", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.NETHER_BRICK)));
         }
 
         @SubscribeEvent
