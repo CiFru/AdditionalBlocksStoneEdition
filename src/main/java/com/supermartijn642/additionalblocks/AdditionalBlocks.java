@@ -9,10 +9,10 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.tileentity.TileEntityType;
+import net.minecraft.world.gen.feature.Feature;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.ObjectHolder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -153,6 +153,11 @@ public class AdditionalBlocks {
         public static void onItemRegistry(final RegistryEvent.Register<Item> e) {
             for (Block block : blocks)
                 registerItem(e, new BlockItem(block, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(block.getRegistryName()));
+        }
+
+        @SubscribeEvent
+        public static void onFeatureRegistry(final RegistryEvent.Register<Feature<?>> e){
+            WorldGeneration.onFeatureRegistry(e);
         }
     }
 
