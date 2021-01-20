@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X#X",
+    "#X#",
+    "X#X"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:blue_ice"
+      }
+    ],
+    "X": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:water_stone"
+  }
+}
