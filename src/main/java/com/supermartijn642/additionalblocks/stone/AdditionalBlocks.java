@@ -159,7 +159,7 @@ public class AdditionalBlocks {
         @SubscribeEvent
         public static void onItemRegistry(final RegistryEvent.Register<Item> e) {
             for (Block block : blocks)
-                registerItem(e, new BlockItem(block, new Item.Properties().group(ItemGroup.SEARCH)).setRegistryName(block.getRegistryName()));
+                registerItem(e, new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
         }
 
         @SubscribeEvent
