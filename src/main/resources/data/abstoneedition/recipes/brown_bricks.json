@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:bricks"
+  },
+  "result": "abstoneedition:brown_bricks",
+  "experience": 0.2,
+  "cookingtime": 300
+}

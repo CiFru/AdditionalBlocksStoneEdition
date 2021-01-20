@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "###",
+    "XXX"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:stone"
+      }
+    ],
+    "X": {
+      "item": "minecraft:stone_bricks"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:stone_path_straight",
+    "count": 3
+  }
+}

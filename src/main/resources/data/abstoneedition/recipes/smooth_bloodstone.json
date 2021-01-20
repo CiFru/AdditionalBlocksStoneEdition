@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "abstoneedition:bloodstone"
+  },
+  "result": "abstoneedition:smooth_bloodstone",
+  "experience": 0.2,
+  "cookingtime": 200
+}

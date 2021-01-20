@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * Created 7/7/2020 by SuperMartijn642
  */
-@Mod("additionalblocks")
+@Mod("abstoneedition")
 public class AdditionalBlocks {
 
     private static final List<Block> blocks = new ArrayList<>();

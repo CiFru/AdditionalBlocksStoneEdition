@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "abstoneedition:stone_brick_block",
+    "top": "abstoneedition:stone_brick_block",
+    "side": "abstoneedition:stone_brick_block"
+  }
+}

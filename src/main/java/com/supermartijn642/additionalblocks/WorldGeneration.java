@@ -29,7 +29,7 @@ public class WorldGeneration {
         ore_marble = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, AdditionalBlocks.smooth_marble.getDefaultState(), 33));
         ore_marble.range(80).square().func_242731_b(10);
         Registry.register(WorldGenRegistries.CONFIGURED_FEATURE,
-            new ResourceLocation("additionalblocks", "ore_marble"),
+            new ResourceLocation("abstoneedition", "ore_marble"),
             ore_marble
         );
     }

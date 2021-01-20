@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "abstoneedition:water_stone",
+    "top": "abstoneedition:water_stone",
+    "bottom": "abstoneedition:water_stone"
+  }
+}

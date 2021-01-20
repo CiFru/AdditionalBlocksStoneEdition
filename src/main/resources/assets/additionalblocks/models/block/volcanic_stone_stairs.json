@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "additionalblocks:volcanic_stone",
-    "top": "additionalblocks:volcanic_stone",
-    "side": "additionalblocks:volcanic_stone"
-  }
-}

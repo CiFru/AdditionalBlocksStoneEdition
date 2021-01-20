@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "abstoneedition:smooth_black_marble"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:smooth_black_marble_stairs",
+    "count": 4
+  }
+}

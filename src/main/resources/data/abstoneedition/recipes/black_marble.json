@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SC",
+    "CS"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:black_dye"
+    },
+    "C": {
+      "item": "abstoneedition:marble"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:black_marble",
+    "count": 2
+  }
+}

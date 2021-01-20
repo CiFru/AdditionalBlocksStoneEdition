@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "additionalblocks:bloodstone_bricks",
-    "top": "additionalblocks:bloodstone_bricks",
-    "side": "additionalblocks:bloodstone_bricks"
-  }
-}

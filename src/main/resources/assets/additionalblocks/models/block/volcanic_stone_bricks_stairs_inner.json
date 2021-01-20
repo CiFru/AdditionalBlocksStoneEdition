@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "additionalblocks:volcanic_stone_bricks",
-    "top": "additionalblocks:volcanic_stone_bricks",
-    "side": "additionalblocks:volcanic_stone_bricks"
-  }
-}

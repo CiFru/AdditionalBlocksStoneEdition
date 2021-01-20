@@ -15,7 +15,7 @@ license="All rights reserved"
 # A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]] #mandatory
 # The modid of the mod
-modId="additionalblocks" #mandatory
+modId="abstoneedition" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 version="1.0.0" #mandatory
  # A display name for the mod
@@ -25,7 +25,7 @@ displayName="Additional Blocks: Stone Edition" #mandatory
 # A URL for the "homepage" for this mod, displayed in the mod UI
 #displayURL="" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-logoFile="additionalblocks.png" #optional
+logoFile="abstoneedition.png" #optional
 # A text field displayed in the mod UI
 credits="SuperMartijn642" #optional
 # A text field displayed in the mod UI
@@ -33,7 +33,7 @@ authors="CiFru" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''Additional Blocks: Stone Edition adds stone-themed blocks to your game!'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.additionalblocks]] #optional
+[[dependencies.abstoneedition]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
     # Does this dependency have to exist - if not, ordering below must be specified
@@ -45,7 +45,7 @@ description='''Additional Blocks: Stone Edition adds stone-themed blocks to your
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
     side="BOTH"
 # Here's another dependency
-[[dependencies.additionalblocks]]
+[[dependencies.abstoneedition]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16,1.17)"
