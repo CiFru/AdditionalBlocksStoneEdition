@@ -164,7 +164,7 @@ public class AdditionalBlocks {
 
         @SubscribeEvent
         public static void onFeatureRegistry(final RegistryEvent.Register<Feature<?>> e){
-            WorldGeneration.onFeatureRegistry(e);
+//            WorldGeneration.onFeatureRegistry(e);
         }
     }
 
