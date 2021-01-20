@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:black_dye"
+  },
+  "result": "additionalblocks:asphalt",
+  "experience": 0.2,
+  "cookingtime": 500
+}
