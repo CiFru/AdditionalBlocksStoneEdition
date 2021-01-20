@@ -1,4 +1,4 @@
-package com.supermartijn642.additionalblocks;
+package com.supermartijn642.additionalblocks.stone;
 
 import net.minecraft.block.Block;
 

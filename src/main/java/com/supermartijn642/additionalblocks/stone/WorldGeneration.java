@@ -1,11 +1,10 @@
-package com.supermartijn642.additionalblocks;
+package com.supermartijn642.additionalblocks.stone;
 
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
@@ -40,7 +39,7 @@ public class WorldGeneration {
 
         // all overworld biomes
         if(BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(biomeKey)){
-            e.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_marble);
+
         }
 
         // all nether biomes

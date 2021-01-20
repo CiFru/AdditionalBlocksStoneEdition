@@ -16,7 +16,7 @@ apply plugin: 'eclipse'
 apply plugin: 'com.wynprice.cursemaven'
 
 version = '1.0.0-mc1.16'
-group = 'com.supermartijn642.additionalblocks' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = 'com.supermartijn642.additionalblocks.stone' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'abstoneedition'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
