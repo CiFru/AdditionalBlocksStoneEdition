@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "abstoneedition:charred_log"
+    }
+  ],
+  "result": {
+    "item": "abstoneedition:charred_planks",
+    "count": 4
+  }
+}

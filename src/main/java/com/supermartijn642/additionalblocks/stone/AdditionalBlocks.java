@@ -87,6 +87,8 @@ public class AdditionalBlocks {
     public static Block limestone_bricks;
     public static Block pebbles;
     public static Block charred_log;
+    public static Block charred_wood;
+    public static Block charred_planks;
 
     public AdditionalBlocks() {
     }
@@ -154,6 +156,8 @@ public class AdditionalBlocks {
             asphalt = registerBlock(e, new BasicBlock("asphalt", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.5f,6).harvestTool(ToolType.PICKAXE).harvestLevel(2).setRequiresTool()));
             pebbles = registerBlock(e, new BasicBlock("pebbles", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.LIGHT_GRAY).sound(SoundType.STONE).hardnessAndResistance(2.5f,6).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
             charred_log = registerBlock(e, new AxisRotationBlock("charred_log", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(0.8f,0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
+            charred_wood = registerBlock(e, new BasicBlock("charred_wood", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(0.8f,0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
+            charred_planks = registerBlock(e, new BasicBlock("charred_planks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(0.8f,0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
         }
 
         @SubscribeEvent

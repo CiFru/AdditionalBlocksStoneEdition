@@ -57,5 +57,7 @@
   "block.abstoneedition.limestone": "Limestone",
   "block.abstoneedition.limestone_bricks": "Limestone Bricks",
   "block.abstoneedition.pebbles": "Pebbles",
-  "block.abstoneedition.charred_log": "Charred Log"
+  "block.abstoneedition.charred_log": "Charred Log",
+  "block.abstoneedition.charred_wood": "Charred Wood",
+  "block.abstoneedition.charred_planks": "Charred Planks"
 }

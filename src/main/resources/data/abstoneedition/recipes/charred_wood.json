@@ -6,11 +6,11 @@
   ],
   "key": {
     "S": {
-      "item": "minecraft:charcoal"
+      "item": "abstoneedition:charred_log"
     }
   },
   "result": {
-    "item": "abstoneedition:charred_log",
-    "count": 2
+    "item": "abstoneedition:charred_wood",
+    "count": 3
   }
 }
