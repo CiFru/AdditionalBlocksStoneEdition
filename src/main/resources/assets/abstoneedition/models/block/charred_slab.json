@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "abstoneedition:charred_planks",
+    "top": "abstoneedition:charred_planks",
+    "side": "abstoneedition:charred_planks"
+  }
+}

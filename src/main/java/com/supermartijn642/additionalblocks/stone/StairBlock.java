@@ -11,4 +11,8 @@ public class StairBlock extends StairsBlock {
         super(block::getDefaultState, properties);
         this.setRegistryName(block.getRegistryName().getPath() + "_stairs");
     }
+    public StairBlock(Block block, String registryName, Properties properties){
+        super(block::getDefaultState, properties);
+        this.setRegistryName(registryName);
+    }
 }
