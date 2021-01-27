@@ -62,5 +62,8 @@
   "block.abstoneedition.charred_planks": "Charred Planks",
   "block.abstoneedition.charred_slab": "Charred Slab",
   "block.abstoneedition.charred_stairs": "Charred Stairs",
-  "block.abstoneedition.watery_pebbles": "Watery Pebbles"
+  "block.abstoneedition.watery_pebbles": "Watery Pebbles",
+  "block.abstoneedition.gray_bricks": "Gray Bricks",
+  "block.abstoneedition.gray_bricks_slab": "Gray Brick Slab",
+  "block.abstoneedition.gray_bricks_stairs": "Gray Brick Stairs"
 }

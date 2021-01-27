@@ -1,24 +1,22 @@
 package com.supermartijn642.additionalblocks.stone;
 
-import net.minecraftforge.common.ForgeConfigSpec;
-import org.apache.commons.lang3.tuple.Pair;
+import com.supermartijn642.configlib.ModConfigBuilder;
+
+import java.util.function.Supplier;
 
 /**
  * Created 11/30/2020 by SuperMartijn642
  */
 public class AdditionalBlocksConfig {
 
-    static{
-        Pair<AdditionalBlocksConfig,ForgeConfigSpec> pair = new ForgeConfigSpec.Builder().configure(AdditionalBlocksConfig::new);
-        CONFIG_SPEC = pair.getRight();
-        INSTANCE = pair.getLeft();
+    public static final Supplier<Boolean> enableMarble;
+
+    static {
+        ModConfigBuilder config = new ModConfigBuilder("abstoneedition");
+        config.push("general");
+        enableMarble = config.comment("if true, Marble is enabled").define("enableMarble", true);
+        config.pop();
+
+        config.build();
     }
-
-    public static final ForgeConfigSpec CONFIG_SPEC;
-    public static final AdditionalBlocksConfig INSTANCE;
-
-    private AdditionalBlocksConfig(ForgeConfigSpec.Builder builder){
-        builder.push("General");
-    }
-
 }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SC",
+    "CS"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:bricks"
+    },
+    "C": {
+      "item": "minecraft:gray_dye"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:mud",
+    "count": 2
+  }
+}
