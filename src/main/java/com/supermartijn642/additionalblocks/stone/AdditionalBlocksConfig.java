@@ -9,12 +9,15 @@ import java.util.function.Supplier;
  */
 public class AdditionalBlocksConfig {
 
+    public static void create(){
+    }
+
     public static final Supplier<Boolean> enableMarble;
 
     static {
         ModConfigBuilder config = new ModConfigBuilder("abstoneedition");
         config.push("general");
-        enableMarble = config.comment("if true, Marble is enabled").define("enableMarble", true);
+        enableMarble = config.dontSync().comment("if true, Marble is enabled").define("enableMarble", true);
         config.pop();
 
         config.build();

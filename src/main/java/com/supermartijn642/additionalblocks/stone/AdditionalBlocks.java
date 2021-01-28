@@ -97,7 +97,9 @@ public class AdditionalBlocks {
     public static Block gray_bricks;
     public static Block gray_bricks_stairs;
     public static Block gray_bricks_slab;
+
     public AdditionalBlocks() {
+        AdditionalBlocksConfig.create();
     }
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)

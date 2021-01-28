@@ -95,5 +95,5 @@ dependencies {
     // Block Renderer
     runtimeOnly fg.deobf("curse.maven:block-renderer:3149419")
     // Config Lib
-    compile fg.deobf("curse.maven:supermartijn642s-config-lib:3176341")
+    compile fg.deobf("curse.maven:supermartijn642s-config-lib:3183940")
 }
