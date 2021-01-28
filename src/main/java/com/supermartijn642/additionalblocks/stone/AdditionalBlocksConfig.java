@@ -13,11 +13,14 @@ public class AdditionalBlocksConfig {
     }
 
     public static final Supplier<Boolean> enableMarble;
+    public static final Supplier<Boolean> enableSmoothMarble;
 
     static {
         ModConfigBuilder config = new ModConfigBuilder("abstoneedition");
-        config.push("general");
-        enableMarble = config.dontSync().comment("if true, Marble is enabled").define("enableMarble", true);
+        config.push("blocks");
+        enableMarble = config.comment("if true, Marble is enabled").define("enableMarble", true);
+        enableSmoothMarble = config.comment("if true, Smooth Marble is enabled").define("enableSmoothMarble", true);
+//        enableMarble = config.dontSync().comment("if true, Marble is enabled").define("enableMarble", true);
         config.pop();
 
         config.build();

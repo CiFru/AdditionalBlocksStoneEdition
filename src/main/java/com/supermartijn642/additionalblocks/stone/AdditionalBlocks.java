@@ -30,25 +30,37 @@ public class AdditionalBlocks {
     private static final List<Item> items = new ArrayList<>();
 
 
-    public static Block marble;
-    public static Block smooth_marble;
-    public static Block stone_brick_block;
-    public static Block marble_bricks;
-    public static Block diorite_bricks;
-    public static Block andesite_bricks;
-    public static Block granite_bricks;
-    public static Block water_stone;
-    public static Block marble_pillar;
-    public static Block bloodstone;
-    public static Block smooth_bloodstone;
-    public static Block bloodstone_bricks;
-    public static Block black_marble;
-    public static Block smooth_black_marble;
-    public static Block black_marble_bricks;
-    public static Block mud;
-    public static Block brown_bricks;
-    public static Block volcanic_stone;
-    public static Block volcanic_stone_bricks;
+    public static BasicBlock marble;
+    public static BasicBlock smooth_marble;
+    public static BasicBlock stone_brick_block;
+    public static BasicBlock marble_bricks;
+    public static BasicBlock diorite_bricks;
+    public static BasicBlock andesite_bricks;
+    public static BasicBlock granite_bricks;
+    public static BasicBlock water_stone;
+    public static BasicBlock marble_pillar;
+    public static BasicBlock bloodstone;
+    public static BasicBlock smooth_bloodstone;
+    public static BasicBlock bloodstone_bricks;
+    public static BasicBlock black_marble;
+    public static BasicBlock smooth_black_marble;
+    public static BasicBlock black_marble_bricks;
+    public static BasicBlock mud;
+    public static BasicBlock brown_bricks;
+    public static BasicBlock volcanic_stone;
+    public static BasicBlock volcanic_stone_bricks;
+    public static BasicBlock gray_bricks;
+    public static BasicBlock stone_path_curved;
+    public static BasicBlock stone_path_straight;
+    public static BasicBlock stone_pattern;
+    public static BasicBlock asphalt;
+    public static BasicBlock limestone;
+    public static BasicBlock limestone_bricks;
+    public static BasicBlock pebbles;
+    public static BasicBlock charred_log;
+    public static BasicBlock charred_wood;
+    public static BasicBlock charred_planks;
+    public static BasicBlock watery_pebbles;
     public static Block marble_stairs;
     public static Block andesite_bricks_stairs;
     public static Block black_marble_stairs;
@@ -81,20 +93,8 @@ public class AdditionalBlocks {
     public static Block stone_brick_block_slab;
     public static Block volcanic_stone_slab;
     public static Block volcanic_stone_bricks_slab;
-    public static Block stone_path_curved;
-    public static Block stone_path_straight;
-    public static Block stone_pattern;
-    public static Block asphalt;
-    public static Block limestone;
-    public static Block limestone_bricks;
-    public static Block pebbles;
-    public static Block charred_log;
-    public static Block charred_wood;
-    public static Block charred_planks;
     public static Block charred_stairs;
     public static Block charred_slab;
-    public static Block watery_pebbles;
-    public static Block gray_bricks;
     public static Block gray_bricks_stairs;
     public static Block gray_bricks_slab;
 
@@ -107,10 +107,10 @@ public class AdditionalBlocks {
         @SubscribeEvent
         public static void onBlockRegistry(final RegistryEvent.Register<Block> e) {
 
-            marble = registerBlock(e, new BasicBlock("marble", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE).hardnessAndResistance(0.8f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
+            marble = registerBlock(e, new BasicBlock("marble",AdditionalBlocksConfig.enableMarble, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE).hardnessAndResistance(0.8f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
             marble_stairs = registerBlock(e, new StairBlock(marble,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE).hardnessAndResistance(0.8f,0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
             marble_slab = registerBlock(e, new SlabBlock(marble,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE).hardnessAndResistance(0.8f,0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
-            smooth_marble = registerBlock(e, new BasicBlock("smooth_marble", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE).hardnessAndResistance(0.8f,0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
+            smooth_marble = registerBlock(e, new BasicBlock("smooth_marble",AdditionalBlocksConfig.enableSmoothMarble, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE).hardnessAndResistance(0.8f,0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
             stone_brick_block = registerBlock(e, new BasicBlock("stone_brick_block", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(1.5f,6).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
             marble_bricks = registerBlock(e, new BasicBlock("marble_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).sound(SoundType.STONE).hardnessAndResistance(0.8f,0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
             diorite_bricks = registerBlock(e, new BasicBlock("diorite_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.LIGHT_GRAY).sound(SoundType.STONE).hardnessAndResistance(1.5f,6).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
@@ -128,7 +128,6 @@ public class AdditionalBlocks {
             brown_bricks = registerBlock(e, new BasicBlock("brown_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BROWN).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
             volcanic_stone = registerBlock(e, new BasicBlock("volcanic_stone", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
             volcanic_stone_bricks = registerBlock(e, new BasicBlock("volcanic_stone_bricks", AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
-
             andesite_bricks_stairs = registerBlock(e, new StairBlock(andesite_bricks,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
             black_marble_stairs = registerBlock(e, new StairBlock(black_marble,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.STONE).hardnessAndResistance(0.8f,0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
             black_marble_bricks_stairs = registerBlock(e, new StairBlock(black_marble_bricks,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.STONE).hardnessAndResistance(0.8f,0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
@@ -144,7 +143,6 @@ public class AdditionalBlocks {
             stone_brick_block_stairs = registerBlock(e, new StairBlock(stone_brick_block,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
             volcanic_stone_stairs = registerBlock(e, new StairBlock(volcanic_stone,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
             volcanic_stone_bricks_stairs = registerBlock(e, new StairBlock(volcanic_stone_bricks,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
-
             andesite_bricks_slab = registerBlock(e, new SlabBlock(andesite_bricks,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
             black_marble_slab = registerBlock(e, new SlabBlock(black_marble,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.STONE).hardnessAndResistance(0.8f,0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
             black_marble_bricks_slab = registerBlock(e, new SlabBlock(black_marble_bricks,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.STONE).hardnessAndResistance(0.8f,0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
