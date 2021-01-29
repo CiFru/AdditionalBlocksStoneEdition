@@ -55,6 +55,6 @@ description='''Additional Blocks: Stone Edition adds stone-themed blocks to your
 [[dependencies.abstoneedition]]
     modId="supermartijn642configlib"
     mandatory=true
-    versionRange="[1.0.1,)"
+    versionRange="[1.0.3,)"
     ordering="NONE"
     side="BOTH"

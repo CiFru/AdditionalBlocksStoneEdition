@@ -6,6 +6,8 @@ import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.StateContainer;
 import net.minecraft.util.Direction;
 
+import java.util.function.Supplier;
+
 /**
  * Created 1/15/2021 by SuperMartijn642
  */
@@ -13,8 +15,8 @@ public class HorizontalRotationBlock extends BasicBlock {
 
     private final boolean reversePlacement;
 
-    public HorizontalRotationBlock(String registryName, boolean reversePlacement, Properties properties){
-        super(registryName, properties);
+    public HorizontalRotationBlock(String registryName, Supplier<Boolean> configValue, boolean reversePlacement, Properties properties){
+        super(registryName, configValue, properties);
         this.reversePlacement = reversePlacement;
         this.setDefaultState(this.getDefaultState().with(BlockProperties.HORIZONTAL_FACING, Direction.NORTH));
     }
