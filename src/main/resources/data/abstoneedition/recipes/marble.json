@@ -1,11 +1,5 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "conditions": [
-    {
-      "type": "abstoneedition:isitemenabled",
-      "item": "abstoneedition:marble"
-    }
-  ],
+  "type": "abstoneedition:shaped",
   "pattern": [
     "X#X",
     "#X#",
