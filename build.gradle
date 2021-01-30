@@ -98,4 +98,5 @@ dependencies {
 
     // Config Lib
     compile fg.deobf("curse.maven:supermartijn642s-config-lib:3185875")
+    runtimeOnly fg.deobf("curse.maven:supermartijn642s-config-lib:3185875")
 }
