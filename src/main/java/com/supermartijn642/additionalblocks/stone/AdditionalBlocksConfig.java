@@ -66,8 +66,6 @@ public class AdditionalBlocksConfig {
         enablePebbles = config.comment("if true, Pebble Blocks are enabled").define("enablePebbles", true);
         enableCharredBlocks = config.comment("if true, Charred Blocks are enabled").define("enableCharredBlocks", true);
         enableGrayBricks = config.comment("if true, Gray Brick Blocks are enabled").define("enableGrayBricks", true);
-//        enableMud = config.comment("if true, Mud is enabled").define("enableMud", true);
-//        enableMarble = config.dontSync().comment("if true, Marble is enabled").define("enableMarble", true);
         config.pop();
 
         config.build();

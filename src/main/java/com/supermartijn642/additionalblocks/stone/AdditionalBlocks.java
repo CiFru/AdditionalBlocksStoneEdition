@@ -103,6 +103,10 @@ public class AdditionalBlocks {
     public static Block charred_slab;
     public static Block gray_bricks_stairs;
     public static Block gray_bricks_slab;
+    public static Block limestone_slab;
+    public static Block limestone_stairs;
+    public static Block asphalt_slab;
+    public static Block asphalt_stairs;
 
     public AdditionalBlocks() {
         AdditionalBlocksConfig.create();
@@ -180,6 +184,10 @@ public class AdditionalBlocks {
             gray_bricks = registerBlock(e, new BasicBlock("gray_bricks",AdditionalBlocksConfig.enableGrayBricks, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
             gray_bricks_stairs = registerBlock(e, new StairBlock(gray_bricks,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
             gray_bricks_slab = registerBlock(e, new SlabBlock(gray_bricks,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            limestone_slab = registerBlock(e, new SlabBlock(limestone,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.YELLOW).sound(SoundType.NETHER_BRICK).hardnessAndResistance(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
+            limestone_stairs = registerBlock(e, new StairBlock(limestone,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.YELLOW).sound(SoundType.NETHER_BRICK).hardnessAndResistance(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
+            asphalt_slab = registerBlock(e, new SlabBlock(asphalt,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.5f,6).harvestTool(ToolType.PICKAXE).harvestLevel(2).setRequiresTool()));
+            asphalt_stairs = registerBlock(e, new StairBlock(asphalt,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(2).setRequiresTool()));
         }
 
         @SubscribeEvent

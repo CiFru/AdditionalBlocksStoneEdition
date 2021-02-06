@@ -1,0 +1,15 @@
+{
+  "type": "abstoneedition:shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "abstoneedition:limestone"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:limestone_slab",
+    "count": 6
+  }
+}

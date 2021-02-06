@@ -1,0 +1,15 @@
+{
+  "type": "abstoneedition:shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "abstoneedition:asphalt"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:asphalt_slab",
+    "count": 6
+  }
+}

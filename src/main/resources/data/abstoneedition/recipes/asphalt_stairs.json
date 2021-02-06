@@ -1,0 +1,17 @@
+{
+  "type": "abstoneedition:shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "abstoneedition:asphalt"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:asphalt_stairs",
+    "count": 4
+  }
+}

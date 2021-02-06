@@ -65,5 +65,9 @@
   "block.abstoneedition.watery_pebbles": "Watery Pebbles",
   "block.abstoneedition.gray_bricks": "Gray Bricks",
   "block.abstoneedition.gray_bricks_slab": "Gray Brick Slab",
-  "block.abstoneedition.gray_bricks_stairs": "Gray Brick Stairs"
+  "block.abstoneedition.gray_bricks_stairs": "Gray Brick Stairs",
+  "block.abstoneedition.limestone_slab": "Limestone Slab",
+  "block.abstoneedition.limestone_stairs": "Limestone Stairs",
+  "block.abstoneedition.asphalt_slab": "Asphalt Slab",
+  "block.abstoneedition.asphalt_stairs": "Asphalt Stairs"
 }
