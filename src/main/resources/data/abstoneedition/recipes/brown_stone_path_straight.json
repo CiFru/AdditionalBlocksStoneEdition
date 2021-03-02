@@ -1,0 +1,9 @@
+{
+  "type": "abstoneedition:furnace",
+  "ingredient": {
+    "item": "abstoneedition:stone_path_straight"
+  },
+  "result": "abstoneedition:brown_stone_path_straight",
+  "experience": 0.2,
+  "cookingtime": 400
+}

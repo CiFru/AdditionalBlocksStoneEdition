@@ -44,6 +44,7 @@ public class AdditionalBlocksConfig {
 //    public static final Supplier<Boolean> enableCharredWood;
 //    public static final Supplier<Boolean> enableCharredPlanks;
 //    public static final Supplier<Boolean> enableWateryPebbles;
+    public static final Supplier<Boolean> enableStoneTiles;
 
     static {
         ModConfigBuilder config = new ModConfigBuilder("abstoneedition");
@@ -66,6 +67,7 @@ public class AdditionalBlocksConfig {
         enablePebbles = config.comment("if true, Pebble Blocks are enabled").define("enablePebbles", true);
         enableCharredBlocks = config.comment("if true, Charred Blocks are enabled").define("enableCharredBlocks", true);
         enableGrayBricks = config.comment("if true, Gray Brick Blocks are enabled").define("enableGrayBricks", true);
+        enableStoneTiles = config.comment("if true, Stone Tiles are enabled").define("enableStoneTiles", true);
         config.pop();
 
         config.build();

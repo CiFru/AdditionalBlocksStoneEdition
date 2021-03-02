@@ -69,5 +69,10 @@
   "block.abstoneedition.limestone_slab": "石灰岩半磚",
   "block.abstoneedition.limestone_stairs": "石灰岩階梯",
   "block.abstoneedition.asphalt_slab": "瀝青半磚",
-  "block.abstoneedition.asphalt_stairs": "瀝青階梯"
+  "block.abstoneedition.asphalt_stairs": "瀝青階梯",
+  "block.abstoneedition.stone_tiles": "石材瓷砖",
+  "block.abstoneedition.brown_stone_path_straight": "Brown Straight Stone Path",
+  "block.abstoneedition.stone_stone_path_curved": "Brown Curved Stone Path",
+  "block.abstoneedition.brown_stone_pattern": "Brown Stone Pattern",
+  "block.abstoneedition.brown_stone_tiles": "Brown Stone Tiles"
 }
