@@ -53,8 +53,8 @@
   "block.abstoneedition.stone_path_curved": "Curved Stone Path",
   "block.abstoneedition.stone_path_straight": "Stone Path",
   "block.abstoneedition.stone_pattern": "Stone Pattern",
-  "block.abstoneedition.asphalt": "Asphalt",
-  "block.abstoneedition.limestone": "Limestone",
+  "block.abstoneedition.asphalt": "Asphalt Block",
+  "block.abstoneedition.limestone": "Limestone Block",
   "block.abstoneedition.limestone_bricks": "Limestone Bricks",
   "block.abstoneedition.pebbles": "Pebbles",
   "block.abstoneedition.charred_log": "Charred Log",
@@ -74,5 +74,11 @@
   "block.abstoneedition.brown_stone_path_straight": "Brown Straight Stone Path",
   "block.abstoneedition.brown_stone_path_curved": "Brown Curved Stone Path",
   "block.abstoneedition.brown_stone_pattern": "Brown Stone Pattern",
-  "block.abstoneedition.brown_stone_tiles": "Brown Stone Tiles"
+  "block.abstoneedition.brown_stone_tiles": "Brown Stone Tiles",
+  "block.abstoneedition.smooth_glowstone": "Smooth Glowstone Block",
+  "block.abstoneedition.smooth_glowstone_stairs": "Smooth Glowstone Stairs",
+  "block.abstoneedition.smooth_glowstone_slab": "Smooth Glowstone Slab",
+  "block.abstoneedition.glowstone_bricks": "Glowstone Brick Block",
+  "block.abstoneedition.glowstone_bricks_slab": "Glowstone Brick Slab",
+  "block.abstoneedition.glowstone_bricks_stairs": "Glowstone Brick Stairs"
 }

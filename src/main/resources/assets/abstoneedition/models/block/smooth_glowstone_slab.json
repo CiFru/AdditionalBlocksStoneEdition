@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "abstoneedition:smooth_glowstone",
+    "top": "abstoneedition:smooth_glowstone",
+    "side": "abstoneedition:smooth_glowstone"
+  }
+}

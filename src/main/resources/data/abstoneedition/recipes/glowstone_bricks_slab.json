@@ -1,0 +1,15 @@
+{
+  "type": "abstoneedition:shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "abstoneedition:glowstone_bricks"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:glowstone_bricks_slab",
+    "count": 6
+  }
+}

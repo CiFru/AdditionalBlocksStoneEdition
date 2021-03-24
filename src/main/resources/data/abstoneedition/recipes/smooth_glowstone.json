@@ -1,0 +1,9 @@
+{
+  "type": "abstoneedition:furnace",
+  "ingredient": {
+    "item": "minecraft:glowstone"
+  },
+  "result": "abstoneedition:smooth_glowstone",
+  "experience": 0.5,
+  "cookingtime": 250
+}

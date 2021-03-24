@@ -112,6 +112,14 @@ public class AdditionalBlocks {
     public static Block brown_stone_path_curved;
     public static Block brown_stone_pattern;
     public static Block brown_stone_tiles;
+    public static BasicBlock smooth_glowstone;
+    public static Block smooth_glowstone_stairs;
+    public static Block smooth_glowstone_slab;
+    public static Block glowstone_stairs;
+    public static Block glowstone_slab;
+    public static BasicBlock glowstone_bricks;
+    public static Block glowstone_bricks_stairs;
+    public static Block glowstone_bricks_slab;
 
     public AdditionalBlocks() {
         AdditionalBlocksConfig.create();
@@ -173,8 +181,8 @@ public class AdditionalBlocks {
             stone_brick_block_slab = registerBlock(e, new SlabBlock(stone_brick_block,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
             volcanic_stone_slab = registerBlock(e, new SlabBlock(volcanic_stone,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
             volcanic_stone_bricks_slab = registerBlock(e, new SlabBlock(volcanic_stone_bricks,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
-            stone_path_straight = registerBlock(e, new HorizontalRotationBlock("stone_path_straight", AdditionalBlocksConfig.enableStonePath, true, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
-            stone_path_curved = registerBlock(e, new HorizontalRotationBlock("stone_path_curved", AdditionalBlocksConfig.enableStonePath,true, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            stone_path_straight = registerBlock(e, new HorizontalRotationBlock("stone_path_straight", AdditionalBlocksConfig.enableStonePath, true, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            stone_path_curved = registerBlock(e, new HorizontalRotationBlock("stone_path_curved", AdditionalBlocksConfig.enableStonePath,true, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
             stone_pattern = registerBlock(e, new BasicBlock("stone_pattern",AdditionalBlocksConfig.enableStonePattern, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
             limestone = registerBlock(e, new BasicBlock("limestone",AdditionalBlocksConfig.enableLimestone, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.YELLOW).sound(SoundType.NETHER_BRICK).hardnessAndResistance(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
             limestone_bricks = registerBlock(e, new BasicBlock("limestone_bricks",AdditionalBlocksConfig.enableLimestone, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.YELLOW).sound(SoundType.NETHER_BRICK).hardnessAndResistance(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
@@ -194,10 +202,16 @@ public class AdditionalBlocks {
             asphalt_slab = registerBlock(e, new SlabBlock(asphalt,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.5f,6).harvestTool(ToolType.PICKAXE).harvestLevel(2).setRequiresTool()));
             asphalt_stairs = registerBlock(e, new StairBlock(asphalt,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(2).setRequiresTool()));
             stone_tiles = registerBlock(e, new BasicBlock("stone_tiles",AdditionalBlocksConfig.enableStoneTiles, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
-            brown_stone_path_curved = registerBlock(e, new HorizontalRotationBlock("brown_stone_path_curved", AdditionalBlocksConfig.enableStonePath, true, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BROWN).sound(SoundType.STONE).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
-            brown_stone_path_straight = registerBlock(e, new HorizontalRotationBlock("brown_stone_path_straight", AdditionalBlocksConfig.enableStonePath, true, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BROWN).sound(SoundType.STONE).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            brown_stone_path_curved = registerBlock(e, new HorizontalRotationBlock("brown_stone_path_curved", AdditionalBlocksConfig.enableStonePath, true, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BROWN).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            brown_stone_path_straight = registerBlock(e, new HorizontalRotationBlock("brown_stone_path_straight", AdditionalBlocksConfig.enableStonePath, true, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BROWN).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
             brown_stone_pattern = registerBlock(e, new BasicBlock("brown_stone_pattern",AdditionalBlocksConfig.enableStonePattern, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BROWN).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
             brown_stone_tiles = registerBlock(e, new BasicBlock("brown_stone_tiles",AdditionalBlocksConfig.enableStoneTiles, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BROWN).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            smooth_glowstone = registerBlock(e, new BasicBlock("smooth_glowstone",AdditionalBlocksConfig.enableSmoothGlowstone, AbstractBlock.Properties.create(Material.GLASS, MaterialColor.YELLOW).sound(SoundType.GLASS).hardnessAndResistance(0.2f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setLightLevel(state -> 15)));
+            smooth_glowstone_stairs = registerBlock(e, new StairBlock(smooth_glowstone,AbstractBlock.Properties.create(Material.GLASS, MaterialColor.YELLOW).sound(SoundType.GLASS).hardnessAndResistance(0.2f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setLightLevel(state -> 15)));
+            smooth_glowstone_slab = registerBlock(e, new SlabBlock(smooth_glowstone,AbstractBlock.Properties.create(Material.GLASS, MaterialColor.YELLOW).sound(SoundType.GLASS).hardnessAndResistance(0.2f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setLightLevel(state -> 15)));
+            glowstone_bricks = registerBlock(e, new BasicBlock("glowstone_bricks",AdditionalBlocksConfig.enableGlowstoneBricks, AbstractBlock.Properties.create(Material.GLASS, MaterialColor.YELLOW).sound(SoundType.GLASS).hardnessAndResistance(0.4f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setLightLevel(state -> 15)));
+            glowstone_bricks_stairs = registerBlock(e, new StairBlock(glowstone_bricks,AbstractBlock.Properties.create(Material.GLASS, MaterialColor.YELLOW).sound(SoundType.GLASS).hardnessAndResistance(0.4f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setLightLevel(state -> 15)));
+            glowstone_bricks_slab = registerBlock(e, new SlabBlock(glowstone_bricks,AbstractBlock.Properties.create(Material.GLASS, MaterialColor.YELLOW).sound(SoundType.GLASS).hardnessAndResistance(0.4f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setLightLevel(state -> 15)));
         }
 
         @SubscribeEvent

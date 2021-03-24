@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "abstoneedition:block/smooth_glowstone_slab"
+    },
+    "type=double": {
+      "model": "abstoneedition:block/smooth_glowstone"
+    },
+    "type=top": {
+      "model": "abstoneedition:block/smooth_glowstone_slab_top"
+    }
+  }
+}
