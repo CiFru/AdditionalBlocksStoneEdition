@@ -61,6 +61,7 @@ public class AdditionalBlocks {
     public static BasicBlock stone_pattern;
     public static BasicBlock asphalt;
     public static BasicBlock limestone;
+    public static BasicBlock smooth_limestone;
     public static BasicBlock limestone_bricks;
     public static BasicBlock pebbles;
     public static BasicBlock charred_log;
@@ -185,6 +186,7 @@ public class AdditionalBlocks {
             stone_path_curved = registerBlock(e, new HorizontalRotationBlock("stone_path_curved", AdditionalBlocksConfig.enableStonePath,true, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
             stone_pattern = registerBlock(e, new BasicBlock("stone_pattern",AdditionalBlocksConfig.enableStonePattern, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
             limestone = registerBlock(e, new BasicBlock("limestone",AdditionalBlocksConfig.enableLimestone, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.YELLOW).sound(SoundType.NETHER_BRICK).hardnessAndResistance(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
+            smooth_limestone = registerBlock(e, new BasicBlock("smooth_limestone",AdditionalBlocksConfig.enableLimestone, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.YELLOW).sound(SoundType.NETHER_BRICK).hardnessAndResistance(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
             limestone_bricks = registerBlock(e, new BasicBlock("limestone_bricks",AdditionalBlocksConfig.enableLimestone, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.YELLOW).sound(SoundType.NETHER_BRICK).hardnessAndResistance(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
             asphalt = registerBlock(e, new BasicBlock("asphalt",AdditionalBlocksConfig.enableAsphalt, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.5f,6).harvestTool(ToolType.PICKAXE).harvestLevel(2).setRequiresTool()));
             pebbles = registerBlock(e, new BasicBlock("pebbles",AdditionalBlocksConfig.enablePebbles, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.LIGHT_GRAY).sound(SoundType.STONE).hardnessAndResistance(2.5f,6).harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));

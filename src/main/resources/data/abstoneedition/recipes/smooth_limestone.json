@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "abstoneedition:smooth_limestone"
+      "item": "abstoneedition:limestone"
     }
   },
   "result": {
-    "item": "abstoneedition:limestone_bricks",
+    "item": "abstoneedition:smooth_limestone",
     "count": 4
   }
 }
