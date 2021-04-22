@@ -5,9 +5,12 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.world.gen.placement.Placement;
+import net.minecraft.world.gen.placement.TopSolidRangeConfig;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
@@ -22,35 +25,36 @@ import net.minecraftforge.registries.ForgeRegistries;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class WorldGeneration {
 
-//    public static ConfiguredFeature<?,?> ore_marble;
+    public static ConfiguredFeature<?,?> ore_marble;
+//
+    public static void onFeatureRegistry(final RegistryEvent.Register<Feature<?>> e){
+        ore_marble = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, AdditionalBlocks.marble.getDefaultState(), 20)).withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 64, 100)));
+        ore_marble.range(80).square().func_242731_b(10);
+        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE,
+            new ResourceLocation("abstoneedition", "ore_marble"),
+            ore_marble
+        );
+    }
 
-//    public static void onFeatureRegistry(final RegistryEvent.Register<Feature<?>> e){
-//        ore_marble = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, AdditionalBlocks.smooth_marble.getDefaultState(), 33));
-//        ore_marble.range(80).square().func_242731_b(10);
-//        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE,
-//            new ResourceLocation("abstoneedition", "ore_marble"),
-//            ore_marble
-//        );
-//    }
+    @SubscribeEvent(priority = EventPriority.LOW)
+    public static void onBiomeLoad(BiomeLoadingEvent e){
+        RegistryKey<Biome> biomeKey = RegistryKey.getOrCreateKey(ForgeRegistries.Keys.BIOMES, e.getName());
 
-//    @SubscribeEvent(priority = EventPriority.LOW)
-//    public static void onBiomeLoad(BiomeLoadingEvent e){
-//        RegistryKey<Biome> biomeKey = RegistryKey.getOrCreateKey(ForgeRegistries.Keys.BIOMES, e.getName());
-//
-//        // all overworld biomes
-//        if(BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(biomeKey)){
-//
-//        }
-//
-//        // all nether biomes
-//        if(BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(biomeKey)){
-//
-//        }
-//
-//        // all end biomes
-//        if(BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(biomeKey)){
-//
-//        }
-//    }
+        // all overworld biomes
+        if(BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(biomeKey)){
+            e.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,ore_marble);
+
+        }
+
+        // all nether biomes
+        if(BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(biomeKey)){
+
+        }
+
+        // all end biomes
+        if(BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(biomeKey)){
+
+        }
+    }
 
 }
