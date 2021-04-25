@@ -81,5 +81,7 @@
   "block.abstoneedition.smooth_glowstone_slab": "Laje de Pedra Luminosa Pólida",
   "block.abstoneedition.glowstone_bricks": "Tijolos de Pedra Luminosa",
   "block.abstoneedition.glowstone_bricks_slab": "Laje de Tijolos de Pedra Luminosa",
-  "block.abstoneedition.glowstone_bricks_stairs": "Escadas de Tijolos de Pedra Luminosa"
+  "block.abstoneedition.glowstone_bricks_stairs": "Escadas de Tijolos de Pedra Luminosa",
+  "block.abstoneedition.copper_ore": "Copper Ore",
+  "block.abstoneedition.silver_ore": "Silver Ore"
 }

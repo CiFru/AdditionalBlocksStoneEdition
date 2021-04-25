@@ -121,6 +121,8 @@ public class AdditionalBlocks {
     public static BasicBlock glowstone_bricks;
     public static Block glowstone_bricks_stairs;
     public static Block glowstone_bricks_slab;
+    public static Block silver_ore;
+    public static Block copper_ore;
 
     public AdditionalBlocks() {
         AdditionalBlocksConfig.create();
@@ -214,6 +216,8 @@ public class AdditionalBlocks {
             glowstone_bricks = registerBlock(e, new BasicBlock("glowstone_bricks",AdditionalBlocksConfig.enableGlowstoneBricks, AbstractBlock.Properties.create(Material.GLASS, MaterialColor.YELLOW).sound(SoundType.GLASS).hardnessAndResistance(0.4f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setLightLevel(state -> 15)));
             glowstone_bricks_stairs = registerBlock(e, new StairBlock(glowstone_bricks,AbstractBlock.Properties.create(Material.GLASS, MaterialColor.YELLOW).sound(SoundType.GLASS).hardnessAndResistance(0.4f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setLightLevel(state -> 15)));
             glowstone_bricks_slab = registerBlock(e, new SlabBlock(glowstone_bricks,AbstractBlock.Properties.create(Material.GLASS, MaterialColor.YELLOW).sound(SoundType.GLASS).hardnessAndResistance(0.4f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setLightLevel(state -> 15)));
+            copper_ore = registerBlock(e, new OorBlock("copper_ore", AdditionalBlocksConfig.enableCopper, AbstractBlock.Properties.create(Material.ROCK).setRequiresTool().hardnessAndResistance(3.0F, 3.0F)));
+            silver_ore = registerBlock(e, new OorBlock("silver_ore", AdditionalBlocksConfig.enableSilver, AbstractBlock.Properties.create(Material.ROCK).setRequiresTool().hardnessAndResistance(3.0F, 3.0F)));
         }
 
         @SubscribeEvent

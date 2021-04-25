@@ -81,5 +81,7 @@
   "block.abstoneedition.smooth_glowstone_slab": "Smooth Glowstone Slab",
   "block.abstoneedition.glowstone_bricks": "Glowstone Brick Block",
   "block.abstoneedition.glowstone_bricks_slab": "Glowstone Brick Slab",
-  "block.abstoneedition.glowstone_bricks_stairs": "Glowstone Brick Stairs"
+  "block.abstoneedition.glowstone_bricks_stairs": "Glowstone Brick Stairs",
+  "block.abstoneedition.copper_ore": "Copper Ore",
+  "block.abstoneedition.silver_ore": "Silver Ore"
 }
