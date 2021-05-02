@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "abstoneedition:silver_nugget"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:silver_ingot"
+  }
+}

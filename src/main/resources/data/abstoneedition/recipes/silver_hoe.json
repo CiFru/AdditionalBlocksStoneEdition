@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    " #",
+    " #"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "abstoneedition:silver_ingot"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:silver_hoe"
+  }
+}

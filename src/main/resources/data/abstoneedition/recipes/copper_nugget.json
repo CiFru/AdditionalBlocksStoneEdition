@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "abstoneedition:copper_ingot"
+    }
+  ],
+  "result": {
+    "item": "abstoneedition:copper_nugget",
+    "count": 9
+  }
+}

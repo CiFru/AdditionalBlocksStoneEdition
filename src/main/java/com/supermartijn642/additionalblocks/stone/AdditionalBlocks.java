@@ -1,5 +1,6 @@
 package com.supermartijn642.additionalblocks.stone;
 
+import com.supermartijn642.additionalblocks.stone.ToolItemClasses.*;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -19,6 +20,7 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import org.lwjgl.system.CallbackI;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -123,6 +125,8 @@ public class AdditionalBlocks {
     public static Block glowstone_bricks_slab;
     public static Block silver_ore;
     public static Block copper_ore;
+    public static BasicBlock silver_block;
+    public static BasicBlock copper_block;
 
     public AdditionalBlocks() {
         AdditionalBlocksConfig.create();
@@ -218,6 +222,8 @@ public class AdditionalBlocks {
             glowstone_bricks_slab = registerBlock(e, new SlabBlock(glowstone_bricks,AbstractBlock.Properties.create(Material.GLASS, MaterialColor.YELLOW).sound(SoundType.GLASS).hardnessAndResistance(0.4f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).setLightLevel(state -> 15)));
             copper_ore = registerBlock(e, new OorBlock("copper_ore", AdditionalBlocksConfig.enableCopper, AbstractBlock.Properties.create(Material.ROCK).setRequiresTool().hardnessAndResistance(3.0F, 3.0F)));
             silver_ore = registerBlock(e, new OorBlock("silver_ore", AdditionalBlocksConfig.enableSilver, AbstractBlock.Properties.create(Material.ROCK).setRequiresTool().hardnessAndResistance(3.0F, 3.0F)));
+            copper_block = registerBlock(e, new BasicBlock("copper_block",AdditionalBlocksConfig.enableCopper, AbstractBlock.Properties.create(Material.IRON, MaterialColor.IRON).setRequiresTool().hardnessAndResistance(5.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).sound(SoundType.METAL)));
+            silver_block = registerBlock(e, new BasicBlock("silver_block",AdditionalBlocksConfig.enableSilver, AbstractBlock.Properties.create(Material.IRON, MaterialColor.IRON).setRequiresTool().hardnessAndResistance(5.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).sound(SoundType.METAL)));
         }
 
         @SubscribeEvent
@@ -228,6 +234,20 @@ public class AdditionalBlocks {
         public static void onItemRegistry(final RegistryEvent.Register<Item> e) {
             for (Block block : blocks)
                 registerItem(e, new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
+            e.getRegistry().register(new OreItem("copper_ingot", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ItemGroup.MATERIALS)));
+            e.getRegistry().register(new OreItem("silver_ingot", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ItemGroup.MATERIALS)));
+            e.getRegistry().register(new OreItem("copper_nugget", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ItemGroup.MATERIALS)));
+            e.getRegistry().register(new OreItem("silver_nugget", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ItemGroup.MATERIALS)));
+            e.getRegistry().register(new BijlItem("copper_axe", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ItemGroup.TOOLS), 6.0F, -2.5F));
+            e.getRegistry().register(new BijlItem("silver_axe", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ItemGroup.TOOLS), 6.0F, -2.5F));
+            e.getRegistry().register(new HouweelItem("copper_pickaxe", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ItemGroup.TOOLS), 1, -1.8F));
+            e.getRegistry().register(new HouweelItem("silver_pickaxe", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ItemGroup.TOOLS), 1, -1.8F));
+            e.getRegistry().register(new SchepItem("copper_shovel", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ItemGroup.TOOLS), 1.5F, -3.0F));
+            e.getRegistry().register(new SchepItem("silver_shovel", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ItemGroup.TOOLS), 1.5F, -3.0F));
+            e.getRegistry().register(new SchoffelItem("copper_hoe", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ItemGroup.TOOLS), -2, 0.0F));
+            e.getRegistry().register(new SchoffelItem("silver_hoe", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ItemGroup.TOOLS), -2, 0.0F));
+            e.getRegistry().register(new ZwaardItem("copper_sword", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ItemGroup.TOOLS), 3, -2.4F));
+            e.getRegistry().register(new ZwaardItem("silver_sword", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ItemGroup.TOOLS), 3, -2.4F));
         }
 
         @SubscribeEvent

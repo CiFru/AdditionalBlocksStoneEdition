@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "abstoneedition:silver_ore"
+  },
+  "result": "abstoneedition:silver_ingot",
+  "experience": 0.7,
+  "cookingtime": 120
+}
