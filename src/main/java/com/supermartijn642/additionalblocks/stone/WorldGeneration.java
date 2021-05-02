@@ -1,28 +1,21 @@
 package com.supermartijn642.additionalblocks.stone;
 
-import net.minecraft.util.RegistryKey;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.Placement;
-import net.minecraft.world.gen.placement.TopSolidRangeConfig;
 import net.minecraftforge.common.BiomeDictionary;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 /**
  * Created 1/20/2021 by SuperMartijn642
  */
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class WorldGeneration {
 
     public static ConfiguredFeature<?, ?> ore_marble;
@@ -35,90 +28,66 @@ public class WorldGeneration {
     public static ConfiguredFeature<?, ?> ore_silver;
     public static ConfiguredFeature<?, ?> ore_copper;
 
-    //
-    public static void onFeatureRegistry(final RegistryEvent.Register<Feature<?>> e) {
-        ore_marble = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, AdditionalBlocks.marble.getDefaultState(), 25));
-        ore_marble = ore_marble.range(60).square().func_242731_b(6);
-        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE,
-                new ResourceLocation("abstoneedition", "ore_marble"),
-                ore_marble
-        );
-        ore_limestone = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, AdditionalBlocks.limestone.getDefaultState(), 25));
-        ore_limestone = ore_limestone.range(60).square().func_242731_b(6);
-        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE,
-                new ResourceLocation("abstoneedition", "ore_limestone"),
-                ore_limestone
-        );
-        ore_copper = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, AdditionalBlocks.copper_ore.getDefaultState(), 10));
-        ore_copper = ore_copper.range(64).square().func_242731_b(20);
-        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE,
-                new ResourceLocation("abstoneedition", "ore_copper"),
-                ore_copper
-        );
-        ore_silver = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, AdditionalBlocks.silver_ore.getDefaultState(), 9));
-        ore_silver = ore_silver.range(64).square().func_242731_b(20);
-        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE,
-                new ResourceLocation("abstoneedition", "ore_silver"),
-                ore_silver
-        );
-        ore_bloodstone = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_NETHER, AdditionalBlocks.bloodstone.getDefaultState(), 25));
-        ore_bloodstone = ore_bloodstone.range(60).square().func_242731_b(6);
-        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE,
-                new ResourceLocation("abstoneedition", "ore_bloodstone"),
-                ore_bloodstone
-        );
-        ore_black_marble = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_NETHER, AdditionalBlocks.black_marble.getDefaultState(), 25));
-        ore_black_marble = ore_black_marble.range(60).square().func_242731_b(6);
-        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE,
-                new ResourceLocation("abstoneedition", "ore_black_marble"),
-                ore_black_marble
-        );
-        ore_volcanic_stone_bricks = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_NETHER, AdditionalBlocks.volcanic_stone_bricks.getDefaultState(), 25));
-        ore_volcanic_stone_bricks = ore_volcanic_stone_bricks.range(60).square().func_242731_b(6);
-        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE,
-                new ResourceLocation("abstoneedition", "ore_volcanic_stone_bricks"),
-                ore_volcanic_stone_bricks
-        );
-        ore_volcanic_stone = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, AdditionalBlocks.volcanic_stone.getDefaultState(), 30));
-        ore_volcanic_stone = ore_volcanic_stone.range(60).square().func_242731_b(8);
-        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE,
-                new ResourceLocation("abstoneedition", "ore_volcanic_stone"),
-                ore_volcanic_stone
-        );
+    @SubscribeEvent
+    public static void onFeatureRegistry(FMLCommonSetupEvent e) {
+        ore_marble = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, AdditionalBlocks.marble.getDefaultState(), 25));
+        ore_marble = ore_marble.withPlacement(Placement.field_215028_n.configure(new CountRangeConfig(10, 0, 0, 80)));
+
+        ore_limestone = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, AdditionalBlocks.limestone.getDefaultState(), 25));
+        ore_limestone = ore_limestone.withPlacement(Placement.field_215028_n.configure(new CountRangeConfig(10, 0, 0, 80)));
+
+        ore_copper = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, AdditionalBlocks.copper_ore.getDefaultState(), 10));
+        ore_copper = ore_copper.withPlacement(Placement.field_215028_n.configure(new CountRangeConfig(20, 0, 0, 64)));
+
+        ore_silver = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, AdditionalBlocks.silver_ore.getDefaultState(), 9));
+        ore_silver = ore_silver.withPlacement(Placement.field_215028_n.configure(new CountRangeConfig(20, 0, 0, 64)));
+
+        ore_bloodstone = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, AdditionalBlocks.bloodstone.getDefaultState(), 25));
+        ore_bloodstone = ore_bloodstone.withPlacement(Placement.field_215028_n.configure(new CountRangeConfig(2, 5, 0, 37)));
+
+        ore_black_marble = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, AdditionalBlocks.black_marble.getDefaultState(), 25));
+        ore_black_marble = ore_black_marble.withPlacement(Placement.field_215028_n.configure(new CountRangeConfig(2, 5, 0, 37)));
+
+        ore_volcanic_stone_bricks = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, AdditionalBlocks.volcanic_stone_bricks.getDefaultState(), 25));
+        ore_volcanic_stone_bricks = ore_volcanic_stone_bricks.withPlacement(Placement.field_215028_n.configure(new CountRangeConfig(2, 5, 0, 37)));
+
+        ore_volcanic_stone = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, AdditionalBlocks.volcanic_stone.getDefaultState(), 30));
+        ore_volcanic_stone = ore_volcanic_stone.withPlacement(Placement.field_215028_n.configure(new CountRangeConfig(8, 0, 0, 256)));
+
+        for (Biome biome : Biome.field_201870_ab)
+            onBiomeLoad(biome);
     }
 
-    @SubscribeEvent(priority = EventPriority.LOW)
-    public static void onBiomeLoad(BiomeLoadingEvent e) {
-        RegistryKey<Biome> biomeKey = RegistryKey.getOrCreateKey(ForgeRegistries.Keys.BIOMES, e.getName());
+    public static void onBiomeLoad(Biome e) {
 
         // all overworld biomes
-        if (BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(biomeKey)) {
-            if (!(e.getName().getNamespace().equals("minecraft") && (e.getName().getPath().equals("desert")||e.getName().getPath().equals("desert_hills")||e.getName().getPath().equals("desert_lakes")))) {
-                e.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_marble);
+        if (BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(e)) {
+            if (!(e.getRegistryName().getNamespace().equals("minecraft") && (e.getRegistryName().getPath().equals("desert") || e.getRegistryName().getPath().equals("desert_hills") || e.getRegistryName().getPath().equals("desert_lakes")))) {
+                e.func_203611_a(GenerationStage.Decoration.UNDERGROUND_ORES, ore_marble);
             }
-            if (e.getName().getNamespace().equals("minecraft") && (e.getName().getPath().equals("desert")||e.getName().getPath().equals("desert_hills")||e.getName().getPath().equals("desert_lakes"))) {
-                e.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_limestone);
+            if (e.getRegistryName().getNamespace().equals("minecraft") && (e.getRegistryName().getPath().equals("desert") || e.getRegistryName().getPath().equals("desert_hills") || e.getRegistryName().getPath().equals("desert_lakes"))) {
+                e.func_203611_a(GenerationStage.Decoration.UNDERGROUND_ORES, ore_limestone);
             }
-            if (e.getName().getNamespace().equals("minecraft") && (e.getName().getPath().equals("snowy_mountains")||e.getName().getPath().equals("modified_gravelly_mountains")||e.getName().getPath().equals("gravelly_mountains")||e.getName().getPath().equals("stone_shore"))) {
-                e.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_volcanic_stone);
+            if (e.getRegistryName().getNamespace().equals("minecraft") && (e.getRegistryName().getPath().equals("snowy_mountains") || e.getRegistryName().getPath().equals("modified_gravelly_mountains") || e.getRegistryName().getPath().equals("gravelly_mountains") || e.getRegistryName().getPath().equals("stone_shore"))) {
+                e.func_203611_a(GenerationStage.Decoration.UNDERGROUND_ORES, ore_volcanic_stone);
             }
-            e.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_copper);
-            e.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_silver);
+            e.func_203611_a(GenerationStage.Decoration.UNDERGROUND_ORES, ore_copper);
+            e.func_203611_a(GenerationStage.Decoration.UNDERGROUND_ORES, ore_silver);
         }
 
         // all nether biomes
-        if (BiomeDictionary.getBiomes(BiomeDictionary.Type.NETHER).contains(biomeKey)) {
-            if (e.getName().getNamespace().equals("minecraft") && (e.getName().getPath().equals("soul_sand_valley")||e.getName().getPath().equals("basalt_deltas"))) {
-                e.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_black_marble);
+        if (BiomeDictionary.getBiomes(BiomeDictionary.Type.NETHER).contains(e)) {
+            if (e.getRegistryName().getNamespace().equals("minecraft") && (e.getRegistryName().getPath().equals("soul_sand_valley") || e.getRegistryName().getPath().equals("basalt_deltas"))) {
+                e.func_203611_a(GenerationStage.Decoration.UNDERGROUND_ORES, ore_black_marble);
             }
-            if (e.getName().getNamespace().equals("minecraft") && (e.getName().getPath().equals("soul_sand_valley")||e.getName().getPath().equals("basalt_deltas"))) {
-                e.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_volcanic_stone_bricks);
+            if (e.getRegistryName().getNamespace().equals("minecraft") && (e.getRegistryName().getPath().equals("soul_sand_valley") || e.getRegistryName().getPath().equals("basalt_deltas"))) {
+                e.func_203611_a(GenerationStage.Decoration.UNDERGROUND_ORES, ore_volcanic_stone_bricks);
             }
-            e.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_black_marble);
+            e.func_203611_a(GenerationStage.Decoration.UNDERGROUND_ORES, ore_bloodstone);
         }
 
         // all end biomes
-        if (BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(biomeKey)) {
+        if (BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(e)) {
 
         }
     }

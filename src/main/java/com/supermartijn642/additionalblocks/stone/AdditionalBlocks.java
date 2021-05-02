@@ -251,11 +251,6 @@ public class AdditionalBlocks {
         }
 
         @SubscribeEvent
-        public static void onFeatureRegistry(final RegistryEvent.Register<Feature<?>> e){
-            WorldGeneration.onFeatureRegistry(e);
-        }
-
-        @SubscribeEvent
         public static void onRecipeRegistry(final RegistryEvent.Register<IRecipeSerializer<?>> e){
             e.getRegistry().register(SHAPED_RECIPE_SERIALIZER.setRegistryName(new ResourceLocation("abstoneedition", "shaped")));
             e.getRegistry().register(SHAPELESS_RECIPE_SERIALIZER.setRegistryName(new ResourceLocation("abstoneedition", "shapeless")));
