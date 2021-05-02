@@ -15,7 +15,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'com.wynprice.cursemaven'
 
-version = '2.0.0-mc1.16'
+version = '2.0.0-mc1.16.1-.2'
 group = 'com.supermartijn642.additionalblocks.stone' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'abstoneedition'
 
@@ -69,32 +69,11 @@ minecraft {
     }
 }
 
-repositories {
-    maven {
-        // location of the maven that hosts JEI files
-        name = "Progwml6 maven"
-        url = "https://dvs1.progwml6.com/files/maven/"
-    }
-    maven {
-        // location of a maven mirror for JEI files, as a fallback
-        name = "ModMaven"
-        url = "https://modmaven.k-4u.nl"
-    }
-}
-
 dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.16.4-35.1.13'
-
-    // compile against the JEI API but do not include it at runtime
-    compileOnly fg.deobf("mezz.jei:jei-1.16.3:7.6.0.51:api")
-    // at runtime, use the full JEI jar
-    runtimeOnly fg.deobf("mezz.jei:jei-1.16.3:7.6.0.51")
-
-    // Block Renderer
-    runtimeOnly fg.deobf("curse.maven:block-renderer:3149419")
+    minecraft 'net.minecraftforge:forge:1.16.1-32.0.108'
 
     // Config Lib
     compile fg.deobf("curse.maven:supermartijn642s-config-lib:3185875")
