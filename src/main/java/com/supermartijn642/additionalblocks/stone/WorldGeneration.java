@@ -54,8 +54,9 @@ public class WorldGeneration {
         ore_volcanic_stone = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, AdditionalBlocks.volcanic_stone.getDefaultState(), 30));
         ore_volcanic_stone = ore_volcanic_stone.withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(8, 0, 0, 256)));
 
-        for (Biome biome : Biome.BIOMES)
-            onBiomeLoad(biome);
+        for(BiomeDictionary.Type type : BiomeDictionary.Type.getAll())
+            for (Biome biome : BiomeDictionary.getBiomes(type))
+                onBiomeLoad(biome);
     }
 
     public static void onBiomeLoad(Biome e) {
