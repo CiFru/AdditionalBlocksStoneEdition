@@ -1,6 +1,7 @@
 package com.supermartijn642.additionalblocks.stone;
 
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
@@ -11,6 +12,7 @@ import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.registries.ForgeRegistries;
 
 /**
  * Created 1/20/2021 by SuperMartijn642
@@ -43,20 +45,19 @@ public class WorldGeneration {
         ore_silver = ore_silver.withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(20, 0, 0, 64)));
 
         ore_bloodstone = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, AdditionalBlocks.bloodstone.getDefaultState(), 25));
-        ore_bloodstone = ore_bloodstone.withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(2, 5, 0, 37)));
+        ore_bloodstone = ore_bloodstone.withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(8, 5, 0, 90)));
 
         ore_black_marble = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, AdditionalBlocks.black_marble.getDefaultState(), 25));
-        ore_black_marble = ore_black_marble.withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(2, 5, 0, 37)));
+        ore_black_marble = ore_black_marble.withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(8, 5, 0, 90)));
 
         ore_volcanic_stone_bricks = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, AdditionalBlocks.volcanic_stone_bricks.getDefaultState(), 25));
-        ore_volcanic_stone_bricks = ore_volcanic_stone_bricks.withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(2, 5, 0, 37)));
+        ore_volcanic_stone_bricks = ore_volcanic_stone_bricks.withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(8, 5, 0, 90)));
 
         ore_volcanic_stone = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, AdditionalBlocks.volcanic_stone.getDefaultState(), 30));
-        ore_volcanic_stone = ore_volcanic_stone.withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(8, 0, 0, 256)));
+        ore_volcanic_stone = ore_volcanic_stone.withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(15, 0, 0, 256)));
 
-        for(BiomeDictionary.Type type : BiomeDictionary.Type.getAll())
-            for (Biome biome : BiomeDictionary.getBiomes(type))
-                onBiomeLoad(biome);
+        for (Biome biome : ForgeRegistries.BIOMES.getValues())
+            onBiomeLoad(biome);
     }
 
     public static void onBiomeLoad(Biome e) {
@@ -77,15 +78,15 @@ public class WorldGeneration {
         }
 
         // all nether biomes
-        if (BiomeDictionary.getBiomes(BiomeDictionary.Type.NETHER).contains(e)) {
+        if (e == Biomes.BASALT_DELTAS || e == Biomes.CRIMSON_FOREST || e == Biomes.NETHER_WASTES || e == Biomes.SOUL_SAND_VALLEY || e == Biomes.WARPED_FOREST) {
+            System.out.println("netherbiome: " + e.getRegistryName());
             if (e.getRegistryName().getNamespace().equals("minecraft") && (e.getRegistryName().getPath().equals("soul_sand_valley") || e.getRegistryName().getPath().equals("basalt_deltas"))) {
-                e.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_black_marble);
+                e.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, ore_black_marble);
+                e.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, ore_volcanic_stone_bricks);
             }
-            if (e.getRegistryName().getNamespace().equals("minecraft") && (e.getRegistryName().getPath().equals("soul_sand_valley") || e.getRegistryName().getPath().equals("basalt_deltas"))) {
-                e.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_volcanic_stone_bricks);
-            }
-            e.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_bloodstone);
+            e.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, ore_bloodstone);
         }
+        System.out.println("biome: " + e.getRegistryName());
 
         // all end biomes
         if (BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(e)) {
