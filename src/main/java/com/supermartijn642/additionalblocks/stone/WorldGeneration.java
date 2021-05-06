@@ -114,7 +114,7 @@ public class WorldGeneration {
             if (e.getName().getNamespace().equals("minecraft") && (e.getName().getPath().equals("soul_sand_valley")||e.getName().getPath().equals("basalt_deltas"))) {
                 e.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_volcanic_stone_bricks);
             }
-            e.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_black_marble);
+            e.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_bloodstone);
         }
 
         // all end biomes

@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "abstoneedition:glowstone_bricks_stairs",
+    "abstoneedition:smooth_glowstone_stairs",
+    "abstoneedition:asphalt_stairs",
+    "abstoneedition:limestone_stairs",
+    "abstoneedition:gray_bricks_stairs",
+    "abstoneedition:charred_stairs",
+    "abstoneedition:volcanic_stone_stairs",
+    "abstoneedition:volcanic_stone_bricks_stairs",
+    "abstoneedition:stone_brick_block_stairs",
+    "abstoneedition:smooth_marble_stairs",
+    "abstoneedition:smooth_bloodstone_stairs",
+    "abstoneedition:smooth_black_marble_stairs",
+    "abstoneedition:marble_stairs",
+    "abstoneedition:marble_bricks_stairs",
+    "abstoneedition:granite_bricks_stairs",
+    "abstoneedition:diorite_bricks_stairs",
+    "abstoneedition:brown_bricks_stairs",
+    "abstoneedition:bloodstone_stairs",
+    "abstoneedition:bloodstone_bricks_stairs",
+    "abstoneedition:black_marble_stairs",
+    "abstoneedition:black_marble_bricks_stairs",
+    "abstoneedition:andesite_bricks_stairs"
+  ]
+}

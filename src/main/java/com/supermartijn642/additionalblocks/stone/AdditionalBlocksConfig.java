@@ -76,8 +76,8 @@ public class AdditionalBlocksConfig {
         enableSmoothGlowstone = config.comment("if true, Smooth Glowstone Blocks are enabled").define("enableSmoothGlowstone", true);
         enableGlowstoneBricks = config.comment("if true, Glowstone Brick Blocks are enabled").define("enableGlowstoneBricks", true);
         enableGlowstone = config.comment("if true, Glowstone Blocks are enabled").define("enableGlowstone",true);
-        enableCopper = config.comment("if true, Copper Blocks are enabled").define("enableCopper",true);
-        enableSilver = config.comment("if true, Silver Blocks are enabled").define("enableSilver",true);
+        enableCopper = config.comment("if true, Copper Blocks and Items are enabled").define("enableCopper",true);
+        enableSilver = config.comment("if true, Silver Blocks and Items are enabled").define("enableSilver",true);
         config.pop();
 
         config.build();

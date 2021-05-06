@@ -6,7 +6,7 @@
   ],
   "key": {
     "S": {
-      "item": "minecraft:black_dye"
+      "tag": "forge:dyes/black"
     },
     "C": {
       "item": "abstoneedition:marble"

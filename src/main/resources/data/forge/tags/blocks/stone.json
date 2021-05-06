@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "abstoneedition:marble",
+    "abstoneedition:smooth_marble",
+    "abstoneedition:limestone",
+    "abstoneedition:smooth_limestone",
+    "abstoneedition:bloodstone",
+    "abstoneedition:smooth_bloodstone",
+    "abstoneedition:black_marble",
+    "abstoneedition:smooth_black_marble",
+    "abstoneedition:volcanic_stone"
+  ]
+}

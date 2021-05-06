@@ -9,7 +9,7 @@
       "item": "minecraft:bricks"
     },
     "C": {
-      "item": "minecraft:gray_dye"
+      "tag": "forge:dyes/gray"
     }
   },
   "result": {
