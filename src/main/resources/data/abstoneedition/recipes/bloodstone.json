@@ -6,13 +6,11 @@
     "X#X"
   ],
   "key": {
-    "#": [
-      {
-        "item": "minecraft:redstone"
-      }
-    ],
+    "#": {
+      "tag": "forge:dusts/redstone"
+    },
     "X": {
-      "item": "minecraft:coal_block"
+      "tag": "forge:storage_blocks/coal"
     }
   },
   "result": {

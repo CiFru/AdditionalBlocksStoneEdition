@@ -6,11 +6,9 @@
     "X#X"
   ],
   "key": {
-    "#": [
-      {
-        "item": "minecraft:sandstone"
-      }
-    ],
+    "#": {
+      "item": "minecraft:sandstone"
+    },
     "X": {
       "item": "minecraft:quartz_block"
     }

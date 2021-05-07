@@ -1,7 +1,7 @@
 {
   "type": "abstoneedition:furnace",
   "ingredient": {
-    "item": "minecraft:black_dye"
+    "tag": "forge:dyes/black"
   },
   "result": "abstoneedition:asphalt",
   "experience": 0.2,

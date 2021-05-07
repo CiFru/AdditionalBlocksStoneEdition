@@ -1,6 +1,9 @@
 package com.supermartijn642.additionalblocks.stone;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 
 import java.util.function.Supplier;
 
@@ -17,5 +20,11 @@ public class OreItem extends Item implements IConfigObject {
     @Override
     public boolean isEnabled() {
         return this.enable.get();
+    }
+
+    @Override
+    public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
+        if (this.isEnabled())
+            super.fillItemGroup(group, items);
     }
 }
