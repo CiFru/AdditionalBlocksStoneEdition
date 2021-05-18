@@ -7,7 +7,7 @@ import net.minecraft.util.NonNullList;
 
 import java.util.function.Supplier;
 
-public class OreItem extends Item implements IConfigObject {
+public class OreItem extends Item implements IConfigObject, IItemGroupIndex {
 
     private final Supplier<Boolean> enable;
 
@@ -26,5 +26,10 @@ public class OreItem extends Item implements IConfigObject {
     public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
         if (this.isEnabled())
             super.fillItemGroup(group, items);
+    }
+
+    @Override
+    public int getItemGroupIndex() {
+        return 3;
     }
 }

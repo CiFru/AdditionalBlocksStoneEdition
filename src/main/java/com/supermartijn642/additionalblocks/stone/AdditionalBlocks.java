@@ -14,7 +14,6 @@ import net.minecraft.item.crafting.*;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.gen.feature.Feature;
-import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -35,12 +34,7 @@ public class AdditionalBlocks {
     public static final IRecipeSerializer<FurnaceRecipe> FURNACE_RECIPE_SERIALIZER = new AdditionalBlocksRecipes.FurnaceSerializer();
     public static final IRecipeSerializer<BlastingRecipe> BLASTING_RECIPE_SERIALIZER = new AdditionalBlocksRecipes.BlastFurnaceSerializer();
 
-    private static final ItemGroup ITEM_GROUP = new ItemGroup("abstoneedition") {
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(marble_bricks);
-        }
-    };
+    private static final ItemGroup ITEM_GROUP = new AbItemGroup();
 
     private static final List<Block> blocks = new ArrayList<>();
     private static final List<Item> items = new ArrayList<>();

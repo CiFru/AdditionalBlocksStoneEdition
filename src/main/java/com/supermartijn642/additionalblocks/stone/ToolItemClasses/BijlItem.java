@@ -1,12 +1,13 @@
 package com.supermartijn642.additionalblocks.stone.ToolItemClasses;
 
 import com.supermartijn642.additionalblocks.stone.IConfigObject;
+import com.supermartijn642.additionalblocks.stone.IItemGroupIndex;
 import net.minecraft.item.*;
 import net.minecraft.util.NonNullList;
 
 import java.util.function.Supplier;
 
-public class BijlItem extends AxeItem implements IConfigObject {
+public class BijlItem extends AxeItem implements IConfigObject, IItemGroupIndex {
 
     private final Supplier<Boolean> enable;
 
@@ -25,5 +26,10 @@ public class BijlItem extends AxeItem implements IConfigObject {
     public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
         if (this.isEnabled())
             super.fillItemGroup(group, items);
+    }
+
+    @Override
+    public int getItemGroupIndex() {
+        return 4;
     }
 }
