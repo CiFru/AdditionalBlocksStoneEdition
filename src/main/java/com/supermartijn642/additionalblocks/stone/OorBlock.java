@@ -11,7 +11,7 @@ import net.minecraft.util.math.MathHelper;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class OorBlock extends OreBlock implements IConfigObject {
+public class OorBlock extends OreBlock implements IConfigObject, IItemGroupIndex{
     private final Supplier<Boolean> enable;
 
     public OorBlock(String registryName, Supplier<Boolean> configValue, Block.Properties properties) {
@@ -43,6 +43,11 @@ public class OorBlock extends OreBlock implements IConfigObject {
     @Override
     public boolean isEnabled() {
         return this.enable.get();
+    }
+
+    @Override
+    public int getItemGroupIndex() {
+        return 0;
     }
 }
 

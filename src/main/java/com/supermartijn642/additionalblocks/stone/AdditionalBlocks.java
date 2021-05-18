@@ -9,10 +9,8 @@ import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.crafting.FurnaceRecipe;
-import net.minecraft.item.crafting.IRecipeSerializer;
-import net.minecraft.item.crafting.ShapedRecipe;
-import net.minecraft.item.crafting.ShapelessRecipe;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.*;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.gen.feature.Feature;
@@ -34,6 +32,9 @@ public class AdditionalBlocks {
     public static final IRecipeSerializer<ShapedRecipe> SHAPED_RECIPE_SERIALIZER = new AdditionalBlocksRecipes.ShapedSerializer();
     public static final IRecipeSerializer<ShapelessRecipe> SHAPELESS_RECIPE_SERIALIZER = new AdditionalBlocksRecipes.ShapelessSerializer();
     public static final IRecipeSerializer<FurnaceRecipe> FURNACE_RECIPE_SERIALIZER = new AdditionalBlocksRecipes.FurnaceSerializer();
+    public static final IRecipeSerializer<BlastingRecipe> BLASTING_RECIPE_SERIALIZER = new AdditionalBlocksRecipes.BlastFurnaceSerializer();
+
+    private static final ItemGroup ITEM_GROUP = new AbItemGroup();
 
     private static final List<Block> blocks = new ArrayList<>();
     private static final List<Item> items = new ArrayList<>();
@@ -233,21 +234,21 @@ public class AdditionalBlocks {
         @SubscribeEvent
         public static void onItemRegistry(final RegistryEvent.Register<Item> e) {
             for (Block block : blocks)
-                registerItem(e, new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
-            e.getRegistry().register(new OreItem("copper_ingot", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ItemGroup.MATERIALS)));
-            e.getRegistry().register(new OreItem("silver_ingot", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ItemGroup.MATERIALS)));
-            e.getRegistry().register(new OreItem("copper_nugget", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ItemGroup.MATERIALS)));
-            e.getRegistry().register(new OreItem("silver_nugget", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ItemGroup.MATERIALS)));
-            e.getRegistry().register(new BijlItem("copper_axe", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ItemGroup.TOOLS), 6.0F, -2.5F));
-            e.getRegistry().register(new BijlItem("silver_axe", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ItemGroup.TOOLS), 6.0F, -2.5F));
-            e.getRegistry().register(new HouweelItem("copper_pickaxe", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ItemGroup.TOOLS), 1, -1.8F));
-            e.getRegistry().register(new HouweelItem("silver_pickaxe", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ItemGroup.TOOLS), 1, -1.8F));
-            e.getRegistry().register(new SchepItem("copper_shovel", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ItemGroup.TOOLS), 1.5F, -3.0F));
-            e.getRegistry().register(new SchepItem("silver_shovel", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ItemGroup.TOOLS), 1.5F, -3.0F));
-            e.getRegistry().register(new SchoffelItem("copper_hoe", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ItemGroup.TOOLS), -2, 0.0F));
-            e.getRegistry().register(new SchoffelItem("silver_hoe", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ItemGroup.TOOLS), -2, 0.0F));
-            e.getRegistry().register(new ZwaardItem("copper_sword", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ItemGroup.TOOLS), 3, -2.4F));
-            e.getRegistry().register(new ZwaardItem("silver_sword", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ItemGroup.TOOLS), 3, -2.4F));
+                registerItem(e, new BlockItem(block, new Item.Properties().group(ITEM_GROUP)).setRegistryName(block.getRegistryName()));
+            e.getRegistry().register(new OreItem("copper_ingot", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ITEM_GROUP)));
+            e.getRegistry().register(new OreItem("silver_ingot", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ITEM_GROUP)));
+            e.getRegistry().register(new OreItem("copper_nugget", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ITEM_GROUP)));
+            e.getRegistry().register(new OreItem("silver_nugget", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ITEM_GROUP)));
+            e.getRegistry().register(new BijlItem("copper_axe", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ITEM_GROUP), 6.0F, -2.5F));
+            e.getRegistry().register(new BijlItem("silver_axe", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ITEM_GROUP), 6.0F, -2.5F));
+            e.getRegistry().register(new HouweelItem("copper_pickaxe", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ITEM_GROUP), 1, -1.8F));
+            e.getRegistry().register(new HouweelItem("silver_pickaxe", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ITEM_GROUP), 1, -1.8F));
+            e.getRegistry().register(new SchepItem("copper_shovel", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ITEM_GROUP), 1.5F, -3.0F));
+            e.getRegistry().register(new SchepItem("silver_shovel", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ITEM_GROUP), 1.5F, -3.0F));
+            e.getRegistry().register(new SchoffelItem("copper_hoe", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ITEM_GROUP), -2, 0.0F));
+            e.getRegistry().register(new SchoffelItem("silver_hoe", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ITEM_GROUP), -2, 0.0F));
+            e.getRegistry().register(new ZwaardItem("copper_sword", AdditionalBlocksConfig.enableCopper, new Item.Properties().group(ITEM_GROUP), 3, -2.4F));
+            e.getRegistry().register(new ZwaardItem("silver_sword", AdditionalBlocksConfig.enableSilver, new Item.Properties().group(ITEM_GROUP), 3, -2.4F));
         }
 
         @SubscribeEvent
@@ -255,6 +256,7 @@ public class AdditionalBlocks {
             e.getRegistry().register(SHAPED_RECIPE_SERIALIZER.setRegistryName(new ResourceLocation("abstoneedition", "shaped")));
             e.getRegistry().register(SHAPELESS_RECIPE_SERIALIZER.setRegistryName(new ResourceLocation("abstoneedition", "shapeless")));
             e.getRegistry().register(FURNACE_RECIPE_SERIALIZER.setRegistryName(new ResourceLocation("abstoneedition", "furnace")));
+            e.getRegistry().register(BLASTING_RECIPE_SERIALIZER.setRegistryName(new ResourceLocation("abstoneedition", "blastfurnace")));
         }
     }
 

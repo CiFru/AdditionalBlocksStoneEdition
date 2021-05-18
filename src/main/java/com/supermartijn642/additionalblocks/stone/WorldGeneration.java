@@ -65,28 +65,34 @@ public class WorldGeneration {
         // all overworld biomes
         if (BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(e)) {
             if (!(e.getRegistryName().getNamespace().equals("minecraft") && (e.getRegistryName().getPath().equals("desert") || e.getRegistryName().getPath().equals("desert_hills") || e.getRegistryName().getPath().equals("desert_lakes")))) {
-                e.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_marble);
+                if(AdditionalBlocksConfig.enableMarble.get())
+                    e.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_marble);
             }
             if (e.getRegistryName().getNamespace().equals("minecraft") && (e.getRegistryName().getPath().equals("desert") || e.getRegistryName().getPath().equals("desert_hills") || e.getRegistryName().getPath().equals("desert_lakes"))) {
-                e.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_limestone);
+                if(AdditionalBlocksConfig.enableLimestone.get())
+                    e.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_limestone);
             }
             if (e.getRegistryName().getNamespace().equals("minecraft") && (e.getRegistryName().getPath().equals("snowy_mountains") || e.getRegistryName().getPath().equals("modified_gravelly_mountains") || e.getRegistryName().getPath().equals("gravelly_mountains") || e.getRegistryName().getPath().equals("stone_shore"))) {
-                e.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_volcanic_stone);
+                if(AdditionalBlocksConfig.enableVolcanicStone.get())
+                    e.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_volcanic_stone);
             }
-            e.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_copper);
-            e.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_silver);
+            if(AdditionalBlocksConfig.enableCopper.get())
+                e.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_copper);
+            if(AdditionalBlocksConfig.enableSilver.get())
+                e.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_silver);
         }
 
         // all nether biomes
         if (e == Biomes.BASALT_DELTAS || e == Biomes.CRIMSON_FOREST || e == Biomes.NETHER_WASTES || e == Biomes.SOUL_SAND_VALLEY || e == Biomes.WARPED_FOREST) {
-            System.out.println("netherbiome: " + e.getRegistryName());
             if (e.getRegistryName().getNamespace().equals("minecraft") && (e.getRegistryName().getPath().equals("soul_sand_valley") || e.getRegistryName().getPath().equals("basalt_deltas"))) {
-                e.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, ore_black_marble);
-                e.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, ore_volcanic_stone_bricks);
+                if(AdditionalBlocksConfig.enableBlackMarble.get())
+                    e.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, ore_black_marble);
+                if(AdditionalBlocksConfig.enableVolcanicStone.get())
+                    e.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, ore_volcanic_stone_bricks);
             }
-            e.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, ore_bloodstone);
+            if(AdditionalBlocksConfig.enableBloodstone.get())
+                e.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, ore_bloodstone);
         }
-        System.out.println("biome: " + e.getRegistryName());
 
         // all end biomes
         if (BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(e)) {

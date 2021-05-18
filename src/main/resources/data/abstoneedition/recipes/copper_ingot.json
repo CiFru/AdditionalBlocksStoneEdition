@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:smelting",
+  "type": "abstoneedition:furnace",
   "ingredient": {
     "tag": "forge:ores/copper"
   },

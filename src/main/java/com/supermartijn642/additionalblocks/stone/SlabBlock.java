@@ -8,7 +8,7 @@ import net.minecraft.util.NonNullList;
 /**
  * Created 1/17/2021 by SuperMartijn642
  */
-public class SlabBlock extends net.minecraft.block.SlabBlock implements IConfigObject {
+public class SlabBlock extends net.minecraft.block.SlabBlock implements IConfigObject, IItemGroupIndex {
 
     private final BasicBlock block;
 
@@ -33,5 +33,10 @@ public class SlabBlock extends net.minecraft.block.SlabBlock implements IConfigO
     @Override
     public boolean isEnabled() {
         return this.block.isEnabled();
+    }
+
+    @Override
+    public int getItemGroupIndex() {
+        return 2;
     }
 }

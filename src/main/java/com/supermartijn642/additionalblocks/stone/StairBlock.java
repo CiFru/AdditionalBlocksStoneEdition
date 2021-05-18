@@ -9,7 +9,7 @@ import net.minecraft.util.NonNullList;
 /**
  * Created 1/17/2021 by SuperMartijn642
  */
-public class StairBlock extends StairsBlock implements IConfigObject {
+public class StairBlock extends StairsBlock implements IConfigObject, IItemGroupIndex {
 
     private final BasicBlock block;
 
@@ -34,5 +34,10 @@ public class StairBlock extends StairsBlock implements IConfigObject {
     @Override
     public boolean isEnabled() {
         return this.block.isEnabled();
+    }
+
+    @Override
+    public int getItemGroupIndex() {
+        return 1;
     }
 }

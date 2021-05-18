@@ -10,7 +10,7 @@ import java.util.function.Supplier;
 /**
  * Created 11/30/2020 by SuperMartijn642
  */
-public class BasicBlock extends Block implements IConfigObject {
+public class BasicBlock extends Block implements IConfigObject, IItemGroupIndex {
 
     private final Supplier<Boolean> enable;
 
@@ -34,5 +34,10 @@ public class BasicBlock extends Block implements IConfigObject {
     @Override
     public boolean isEnabled() {
         return this.enable.get();
+    }
+
+    @Override
+    public int getItemGroupIndex() {
+        return 0;
     }
 }

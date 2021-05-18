@@ -98,4 +98,24 @@ public class AdditionalBlocksRecipes {
             IRecipeSerializer.SMELTING.write(buffer, recipe);
         }
     }
+
+    public static class BlastFurnaceSerializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<BlastingRecipe> {
+        @Override
+        public BlastingRecipe read(ResourceLocation recipeId, JsonObject json){
+            BlastingRecipe recipe = IRecipeSerializer.BLASTING.read(recipeId, json);
+            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getRecipeOutput()) ? recipe : null;
+        }
+
+        @Nullable
+        @Override
+        public BlastingRecipe read(ResourceLocation recipeId, PacketBuffer buffer){
+            BlastingRecipe recipe = IRecipeSerializer.BLASTING.read(recipeId, buffer);
+            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getRecipeOutput()) ? recipe : null;
+        }
+
+        @Override
+        public void write(PacketBuffer buffer, BlastingRecipe recipe){
+            IRecipeSerializer.BLASTING.write(buffer, recipe);
+        }
+    }
 }

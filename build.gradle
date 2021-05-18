@@ -76,5 +76,5 @@ dependencies {
     minecraft 'net.minecraftforge:forge:1.16.1-32.0.108'
 
     // Config Lib
-    compile fg.deobf("curse.maven:supermartijn642s-config-lib:3226128")
+    compile fg.deobf("curse.maven:supermartijn642s-config-lib:3312641")
 }
