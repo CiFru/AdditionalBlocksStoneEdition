@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "abstoneedition:smooth_stone_bricks"
+      "item": "minecraft:smooth_stone"
     }
   },
   "result": {
-    "item": "abstoneedition:stone_tiles",
+    "item": "abstoneedition:smooth_stone_bricks",
     "count": 4
   }
 }

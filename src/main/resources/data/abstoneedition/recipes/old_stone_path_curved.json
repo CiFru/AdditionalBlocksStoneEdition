@@ -2,21 +2,21 @@
   "type": "abstoneedition:shaped",
   "pattern": [
     "XXX",
-    "###",
-    "XXX"
+    "X##",
+    "X#X"
   ],
   "key": {
     "#": [
       {
-        "item": "minecraft:smooth_stone"
+        "item": "minecraft:stone"
       }
     ],
     "X": {
-      "item": "abstoneedition:smooth_stone_bricks"
+      "item": "minecraft:stone_bricks"
     }
   },
   "result": {
-    "item": "abstoneedition:stone_path_straight",
+    "item": "abstoneedition:old_stone_path_curved",
     "count": 6
   }
 }

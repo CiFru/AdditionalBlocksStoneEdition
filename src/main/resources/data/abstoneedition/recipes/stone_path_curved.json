@@ -8,11 +8,11 @@
   "key": {
     "#": [
       {
-        "item": "minecraft:stone"
+        "item": "minecraft:smooth_stone"
       }
     ],
     "X": {
-      "item": "minecraft:stone_bricks"
+      "item": "abstoneedition:smooth_stone_bricks"
     }
   },
   "result": {
