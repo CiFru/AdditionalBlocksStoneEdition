@@ -1,6 +1,7 @@
 package com.supermartijn642.additionalblocks.stone;
 
 import com.supermartijn642.configlib.ModConfigBuilder;
+import org.lwjgl.system.CallbackI;
 
 import java.util.function.Supplier;
 
@@ -50,6 +51,7 @@ public class AdditionalBlocksConfig {
     public static final Supplier<Boolean> enableGlowstone;
     public static final Supplier<Boolean> enableCopper;
     public static final Supplier<Boolean> enableSilver;
+    public static final Supplier<Boolean> enableSmoothStoneBricks;
 
     static {
         ModConfigBuilder config = new ModConfigBuilder("abstoneedition");
@@ -78,6 +80,7 @@ public class AdditionalBlocksConfig {
         enableGlowstone = config.comment("if true, Glowstone Blocks are enabled").define("enableGlowstone",true);
         enableCopper = config.comment("if true, Copper Blocks and Items are enabled").define("enableCopper",true);
         enableSilver = config.comment("if true, Silver Blocks and Items are enabled").define("enableSilver",true);
+        enableSmoothStoneBricks = config.comment("if true, Smooth Stone Brick Blocks are enabled").define("enableSmoothStoneBricks",true);
         config.pop();
 
         config.build();

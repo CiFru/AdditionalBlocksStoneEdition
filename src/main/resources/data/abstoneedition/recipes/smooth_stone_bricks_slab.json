@@ -1,8 +1,7 @@
 {
   "type": "abstoneedition:shaped",
   "pattern": [
-    "##",
-    "##"
+    "###"
   ],
   "key": {
     "#": {
@@ -10,7 +9,7 @@
     }
   },
   "result": {
-    "item": "abstoneedition:stone_tiles",
-    "count": 4
+    "item": "abstoneedition:smooth_stone_bricks_slab",
+    "count": 6
   }
 }

@@ -128,6 +128,13 @@ public class AdditionalBlocks {
     public static Block copper_ore;
     public static BasicBlock silver_block;
     public static BasicBlock copper_block;
+    public static Block old_stone_path_straight;
+    public static Block old_stone_path_curved;
+    public static Block old_stone_pattern;
+    public static Block old_stone_tiles;
+    public static BasicBlock smooth_stone_bricks;
+    public static Block smooth_stone_bricks_stairs;
+    public static Block smooth_stone_bricks_slab;
 
     public AdditionalBlocks() {
         AdditionalBlocksConfig.create();
@@ -225,6 +232,13 @@ public class AdditionalBlocks {
             silver_ore = registerBlock(e, new OorBlock("silver_ore", AdditionalBlocksConfig.enableSilver, AbstractBlock.Properties.create(Material.ROCK).setRequiresTool().hardnessAndResistance(3.0F, 3.0F)));
             copper_block = registerBlock(e, new BasicBlock("copper_block",AdditionalBlocksConfig.enableCopper, AbstractBlock.Properties.create(Material.IRON, MaterialColor.IRON).setRequiresTool().hardnessAndResistance(5.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).sound(SoundType.METAL)));
             silver_block = registerBlock(e, new BasicBlock("silver_block",AdditionalBlocksConfig.enableSilver, AbstractBlock.Properties.create(Material.IRON, MaterialColor.IRON).setRequiresTool().hardnessAndResistance(5.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).sound(SoundType.METAL)));
+            old_stone_path_curved = registerBlock(e, new HorizontalRotationBlock("old_stone_path_curved", AdditionalBlocksConfig.enableStonePath, true, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            old_stone_path_straight = registerBlock(e, new HorizontalRotationBlock("old_stone_path_straight", AdditionalBlocksConfig.enableStonePath, true, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            old_stone_pattern = registerBlock(e, new BasicBlock("old_stone_pattern",AdditionalBlocksConfig.enableStonePattern, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            old_stone_tiles = registerBlock(e, new BasicBlock("old_stone_tiles",AdditionalBlocksConfig.enableStoneTiles, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            smooth_stone_bricks = registerBlock(e, new BasicBlock("smooth_stone_bricks",AdditionalBlocksConfig.enableSmoothStoneBricks, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            smooth_stone_bricks_stairs = registerBlock(e, new StairBlock(smooth_stone_bricks,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            smooth_stone_bricks_slab = registerBlock(e, new SlabBlock(smooth_stone_bricks,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
         }
 
         @SubscribeEvent
