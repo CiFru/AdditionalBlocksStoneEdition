@@ -53,7 +53,7 @@ public class AdditionalBlocksConfig {
     public static final Supplier<Boolean> enableSmoothStoneBricks;
 
     static {
-        ModConfigBuilder config = new ModConfigBuilder("abstoneedition");
+        ModConfigBuilder config = new ModConfigBuilder();
         config.push("blocks");
         enableMarble = config.comment("if true, Marble Blocks are enabled").define("enableMarble", true);
         enableBlackMarble = config.comment("if true, Black Marble Blocks are enabled").define("enableBlackMarble", true);
