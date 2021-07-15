@@ -40,6 +40,7 @@ public class AdditionalBlocksRecipes {
     }
 
     public static class ShapedSerializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<ShapedRecipe> {
+
         @Override
         public ShapedRecipe read(ResourceLocation recipeId, JsonObject json){
             ShapedRecipe recipe = IRecipeSerializer.CRAFTING_SHAPED.read(recipeId, json);
@@ -60,6 +61,7 @@ public class AdditionalBlocksRecipes {
     }
 
     public static class ShapelessSerializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<ShapelessRecipe> {
+
         @Override
         public ShapelessRecipe read(ResourceLocation recipeId, JsonObject json){
             ShapelessRecipe recipe = IRecipeSerializer.CRAFTING_SHAPELESS.read(recipeId, json);
@@ -80,6 +82,7 @@ public class AdditionalBlocksRecipes {
     }
 
     public static class FurnaceSerializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<FurnaceRecipe> {
+
         @Override
         public FurnaceRecipe read(ResourceLocation recipeId, JsonObject json){
             FurnaceRecipe recipe = IRecipeSerializer.SMELTING.read(recipeId, json);
@@ -100,6 +103,7 @@ public class AdditionalBlocksRecipes {
     }
 
     public static class BlastFurnaceSerializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<BlastingRecipe> {
+
         @Override
         public BlastingRecipe read(ResourceLocation recipeId, JsonObject json){
             BlastingRecipe recipe = IRecipeSerializer.BLASTING.read(recipeId, json);
@@ -116,6 +120,27 @@ public class AdditionalBlocksRecipes {
         @Override
         public void write(PacketBuffer buffer, BlastingRecipe recipe){
             IRecipeSerializer.BLASTING.write(buffer, recipe);
+        }
+    }
+
+    public static class StoneCutterSerializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<StonecuttingRecipe> {
+
+        @Override
+        public StonecuttingRecipe read(ResourceLocation recipeId, JsonObject json){
+            StonecuttingRecipe recipe = IRecipeSerializer.STONECUTTING.read(recipeId, json);
+            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getRecipeOutput()) ? recipe : null;
+        }
+
+        @Nullable
+        @Override
+        public StonecuttingRecipe read(ResourceLocation recipeId, PacketBuffer buffer){
+            StonecuttingRecipe recipe = IRecipeSerializer.STONECUTTING.read(recipeId, buffer);
+            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getRecipeOutput()) ? recipe : null;
+        }
+
+        @Override
+        public void write(PacketBuffer buffer, StonecuttingRecipe recipe){
+            IRecipeSerializer.STONECUTTING.write(buffer, recipe);
         }
     }
 }
