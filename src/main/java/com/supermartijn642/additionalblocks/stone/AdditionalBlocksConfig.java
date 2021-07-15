@@ -51,6 +51,7 @@ public class AdditionalBlocksConfig {
     public static final Supplier<Boolean> enableCopper;
     public static final Supplier<Boolean> enableSilver;
     public static final Supplier<Boolean> enableSmoothStoneBricks;
+    public static final Supplier<Boolean> enableAztec;
 
     static {
         ModConfigBuilder config = new ModConfigBuilder();
@@ -80,6 +81,7 @@ public class AdditionalBlocksConfig {
         enableCopper = config.comment("if true, Copper Blocks and Items are enabled").define("enableCopper",true);
         enableSilver = config.comment("if true, Silver Blocks and Items are enabled").define("enableSilver",true);
         enableSmoothStoneBricks = config.comment("if true, Smooth Stone Brick Blocks are enabled").define("enableSmoothStoneBricks",true);
+        enableAztec = config.comment("if true, Aztec Blocks are enabled").define("enableAztec",true);
         config.pop();
 
         config.build();

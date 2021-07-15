@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "abstoneedition:stone_path_curved"
+          "name": "abstoneedition:old_stone_path_curved"
         }
       ],
       "conditions": [

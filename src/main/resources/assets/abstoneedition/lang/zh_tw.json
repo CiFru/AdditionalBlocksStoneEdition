@@ -106,5 +106,10 @@
   "block.abstoneedition.old_stone_tiles": "Old Stone Tiles",
   "block.abstoneedition.smooth_stone_bricks": "Smooth Stone Bricks",
   "block.abstoneedition.smooth_stone_bricks_slab": "Smooth Stone Brick Slab",
-  "block.abstoneedition.smooth_stone_bricks_stairs": "Smooth Stone Brick Stairs"
+  "block.abstoneedition.smooth_stone_bricks_stairs": "Smooth Stone Brick Stairs",
+  "block.abstoneedition.aztec_pattern": "Aztec Pattern",
+  "block.abstoneedition.aztec_patterned_wall": "Aztec Wall Pattern",
+  "block.abstoneedition.aztec_tiles": "Aztec Tiles",
+  "block.abstoneedition.sunstone": "Aztec Sunstone",
+  "block.abstoneedition.aztec_pillar": "Aztec Pillar"
 }

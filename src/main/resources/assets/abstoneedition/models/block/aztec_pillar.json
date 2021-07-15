@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "abstoneedition:aztec_pillar",
+    "top": "abstoneedition:aztec_pillar_top",
+    "bottom": "abstoneedition:aztec_pillar_top"
+  }
+}

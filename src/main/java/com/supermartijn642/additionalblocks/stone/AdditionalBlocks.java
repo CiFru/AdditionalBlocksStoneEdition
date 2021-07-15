@@ -33,6 +33,7 @@ public class AdditionalBlocks {
     public static final IRecipeSerializer<ShapelessRecipe> SHAPELESS_RECIPE_SERIALIZER = new AdditionalBlocksRecipes.ShapelessSerializer();
     public static final IRecipeSerializer<FurnaceRecipe> FURNACE_RECIPE_SERIALIZER = new AdditionalBlocksRecipes.FurnaceSerializer();
     public static final IRecipeSerializer<BlastingRecipe> BLASTING_RECIPE_SERIALIZER = new AdditionalBlocksRecipes.BlastFurnaceSerializer();
+    public static final IRecipeSerializer<StonecuttingRecipe> STONE_CUTTING_RECIPE_SERIALIZER = new AdditionalBlocksRecipes.StoneCutterSerializer();
 
     private static final ItemGroup ITEM_GROUP = new AbItemGroup();
 
@@ -135,6 +136,11 @@ public class AdditionalBlocks {
     public static BasicBlock smooth_stone_bricks;
     public static Block smooth_stone_bricks_stairs;
     public static Block smooth_stone_bricks_slab;
+    public static BasicBlock aztec_pattern;
+    public static BasicBlock aztec_patterned_wall;
+    public static BasicBlock aztec_tiles;
+    public static BasicBlock sunstone;
+    public static BasicBlock aztec_pillar;
 
     public AdditionalBlocks() {
         AdditionalBlocksConfig.create();
@@ -239,6 +245,12 @@ public class AdditionalBlocks {
             smooth_stone_bricks = registerBlock(e, new BasicBlock("smooth_stone_bricks",AdditionalBlocksConfig.enableSmoothStoneBricks, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
             smooth_stone_bricks_stairs = registerBlock(e, new StairBlock(smooth_stone_bricks,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
             smooth_stone_bricks_slab = registerBlock(e, new SlabBlock(smooth_stone_bricks,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            aztec_pattern = registerBlock(e, new BasicBlock("aztec_pattern",AdditionalBlocksConfig.enableAztec, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            aztec_patterned_wall = registerBlock(e, new BasicBlock("aztec_patterned_wall",AdditionalBlocksConfig.enableAztec, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            aztec_tiles = registerBlock(e, new BasicBlock("aztec_tiles",AdditionalBlocksConfig.enableAztec, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.NETHER_BRICK).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            sunstone = registerBlock(e, new BasicBlock("sunstone",AdditionalBlocksConfig.enableAztec, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.YELLOW).sound(SoundType.GILDED_BLACKSTONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            aztec_pillar = registerBlock(e, new AxisRotationBlock("aztec_pillar",AdditionalBlocksConfig.enableAztec, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0f,6.0f).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+
         }
 
         @SubscribeEvent
@@ -276,6 +288,7 @@ public class AdditionalBlocks {
             e.getRegistry().register(SHAPELESS_RECIPE_SERIALIZER.setRegistryName(new ResourceLocation("abstoneedition", "shapeless")));
             e.getRegistry().register(FURNACE_RECIPE_SERIALIZER.setRegistryName(new ResourceLocation("abstoneedition", "furnace")));
             e.getRegistry().register(BLASTING_RECIPE_SERIALIZER.setRegistryName(new ResourceLocation("abstoneedition", "blastfurnace")));
+            e.getRegistry().register(STONE_CUTTING_RECIPE_SERIALIZER.setRegistryName(new ResourceLocation("abstoneedition", "stonecutting")));
         }
     }
 
