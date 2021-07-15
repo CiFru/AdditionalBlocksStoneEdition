@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "abstoneedition:stone_tiles"
+          "name": "abstoneedition:old_stone_tiles"
         }
       ],
       "conditions": [

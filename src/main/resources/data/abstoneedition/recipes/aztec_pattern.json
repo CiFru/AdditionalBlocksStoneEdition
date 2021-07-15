@@ -1,0 +1,23 @@
+{
+  "type": "abstoneedition:shaped",
+  "pattern": [
+    "ACA",
+    "ASA",
+    "AAA"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:vine"
+    },
+    "C": {
+      "item": "minecraft:gray_dye"
+    },
+    "A": {
+      "item": "minecraft:stone"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:aztec_pattern",
+    "count": 6
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "abstoneedition:shaped",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "abstoneedition:aztec_tiles"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:aztec_pillar",
+    "count": 2
+  }
+}

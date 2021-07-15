@@ -1,0 +1,24 @@
+{
+  "type": "abstoneedition:shaped",
+  "pattern": [
+    "ACA",
+    "CSC",
+    "ACA"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:gold_ingot"
+    },
+    "C": {
+      "item": "abstoneedition:copper_ingot"
+    },
+    "A": {
+      "item": "minecraft:stone"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:sunstone",
+    "count": 1
+  }
+}
+
