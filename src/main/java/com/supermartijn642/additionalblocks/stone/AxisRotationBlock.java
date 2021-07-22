@@ -15,17 +15,17 @@ public class AxisRotationBlock extends BasicBlock {
 
     public AxisRotationBlock(String registryName,Supplier<Boolean> configValue, Properties properties){
         super(registryName, configValue, properties);
-        this.setDefaultState(this.getDefaultState().with(BlockProperties.AXIS, Direction.Axis.Y));
+        this.registerDefaultState(this.defaultBlockState().setValue(BlockProperties.AXIS, Direction.Axis.Y));
     }
 
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context){
-        Direction facing = context.getFace();
-        return this.getDefaultState().with(BlockProperties.AXIS, facing.getAxis());
+        Direction facing = context.getClickedFace();
+        return this.defaultBlockState().setValue(BlockProperties.AXIS, facing.getAxis());
     }
 
     @Override
-    protected void fillStateContainer(StateContainer.Builder<Block,BlockState> builder){
+    protected void createBlockStateDefinition(StateContainer.Builder<Block,BlockState> builder){
         builder.add(BlockProperties.AXIS);
     }
 }

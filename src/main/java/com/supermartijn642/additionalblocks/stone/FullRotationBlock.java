@@ -18,17 +18,17 @@ public class FullRotationBlock extends BasicBlock {
     public FullRotationBlock(String registryName, boolean reversePlacement, Properties properties, Supplier<Boolean> configValue){
         super(registryName, configValue, properties);
         this.reversePlacement = reversePlacement;
-        this.setDefaultState(this.getDefaultState().with(BlockProperties.FACING, Direction.NORTH));
+        this.registerDefaultState(this.defaultBlockState().setValue(BlockProperties.FACING, Direction.NORTH));
     }
 
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context){
         Direction facing = context.getNearestLookingDirection();
-        return this.getDefaultState().with(BlockProperties.FACING, this.reversePlacement ? facing.getOpposite() : facing);
+        return this.defaultBlockState().setValue(BlockProperties.FACING, this.reversePlacement ? facing.getOpposite() : facing);
     }
 
     @Override
-    protected void fillStateContainer(StateContainer.Builder<Block,BlockState> builder){
+    protected void createBlockStateDefinition(StateContainer.Builder<Block,BlockState> builder){
         builder.add(BlockProperties.FACING);
     }
 }

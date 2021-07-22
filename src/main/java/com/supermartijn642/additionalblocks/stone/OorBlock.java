@@ -1,7 +1,6 @@
 package com.supermartijn642.additionalblocks.stone;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.OreBlock;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -14,19 +13,19 @@ import java.util.function.Supplier;
 public class OorBlock extends OreBlock implements IConfigObject, IItemGroupIndex{
     private final Supplier<Boolean> enable;
 
-    public OorBlock(String registryName, Supplier<Boolean> configValue, Block.Properties properties) {
+    public OorBlock(String registryName, Supplier<Boolean> configValue, AbstractBlock.Properties properties) {
         super(properties);
         this.setRegistryName(registryName);
         this.enable = configValue;
     }
 
-    public OorBlock(String registryName, Block.Properties properties) {
+    public OorBlock(String registryName, AbstractBlock.Properties properties) {
         super(properties);
         this.setRegistryName(registryName);
         this.enable = () -> true;
     }
 
-    protected int getExperience(Random rand) {
+    protected int xpOnDrop(Random rand) {
         if (this == AdditionalBlocks.copper_ore) {
             return MathHelper.nextInt(rand, 0, 2);
         } else {
@@ -35,9 +34,9 @@ public class OorBlock extends OreBlock implements IConfigObject, IItemGroupIndex
     }
 
     @Override
-    public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
+    public void fillItemCategory(ItemGroup group, NonNullList<ItemStack> items) {
         if (this.isEnabled())
-            super.fillItemGroup(group, items);
+            super.fillItemCategory(group, items);
     }
 
     @Override

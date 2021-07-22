@@ -2,7 +2,10 @@ package com.supermartijn642.additionalblocks.stone.ToolItemClasses;
 
 import com.supermartijn642.additionalblocks.stone.IConfigObject;
 import com.supermartijn642.additionalblocks.stone.IItemGroupIndex;
-import net.minecraft.item.*;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemTier;
+import net.minecraft.item.PickaxeItem;
 import net.minecraft.util.NonNullList;
 
 import java.util.function.Supplier;
@@ -23,9 +26,9 @@ public class HouweelItem extends PickaxeItem implements IConfigObject, IItemGrou
     }
 
     @Override
-    public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
+    public void fillItemCategory(ItemGroup group, NonNullList<ItemStack> items) {
         if (this.isEnabled())
-            super.fillItemGroup(group, items);
+            super.fillItemCategory(group, items);
     }
 
     @Override

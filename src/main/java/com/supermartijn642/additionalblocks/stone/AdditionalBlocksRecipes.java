@@ -19,7 +19,7 @@ public class AdditionalBlocksRecipes {
 
     private static boolean checkIngredients(Iterable<Ingredient> ingredients){
         for(Ingredient ingredient : ingredients){
-            ItemStack[] itemStacks = ingredient.getMatchingStacks();
+            ItemStack[] itemStacks = ingredient.getItems();
             if(itemStacks.length == 1 && !checkItemStack(itemStacks[0]))
                 return false;
         }
@@ -42,105 +42,105 @@ public class AdditionalBlocksRecipes {
     public static class ShapedSerializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<ShapedRecipe> {
 
         @Override
-        public ShapedRecipe read(ResourceLocation recipeId, JsonObject json){
-            ShapedRecipe recipe = IRecipeSerializer.CRAFTING_SHAPED.read(recipeId, json);
-            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getRecipeOutput()) ? recipe : null;
+        public ShapedRecipe fromJson(ResourceLocation recipeId, JsonObject json){
+            ShapedRecipe recipe = IRecipeSerializer.SHAPED_RECIPE.fromJson(recipeId, json);
+            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Nullable
         @Override
-        public ShapedRecipe read(ResourceLocation recipeId, PacketBuffer buffer){
-            ShapedRecipe recipe = IRecipeSerializer.CRAFTING_SHAPED.read(recipeId, buffer);
-            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getRecipeOutput()) ? recipe : null;
+        public ShapedRecipe fromNetwork(ResourceLocation recipeId, PacketBuffer buffer){
+            ShapedRecipe recipe = IRecipeSerializer.SHAPED_RECIPE.fromNetwork(recipeId, buffer);
+            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Override
-        public void write(PacketBuffer buffer, ShapedRecipe recipe){
-            IRecipeSerializer.CRAFTING_SHAPED.write(buffer, recipe);
+        public void toNetwork(PacketBuffer buffer, ShapedRecipe recipe){
+            IRecipeSerializer.SHAPED_RECIPE.toNetwork(buffer, recipe);
         }
     }
 
     public static class ShapelessSerializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<ShapelessRecipe> {
 
         @Override
-        public ShapelessRecipe read(ResourceLocation recipeId, JsonObject json){
-            ShapelessRecipe recipe = IRecipeSerializer.CRAFTING_SHAPELESS.read(recipeId, json);
-            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getRecipeOutput()) ? recipe : null;
+        public ShapelessRecipe fromJson(ResourceLocation recipeId, JsonObject json){
+            ShapelessRecipe recipe = IRecipeSerializer.SHAPELESS_RECIPE.fromJson(recipeId, json);
+            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Nullable
         @Override
-        public ShapelessRecipe read(ResourceLocation recipeId, PacketBuffer buffer){
-            ShapelessRecipe recipe = IRecipeSerializer.CRAFTING_SHAPELESS.read(recipeId, buffer);
-            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getRecipeOutput()) ? recipe : null;
+        public ShapelessRecipe fromNetwork(ResourceLocation recipeId, PacketBuffer buffer){
+            ShapelessRecipe recipe = IRecipeSerializer.SHAPELESS_RECIPE.fromNetwork(recipeId, buffer);
+            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Override
-        public void write(PacketBuffer buffer, ShapelessRecipe recipe){
-            IRecipeSerializer.CRAFTING_SHAPELESS.write(buffer, recipe);
+        public void toNetwork(PacketBuffer buffer, ShapelessRecipe recipe){
+            IRecipeSerializer.SHAPELESS_RECIPE.toNetwork(buffer, recipe);
         }
     }
 
     public static class FurnaceSerializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<FurnaceRecipe> {
 
         @Override
-        public FurnaceRecipe read(ResourceLocation recipeId, JsonObject json){
-            FurnaceRecipe recipe = IRecipeSerializer.SMELTING.read(recipeId, json);
-            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getRecipeOutput()) ? recipe : null;
+        public FurnaceRecipe fromJson(ResourceLocation recipeId, JsonObject json){
+            FurnaceRecipe recipe = IRecipeSerializer.SMELTING_RECIPE.fromJson(recipeId, json);
+            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Nullable
         @Override
-        public FurnaceRecipe read(ResourceLocation recipeId, PacketBuffer buffer){
-            FurnaceRecipe recipe = IRecipeSerializer.SMELTING.read(recipeId, buffer);
-            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getRecipeOutput()) ? recipe : null;
+        public FurnaceRecipe fromNetwork(ResourceLocation recipeId, PacketBuffer buffer){
+            FurnaceRecipe recipe = IRecipeSerializer.SMELTING_RECIPE.fromNetwork(recipeId, buffer);
+            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Override
-        public void write(PacketBuffer buffer, FurnaceRecipe recipe){
-            IRecipeSerializer.SMELTING.write(buffer, recipe);
+        public void toNetwork(PacketBuffer buffer, FurnaceRecipe recipe){
+            IRecipeSerializer.SMELTING_RECIPE.toNetwork(buffer, recipe);
         }
     }
 
     public static class BlastFurnaceSerializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<BlastingRecipe> {
 
         @Override
-        public BlastingRecipe read(ResourceLocation recipeId, JsonObject json){
-            BlastingRecipe recipe = IRecipeSerializer.BLASTING.read(recipeId, json);
-            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getRecipeOutput()) ? recipe : null;
+        public BlastingRecipe fromJson(ResourceLocation recipeId, JsonObject json){
+            BlastingRecipe recipe = IRecipeSerializer.BLASTING_RECIPE.fromJson(recipeId, json);
+            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Nullable
         @Override
-        public BlastingRecipe read(ResourceLocation recipeId, PacketBuffer buffer){
-            BlastingRecipe recipe = IRecipeSerializer.BLASTING.read(recipeId, buffer);
-            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getRecipeOutput()) ? recipe : null;
+        public BlastingRecipe fromNetwork(ResourceLocation recipeId, PacketBuffer buffer){
+            BlastingRecipe recipe = IRecipeSerializer.BLASTING_RECIPE.fromNetwork(recipeId, buffer);
+            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Override
-        public void write(PacketBuffer buffer, BlastingRecipe recipe){
-            IRecipeSerializer.BLASTING.write(buffer, recipe);
+        public void toNetwork(PacketBuffer buffer, BlastingRecipe recipe){
+            IRecipeSerializer.BLASTING_RECIPE.toNetwork(buffer, recipe);
         }
     }
 
     public static class StoneCutterSerializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<StonecuttingRecipe> {
 
         @Override
-        public StonecuttingRecipe read(ResourceLocation recipeId, JsonObject json){
-            StonecuttingRecipe recipe = IRecipeSerializer.STONECUTTING.read(recipeId, json);
-            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getRecipeOutput()) ? recipe : null;
+        public StonecuttingRecipe fromJson(ResourceLocation recipeId, JsonObject json){
+            StonecuttingRecipe recipe = IRecipeSerializer.STONECUTTER.fromJson(recipeId, json);
+            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Nullable
         @Override
-        public StonecuttingRecipe read(ResourceLocation recipeId, PacketBuffer buffer){
-            StonecuttingRecipe recipe = IRecipeSerializer.STONECUTTING.read(recipeId, buffer);
-            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getRecipeOutput()) ? recipe : null;
+        public StonecuttingRecipe fromNetwork(ResourceLocation recipeId, PacketBuffer buffer){
+            StonecuttingRecipe recipe = IRecipeSerializer.STONECUTTER.fromNetwork(recipeId, buffer);
+            return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Override
-        public void write(PacketBuffer buffer, StonecuttingRecipe recipe){
-            IRecipeSerializer.STONECUTTING.write(buffer, recipe);
+        public void toNetwork(PacketBuffer buffer, StonecuttingRecipe recipe){
+            IRecipeSerializer.STONECUTTER.toNetwork(buffer, recipe);
         }
     }
 }

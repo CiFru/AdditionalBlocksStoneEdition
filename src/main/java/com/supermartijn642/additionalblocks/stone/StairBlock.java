@@ -1,6 +1,5 @@
 package com.supermartijn642.additionalblocks.stone;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -14,21 +13,21 @@ public class StairBlock extends StairsBlock implements IConfigObject, IItemGroup
     private final BasicBlock block;
 
     public StairBlock(BasicBlock block, Properties properties) {
-        super(block::getDefaultState, properties);
+        super(block::defaultBlockState, properties);
         this.setRegistryName(block.getRegistryName().getPath() + "_stairs");
         this.block = block;
     }
 
     public StairBlock(BasicBlock block, String registryName, Properties properties) {
-        super(block::getDefaultState, properties);
+        super(block::defaultBlockState, properties);
         this.setRegistryName(registryName);
         this.block = block;
     }
 
     @Override
-    public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
+    public void fillItemCategory(ItemGroup group, NonNullList<ItemStack> items) {
         if (this.isEnabled())
-            super.fillItemGroup(group, items);
+            super.fillItemCategory(group, items);
     }
 
     @Override

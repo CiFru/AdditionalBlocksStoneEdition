@@ -18,17 +18,17 @@ public class HorizontalRotationBlock extends BasicBlock {
     public HorizontalRotationBlock(String registryName, Supplier<Boolean> configValue, boolean reversePlacement, Properties properties){
         super(registryName, configValue, properties);
         this.reversePlacement = reversePlacement;
-        this.setDefaultState(this.getDefaultState().with(BlockProperties.HORIZONTAL_FACING, Direction.NORTH));
+        this.registerDefaultState(this.defaultBlockState().setValue(BlockProperties.HORIZONTAL_FACING, Direction.NORTH));
     }
 
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context){
-        Direction facing = context.getPlacementHorizontalFacing();
-        return this.getDefaultState().with(BlockProperties.HORIZONTAL_FACING, this.reversePlacement ? facing.getOpposite() : facing);
+        Direction facing = context.getHorizontalDirection();
+        return this.defaultBlockState().setValue(BlockProperties.HORIZONTAL_FACING, this.reversePlacement ? facing.getOpposite() : facing);
     }
 
     @Override
-    protected void fillStateContainer(StateContainer.Builder<Block,BlockState> builder){
+    protected void createBlockStateDefinition(StateContainer.Builder<Block,BlockState> builder){
         builder.add(BlockProperties.HORIZONTAL_FACING);
     }
 }

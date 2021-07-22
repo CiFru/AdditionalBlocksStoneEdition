@@ -23,9 +23,9 @@ public class OreItem extends Item implements IConfigObject, IItemGroupIndex {
     }
 
     @Override
-    public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
+    public void fillItemCategory(ItemGroup group, NonNullList<ItemStack> items) {
         if (this.isEnabled())
-            super.fillItemGroup(group, items);
+            super.fillItemCategory(group, items);
     }
 
     @Override
