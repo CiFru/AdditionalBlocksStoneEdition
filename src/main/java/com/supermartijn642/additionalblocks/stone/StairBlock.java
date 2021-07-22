@@ -1,14 +1,14 @@
 package com.supermartijn642.additionalblocks.stone;
 
-import net.minecraft.block.StairsBlock;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 
 /**
  * Created 1/17/2021 by SuperMartijn642
  */
-public class StairBlock extends StairsBlock implements IConfigObject, IItemGroupIndex {
+public class StairBlock extends StairBlock implements IConfigObject, IItemGroupIndex {
 
     private final BasicBlock block;
 
@@ -25,7 +25,7 @@ public class StairBlock extends StairsBlock implements IConfigObject, IItemGroup
     }
 
     @Override
-    public void fillItemCategory(ItemGroup group, NonNullList<ItemStack> items) {
+    public void fillItemCategory(CreativeModeTab group, NonNullList<ItemStack> items) {
         if (this.isEnabled())
             super.fillItemCategory(group, items);
     }

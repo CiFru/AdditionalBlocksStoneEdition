@@ -1,8 +1,8 @@
 package com.supermartijn642.additionalblocks.stone;
 
-import net.minecraft.state.EnumProperty;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.Direction;
+import net.minecraft.core.Direction;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 
 /**
  * Created 1/16/2021 by SuperMartijn642

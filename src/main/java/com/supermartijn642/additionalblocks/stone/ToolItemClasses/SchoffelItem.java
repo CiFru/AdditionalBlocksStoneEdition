@@ -2,11 +2,11 @@ package com.supermartijn642.additionalblocks.stone.ToolItemClasses;
 
 import com.supermartijn642.additionalblocks.stone.IConfigObject;
 import com.supermartijn642.additionalblocks.stone.IItemGroupIndex;
-import net.minecraft.item.HoeItem;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemTier;
-import net.minecraft.util.NonNullList;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.HoeItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Tiers;
 
 import java.util.function.Supplier;
 
@@ -15,7 +15,7 @@ public class SchoffelItem extends HoeItem implements IConfigObject, IItemGroupIn
     private final Supplier<Boolean> enable;
 
     public SchoffelItem(String registryName, Supplier<Boolean> enable, Properties properties, int attackDamage, float attackSpeed) {
-        super(ItemTier.IRON, attackDamage, attackSpeed, properties);
+        super(Tiers.IRON, attackDamage, attackSpeed, properties);
         this.setRegistryName(registryName);
         this.enable = enable;
     }
@@ -26,7 +26,7 @@ public class SchoffelItem extends HoeItem implements IConfigObject, IItemGroupIn
     }
 
     @Override
-    public void fillItemCategory(ItemGroup group, NonNullList<ItemStack> items) {
+    public void fillItemCategory(CreativeModeTab group, NonNullList<ItemStack> items) {
         if (this.isEnabled())
             super.fillItemCategory(group, items);
     }

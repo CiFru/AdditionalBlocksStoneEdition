@@ -1,13 +1,19 @@
 package com.supermartijn642.additionalblocks.stone;
 
 import com.google.gson.JsonObject;
-import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.*;
-import net.minecraft.network.PacketBuffer;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.item.crafting.BlastingRecipe;
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.item.crafting.ShapedRecipe;
+import net.minecraft.item.crafting.ShapelessRecipe;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.SmeltingRecipe;
+import net.minecraft.world.item.crafting.StonecutterRecipe;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.ForgeRegistryEntry;
 
 import javax.annotation.Nullable;
@@ -39,108 +45,108 @@ public class AdditionalBlocksRecipes {
         return true;
     }
 
-    public static class ShapedSerializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<ShapedRecipe> {
+    public static class ShapedSerializer extends ForgeRegistryEntry<RecipeSerializer<?>> implements RecipeSerializer<ShapedRecipe> {
 
         @Override
         public ShapedRecipe fromJson(ResourceLocation recipeId, JsonObject json){
-            ShapedRecipe recipe = IRecipeSerializer.SHAPED_RECIPE.fromJson(recipeId, json);
+            ShapedRecipe recipe = RecipeSerializer.SHAPED_RECIPE.fromJson(recipeId, json);
             return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Nullable
         @Override
-        public ShapedRecipe fromNetwork(ResourceLocation recipeId, PacketBuffer buffer){
-            ShapedRecipe recipe = IRecipeSerializer.SHAPED_RECIPE.fromNetwork(recipeId, buffer);
+        public ShapedRecipe fromNetwork(ResourceLocation recipeId, FriendlyByteBuf buffer){
+            ShapedRecipe recipe = RecipeSerializer.SHAPED_RECIPE.fromNetwork(recipeId, buffer);
             return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Override
-        public void toNetwork(PacketBuffer buffer, ShapedRecipe recipe){
-            IRecipeSerializer.SHAPED_RECIPE.toNetwork(buffer, recipe);
+        public void toNetwork(FriendlyByteBuf buffer, ShapedRecipe recipe){
+            RecipeSerializer.SHAPED_RECIPE.toNetwork(buffer, recipe);
         }
     }
 
-    public static class ShapelessSerializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<ShapelessRecipe> {
+    public static class ShapelessSerializer extends ForgeRegistryEntry<RecipeSerializer<?>> implements RecipeSerializer<ShapelessRecipe> {
 
         @Override
         public ShapelessRecipe fromJson(ResourceLocation recipeId, JsonObject json){
-            ShapelessRecipe recipe = IRecipeSerializer.SHAPELESS_RECIPE.fromJson(recipeId, json);
+            ShapelessRecipe recipe = RecipeSerializer.SHAPELESS_RECIPE.fromJson(recipeId, json);
             return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Nullable
         @Override
-        public ShapelessRecipe fromNetwork(ResourceLocation recipeId, PacketBuffer buffer){
-            ShapelessRecipe recipe = IRecipeSerializer.SHAPELESS_RECIPE.fromNetwork(recipeId, buffer);
+        public ShapelessRecipe fromNetwork(ResourceLocation recipeId, FriendlyByteBuf buffer){
+            ShapelessRecipe recipe = RecipeSerializer.SHAPELESS_RECIPE.fromNetwork(recipeId, buffer);
             return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Override
-        public void toNetwork(PacketBuffer buffer, ShapelessRecipe recipe){
-            IRecipeSerializer.SHAPELESS_RECIPE.toNetwork(buffer, recipe);
+        public void toNetwork(FriendlyByteBuf buffer, ShapelessRecipe recipe){
+            RecipeSerializer.SHAPELESS_RECIPE.toNetwork(buffer, recipe);
         }
     }
 
-    public static class FurnaceSerializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<FurnaceRecipe> {
+    public static class FurnaceSerializer extends ForgeRegistryEntry<RecipeSerializer<?>> implements RecipeSerializer<SmeltingRecipe> {
 
         @Override
-        public FurnaceRecipe fromJson(ResourceLocation recipeId, JsonObject json){
-            FurnaceRecipe recipe = IRecipeSerializer.SMELTING_RECIPE.fromJson(recipeId, json);
+        public SmeltingRecipe fromJson(ResourceLocation recipeId, JsonObject json){
+            SmeltingRecipe recipe = RecipeSerializer.SMELTING_RECIPE.fromJson(recipeId, json);
             return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Nullable
         @Override
-        public FurnaceRecipe fromNetwork(ResourceLocation recipeId, PacketBuffer buffer){
-            FurnaceRecipe recipe = IRecipeSerializer.SMELTING_RECIPE.fromNetwork(recipeId, buffer);
+        public SmeltingRecipe fromNetwork(ResourceLocation recipeId, FriendlyByteBuf buffer){
+            SmeltingRecipe recipe = RecipeSerializer.SMELTING_RECIPE.fromNetwork(recipeId, buffer);
             return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Override
-        public void toNetwork(PacketBuffer buffer, FurnaceRecipe recipe){
-            IRecipeSerializer.SMELTING_RECIPE.toNetwork(buffer, recipe);
+        public void toNetwork(FriendlyByteBuf buffer, SmeltingRecipe recipe){
+            RecipeSerializer.SMELTING_RECIPE.toNetwork(buffer, recipe);
         }
     }
 
-    public static class BlastFurnaceSerializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<BlastingRecipe> {
+    public static class BlastFurnaceSerializer extends ForgeRegistryEntry<RecipeSerializer<?>> implements RecipeSerializer<BlastingRecipe> {
 
         @Override
         public BlastingRecipe fromJson(ResourceLocation recipeId, JsonObject json){
-            BlastingRecipe recipe = IRecipeSerializer.BLASTING_RECIPE.fromJson(recipeId, json);
+            BlastingRecipe recipe = RecipeSerializer.BLASTING_RECIPE.fromJson(recipeId, json);
             return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Nullable
         @Override
-        public BlastingRecipe fromNetwork(ResourceLocation recipeId, PacketBuffer buffer){
-            BlastingRecipe recipe = IRecipeSerializer.BLASTING_RECIPE.fromNetwork(recipeId, buffer);
+        public BlastingRecipe fromNetwork(ResourceLocation recipeId, FriendlyByteBuf buffer){
+            BlastingRecipe recipe = RecipeSerializer.BLASTING_RECIPE.fromNetwork(recipeId, buffer);
             return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Override
-        public void toNetwork(PacketBuffer buffer, BlastingRecipe recipe){
-            IRecipeSerializer.BLASTING_RECIPE.toNetwork(buffer, recipe);
+        public void toNetwork(FriendlyByteBuf buffer, BlastingRecipe recipe){
+            RecipeSerializer.BLASTING_RECIPE.toNetwork(buffer, recipe);
         }
     }
 
-    public static class StoneCutterSerializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<StonecuttingRecipe> {
+    public static class StoneCutterSerializer extends ForgeRegistryEntry<RecipeSerializer<?>> implements RecipeSerializer<StonecutterRecipe> {
 
         @Override
-        public StonecuttingRecipe fromJson(ResourceLocation recipeId, JsonObject json){
-            StonecuttingRecipe recipe = IRecipeSerializer.STONECUTTER.fromJson(recipeId, json);
+        public StonecutterRecipe fromJson(ResourceLocation recipeId, JsonObject json){
+            StonecutterRecipe recipe = RecipeSerializer.STONECUTTER.fromJson(recipeId, json);
             return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Nullable
         @Override
-        public StonecuttingRecipe fromNetwork(ResourceLocation recipeId, PacketBuffer buffer){
-            StonecuttingRecipe recipe = IRecipeSerializer.STONECUTTER.fromNetwork(recipeId, buffer);
+        public StonecutterRecipe fromNetwork(ResourceLocation recipeId, FriendlyByteBuf buffer){
+            StonecutterRecipe recipe = RecipeSerializer.STONECUTTER.fromNetwork(recipeId, buffer);
             return checkIngredients(recipe.getIngredients()) && checkItemStack(recipe.getResultItem()) ? recipe : null;
         }
 
         @Override
-        public void toNetwork(PacketBuffer buffer, StonecuttingRecipe recipe){
-            IRecipeSerializer.STONECUTTER.toNetwork(buffer, recipe);
+        public void toNetwork(FriendlyByteBuf buffer, StonecutterRecipe recipe){
+            RecipeSerializer.STONECUTTER.toNetwork(buffer, recipe);
         }
     }
 }

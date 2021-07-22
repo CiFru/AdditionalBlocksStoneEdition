@@ -1,11 +1,11 @@
 package com.supermartijn642.additionalblocks.stone;
 
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 
-public class AbItemGroup extends ItemGroup {
+public class AbItemGroup extends CreativeModeTab {
     public AbItemGroup() {
         super("abstoneedition");
     }

@@ -1,10 +1,10 @@
 package com.supermartijn642.additionalblocks.stone;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import java.util.function.Supplier;
 
@@ -15,19 +15,19 @@ public class BasicBlock extends Block implements IConfigObject, IItemGroupIndex 
 
     private final Supplier<Boolean> enable;
 
-    public BasicBlock(String registryName, Supplier<Boolean> configValue, AbstractBlock.Properties properties) {
+    public BasicBlock(String registryName, Supplier<Boolean> configValue, BlockBehaviour.Properties properties) {
         super(properties);
         this.setRegistryName(registryName);
         this.enable = configValue;
     }
-    public BasicBlock(String registryName, AbstractBlock.Properties properties) {
+    public BasicBlock(String registryName, BlockBehaviour.Properties properties) {
         super(properties);
         this.setRegistryName(registryName);
         this.enable = ()->true;
     }
 
     @Override
-    public void fillItemCategory(ItemGroup group, NonNullList<ItemStack> items) {
+    public void fillItemCategory(CreativeModeTab group, NonNullList<ItemStack> items) {
         if (this.isEnabled())
             super.fillItemCategory(group, items);
     }

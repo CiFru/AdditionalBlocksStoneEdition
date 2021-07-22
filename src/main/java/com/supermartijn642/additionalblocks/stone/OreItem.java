@@ -1,9 +1,9 @@
 package com.supermartijn642.additionalblocks.stone;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 
 import java.util.function.Supplier;
 
@@ -23,7 +23,7 @@ public class OreItem extends Item implements IConfigObject, IItemGroupIndex {
     }
 
     @Override
-    public void fillItemCategory(ItemGroup group, NonNullList<ItemStack> items) {
+    public void fillItemCategory(CreativeModeTab group, NonNullList<ItemStack> items) {
         if (this.isEnabled())
             super.fillItemCategory(group, items);
     }

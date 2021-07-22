@@ -1,13 +1,13 @@
 package com.supermartijn642.additionalblocks.stone;
 
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 
 /**
  * Created 1/17/2021 by SuperMartijn642
  */
-public class SlabBlock extends net.minecraft.block.SlabBlock implements IConfigObject, IItemGroupIndex {
+public class SlabBlock extends net.minecraft.world.level.block.SlabBlock implements IConfigObject, IItemGroupIndex {
 
     private final BasicBlock block;
 
@@ -24,7 +24,7 @@ public class SlabBlock extends net.minecraft.block.SlabBlock implements IConfigO
     }
 
     @Override
-    public void fillItemCategory(ItemGroup group, NonNullList<ItemStack> items) {
+    public void fillItemCategory(CreativeModeTab group, NonNullList<ItemStack> items) {
         if (this.isEnabled())
             super.fillItemCategory(group, items);
     }
