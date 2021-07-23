@@ -48,7 +48,7 @@ description='''Additional Blocks: Stone Edition adds stone-themed blocks to your
 [[dependencies.abstoneedition]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16,1.17)"
+    versionRange="[1.17,1.18)"
     ordering="NONE"
     side="BOTH"
 # Here's another dependency

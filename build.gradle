@@ -12,7 +12,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply from: 'https://raw.githubusercontent.com/SizableShrimp/Forge-Class-Remapper/main/classremapper.gradle'
 
-version = '2.0.4-mc1.16.3-16.5'
+version = '2.0.4-mc1.17'
 group = 'com.supermartijn642.additionalblocks.stone' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'abstoneedition'
 
@@ -90,6 +90,6 @@ dependencies {
     // Block Renderer
 //    runtimeOnly fg.deobf("curse.maven:block-renderer-380456:3149419")
 
-    // Config Lib
-//    compile fg.deobf("curse.maven:supermartijn642s-config-lib-438332:3397561")
+//     Config Lib
+    compileOnly fg.deobf("curse.maven:supermartijn642s-config-lib-438332:3357667")
 }

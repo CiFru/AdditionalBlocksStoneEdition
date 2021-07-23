@@ -3,12 +3,11 @@ package com.supermartijn642.additionalblocks.stone;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 
 /**
  * Created 1/17/2021 by SuperMartijn642
  */
-public class StairBlock extends StairBlock implements IConfigObject, IItemGroupIndex {
+public class StairBlock extends net.minecraft.world.level.block.StairBlock implements IConfigObject, IItemGroupIndex {
 
     private final BasicBlock block;
 

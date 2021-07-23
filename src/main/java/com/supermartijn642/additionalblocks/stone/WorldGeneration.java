@@ -38,50 +38,50 @@ public class WorldGeneration {
 
     //
     public static void onFeatureRegistry(final RegistryEvent.Register<Feature<?>> e) {
-        ore_marble = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, AdditionalBlocks.marble.defaultBlockState(), 25));
-        ore_marble = ore_marble.range(range(0, 100)).squared().count(6);
+        ore_marble = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, AdditionalBlocks.marble.defaultBlockState(), 20));
+        ore_marble = ore_marble.range(range(30, 90)).squared().count(6);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
                 new ResourceLocation("abstoneedition", "ore_marble"),
                 ore_marble
         );
-        ore_limestone = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, AdditionalBlocks.limestone.defaultBlockState(), 25));
-        ore_limestone = ore_limestone.range(60).squared().count(6);
+        ore_limestone = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, AdditionalBlocks.limestone.defaultBlockState(), 20));
+        ore_limestone = ore_limestone.range(range(30, 90)).squared().count(6);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
                 new ResourceLocation("abstoneedition", "ore_limestone"),
                 ore_limestone
         );
-        ore_copper = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, AdditionalBlocks.copper_ore.defaultBlockState(), 10));
-        ore_copper = ore_copper.range(64).squared().count(20);
+        ore_copper = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, AdditionalBlocks.copper_ore.defaultBlockState(), 8));
+        ore_copper = ore_copper.range(range(20, 75)).squared().count(15);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
                 new ResourceLocation("abstoneedition", "ore_copper"),
                 ore_copper
         );
-        ore_silver = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, AdditionalBlocks.silver_ore.defaultBlockState(), 9));
-        ore_silver = ore_silver.range(64).squared().count(20);
+        ore_silver = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, AdditionalBlocks.silver_ore.defaultBlockState(), 6));
+        ore_silver = ore_silver.range(range(20, 60)).squared().count(6);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
                 new ResourceLocation("abstoneedition", "ore_silver"),
                 ore_silver
         );
-        ore_bloodstone = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NETHER_ORE_REPLACEABLES, AdditionalBlocks.bloodstone.defaultBlockState(), 25));
-        ore_bloodstone = ore_bloodstone.range(60).squared().count(6);
+        ore_bloodstone = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NETHER_ORE_REPLACEABLES, AdditionalBlocks.bloodstone.defaultBlockState(), 20));
+        ore_bloodstone = ore_bloodstone.range(range(0, 100)).squared().count(6);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
                 new ResourceLocation("abstoneedition", "ore_bloodstone"),
                 ore_bloodstone
         );
-        ore_black_marble = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NETHER_ORE_REPLACEABLES, AdditionalBlocks.black_marble.defaultBlockState(), 25));
-        ore_black_marble = ore_black_marble.range(60).squared().count(6);
+        ore_black_marble = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NETHER_ORE_REPLACEABLES, AdditionalBlocks.black_marble.defaultBlockState(), 20));
+        ore_black_marble = ore_black_marble.range(range(0, 100)).squared().count(6);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
                 new ResourceLocation("abstoneedition", "ore_black_marble"),
                 ore_black_marble
         );
-        ore_volcanic_stone_bricks = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NETHER_ORE_REPLACEABLES, AdditionalBlocks.volcanic_stone_bricks.defaultBlockState(), 25));
-        ore_volcanic_stone_bricks = ore_volcanic_stone_bricks.range(60).squared().count(6);
+        ore_volcanic_stone_bricks = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NETHER_ORE_REPLACEABLES, AdditionalBlocks.volcanic_stone_bricks.defaultBlockState(), 20));
+        ore_volcanic_stone_bricks = ore_volcanic_stone_bricks.range(range(0, 100)).squared().count(6);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
                 new ResourceLocation("abstoneedition", "ore_volcanic_stone_bricks"),
                 ore_volcanic_stone_bricks
         );
         ore_volcanic_stone = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, AdditionalBlocks.volcanic_stone.defaultBlockState(), 30));
-        ore_volcanic_stone = ore_volcanic_stone.range(60).squared().count(8);
+        ore_volcanic_stone = ore_volcanic_stone.range(range(0, 100)).squared().count(8);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
                 new ResourceLocation("abstoneedition", "ore_volcanic_stone"),
                 ore_volcanic_stone
