@@ -6,9 +6,12 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.RangeDecoratorConfiguration;
+import net.minecraft.world.level.levelgen.heightproviders.UniformHeight;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
@@ -36,7 +39,7 @@ public class WorldGeneration {
     //
     public static void onFeatureRegistry(final RegistryEvent.Register<Feature<?>> e) {
         ore_marble = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, AdditionalBlocks.marble.defaultBlockState(), 25));
-        ore_marble = ore_marble.range(60).squared().count(6);
+        ore_marble = ore_marble.range(range(0, 100)).squared().count(6);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
                 new ResourceLocation("abstoneedition", "ore_marble"),
                 ore_marble
@@ -127,6 +130,10 @@ public class WorldGeneration {
         if (BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(biomeKey)) {
 
         }
+    }
+
+    private static RangeDecoratorConfiguration range(int bottom, int top){
+        return new RangeDecoratorConfiguration(UniformHeight.of(VerticalAnchor.aboveBottom(bottom), VerticalAnchor.belowTop(top)));
     }
 
 }
