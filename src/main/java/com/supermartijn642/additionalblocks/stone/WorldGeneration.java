@@ -50,12 +50,12 @@ public class WorldGeneration {
                 new ResourceLocation("abstoneedition", "ore_limestone"),
                 ore_limestone
         );
-        ore_copper = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, AdditionalBlocks.copper_ore.defaultBlockState(), 8));
-        ore_copper = ore_copper.range(range(20, 75)).squared().count(15);
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
-                new ResourceLocation("abstoneedition", "ore_copper"),
-                ore_copper
-        );
+//        ore_copper = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, AdditionalBlocks.copper_ore.defaultBlockState(), 8));
+//        ore_copper = ore_copper.range(range(20, 75)).squared().count(15);
+//        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
+//                new ResourceLocation("abstoneedition", "ore_copper"),
+//                ore_copper
+//        );
         ore_silver = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, AdditionalBlocks.silver_ore.defaultBlockState(), 6));
         ore_silver = ore_silver.range(range(20, 60)).squared().count(6);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
@@ -106,8 +106,8 @@ public class WorldGeneration {
                 if(AdditionalBlocksConfig.enableVolcanicStone.get())
                     e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_volcanic_stone);
             }
-            if(AdditionalBlocksConfig.enableCopper.get())
-                e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_copper);
+//            if(AdditionalBlocksConfig.enableCopper.get())
+//                e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_copper);
             if(AdditionalBlocksConfig.enableSilver.get())
                 e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_silver);
         }

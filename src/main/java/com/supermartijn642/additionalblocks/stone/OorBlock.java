@@ -26,11 +26,11 @@ public class OorBlock extends OreBlock implements IConfigObject, IItemGroupIndex
     }
 
     protected int xpOnDrop(Random rand) {
-        if (this == AdditionalBlocks.copper_ore) {
-            return Mth.nextInt(rand, 0, 2);
-        } else {
+//        if (this == AdditionalBlocks.copper_ore) {
+//            return Mth.nextInt(rand, 0, 2);
+//        } else {
             return this == AdditionalBlocks.silver_ore ? Mth.nextInt(rand, 0, 3) : 0;
-        }
+//        }
     }
 
     @Override
