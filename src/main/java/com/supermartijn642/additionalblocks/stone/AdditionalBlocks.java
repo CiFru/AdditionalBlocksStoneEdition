@@ -395,7 +395,7 @@ public class AdditionalBlocks {
 
         @SubscribeEvent
         public static void onGatherData(final GatherDataEvent e){
-            e.getGenerator().addProvider(new AbBlockStateProvider(e.getGenerator(), "abcarpenter", e.getExistingFileHelper()));
+            e.getGenerator().addProvider(new AbBlockStateProvider(e.getGenerator(), "abstoneedition", e.getExistingFileHelper()));
         }
 
         @SubscribeEvent
