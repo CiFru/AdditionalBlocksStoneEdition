@@ -1,5 +1,6 @@
 package com.supermartijn642.additionalblocks.stone;
 
+import net.minecraft.block.WallBlock;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -14,7 +15,7 @@ public class AbBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         this.addStoneStairsModels();
         this.addStoneSlabModels();
-        this.addStoneWallModels();
+        this.addStoneWalls();
     }
 
     private void addStoneStairsModels() {
@@ -87,59 +88,39 @@ public class AbBlockStateProvider extends BlockStateProvider {
         this.itemModels().withExistingParent("item/smooth_limestone_slab", new ResourceLocation("abstoneedition", "block/smooth_limestone_slab"));
     }
 
-    private void addStoneWallModels() {
-        this.wallBlock(AdditionalBlocks.polished_andesite_wall, new ResourceLocation("minecraft", "block/polished_andesite"));
-        this.wallBlock(AdditionalBlocks.polished_diorite_wall, new ResourceLocation("minecraft", "block/polished_diorite"));
-        this.wallBlock(AdditionalBlocks.polished_granite_wall, new ResourceLocation("minecraft", "block/polished_granite"));
-        this.wallBlock(AdditionalBlocks.andesite_bricks_wall, new ResourceLocation("abstoneedition", "andesite_bricks"));
-        this.wallBlock(AdditionalBlocks.diorite_bricks_wall, new ResourceLocation("abstoneedition", "diorite_bricks"));
-        this.wallBlock(AdditionalBlocks.granite_bricks_wall, new ResourceLocation("abstoneedition", "granite_bricks"));
-        this.wallBlock(AdditionalBlocks.black_marble_wall, new ResourceLocation("abstoneedition", "black_marble"));
-        this.wallBlock(AdditionalBlocks.black_marble_bricks_wall, new ResourceLocation("abstoneedition", "black_marble_bricks"));
-        this.wallBlock(AdditionalBlocks.bloodstone_wall, new ResourceLocation("abstoneedition", "bloodstone"));
-        this.wallBlock(AdditionalBlocks.bloodstone_bricks_wall, new ResourceLocation("abstoneedition", "bloodstone_bricks"));
-        this.wallBlock(AdditionalBlocks.glowstone_wall, new ResourceLocation("minecraft", "block/glowstone"));
-        this.wallBlock(AdditionalBlocks.glowstone_bricks_wall, new ResourceLocation("abstoneedition", "glowstone_bricks"));
-        this.wallBlock(AdditionalBlocks.gray_bricks_wall, new ResourceLocation("abstoneedition", "gray_bricks"));
-        this.wallBlock(AdditionalBlocks.limestone_bricks_wall, new ResourceLocation("abstoneedition", "limestone_bricks"));
-        this.wallBlock(AdditionalBlocks.marble_wall, new ResourceLocation("abstoneedition", "marble"));
-        this.wallBlock(AdditionalBlocks.marble_bricks_wall, new ResourceLocation("abstoneedition", "marble_bricks"));
-        this.wallBlock(AdditionalBlocks.smooth_black_marble_wall, new ResourceLocation("abstoneedition", "smooth_black_marble"));
-        this.wallBlock(AdditionalBlocks.smooth_bloodstone_wall, new ResourceLocation("abstoneedition", "smooth_bloodstone"));
-        this.wallBlock(AdditionalBlocks.smooth_glowstone_wall, new ResourceLocation("abstoneedition", "smooth_glowstone"));
-        this.wallBlock(AdditionalBlocks.smooth_limestone_wall, new ResourceLocation("abstoneedition", "smooth_limestone"));
-        this.wallBlock(AdditionalBlocks.smooth_marble_wall, new ResourceLocation("abstoneedition", "smooth_marble"));
-        this.wallBlock(AdditionalBlocks.smooth_stone_wall, new ResourceLocation("minecraft", "block/smooth_stone"));
-        this.wallBlock(AdditionalBlocks.smooth_stone_bricks_wall, new ResourceLocation("abstoneedition", "smooth_stone_bricks"));
-        this.wallBlock(AdditionalBlocks.stone_brick_block_wall, new ResourceLocation("abstoneedition", "stone_brick_block"));
-        this.wallBlock(AdditionalBlocks.volcanic_stone_wall, new ResourceLocation("abstoneedition", "volcanic_stone"));
-        this.wallBlock(AdditionalBlocks.volcanic_stone_bricks_wall, new ResourceLocation("abstoneedition", "volcanic_stone_bricks"));
+    private void addStoneWalls() {
+        this.addStoneWallModels(AdditionalBlocks.polished_andesite_wall, new ResourceLocation("minecraft", "block/polished_andesite"));
+        this.addStoneWallModels(AdditionalBlocks.polished_diorite_wall, new ResourceLocation("minecraft", "block/polished_diorite"));
+        this.addStoneWallModels(AdditionalBlocks.polished_granite_wall, new ResourceLocation("minecraft", "block/polished_granite"));
+        this.addStoneWallModels(AdditionalBlocks.andesite_bricks_wall, new ResourceLocation("abstoneedition", "andesite_bricks"));
+        this.addStoneWallModels(AdditionalBlocks.diorite_bricks_wall, new ResourceLocation("abstoneedition", "diorite_bricks"));
+        this.addStoneWallModels(AdditionalBlocks.granite_bricks_wall, new ResourceLocation("abstoneedition", "granite_bricks"));
+        this.addStoneWallModels(AdditionalBlocks.black_marble_wall, new ResourceLocation("abstoneedition", "black_marble"));
+        this.addStoneWallModels(AdditionalBlocks.black_marble_bricks_wall, new ResourceLocation("abstoneedition", "black_marble_bricks"));
+        this.addStoneWallModels(AdditionalBlocks.bloodstone_wall, new ResourceLocation("abstoneedition", "bloodstone"));
+        this.addStoneWallModels(AdditionalBlocks.bloodstone_bricks_wall, new ResourceLocation("abstoneedition", "bloodstone_bricks"));
+        this.addStoneWallModels(AdditionalBlocks.glowstone_wall, new ResourceLocation("minecraft", "block/glowstone"));
+        this.addStoneWallModels(AdditionalBlocks.glowstone_bricks_wall, new ResourceLocation("abstoneedition", "glowstone_bricks"));
+        this.addStoneWallModels(AdditionalBlocks.gray_bricks_wall, new ResourceLocation("abstoneedition", "gray_bricks"));
+        this.addStoneWallModels(AdditionalBlocks.limestone_bricks_wall, new ResourceLocation("abstoneedition", "limestone_bricks"));
+        this.addStoneWallModels(AdditionalBlocks.marble_wall, new ResourceLocation("abstoneedition", "marble"));
+        this.addStoneWallModels(AdditionalBlocks.marble_bricks_wall, new ResourceLocation("abstoneedition", "marble_bricks"));
+        this.addStoneWallModels(AdditionalBlocks.smooth_black_marble_wall, new ResourceLocation("abstoneedition", "smooth_black_marble"));
+        this.addStoneWallModels(AdditionalBlocks.smooth_bloodstone_wall, new ResourceLocation("abstoneedition", "smooth_bloodstone"));
+        this.addStoneWallModels(AdditionalBlocks.smooth_glowstone_wall, new ResourceLocation("abstoneedition", "smooth_glowstone"));
+        this.addStoneWallModels(AdditionalBlocks.smooth_limestone_wall, new ResourceLocation("abstoneedition", "smooth_limestone"));
+        this.addStoneWallModels(AdditionalBlocks.smooth_marble_wall, new ResourceLocation("abstoneedition", "smooth_marble"));
+        this.addStoneWallModels(AdditionalBlocks.smooth_stone_wall, new ResourceLocation("minecraft", "block/smooth_stone"));
+        this.addStoneWallModels(AdditionalBlocks.smooth_stone_bricks_wall, new ResourceLocation("abstoneedition", "smooth_stone_bricks"));
+        this.addStoneWallModels(AdditionalBlocks.stone_brick_block_wall, new ResourceLocation("abstoneedition", "stone_brick_block"));
+        this.addStoneWallModels(AdditionalBlocks.volcanic_stone_wall, new ResourceLocation("abstoneedition", "volcanic_stone"));
+        this.addStoneWallModels(AdditionalBlocks.volcanic_stone_bricks_wall, new ResourceLocation("abstoneedition", "volcanic_stone_bricks"));
+    }
 
-        this.itemModels().withExistingParent("item/polished_andesite_wall", new ResourceLocation("abstoneedition", "block/polished_andesite_wall"));
-        this.itemModels().withExistingParent("item/polished_diorite_wall", new ResourceLocation("abstoneedition", "block/polished_diorite_wall"));
-        this.itemModels().withExistingParent("item/polished_granite_wall", new ResourceLocation("abstoneedition", "block/polished_granite_wall"));
-        this.itemModels().withExistingParent("item/andesite_bricks_wall", new ResourceLocation("abstoneedition", "block/andesite_bricks_wall"));
-        this.itemModels().withExistingParent("item/diorite_bricks_wall", new ResourceLocation("abstoneedition", "block/diorite_bricks_wall"));
-        this.itemModels().withExistingParent("item/granite_bricks_wall", new ResourceLocation("abstoneedition", "block/granite_bricks_wall"));
-        this.itemModels().withExistingParent("item/black_marble_wall", new ResourceLocation("abstoneedition", "block/polished_andesite_wall"));
-        this.itemModels().withExistingParent("item/black_marble_bricks_wall", new ResourceLocation("abstoneedition", "block/black_marble_bricks_wall"));
-        this.itemModels().withExistingParent("item/bloodstone_wall", new ResourceLocation("abstoneedition", "block/bloodstone_wall"));
-        this.itemModels().withExistingParent("item/bloodstone_bricks_wall", new ResourceLocation("abstoneedition", "block/bloodstone_bricks_wall"));
-        this.itemModels().withExistingParent("item/glowstone_wall", new ResourceLocation("abstoneedition", "block/glowstone_wall"));
-        this.itemModels().withExistingParent("item/glowstone_bricks_wall", new ResourceLocation("abstoneedition", "block/glowstone_bricks_wall"));
-        this.itemModels().withExistingParent("item/gray_bricks_wall", new ResourceLocation("abstoneedition", "block/gray_bricks_wall"));
-        this.itemModels().withExistingParent("item/limestone_bricks_wall", new ResourceLocation("abstoneedition", "block/limestone_bricks_wall"));
-        this.itemModels().withExistingParent("item/marble_wall", new ResourceLocation("abstoneedition", "block/marble_wall"));
-        this.itemModels().withExistingParent("item/marble_bricks_wall", new ResourceLocation("abstoneedition", "block/marble_bricks_wall"));
-        this.itemModels().withExistingParent("item/smooth_black_marble_wall", new ResourceLocation("abstoneedition", "block/smooth_black_marble_wall"));
-        this.itemModels().withExistingParent("item/smooth_bloodstone_wall", new ResourceLocation("abstoneedition", "block/smooth_bloodstone_wall"));
-        this.itemModels().withExistingParent("item/smooth_glowstone_wall", new ResourceLocation("abstoneedition", "block/smooth_glowstone_wall"));
-        this.itemModels().withExistingParent("item/smooth_limestone_wall", new ResourceLocation("abstoneedition", "block/smooth_limestone_wall"));
-        this.itemModels().withExistingParent("item/smooth_marble_wall", new ResourceLocation("abstoneedition", "block/smooth_marble_wall"));
-        this.itemModels().withExistingParent("item/smooth_stone_wall", new ResourceLocation("abstoneedition", "block/smooth_stone_wall"));
-        this.itemModels().withExistingParent("item/smooth_stone_bricks_wall", new ResourceLocation("abstoneedition", "block/smooth_stone_bricks_wall"));
-        this.itemModels().withExistingParent("item/stone_brick_block_wall", new ResourceLocation("abstoneedition", "block/stone_brick_block_wall"));
-        this.itemModels().withExistingParent("item/volcanic_stone_wall", new ResourceLocation("abstoneedition", "block/volcanic_stone_wall"));
-        this.itemModels().withExistingParent("item/volcanic_stone_bricks_wall", new ResourceLocation("abstoneedition", "block/volcanic_stone_bricks_wall"));
+    private void addStoneWallModels(WallBlock block, ResourceLocation texture){
+        this.wallBlock(block, texture);
+        String name = block.getRegistryName().getPath();
+        this.itemModels().wallInventory("block/" + name + "_inventory", texture);
+        this.itemModels().withExistingParent("item/" + name, new ResourceLocation("abstoneedition", "block/" + name + "_inventory"));
     }
 }

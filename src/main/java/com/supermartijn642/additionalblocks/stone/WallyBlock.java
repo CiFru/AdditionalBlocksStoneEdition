@@ -32,9 +32,9 @@ public class WallyBlock extends WallBlock implements IConfigObject, IItemGroupIn
     }
 
     @Override
-    public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
+    public void fillItemCategory(ItemGroup group, NonNullList<ItemStack> items) {
         if (this.isEnabled())
-            super.fillItemGroup(group, items);
+            super.fillItemCategory(group, items);
     }
 
     @Override
