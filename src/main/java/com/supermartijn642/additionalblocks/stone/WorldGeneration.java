@@ -114,8 +114,6 @@ public class WorldGeneration {
             if (e.getName().getNamespace().equals("minecraft") && (e.getName().getPath().equals("soul_sand_valley")||e.getName().getPath().equals("basalt_deltas"))) {
                 if(AdditionalBlocksConfig.enableBlackMarble.get())
                     e.getGeneration().addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_black_marble);
-            }
-            if (e.getName().getNamespace().equals("minecraft") && (e.getName().getPath().equals("soul_sand_valley")||e.getName().getPath().equals("basalt_deltas"))) {
                 if(AdditionalBlocksConfig.enableVolcanicStone.get())
                     e.getGeneration().addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_volcanic_stone_bricks);
             }

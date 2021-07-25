@@ -58,7 +58,7 @@ minecraft {
             // Recommended logging data for a userdev environment
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
 
-            args '--mod', 'abstoneedition', '--all', '--output', file('src/generated/resources/')
+            args '--mod', 'abstoneedition', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
                 abstoneedition {
