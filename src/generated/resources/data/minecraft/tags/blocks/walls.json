@@ -1,0 +1,32 @@
+{
+  "replace": false,
+  "values": [
+    "abstoneedition:polished_andesite_wall",
+    "abstoneedition:andesite_bricks_wall",
+    "abstoneedition:black_marble_wall",
+    "abstoneedition:black_marble_bricks_wall",
+    "abstoneedition:bloodstone_wall",
+    "abstoneedition:bloodstone_bricks_wall",
+    "abstoneedition:polished_diorite_wall",
+    "abstoneedition:diorite_bricks_wall",
+    "abstoneedition:glowstone_wall",
+    "abstoneedition:glowstone_bricks_wall",
+    "abstoneedition:polished_granite_wall",
+    "abstoneedition:granite_bricks_wall",
+    "abstoneedition:gray_bricks_wall",
+    "abstoneedition:limestone_wall",
+    "abstoneedition:limestone_bricks_wall",
+    "abstoneedition:marble_wall",
+    "abstoneedition:marble_bricks_wall",
+    "abstoneedition:smooth_black_marble_wall",
+    "abstoneedition:smooth_bloodstone_wall",
+    "abstoneedition:smooth_glowstone_wall",
+    "abstoneedition:smooth_limestone_wall",
+    "abstoneedition:smooth_marble_wall",
+    "abstoneedition:smooth_stone_wall",
+    "abstoneedition:smooth_stone_bricks_wall",
+    "abstoneedition:stone_brick_block_wall",
+    "abstoneedition:volcanic_stone_wall",
+    "abstoneedition:volcanic_stone_bricks_wall"
+  ]
+}

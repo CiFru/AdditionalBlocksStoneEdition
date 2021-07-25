@@ -1,5 +1,6 @@
-package com.supermartijn642.additionalblocks.stone;
+package com.supermartijn642.additionalblocks.stone.data;
 
+import com.supermartijn642.additionalblocks.stone.AdditionalBlocks;
 import net.minecraft.block.WallBlock;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.util.ResourceLocation;

@@ -1,6 +1,8 @@
 package com.supermartijn642.additionalblocks.stone;
 
 import com.supermartijn642.additionalblocks.stone.ToolItemClasses.*;
+import com.supermartijn642.additionalblocks.stone.data.AbBlockStateProvider;
+import com.supermartijn642.additionalblocks.stone.data.AbTagsProvider;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -37,7 +39,7 @@ public class AdditionalBlocks {
 
     private static final ItemGroup ITEM_GROUP = new AbItemGroup();
 
-    private static final List<Block> blocks = new ArrayList<>();
+    public static final List<Block> blocks = new ArrayList<>();
     private static final List<Item> items = new ArrayList<>();
 
     public static BasicBlock marble;
@@ -412,6 +414,7 @@ public class AdditionalBlocks {
         @SubscribeEvent
         public static void onGatherData(GatherDataEvent e){
             e.getGenerator().addProvider(new AbBlockStateProvider(e.getGenerator(), "abstoneedition", e.getExistingFileHelper()));
+            e.getGenerator().addProvider(new AbTagsProvider(e.getGenerator(), "abstoneedition", e.getExistingFileHelper()));
         }
     }
 
