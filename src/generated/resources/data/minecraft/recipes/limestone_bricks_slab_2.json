@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "AAA",
+    "   "
+  ],
+  "key": {
+    "A": {
+      "item": "abstoneedition:limestone_bricks"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:limestone_bricks_slab",
+    "count": 6
+  }
+}

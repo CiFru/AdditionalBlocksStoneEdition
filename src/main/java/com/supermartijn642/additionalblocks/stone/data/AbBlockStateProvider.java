@@ -103,6 +103,7 @@ public class AbBlockStateProvider extends BlockStateProvider {
         this.addStoneWallModels(AdditionalBlocks.glowstone_wall, new ResourceLocation("minecraft", "block/glowstone"));
         this.addStoneWallModels(AdditionalBlocks.glowstone_bricks_wall, new ResourceLocation("abstoneedition", "glowstone_bricks"));
         this.addStoneWallModels(AdditionalBlocks.gray_bricks_wall, new ResourceLocation("abstoneedition", "gray_bricks"));
+        this.addStoneWallModels(AdditionalBlocks.limestone_wall, new ResourceLocation("abstoneedition", "limestone"));
         this.addStoneWallModels(AdditionalBlocks.limestone_bricks_wall, new ResourceLocation("abstoneedition", "limestone_bricks"));
         this.addStoneWallModels(AdditionalBlocks.marble_wall, new ResourceLocation("abstoneedition", "marble"));
         this.addStoneWallModels(AdditionalBlocks.marble_bricks_wall, new ResourceLocation("abstoneedition", "marble_bricks"));

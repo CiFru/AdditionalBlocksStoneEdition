@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "AAA",
+    "   "
+  ],
+  "key": {
+    "A": {
+      "item": "abstoneedition:stone_path_curved"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:stone_path_curved_slab",
+    "count": 6
+  }
+}

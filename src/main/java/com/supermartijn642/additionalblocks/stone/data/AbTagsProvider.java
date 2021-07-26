@@ -1,6 +1,8 @@
 package com.supermartijn642.additionalblocks.stone.data;
 
 import com.supermartijn642.additionalblocks.stone.AdditionalBlocks;
+import com.supermartijn642.additionalblocks.stone.SlabBlock;
+import com.supermartijn642.additionalblocks.stone.StairBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.WallBlock;
 import net.minecraft.data.BlockTagsProvider;
@@ -15,14 +17,14 @@ import javax.annotation.Nullable;
  */
 public class AbTagsProvider extends BlockTagsProvider {
 
-    public AbTagsProvider(DataGenerator dataGenerator, String modId, @Nullable ExistingFileHelper existingFileHelper){
+    public AbTagsProvider(DataGenerator dataGenerator, String modId, @Nullable ExistingFileHelper existingFileHelper) {
         super(dataGenerator, modId, existingFileHelper);
     }
 
     @Override
-    protected void addTags(){
-        for(Block block : AdditionalBlocks.blocks)
-            if(block instanceof WallBlock)
+    protected void addTags() {
+        for (Block block : AdditionalBlocks.blocks)
+            if (block instanceof WallBlock)
                 this.tag(BlockTags.WALLS).add(block);
     }
 }

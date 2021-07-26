@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "abstoneedition:smooth_black_marble"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:smooth_black_marble_wall",
+    "count": 6
+  }
+}

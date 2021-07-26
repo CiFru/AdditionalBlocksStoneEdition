@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "   ",
+    "   "
+  ],
+  "key": {
+    "A": {
+      "item": "abstoneedition:old_stone_pattern"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:old_stone_pattern_slab",
+    "count": 4
+  }
+}

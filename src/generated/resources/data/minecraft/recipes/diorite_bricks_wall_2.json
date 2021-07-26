@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA",
+    "   "
+  ],
+  "key": {
+    "A": {
+      "item": "abstoneedition:diorite_bricks"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:diorite_bricks_wall",
+    "count": 6
+  }
+}
