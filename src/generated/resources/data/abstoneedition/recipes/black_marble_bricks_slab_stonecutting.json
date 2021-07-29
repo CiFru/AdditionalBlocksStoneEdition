@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "abstoneedition:black_marble"
+    },
+    {
+      "item": "abstoneedition:black_marble_bricks"
+    }
+  ],
+  "result": "abstoneedition:black_marble_bricks_slab",
+  "count": 2
+}

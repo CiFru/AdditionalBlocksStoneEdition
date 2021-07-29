@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:andesite"
+    },
+    {
+      "item": "minecraft:polished_andesite"
+    },
+    {
+      "item": "abstoneedition:andesite_bricks"
+    }
+  ],
+  "result": "abstoneedition:andesite_bricks_stairs",
+  "count": 1
+}

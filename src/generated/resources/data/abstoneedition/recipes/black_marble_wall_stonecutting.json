@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "abstoneedition:black_marble"
+  },
+  "result": "abstoneedition:black_marble_wall",
+  "count": 1
+}

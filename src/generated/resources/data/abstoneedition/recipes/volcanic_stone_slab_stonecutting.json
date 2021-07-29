@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "abstoneedition:volcanic_stone"
+  },
+  "result": "abstoneedition:volcanic_stone_slab",
+  "count": 2
+}

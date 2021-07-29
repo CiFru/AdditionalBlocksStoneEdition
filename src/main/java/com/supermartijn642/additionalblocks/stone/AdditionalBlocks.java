@@ -36,7 +36,7 @@ public class AdditionalBlocks {
 
     private static final ItemGroup ITEM_GROUP = new AbItemGroup();
 
-    private static final List<Block> blocks = new ArrayList<>();
+    public static final List<Block> blocks = new ArrayList<>();
     private static final List<Item> items = new ArrayList<>();
 
     public static BasicBlock marble;
@@ -71,57 +71,57 @@ public class AdditionalBlocks {
     public static BasicBlock charred_wood;
     public static BasicBlock charred_planks;
     public static BasicBlock watery_pebbles;
-    public static Block marble_stairs;
-    public static Block andesite_bricks_stairs;
-    public static Block black_marble_stairs;
-    public static Block black_marble_bricks_stairs;
-    public static Block bloodstone_stairs;
-    public static Block bloodstone_bricks_stairs;
-    public static Block brown_bricks_stairs;
-    public static Block diorite_bricks_stairs;
-    public static Block granite_bricks_stairs;
-    public static Block marble_bricks_stairs;
-    public static Block smooth_black_marble_stairs;
-    public static Block smooth_bloodstone_stairs;
-    public static Block smooth_marble_stairs;
-    public static Block stone_brick_block_stairs;
-    public static Block volcanic_stone_stairs;
-    public static Block volcanic_stone_bricks_stairs;
-    public static Block marble_slab;
-    public static Block andesite_bricks_slab;
-    public static Block black_marble_slab;
-    public static Block black_marble_bricks_slab;
-    public static Block bloodstone_slab;
-    public static Block bloodstone_bricks_slab;
-    public static Block brown_bricks_slab;
-    public static Block diorite_bricks_slab;
-    public static Block granite_bricks_slab;
-    public static Block marble_bricks_slab;
-    public static Block smooth_black_marble_slab;
-    public static Block smooth_bloodstone_slab;
-    public static Block smooth_marble_slab;
-    public static Block stone_brick_block_slab;
-    public static Block volcanic_stone_slab;
-    public static Block volcanic_stone_bricks_slab;
-    public static Block charred_stairs;
-    public static Block charred_slab;
-    public static Block gray_bricks_stairs;
-    public static Block gray_bricks_slab;
-    public static Block limestone_slab;
-    public static Block limestone_stairs;
-    public static Block asphalt_slab;
-    public static Block asphalt_stairs;
+    public static StairBlock marble_stairs;
+    public static StairBlock andesite_bricks_stairs;
+    public static StairBlock black_marble_stairs;
+    public static StairBlock black_marble_bricks_stairs;
+    public static StairBlock bloodstone_stairs;
+    public static StairBlock bloodstone_bricks_stairs;
+    public static StairBlock brown_bricks_stairs;
+    public static StairBlock diorite_bricks_stairs;
+    public static StairBlock granite_bricks_stairs;
+    public static StairBlock marble_bricks_stairs;
+    public static StairBlock smooth_black_marble_stairs;
+    public static StairBlock smooth_bloodstone_stairs;
+    public static StairBlock smooth_marble_stairs;
+    public static StairBlock stone_brick_block_stairs;
+    public static StairBlock volcanic_stone_stairs;
+    public static StairBlock volcanic_stone_bricks_stairs;
+    public static SlabBlock marble_slab;
+    public static SlabBlock andesite_bricks_slab;
+    public static SlabBlock black_marble_slab;
+    public static SlabBlock black_marble_bricks_slab;
+    public static SlabBlock bloodstone_slab;
+    public static SlabBlock bloodstone_bricks_slab;
+    public static SlabBlock brown_bricks_slab;
+    public static SlabBlock diorite_bricks_slab;
+    public static SlabBlock granite_bricks_slab;
+    public static SlabBlock marble_bricks_slab;
+    public static SlabBlock smooth_black_marble_slab;
+    public static SlabBlock smooth_bloodstone_slab;
+    public static SlabBlock smooth_marble_slab;
+    public static SlabBlock stone_brick_block_slab;
+    public static SlabBlock volcanic_stone_slab;
+    public static SlabBlock volcanic_stone_bricks_slab;
+    public static StairBlock charred_stairs;
+    public static SlabBlock charred_slab;
+    public static StairBlock gray_bricks_stairs;
+    public static SlabBlock gray_bricks_slab;
+    public static SlabBlock limestone_slab;
+    public static StairBlock limestone_stairs;
+    public static SlabBlock asphalt_slab;
+    public static StairBlock asphalt_stairs;
     public static BasicBlock stone_tiles;
     public static BasicBlock brown_stone_path_straight;
     public static BasicBlock brown_stone_path_curved;
     public static BasicBlock brown_stone_pattern;
     public static BasicBlock brown_stone_tiles;
     public static BasicBlock smooth_glowstone;
-    public static Block smooth_glowstone_stairs;
-    public static Block smooth_glowstone_slab;
+    public static StairBlock smooth_glowstone_stairs;
+    public static SlabBlock smooth_glowstone_slab;
     public static BasicBlock glowstone_bricks;
-    public static Block glowstone_bricks_stairs;
-    public static Block glowstone_bricks_slab;
+    public static StairBlock glowstone_bricks_stairs;
+    public static SlabBlock glowstone_bricks_slab;
     public static Block silver_ore;
     public static Block copper_ore;
     public static BasicBlock silver_block;
@@ -131,14 +131,14 @@ public class AdditionalBlocks {
     public static BasicBlock old_stone_pattern;
     public static BasicBlock old_stone_tiles;
     public static BasicBlock smooth_stone_bricks;
-    public static Block smooth_stone_bricks_stairs;
-    public static Block smooth_stone_bricks_slab;
+    public static StairBlock smooth_stone_bricks_stairs;
+    public static SlabBlock smooth_stone_bricks_slab;
     public static BasicBlock aztec_pattern;
     public static BasicBlock aztec_patterned_wall;
     public static BasicBlock aztec_tiles;
     public static BasicBlock sunstone;
     public static BasicBlock aztec_pillar;
-    
+
     public static WallyBlock polished_andesite_wall;
     public static WallyBlock andesite_bricks_wall;
     public static WallyBlock black_marble_wall;
@@ -197,14 +197,16 @@ public class AdditionalBlocks {
     public static SlabBlock stone_tiles_slab;
     public static WallyBlock volcanic_stone_wall;
     public static WallyBlock volcanic_stone_bricks_wall;
+    public static WallyBlock stone_wall;
 
 
-    public AdditionalBlocks() {
+    public AdditionalBlocks(){
         AdditionalBlocksConfig.create();
     }
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
+
         @SubscribeEvent
         public static void onBlockRegistry(final RegistryEvent.Register<Block> e) {
 
@@ -367,6 +369,7 @@ public class AdditionalBlocks {
             stone_brick_block_wall = registerBlock(e, new WallyBlock(stone_brick_block, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
             volcanic_stone_wall = registerBlock(e, new WallyBlock(volcanic_stone, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
             volcanic_stone_bricks_wall = registerBlock(e, new WallyBlock(volcanic_stone_bricks, AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            stone_wall = registerBlock(e, new WallyBlock(Blocks.STONE, AdditionalBlocksConfig.enableSmoothStoneBricks,AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY).sound(SoundType.STONE).hardnessAndResistance(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
         }
 
         @SubscribeEvent

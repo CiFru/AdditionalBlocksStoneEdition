@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "abstoneedition:brown_stone_pattern"
+  },
+  "result": "abstoneedition:brown_stone_pattern_stairs",
+  "count": 1
+}

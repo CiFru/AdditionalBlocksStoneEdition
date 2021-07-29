@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "abstoneedition:smooth_bloodstone"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:smooth_bloodstone_wall",
+    "count": 6
+  }
+}

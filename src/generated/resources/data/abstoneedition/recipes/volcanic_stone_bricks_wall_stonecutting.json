@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "abstoneedition:volcanic_stone"
+    },
+    {
+      "item": "abstoneedition:volcanic_stone_bricks"
+    }
+  ],
+  "result": "abstoneedition:volcanic_stone_bricks_wall",
+  "count": 1
+}

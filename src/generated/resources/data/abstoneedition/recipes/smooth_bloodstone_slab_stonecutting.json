@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "abstoneedition:smooth_bloodstone"
+  },
+  "result": "abstoneedition:smooth_bloodstone_slab",
+  "count": 2
+}

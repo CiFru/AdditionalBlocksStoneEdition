@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "abstoneedition:bloodstone"
+  },
+  "result": "abstoneedition:bloodstone_stairs",
+  "count": 1
+}
