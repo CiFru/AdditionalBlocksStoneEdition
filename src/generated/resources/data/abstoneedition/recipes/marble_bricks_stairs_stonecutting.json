@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "abstoneedition:marble"
+    },
+    {
+      "item": "abstoneedition:marble_bricks"
+    }
+  ],
+  "result": "abstoneedition:marble_bricks_stairs",
+  "count": 1
+}

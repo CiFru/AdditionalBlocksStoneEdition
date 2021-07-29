@@ -4,7 +4,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.9+', changing: true
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.15+', changing: true
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
@@ -58,7 +58,7 @@ minecraft {
             // Recommended logging data for a userdev environment
             property 'forge.logging.markers', 'REGISTRIES'
 
-            args '--mod', 'abstoneedition', '--all', '--output', file('src/generated/resources/')
+            args '--mod', 'abstoneedition', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
                 abstoneedition {
@@ -82,7 +82,7 @@ dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.17.1-37.0.7'
+    minecraft 'net.minecraftforge:forge:1.17.1-37.0.13'
 
     // Just Enough Items
 //    runtimeOnly fg.deobf("curse.maven:jei-238222:3104018")
@@ -91,5 +91,5 @@ dependencies {
 //    runtimeOnly fg.deobf("curse.maven:block-renderer-380456:3149419")
 
     // Config Lib
-    compileOnly fg.deobf("curse.maven:supermartijn642s-config-lib-438332:3397561")
+    implementation fg.deobf("curse.maven:supermartijn642s-config-lib-438332:3397561")
 }
