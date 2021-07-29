@@ -10,8 +10,6 @@ import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.RangeDecoratorConfiguration;
-import net.minecraft.world.level.levelgen.heightproviders.UniformHeight;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
@@ -128,10 +126,6 @@ public class WorldGeneration {
         if(BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(biomeKey)){
 
         }
-    }
-
-    private static RangeDecoratorConfiguration range(int bottom, int top){
-        return new RangeDecoratorConfiguration(UniformHeight.of(VerticalAnchor.aboveBottom(bottom), VerticalAnchor.belowTop(top)));
     }
 
 }
