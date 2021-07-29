@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:smooth_stone"
+    },
+    {
+      "item": "abstoneedition:smooth_stone_bricks"
+    }
+  ],
+  "result": "abstoneedition:smooth_stone_bricks_wall",
+  "count": 1
+}

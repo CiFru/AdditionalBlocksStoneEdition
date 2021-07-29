@@ -6,7 +6,6 @@ import com.supermartijn642.additionalblocks.stone.StairBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.WallBlock;
-import net.minecraft.client.Minecraft;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.data.RecipeProvider;
@@ -16,6 +15,7 @@ import java.util.function.Consumer;
 
 public class AbRecipeProvider extends RecipeProvider {
     public AbRecipeProvider(DataGenerator dataGenerator) {
+
         super(dataGenerator);
     }
 
@@ -24,9 +24,10 @@ public class AbRecipeProvider extends RecipeProvider {
         this.addStoneStairsRecipes(recipeConsumer);
         this.addStoneSlabsRecipes(recipeConsumer);
         this.addStoneWallsRecipes(recipeConsumer);
+        AbSCRProvider.stoneCuttingRecipes(recipeConsumer, RecipeProvider::has);
     }
 
-    private void addStairsRecipe(Consumer<IFinishedRecipe> recipeConsumer, StairBlock stairBlock, Block block){
+    private void addStairsRecipe(Consumer<IFinishedRecipe> recipeConsumer, StairBlock stairBlock, Block block) {
         ShapedRecipeBuilder.shaped(stairBlock, 4)
                 .pattern("  A")
                 .pattern(" AA")
@@ -40,48 +41,24 @@ public class AbRecipeProvider extends RecipeProvider {
                 .pattern("AAA")
                 .define('A', block)
                 .unlockedBy("has_item", has(block))
-                .save(recipeConsumer, stairBlock.getRegistryName().getPath()+"_2");
+                .save(recipeConsumer, "abstoneedition:" + stairBlock.getRegistryName().getPath() + "_2");
     }
 
-    private void addSlabRecipe(Consumer<IFinishedRecipe> recipeConsumer, SlabBlock slabBlock, Block block){
+    private void addSlabRecipe(Consumer<IFinishedRecipe> recipeConsumer, SlabBlock slabBlock, Block block) {
         ShapedRecipeBuilder.shaped(slabBlock, 6)
-                .pattern("   ")
-                .pattern("   ")
                 .pattern("AAA")
                 .define('A', block)
                 .unlockedBy("has_item", has(block))
                 .save(recipeConsumer);
-        ShapedRecipeBuilder.shaped(slabBlock, 6)
-                .pattern("   ")
-                .pattern("AAA")
-                .pattern("   ")
-                .define('A', block)
-                .unlockedBy("has_item", has(block))
-                .save(recipeConsumer, slabBlock.getRegistryName().getPath()+"_2");
-        ShapedRecipeBuilder.shaped(slabBlock, 4)
-                .pattern("AAA")
-                .pattern("   ")
-                .pattern("   ")
-                .define('A', block)
-                .unlockedBy("has_item", has(block))
-                .save(recipeConsumer, slabBlock.getRegistryName().getPath()+"_3");
     }
 
-    private void addWallsRecipe(Consumer<IFinishedRecipe> recipeConsumer, WallBlock wallBlock, Block block){
+    private void addWallsRecipe(Consumer<IFinishedRecipe> recipeConsumer, WallBlock wallBlock, Block block) {
         ShapedRecipeBuilder.shaped(wallBlock, 6)
-                .pattern("   ")
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', block)
                 .unlockedBy("has_item", has(block))
                 .save(recipeConsumer);
-        ShapedRecipeBuilder.shaped(wallBlock, 6)
-                .pattern("AAA")
-                .pattern("AAA")
-                .pattern("   ")
-                .define('A', block)
-                .unlockedBy("has_item", has(block))
-                .save(recipeConsumer, wallBlock.getRegistryName().getPath()+"_2");
     }
 
     private void addStoneStairsRecipes(Consumer<IFinishedRecipe> recipeConsumer) {
@@ -143,12 +120,11 @@ public class AbRecipeProvider extends RecipeProvider {
         this.addWallsRecipe(recipeConsumer, AdditionalBlocks.smooth_glowstone_wall, AdditionalBlocks.smooth_glowstone);
         this.addWallsRecipe(recipeConsumer, AdditionalBlocks.smooth_limestone_wall, AdditionalBlocks.smooth_limestone);
         this.addWallsRecipe(recipeConsumer, AdditionalBlocks.smooth_marble_wall, AdditionalBlocks.smooth_marble);
-        this.addWallsRecipe(recipeConsumer, AdditionalBlocks.smooth_black_marble_wall, AdditionalBlocks.smooth_black_marble);
         this.addWallsRecipe(recipeConsumer, AdditionalBlocks.smooth_stone_wall, Blocks.SMOOTH_STONE);
         this.addWallsRecipe(recipeConsumer, AdditionalBlocks.smooth_stone_bricks_wall, AdditionalBlocks.smooth_stone_bricks);
         this.addWallsRecipe(recipeConsumer, AdditionalBlocks.stone_brick_block_wall, AdditionalBlocks.stone_brick_block);
         this.addWallsRecipe(recipeConsumer, AdditionalBlocks.volcanic_stone_wall, AdditionalBlocks.volcanic_stone);
         this.addWallsRecipe(recipeConsumer, AdditionalBlocks.volcanic_stone_bricks_wall, AdditionalBlocks.volcanic_stone_bricks);
-
+        this.addWallsRecipe(recipeConsumer, AdditionalBlocks.stone_wall, Blocks.STONE);
     }
 }

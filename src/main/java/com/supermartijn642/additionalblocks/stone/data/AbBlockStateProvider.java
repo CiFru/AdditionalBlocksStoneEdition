@@ -117,6 +117,7 @@ public class AbBlockStateProvider extends BlockStateProvider {
         this.addStoneWallModels(AdditionalBlocks.stone_brick_block_wall, new ResourceLocation("abstoneedition", "stone_brick_block"));
         this.addStoneWallModels(AdditionalBlocks.volcanic_stone_wall, new ResourceLocation("abstoneedition", "volcanic_stone"));
         this.addStoneWallModels(AdditionalBlocks.volcanic_stone_bricks_wall, new ResourceLocation("abstoneedition", "volcanic_stone_bricks"));
+        this.addStoneWallModels(AdditionalBlocks.stone_wall, new ResourceLocation("minecraft", "block/stone"));
     }
 
     private void addStoneWallModels(WallBlock block, ResourceLocation texture){

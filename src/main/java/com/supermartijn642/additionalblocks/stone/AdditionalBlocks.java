@@ -2,6 +2,7 @@ package com.supermartijn642.additionalblocks.stone;
 
 import com.supermartijn642.additionalblocks.stone.ToolItemClasses.*;
 import com.supermartijn642.additionalblocks.stone.data.AbBlockStateProvider;
+import com.supermartijn642.additionalblocks.stone.data.AbLootTableProvider;
 import com.supermartijn642.additionalblocks.stone.data.AbRecipeProvider;
 import com.supermartijn642.additionalblocks.stone.data.AbTagsProvider;
 import net.minecraft.block.AbstractBlock;
@@ -201,6 +202,7 @@ public class AdditionalBlocks {
     public static SlabBlock stone_tiles_slab;
     public static WallyBlock volcanic_stone_wall;
     public static WallyBlock volcanic_stone_bricks_wall;
+    public static WallyBlock stone_wall;
 
 
     public AdditionalBlocks(){
@@ -372,6 +374,7 @@ public class AdditionalBlocks {
             stone_brick_block_wall = registerBlock(e, new WallyBlock(stone_brick_block, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             volcanic_stone_wall = registerBlock(e, new WallyBlock(volcanic_stone, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             volcanic_stone_bricks_wall = registerBlock(e, new WallyBlock(volcanic_stone_bricks, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
+            stone_wall = registerBlock(e, new WallyBlock(Blocks.STONE, AdditionalBlocksConfig.enableSmoothStoneBricks, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
         }
 
         @SubscribeEvent
@@ -417,6 +420,7 @@ public class AdditionalBlocks {
             e.getGenerator().addProvider(new AbBlockStateProvider(e.getGenerator(), "abstoneedition", e.getExistingFileHelper()));
             e.getGenerator().addProvider(new AbTagsProvider(e.getGenerator(), "abstoneedition", e.getExistingFileHelper()));
             e.getGenerator().addProvider(new AbRecipeProvider(e.getGenerator()));
+            e.getGenerator().addProvider(new AbLootTableProvider(e.getGenerator()));
         }
     }
 

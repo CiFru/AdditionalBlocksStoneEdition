@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "abstoneedition:volcanic_stone"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:volcanic_stone_wall",
+    "count": 6
+  }
+}
