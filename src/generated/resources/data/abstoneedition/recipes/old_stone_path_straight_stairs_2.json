@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A  ",
+    "AA ",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "abstoneedition:old_stone_path_straight"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:old_stone_path_straight_stairs",
+    "count": 4
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "abstoneedition:stone_brick_block"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:stone_brick_block_wall",
+    "count": 6
+  }
+}

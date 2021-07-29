@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "side": "abstoneedition:limestone_bricks",
+    "bottom": "abstoneedition:limestone_bricks",
+    "top": "abstoneedition:limestone_bricks"
+  }
+}

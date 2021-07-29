@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "abstoneedition:stone_path_straight"
+  },
+  "result": "abstoneedition:stone_path_straight_slab",
+  "count": 2
+}

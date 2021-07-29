@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "side": "abstoneedition:brown_stone_path_curved",
+    "bottom": "abstoneedition:brown_stone_path_curved",
+    "top": "abstoneedition:brown_stone_path_curved"
+  }
+}

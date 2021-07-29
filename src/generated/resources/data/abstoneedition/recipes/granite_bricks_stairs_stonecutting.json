@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:granite"
+    },
+    {
+      "item": "minecraft:polished_granite"
+    },
+    {
+      "item": "abstoneedition:granite_bricks"
+    }
+  ],
+  "result": "abstoneedition:granite_bricks_stairs",
+  "count": 1
+}

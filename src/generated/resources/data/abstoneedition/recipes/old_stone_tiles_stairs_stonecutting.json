@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "abstoneedition:old_stone_tiles"
+  },
+  "result": "abstoneedition:old_stone_tiles_stairs",
+  "count": 1
+}
