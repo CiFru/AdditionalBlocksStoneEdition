@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "abstoneedition:raw_silver"
+          "name": "abstoneedition:raw_silver_block"
         }
       ],
       "conditions": [

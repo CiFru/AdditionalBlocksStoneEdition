@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "abstoneedition:silver_ingot_from_blasting"
+      "abstoneedition:raw_silver"
     ]
   },
   "criteria": {
@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "item": "abstoneedition:raw_silver"
+            "item": "abstoneedition:silver_ore"
           }
         ]
       }
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "abstoneedition:silver_ingot_from_blasting"
+        "recipe": "abstoneedition:raw_silver"
       }
     }
   },

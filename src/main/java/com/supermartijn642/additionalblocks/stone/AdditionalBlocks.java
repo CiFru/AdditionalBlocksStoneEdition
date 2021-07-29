@@ -141,6 +141,7 @@ public class AdditionalBlocks {
     public static BasicBlock aztec_tiles;
     public static BasicBlock sunstone;
     public static BasicBlock aztec_pillar;
+    public static BasicBlock raw_silver_block;
 
     public static WallyBlock polished_andesite_wall;
     public static WallyBlock andesite_bricks_wall;
@@ -296,8 +297,9 @@ public class AdditionalBlocks {
             glowstone_bricks = registerBlock(e, new BasicBlock("glowstone_bricks", AdditionalBlocksConfig.enableGlowstoneBricks, BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_YELLOW).sound(SoundType.GLASS).strength(0.4f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).lightLevel(state -> 15)));
             glowstone_bricks_stairs = registerBlock(e, new StairBlock(glowstone_bricks, BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_YELLOW).sound(SoundType.GLASS).strength(0.4f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).lightLevel(state -> 15)));
             glowstone_bricks_slab = registerBlock(e, new SlabBlock(glowstone_bricks, BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_YELLOW).sound(SoundType.GLASS).strength(0.4f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).lightLevel(state -> 15)));
-            silver_ore = registerBlock(e, new OorBlock("silver_ore", AdditionalBlocksConfig.enableSilver, BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(3.0F, 3.0F)));
+            silver_ore = registerBlock(e, new OorBlock("silver_ore", AdditionalBlocksConfig.enableSilver, BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().harvestTool(ToolType.PICKAXE).harvestLevel(2).strength(2.0F, 2.0F).sound(SoundType.METAL)));
             silver_block = registerBlock(e, new BasicBlock("silver_block", AdditionalBlocksConfig.enableSilver, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL).requiresCorrectToolForDrops().strength(5.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).sound(SoundType.METAL)));
+            raw_silver_block = registerBlock(e, new BasicBlock("raw_silver_block", AdditionalBlocksConfig.enableSilver, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL).requiresCorrectToolForDrops().strength(5.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).sound(SoundType.METAL)));
             old_stone_path_curved = registerBlock(e, new HorizontalRotationBlock("old_stone_path_curved", AdditionalBlocksConfig.enableStonePath, true, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             old_stone_path_straight = registerBlock(e, new HorizontalRotationBlock("old_stone_path_straight", AdditionalBlocksConfig.enableStonePath, true, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             old_stone_pattern = registerBlock(e, new BasicBlock("old_stone_pattern", AdditionalBlocksConfig.enableStonePattern, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.NETHER_BRICKS).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
@@ -382,6 +384,7 @@ public class AdditionalBlocks {
             for(Block block : blocks)
                 registerItem(e, new BlockItem(block, new Item.Properties().tab(ITEM_GROUP)).setRegistryName(block.getRegistryName()));
             e.getRegistry().register(new OreItem("silver_ingot", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP)));
+            e.getRegistry().register(new OreItem("raw_silver", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP)));
             e.getRegistry().register(new OreItem("copper_nugget", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP)));
             e.getRegistry().register(new OreItem("silver_nugget", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP)));
             e.getRegistry().register(new BijlItem("silver_axe", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 6.0F, -2.5F));
