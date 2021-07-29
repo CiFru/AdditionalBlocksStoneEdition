@@ -32,8 +32,6 @@ public class WorldGeneration {
     public static ConfiguredFeature<?,?> ore_volcanic_stone_bricks;
     public static ConfiguredFeature<?,?> ore_black_marble;
     public static ConfiguredFeature<?,?> ore_silver;
-    public static ConfiguredFeature<?,?> ore_copper;
-
     //
     public static void onFeatureRegistry(final RegistryEvent.Register<Feature<?>> e){
         ore_marble = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, AdditionalBlocks.marble.defaultBlockState(), 20));
@@ -47,12 +45,6 @@ public class WorldGeneration {
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
             new ResourceLocation("abstoneedition", "ore_limestone"),
             ore_limestone
-        );
-        ore_copper = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, AdditionalBlocks.copper_ore.defaultBlockState(), 8));
-        ore_copper = ore_copper.rangeUniform(VerticalAnchor.aboveBottom(20), VerticalAnchor.aboveBottom(75)).squared().count(15);
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
-            new ResourceLocation("abstoneedition", "ore_copper"),
-            ore_copper
         );
         ore_silver = Feature.ORE.configured(new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE, AdditionalBlocks.silver_ore.defaultBlockState(), 6));
         ore_silver = ore_silver.rangeUniform(VerticalAnchor.aboveBottom(20), VerticalAnchor.aboveBottom(60)).squared().count(6);
@@ -104,10 +96,6 @@ public class WorldGeneration {
                 if(AdditionalBlocksConfig.enableVolcanicStone.get())
                     e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_volcanic_stone);
             }
-            if(AdditionalBlocksConfig.enableCopper.get())
-                e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_copper);
-            if(AdditionalBlocksConfig.enableSilver.get())
-                e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_silver);
         }
 
         // all nether biomes
