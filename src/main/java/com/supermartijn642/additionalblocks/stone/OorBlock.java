@@ -10,27 +10,29 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class OorBlock extends OreBlock implements IConfigObject, IItemGroupIndex{
+public class OorBlock extends OreBlock implements IConfigObject, IItemGroupIndex, IHarvestableBlock{
     private final Supplier<Boolean> enable;
+    private final IHarvestableBlock.ToolType toolType;
+    private final IHarvestableBlock.ToolTier toolTier;
 
-    public OorBlock(String registryName, Supplier<Boolean> configValue, BlockBehaviour.Properties properties) {
+    public OorBlock(String registryName, Supplier<Boolean> configValue, BlockBehaviour.Properties properties, ToolType toolType, ToolTier toolTier) {
         super(properties);
         this.setRegistryName(registryName);
         this.enable = configValue;
+        this.toolType = toolType;
+        this.toolTier = toolTier;
     }
 
-    public OorBlock(String registryName, BlockBehaviour.Properties properties) {
+    public OorBlock(String registryName, BlockBehaviour.Properties properties, ToolType toolType, ToolTier toolTier) {
         super(properties);
         this.setRegistryName(registryName);
         this.enable = () -> true;
+        this.toolType = toolType;
+        this.toolTier = toolTier;
     }
 
     protected int xpOnDrop(Random rand) {
-//        if (this == AdditionalBlocks.copper_ore) {
-//            return Mth.nextInt(rand, 0, 2);
-//        } else {
             return this == AdditionalBlocks.silver_ore ? Mth.nextInt(rand, 0, 3) : 0;
-//        }
     }
 
     @Override
@@ -47,6 +49,16 @@ public class OorBlock extends OreBlock implements IConfigObject, IItemGroupIndex
     @Override
     public int getItemGroupIndex() {
         return 0;
+    }
+
+    @Override
+    public ToolType getHarvestToolType() {
+        return this.toolType;
+    }
+
+    @Override
+    public ToolTier getHarvestToolTier() {
+        return this.toolTier;
     }
 }
 

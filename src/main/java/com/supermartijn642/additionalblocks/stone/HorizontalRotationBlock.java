@@ -15,8 +15,8 @@ public class HorizontalRotationBlock extends BasicBlock {
 
     private final boolean reversePlacement;
 
-    public HorizontalRotationBlock(String registryName, Supplier<Boolean> configValue, boolean reversePlacement, Properties properties){
-        super(registryName, configValue, properties);
+    public HorizontalRotationBlock(String registryName, Supplier<Boolean> configValue, boolean reversePlacement, Properties properties, ToolType toolType, ToolTier toolTier){
+        super(registryName, configValue, properties, toolType, toolTier);
         this.reversePlacement = reversePlacement;
         this.registerDefaultState(this.defaultBlockState().setValue(BlockProperties.HORIZONTAL_FACING, Direction.NORTH));
     }

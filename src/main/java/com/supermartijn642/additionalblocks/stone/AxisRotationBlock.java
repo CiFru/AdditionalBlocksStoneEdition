@@ -13,8 +13,8 @@ import java.util.function.Supplier;
  */
 public class AxisRotationBlock extends BasicBlock {
 
-    public AxisRotationBlock(String registryName,Supplier<Boolean> configValue, Properties properties){
-        super(registryName, configValue, properties);
+    public AxisRotationBlock(String registryName,Supplier<Boolean> configValue, Properties properties, ToolType toolType, ToolTier toolTier){
+        super(registryName, configValue, properties, toolType, toolTier);
         this.registerDefaultState(this.defaultBlockState().setValue(BlockProperties.AXIS, Direction.Axis.Y));
     }
 

@@ -15,8 +15,8 @@ public class FullRotationBlock extends BasicBlock {
 
     private final boolean reversePlacement;
 
-    public FullRotationBlock(String registryName, boolean reversePlacement, Properties properties, Supplier<Boolean> configValue){
-        super(registryName, configValue, properties);
+    public FullRotationBlock(String registryName, boolean reversePlacement, Properties properties, Supplier<Boolean> configValue, ToolType toolType, ToolTier toolTier){
+        super(registryName, configValue, properties, toolType, toolTier);
         this.reversePlacement = reversePlacement;
         this.registerDefaultState(this.defaultBlockState().setValue(BlockProperties.FACING, Direction.NORTH));
     }

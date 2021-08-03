@@ -30,6 +30,6 @@ public class OreItem extends Item implements IConfigObject, IItemGroupIndex {
 
     @Override
     public int getItemGroupIndex() {
-        return 3;
+        return 4;
     }
 }
