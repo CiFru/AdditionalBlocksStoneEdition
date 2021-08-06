@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "abstoneedition:stone_path_curved"
-            ]
+            "item": "abstoneedition:stone_path_curved"
           }
         ]
       }

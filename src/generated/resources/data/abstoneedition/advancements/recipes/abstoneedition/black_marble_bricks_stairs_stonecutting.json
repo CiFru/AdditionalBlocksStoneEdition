@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "abstoneedition:black_marble"
-            ]
+            "item": "abstoneedition:black_marble"
           }
         ]
       }

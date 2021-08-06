@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "abstoneedition:volcanic_stone_bricks"
-            ]
+            "item": "abstoneedition:volcanic_stone_bricks"
           }
         ]
       }

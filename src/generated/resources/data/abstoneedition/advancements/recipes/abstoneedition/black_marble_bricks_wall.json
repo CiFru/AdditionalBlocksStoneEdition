@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "abstoneedition:black_marble_bricks"
-            ]
+            "item": "abstoneedition:black_marble_bricks"
           }
         ]
       }

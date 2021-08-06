@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "abstoneedition:old_stone_pattern"
-            ]
+            "item": "abstoneedition:old_stone_pattern"
           }
         ]
       }

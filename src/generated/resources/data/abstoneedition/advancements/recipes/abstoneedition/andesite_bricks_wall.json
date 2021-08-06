@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "abstoneedition:andesite_bricks"
-            ]
+            "item": "abstoneedition:andesite_bricks"
           }
         ]
       }

@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "abstoneedition:diorite_bricks"
-            ]
+            "item": "abstoneedition:diorite_bricks"
           }
         ]
       }

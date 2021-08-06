@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "abstoneedition:charred_planks"
-            ]
+            "item": "abstoneedition:charred_planks"
           }
         ]
       }

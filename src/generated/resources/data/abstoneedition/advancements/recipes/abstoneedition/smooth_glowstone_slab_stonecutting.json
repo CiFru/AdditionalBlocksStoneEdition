@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "abstoneedition:smooth_glowstone"
-            ]
+            "item": "abstoneedition:smooth_glowstone"
           }
         ]
       }

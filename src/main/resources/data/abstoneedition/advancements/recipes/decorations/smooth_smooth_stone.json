@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "abstoneedition:raw_silver"
+      "abstoneedition:smooth_smooth_stone"
     ]
   },
   "criteria": {
-    "has_silver_ore": {
+    "has_item": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "abstoneedition:silver_ore"
+            "item": "minecraft:smooth_stone"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "abstoneedition:raw_silver"
+        "recipe": "abstoneedition:smooth_smooth_stone"
       }
     }
   },
   "requirements": [
     [
-      "has_silver_ore",
+      "has_item",
       "has_the_recipe"
     ]
   ]

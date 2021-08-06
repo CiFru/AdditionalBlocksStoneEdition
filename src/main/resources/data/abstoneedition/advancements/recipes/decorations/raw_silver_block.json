@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_silver_ingot": {
+    "has_raw_silver": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [

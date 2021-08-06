@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "abstoneedition:limestone"
-            ]
+            "item": "abstoneedition:limestone"
           }
         ]
       }

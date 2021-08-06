@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -141,6 +142,10 @@ public class AdditionalBlocks {
     public static BasicBlock sunstone;
     public static BasicBlock aztec_pillar;
     public static BasicBlock raw_silver_block;
+    public static BasicBlock smooth_smooth_stone;
+    public static SlabBlock smooth_smooth_stone_slab;
+    public static StairBlock smooth_smooth_stone_stairs;
+    public static WallyBlock smooth_smooth_stone_wall;
 
     public static WallyBlock polished_andesite_wall;
     public static WallyBlock andesite_bricks_wall;
@@ -343,6 +348,10 @@ public class AdditionalBlocks {
             glowstone_slab = registerBlock(e, new SlabBlock(Blocks.GLOWSTONE, AdditionalBlocksConfig.enableGlowstone, BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_YELLOW).sound(SoundType.GLASS).strength(0.2f, 0.8f).lightLevel(state -> 15), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.STONE));
             limestone_bricks_slab = registerBlock(e, new SlabBlock(limestone_bricks, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW).sound(SoundType.NETHER_BRICKS).strength(1.5F, 6.0F), IHarvestableBlock.ToolType.PICKAXE, null));
             smooth_limestone_slab = registerBlock(e, new SlabBlock(smooth_limestone, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW).sound(SoundType.NETHER_BRICKS).strength(1.5F, 6.0F), IHarvestableBlock.ToolType.PICKAXE, null));
+            smooth_smooth_stone = registerBlock(e, new BasicBlock("smooth_smooth_stone", AdditionalBlocksConfig.enableSmoothStone,BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F), IHarvestableBlock.ToolType.PICKAXE, null));
+            smooth_smooth_stone_slab = registerBlock(e, new SlabBlock(smooth_smooth_stone, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE), IHarvestableBlock.ToolType.PICKAXE, null));
+            smooth_smooth_stone_stairs = registerBlock(e, new StairBlock(smooth_smooth_stone, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE), IHarvestableBlock.ToolType.PICKAXE, null));
+            smooth_smooth_stone_wall = registerBlock(e, new WallyBlock(smooth_smooth_stone, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE), IHarvestableBlock.ToolType.PICKAXE, null));
 
             polished_andesite_wall = registerBlock(e, new WallyBlock(Blocks.POLISHED_ANDESITE, AdditionalBlocksConfig.enableAndesiteBricks, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(1.5f, 6), IHarvestableBlock.ToolType.PICKAXE, null));
             andesite_bricks_wall = registerBlock(e, new WallyBlock(andesite_bricks, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(1.5f, 6), IHarvestableBlock.ToolType.PICKAXE, null));

@@ -7,11 +7,16 @@
   ],
   "key": {
     "S": {
-      "item": "minecraft:gold_ingot"
+      "tag": "forge:ingots/gold"
     },
-    "C": {
-      "item": "abstoneedition:copper_ingot"
-    },
+    "C": [
+      {
+        "item": "minecraft:copper_ingot"
+      },
+      {
+        "tag": "forge:ingots/copper"
+      }
+    ],
     "A": {
       "item": "minecraft:stone"
     }
