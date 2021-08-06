@@ -141,7 +141,10 @@
   "block.abstoneedition.volcanic_stone_wall": "Volcanic Stone Wall",
   "block.abstoneedition.volcanic_stone_bricks_wall": "Volcanic Stone Brick Wall",
   "block.abstoneedition.stone_wall": "Stone Wall",
-
+  "block.abstoneedition.smooth_smooth_stone": "Very Smooth Stone",
+  "block.abstoneedition.smooth_smooth_stone_stairs": "Very Smooth Stone Stairs",
+  "block.abstoneedition.smooth_smooth_stone_slab": "Very Smooth Stone Slab",
+  "block.abstoneedition.smooth_smooth_stone_wall": "Very Smooth Stone Wall",
 
   "block.abstoneedition.brown_stone_path_straight_slab": "Straight Brown Stone Path Slab",
   "block.abstoneedition.brown_stone_path_curved_slab": "Curved Brown Stone Path Slab",
