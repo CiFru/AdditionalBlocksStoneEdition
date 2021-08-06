@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "abstoneedition:smooth_smooth_stone_wall",
     "abstoneedition:polished_andesite_wall",
     "abstoneedition:andesite_bricks_wall",
     "abstoneedition:black_marble_wall",

@@ -143,6 +143,10 @@ public class AdditionalBlocks {
     public static BasicBlock aztec_tiles;
     public static BasicBlock sunstone;
     public static BasicBlock aztec_pillar;
+    public static BasicBlock smooth_smooth_stone;
+    public static SlabBlock smooth_smooth_stone_slab;
+    public static StairBlock smooth_smooth_stone_stairs;
+    public static WallyBlock smooth_smooth_stone_wall;
 
     public static WallyBlock polished_andesite_wall;
     public static WallyBlock andesite_bricks_wall;
@@ -328,7 +332,7 @@ public class AdditionalBlocks {
             stone_pattern_stairs = registerBlock(e, new StairBlock(stone_pattern, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             stone_tiles_stairs = registerBlock(e, new StairBlock(stone_tiles, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             glowstone_stairs = registerBlock(e, new StairBlock(Blocks.GLOWSTONE, AdditionalBlocksConfig.enableGlowstone, AbstractBlock.Properties.of(Material.GLASS, MaterialColor.COLOR_YELLOW).sound(SoundType.GLASS).strength(0.2f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).lightLevel(state -> 15)));
-            smooth_stone_stairs = registerBlock(e, new StairBlock(Blocks.SMOOTH_STONE, AdditionalBlocksConfig.enableSmoothStoneBricks, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
+            smooth_stone_stairs = registerBlock(e, new StairBlock(Blocks.SMOOTH_STONE, AdditionalBlocksConfig.enableSmoothStone, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             limestone_bricks_stairs = registerBlock(e, new StairBlock(limestone_bricks, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW).sound(SoundType.NETHER_BRICKS).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
             smooth_limestone_stairs = registerBlock(e, new StairBlock(smooth_limestone, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW).sound(SoundType.NETHER_BRICKS).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
             brown_stone_path_straight_slab = registerBlock(e, new SlabBlock(brown_stone_path_straight, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_BROWN).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
@@ -346,6 +350,10 @@ public class AdditionalBlocks {
             glowstone_slab = registerBlock(e, new SlabBlock(Blocks.GLOWSTONE, AdditionalBlocksConfig.enableGlowstone, AbstractBlock.Properties.of(Material.GLASS, MaterialColor.COLOR_YELLOW).sound(SoundType.GLASS).strength(0.2f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).lightLevel(state -> 15)));
             limestone_bricks_slab = registerBlock(e, new SlabBlock(limestone_bricks, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW).sound(SoundType.NETHER_BRICKS).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
             smooth_limestone_slab = registerBlock(e, new SlabBlock(smooth_limestone, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW).sound(SoundType.NETHER_BRICKS).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
+            smooth_smooth_stone = registerBlock(e, new BasicBlock("smooth_smooth_stone", AdditionalBlocksConfig.enableSmoothStone,AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
+            smooth_smooth_stone_slab = registerBlock(e, new SlabBlock(smooth_smooth_stone, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
+            smooth_smooth_stone_stairs = registerBlock(e, new StairBlock(smooth_smooth_stone, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
+            smooth_smooth_stone_wall = registerBlock(e, new WallyBlock(smooth_smooth_stone, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
 
             polished_andesite_wall = registerBlock(e, new WallyBlock(Blocks.POLISHED_ANDESITE, AdditionalBlocksConfig.enableAndesiteBricks, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(1.5f, 6).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
             andesite_bricks_wall = registerBlock(e, new WallyBlock(andesite_bricks, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(1.5f, 6).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
@@ -369,12 +377,12 @@ public class AdditionalBlocks {
             smooth_glowstone_wall = registerBlock(e, new WallyBlock(smooth_glowstone, AbstractBlock.Properties.of(Material.GLASS, MaterialColor.COLOR_YELLOW).sound(SoundType.GLASS).strength(0.2f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).lightLevel(state -> 15)));
             smooth_limestone_wall = registerBlock(e, new WallyBlock(smooth_limestone, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW).sound(SoundType.NETHER_BRICKS).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
             smooth_marble_wall = registerBlock(e, new WallyBlock(smooth_marble, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_PINK).sound(SoundType.STONE).strength(0.8f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
-            smooth_stone_wall = registerBlock(e, new WallyBlock(Blocks.SMOOTH_STONE, AdditionalBlocksConfig.enableSmoothStoneBricks, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
+            smooth_stone_wall = registerBlock(e, new WallyBlock(Blocks.SMOOTH_STONE, AdditionalBlocksConfig.enableSmoothStone, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             smooth_stone_bricks_wall = registerBlock(e, new WallyBlock(smooth_stone_bricks, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             stone_brick_block_wall = registerBlock(e, new WallyBlock(stone_brick_block, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             volcanic_stone_wall = registerBlock(e, new WallyBlock(volcanic_stone, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             volcanic_stone_bricks_wall = registerBlock(e, new WallyBlock(volcanic_stone_bricks, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
-            stone_wall = registerBlock(e, new WallyBlock(Blocks.STONE, AdditionalBlocksConfig.enableSmoothStoneBricks, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
+            stone_wall = registerBlock(e, new WallyBlock(Blocks.STONE, AdditionalBlocksConfig.enableSmoothStone, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
         }
 
         @SubscribeEvent

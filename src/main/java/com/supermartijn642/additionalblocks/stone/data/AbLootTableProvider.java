@@ -42,6 +42,7 @@ public class AbLootTableProvider extends LootTableProvider {
                 AdditionalBlocks.glowstone_slab,
                 AdditionalBlocks.limestone_bricks_slab,
                 AdditionalBlocks.smooth_limestone_slab,
+                AdditionalBlocks.smooth_smooth_stone_slab,
 
                 AdditionalBlocks.brown_stone_path_straight_stairs,
                 AdditionalBlocks.brown_stone_path_curved_stairs,
@@ -58,7 +59,8 @@ public class AbLootTableProvider extends LootTableProvider {
                 AdditionalBlocks.glowstone_stairs,
                 AdditionalBlocks.limestone_bricks_stairs,
                 AdditionalBlocks.smooth_limestone_stairs,
-                AdditionalBlocks.smooth_stone_stairs
+                AdditionalBlocks.smooth_stone_stairs,
+                AdditionalBlocks.smooth_smooth_stone_stairs
         );
 
         for (Block block : AdditionalBlocks.blocks) {

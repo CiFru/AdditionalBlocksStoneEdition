@@ -78,6 +78,7 @@ public class AbRecipeProvider extends RecipeProvider {
         this.addStairsRecipe(recipeConsumer, AdditionalBlocks.limestone_bricks_stairs, AdditionalBlocks.limestone_bricks);
         this.addStairsRecipe(recipeConsumer, AdditionalBlocks.smooth_limestone_stairs, AdditionalBlocks.smooth_limestone);
         this.addStairsRecipe(recipeConsumer, AdditionalBlocks.smooth_stone_stairs, Blocks.SMOOTH_STONE);
+        this.addStairsRecipe(recipeConsumer, AdditionalBlocks.smooth_smooth_stone_stairs, AdditionalBlocks.smooth_smooth_stone);
     }
 
     private void addStoneSlabsRecipes(Consumer<IFinishedRecipe> recipeConsumer) {
@@ -96,6 +97,7 @@ public class AbRecipeProvider extends RecipeProvider {
         this.addSlabRecipe(recipeConsumer, AdditionalBlocks.glowstone_slab, Blocks.GLOWSTONE);
         this.addSlabRecipe(recipeConsumer, AdditionalBlocks.limestone_bricks_slab, AdditionalBlocks.limestone_bricks);
         this.addSlabRecipe(recipeConsumer, AdditionalBlocks.smooth_limestone_slab, AdditionalBlocks.smooth_limestone);
+        this.addSlabRecipe(recipeConsumer, AdditionalBlocks.smooth_smooth_stone_slab, AdditionalBlocks.smooth_smooth_stone);
     }
 
     private void addStoneWallsRecipes(Consumer<IFinishedRecipe> recipeConsumer) {
@@ -126,5 +128,6 @@ public class AbRecipeProvider extends RecipeProvider {
         this.addWallsRecipe(recipeConsumer, AdditionalBlocks.volcanic_stone_wall, AdditionalBlocks.volcanic_stone);
         this.addWallsRecipe(recipeConsumer, AdditionalBlocks.volcanic_stone_bricks_wall, AdditionalBlocks.volcanic_stone_bricks);
         this.addWallsRecipe(recipeConsumer, AdditionalBlocks.stone_wall, Blocks.STONE);
+        this.addWallsRecipe(recipeConsumer, AdditionalBlocks.smooth_smooth_stone_wall, AdditionalBlocks.smooth_smooth_stone);
     }
 }
