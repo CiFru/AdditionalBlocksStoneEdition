@@ -1,6 +1,7 @@
 package com.supermartijn642.additionalblocks.stone;
 
-import com.supermartijn642.configlib.ModConfigBuilder;
+import com.supermartijn642.configlib.api.ConfigBuilders;
+import com.supermartijn642.configlib.api.IConfigBuilder;
 
 import java.util.function.Supplier;
 
@@ -9,38 +10,38 @@ import java.util.function.Supplier;
  */
 public class AdditionalBlocksConfig {
 
-    public static void create(){
+    public static void create() {
     }
 
     public static final Supplier<Boolean> enableMarble;
-//    public static final Supplier<Boolean> enableSmoothMarble;
+    //    public static final Supplier<Boolean> enableSmoothMarble;
     public static final Supplier<Boolean> enableStoneBrickBlock;
-//    public static final Supplier<Boolean> enableMarbleBricks;
+    //    public static final Supplier<Boolean> enableMarbleBricks;
     public static final Supplier<Boolean> enableDioriteBricks;
     public static final Supplier<Boolean> enableAndesiteBricks;
     public static final Supplier<Boolean> enableGraniteBricks;
     public static final Supplier<Boolean> enableWaterStone;
-//    public static final Supplier<Boolean> enableMarblePillar;
+    //    public static final Supplier<Boolean> enableMarblePillar;
     public static final Supplier<Boolean> enableBloodstone;
-//    public static final Supplier<Boolean> enableSmoothBloodstone;
+    //    public static final Supplier<Boolean> enableSmoothBloodstone;
 //    public static final Supplier<Boolean> enableBloodstoneBricks;
     public static final Supplier<Boolean> enableBlackMarble;
-//    public static final Supplier<Boolean> enableSmoothBlackMarble;
+    //    public static final Supplier<Boolean> enableSmoothBlackMarble;
 //    public static final Supplier<Boolean> enableBlackMarbleBricks;
     public static final Supplier<Boolean> enableMud;
     public static final Supplier<Boolean> enableBrownBricks;
     public static final Supplier<Boolean> enableVolcanicStone;
-//    public static final Supplier<Boolean> enableVolcanicStoneBricks;
+    //    public static final Supplier<Boolean> enableVolcanicStoneBricks;
     public static final Supplier<Boolean> enableGrayBricks;
-//    public static final Supplier<Boolean> enableStonePathCurved;
+    //    public static final Supplier<Boolean> enableStonePathCurved;
     public static final Supplier<Boolean> enableStonePath;
     public static final Supplier<Boolean> enableStonePattern;
     public static final Supplier<Boolean> enableAsphalt;
     public static final Supplier<Boolean> enableLimestone;
-//    public static final Supplier<Boolean> enableLimestoneBricks;
+    //    public static final Supplier<Boolean> enableLimestoneBricks;
     public static final Supplier<Boolean> enablePebbles;
     public static final Supplier<Boolean> enableCharredBlocks;
-//    public static final Supplier<Boolean> enableCharredLog;
+    //    public static final Supplier<Boolean> enableCharredLog;
 //    public static final Supplier<Boolean> enableCharredWood;
 //    public static final Supplier<Boolean> enableCharredPlanks;
 //    public static final Supplier<Boolean> enableWateryPebbles;
@@ -55,7 +56,7 @@ public class AdditionalBlocksConfig {
     public static final Supplier<Boolean> enableSmoothStone;
 
     static {
-        ModConfigBuilder config = new ModConfigBuilder();
+        IConfigBuilder config = ConfigBuilders.newTomlConfig("abstoneedition", null, false);
         config.push("blocks");
         enableMarble = config.comment("if true, Marble Blocks are enabled").define("enableMarble", true);
         enableBlackMarble = config.comment("if true, Black Marble Blocks are enabled").define("enableBlackMarble", true);
@@ -78,11 +79,11 @@ public class AdditionalBlocksConfig {
         enableStoneTiles = config.comment("if true, Stone Tiles are enabled").define("enableStoneTiles", true);
         enableSmoothGlowstone = config.comment("if true, Smooth Glowstone Blocks are enabled").define("enableSmoothGlowstone", true);
         enableGlowstoneBricks = config.comment("if true, Glowstone Brick Blocks are enabled").define("enableGlowstoneBricks", true);
-        enableGlowstone = config.comment("if true, Glowstone Blocks are enabled").define("enableGlowstone",true);
-        enableCopper = config.comment("if true, Copper Blocks and Items are enabled").define("enableCopper",true);
-        enableSilver = config.comment("if true, Silver Blocks and Items are enabled").define("enableSilver",true);
-        enableSmoothStoneBricks = config.comment("if true, Smooth Stone Brick Blocks are enabled").define("enableSmoothStoneBricks",true);
-        enableAztec = config.comment("if true, Aztec Blocks are enabled").define("enableAztec",true);
+        enableGlowstone = config.comment("if true, Glowstone Blocks are enabled").define("enableGlowstone", true);
+        enableCopper = config.comment("if true, Copper Blocks and Items are enabled").define("enableCopper", true);
+        enableSilver = config.comment("if true, Silver Blocks and Items are enabled").define("enableSilver", true);
+        enableSmoothStoneBricks = config.comment("if true, Smooth Stone Brick Blocks are enabled").define("enableSmoothStoneBricks", true);
+        enableAztec = config.comment("if true, Aztec Blocks are enabled").define("enableAztec", true);
         enableSmoothStone = config.comment("if true, Smooth Stone Blocks are enabled").define("enableSmoothStone", true);
         config.pop();
 

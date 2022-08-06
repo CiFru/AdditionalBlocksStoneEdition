@@ -7,13 +7,11 @@ buildscript {
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
-        classpath group: 'com.wynprice.cursemaven', name: 'CurseMaven', version: '2.1.4'
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
-apply plugin: 'com.wynprice.cursemaven'
 
 version = '2.0.6-mc1.16.3-16.5'
 group = 'com.supermartijn642.additionalblocks.stone' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -78,10 +76,13 @@ repositories {
         name = "Progwml6 maven"
         url = "https://dvs1.progwml6.com/files/maven/"
     }
+//    maven {
+//        // location of a maven mirror for JEI files, as a fallback
+//        name = "ModMaven"
+//        url = "https://modmaven.k-4u.nl"
+//    }
     maven {
-        // location of a maven mirror for JEI files, as a fallback
-        name = "ModMaven"
-        url = "https://modmaven.k-4u.nl"
+        url "https://www.cursemaven.com"
     }
 }
 
@@ -96,9 +97,9 @@ dependencies {
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-1.16.3:7.6.0.51")
 
-    // Block Renderer
-    runtimeOnly fg.deobf("curse.maven:block-renderer:3149419")
+//    // Block Renderer
+//    runtimeOnly fg.deobf("curse.maven:block-renderer:3149419")
 
     // Config Lib
-    compile fg.deobf("curse.maven:supermartijn642s-config-lib:3344080")
+    compile fg.deobf("curse.maven:supermartijn642s-config-lib-438332:3862963")
 }
