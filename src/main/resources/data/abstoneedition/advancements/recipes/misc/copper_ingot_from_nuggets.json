@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "abstoneedition:copper_nugget"
+      "abstoneedition:copper_ingot_from_nuggets"
     ]
   },
   "criteria": {
-    "has_copper_ingot": {
+    "has_copper_nugget": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:copper_ingot"
+            "item": "abstoneedition:copper_nugget"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "abstoneedition:copper_nugget"
+        "recipe": "abstoneedition:copper_ingot_from_nuggets"
       }
     }
   },
   "requirements": [
     [
-      "has_copper_ingot",
+      "has_copper_nugget",
       "has_the_recipe"
     ]
   ]
