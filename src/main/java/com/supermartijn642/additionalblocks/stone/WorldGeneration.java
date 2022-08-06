@@ -84,6 +84,9 @@ public class WorldGeneration {
 
         // all overworld biomes
         if(BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(biomeKey)){
+            if(AdditionalBlocksConfig.enableSilver.get()){
+                e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_silver);
+            }
             if(!(e.getName().getNamespace().equals("minecraft") && (e.getName().getPath().equals("desert") || e.getName().getPath().equals("desert_hills") || e.getName().getPath().equals("desert_lakes")))){
                 if(AdditionalBlocksConfig.enableMarble.get())
                     e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_marble);
