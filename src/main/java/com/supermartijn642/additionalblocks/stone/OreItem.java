@@ -11,9 +11,8 @@ public class OreItem extends Item implements IConfigObject, IItemGroupIndex {
 
     private final Supplier<Boolean> enable;
 
-    public OreItem(String registryName, Supplier<Boolean> enable, Properties properties) {
+    public OreItem(Supplier<Boolean> enable, Properties properties) {
         super(properties);
-        this.setRegistryName(registryName);
         this.enable = enable;
     }
 

@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "AAA",
-    "AAA"
-  ],
   "key": {
     "A": {
       "item": "minecraft:polished_andesite"
     }
   },
+  "pattern": [
+    "AAA",
+    "AAA"
+  ],
   "result": {
-    "item": "abstoneedition:polished_andesite_wall",
-    "count": 6
+    "count": 6,
+    "item": "abstoneedition:polished_andesite_wall"
   }
 }

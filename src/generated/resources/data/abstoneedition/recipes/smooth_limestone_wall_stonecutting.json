@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 1,
   "ingredient": {
     "item": "abstoneedition:smooth_limestone"
   },
-  "result": "abstoneedition:smooth_limestone_wall",
-  "count": 1
+  "result": "abstoneedition:smooth_limestone_wall"
 }

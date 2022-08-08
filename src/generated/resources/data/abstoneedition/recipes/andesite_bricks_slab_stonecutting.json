@@ -1,5 +1,6 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 2,
   "ingredient": [
     {
       "item": "minecraft:andesite"
@@ -11,6 +12,5 @@
       "item": "abstoneedition:andesite_bricks"
     }
   ],
-  "result": "abstoneedition:andesite_bricks_slab",
-  "count": 2
+  "result": "abstoneedition:andesite_bricks_slab"
 }

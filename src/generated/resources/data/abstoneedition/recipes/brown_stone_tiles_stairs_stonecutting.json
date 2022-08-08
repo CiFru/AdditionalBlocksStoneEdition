@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 1,
   "ingredient": {
     "item": "abstoneedition:brown_stone_tiles"
   },
-  "result": "abstoneedition:brown_stone_tiles_stairs",
-  "count": 1
+  "result": "abstoneedition:brown_stone_tiles_stairs"
 }

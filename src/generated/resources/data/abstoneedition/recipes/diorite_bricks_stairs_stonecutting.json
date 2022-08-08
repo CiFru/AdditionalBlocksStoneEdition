@@ -1,5 +1,6 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 1,
   "ingredient": [
     {
       "item": "minecraft:diorite"
@@ -11,6 +12,5 @@
       "item": "abstoneedition:diorite_bricks"
     }
   ],
-  "result": "abstoneedition:diorite_bricks_stairs",
-  "count": 1
+  "result": "abstoneedition:diorite_bricks_stairs"
 }

@@ -1,13 +1,13 @@
 {
   "variants": {
-    "type=top": {
-      "model": "abstoneedition:block/old_stone_pattern_slab_top"
-    },
     "type=bottom": {
       "model": "abstoneedition:block/old_stone_pattern_slab"
     },
     "type=double": {
       "model": "abstoneedition:block/old_stone_pattern"
+    },
+    "type=top": {
+      "model": "abstoneedition:block/old_stone_pattern_slab_top"
     }
   }
 }

@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "AAA",
-    "AAA"
-  ],
   "key": {
     "A": {
       "item": "abstoneedition:glowstone_bricks"
     }
   },
+  "pattern": [
+    "AAA",
+    "AAA"
+  ],
   "result": {
-    "item": "abstoneedition:glowstone_bricks_wall",
-    "count": 6
+    "count": 6,
+    "item": "abstoneedition:glowstone_bricks_wall"
   }
 }

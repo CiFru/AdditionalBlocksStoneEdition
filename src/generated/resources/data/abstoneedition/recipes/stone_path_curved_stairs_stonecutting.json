@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 1,
   "ingredient": {
     "item": "abstoneedition:stone_path_curved"
   },
-  "result": "abstoneedition:stone_path_curved_stairs",
-  "count": 1
+  "result": "abstoneedition:stone_path_curved_stairs"
 }

@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "  A",
-    " AA",
-    "AAA"
-  ],
   "key": {
     "A": {
       "item": "minecraft:glowstone"
     }
   },
+  "pattern": [
+    "  A",
+    " AA",
+    "AAA"
+  ],
   "result": {
-    "item": "abstoneedition:glowstone_stairs",
-    "count": 4
+    "count": 4,
+    "item": "abstoneedition:glowstone_stairs"
   }
 }

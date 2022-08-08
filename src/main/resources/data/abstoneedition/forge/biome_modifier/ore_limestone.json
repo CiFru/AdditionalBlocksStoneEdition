@@ -1,0 +1,11 @@
+{
+  "type": "abstoneedition:all",
+  "included_biomes": [
+    "minecraft:desert",
+    "minecraft:desert_hills",
+    "minecraft:desert_lakes"
+  ],
+  "excluded_biomes": [],
+  "features": "abstoneedition:ore_limestone",
+  "step": "underground_ores"
+}

@@ -14,9 +14,8 @@ public class ZwaardItem extends SwordItem implements IConfigObject, IItemGroupIn
 
     private final Supplier<Boolean> enable;
 
-    public ZwaardItem(String registryName, Supplier<Boolean> enable, Properties properties, int attackDamage, float attackSpeed) {
+    public ZwaardItem(Supplier<Boolean> enable, Properties properties, int attackDamage, float attackSpeed) {
         super(Tiers.IRON, attackDamage, attackSpeed, properties);
-        this.setRegistryName(registryName);
         this.enable = enable;
     }
 

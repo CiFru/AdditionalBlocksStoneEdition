@@ -4,26 +4,28 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
 /**
  * Created 1/17/2021 by SuperMartijn642
  */
-public class StairBlock extends net.minecraft.world.level.block.StairBlock implements IConfigObject, IItemGroupIndex, IHarvestableBlock {
+public class StairBlock extends net.minecraft.world.level.block.StairBlock implements IConfigObject, IItemGroupIndex, IHarvestableBlock, RegistryNameHolder {
 
     private final Block block;
     private final Supplier<Boolean> enabled;
     private final IHarvestableBlock.ToolType toolType;
     private final IHarvestableBlock.ToolTier toolTier;
+    private final String registryName;
 
     public StairBlock(BasicBlock block, Properties properties, IHarvestableBlock.ToolType toolType, IHarvestableBlock.ToolTier toolTier) {
-        this(block, block.getRegistryName().getPath() + "_stairs", properties, toolType, toolTier);
+        this(block, block.getRegistryName() + "_stairs", properties, toolType, toolTier);
     }
 
     public StairBlock(Block block, Supplier<Boolean> enabled, Properties properties, ToolType toolType, ToolTier toolTier) {
         super(block::defaultBlockState, properties);
-        this.setRegistryName(block.getRegistryName().getPath() + "_stairs");
+        this.registryName = ForgeRegistries.BLOCKS.getKey(block).getPath() + "_stairs";
         this.block = block;
         this.enabled = enabled;
         this.toolType = toolType;
@@ -32,7 +34,7 @@ public class StairBlock extends net.minecraft.world.level.block.StairBlock imple
 
     public StairBlock(BasicBlock block, String registryName, Properties properties, ToolType toolType, ToolTier toolTier) {
         super(block::defaultBlockState, properties);
-        this.setRegistryName(registryName);
+        this.registryName = registryName;
         this.block = block;
         this.enabled = block::isEnabled;
         this.toolType = toolType;
@@ -63,5 +65,10 @@ public class StairBlock extends net.minecraft.world.level.block.StairBlock imple
     @Override
     public ToolTier getHarvestToolTier() {
         return this.toolTier;
+    }
+
+    @Override
+    public String getRegistryName() {
+        return this.registryName;
     }
 }

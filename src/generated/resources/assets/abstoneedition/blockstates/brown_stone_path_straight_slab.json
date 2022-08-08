@@ -1,13 +1,13 @@
 {
   "variants": {
-    "type=top": {
-      "model": "abstoneedition:block/brown_stone_path_straight_slab_top"
-    },
     "type=bottom": {
       "model": "abstoneedition:block/brown_stone_path_straight_slab"
     },
     "type=double": {
       "model": "abstoneedition:block/brown_stone_path_straight"
+    },
+    "type=top": {
+      "model": "abstoneedition:block/brown_stone_path_straight_slab_top"
     }
   }
 }

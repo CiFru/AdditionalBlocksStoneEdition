@@ -5,23 +5,25 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.WallBlock;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class WallyBlock extends WallBlock implements IConfigObject, IItemGroupIndex, IHarvestableBlock {
+public class WallyBlock extends WallBlock implements IConfigObject, IItemGroupIndex, IHarvestableBlock, RegistryNameHolder {
 
     private final Block block;
     private final Supplier<Boolean> enabled;
     private final IHarvestableBlock.ToolType toolType;
     private final IHarvestableBlock.ToolTier toolTier;
+    private final String registryName;
 
     public WallyBlock(BasicBlock block, Properties properties, ToolType toolType, ToolTier toolTier) {
-        this(block, block.getRegistryName().getPath() + "_wall", properties, toolType, toolTier);
+        this(block, block.getRegistryName() + "_wall", properties, toolType, toolTier);
     }
 
     public WallyBlock(Block block, Supplier<Boolean> enabled, Properties properties, ToolType toolType, ToolTier toolTier) {
         super(properties);
-        this.setRegistryName(block.getRegistryName().getPath() + "_wall");
+        this.registryName = ForgeRegistries.BLOCKS.getKey(block).getPath() + "_wall";
         this.block = block;
         this.enabled = enabled;
         this.toolType = toolType;
@@ -30,7 +32,7 @@ public class WallyBlock extends WallBlock implements IConfigObject, IItemGroupIn
 
     public WallyBlock(BasicBlock block, String registryName, Properties properties, ToolType toolType, ToolTier toolTier) {
         super(properties);
-        this.setRegistryName(registryName);
+        this.registryName = registryName;
         this.block = block;
         this.enabled = block::isEnabled;
         this.toolType = toolType;
@@ -61,5 +63,10 @@ public class WallyBlock extends WallBlock implements IConfigObject, IItemGroupIn
     @Override
     public ToolTier getHarvestToolTier() {
         return this.toolTier;
+    }
+
+    @Override
+    public String getRegistryName() {
+        return this.registryName;
     }
 }

@@ -1,11 +1,11 @@
 package com.supermartijn642.additionalblocks.stone;
 
+import com.mojang.serialization.Codec;
 import com.supermartijn642.additionalblocks.stone.ToolItemClasses.*;
 import com.supermartijn642.additionalblocks.stone.data.AbBlockStateProvider;
 import com.supermartijn642.additionalblocks.stone.data.AbLootTableProvider;
 import com.supermartijn642.additionalblocks.stone.data.AbRecipeProvider;
 import com.supermartijn642.additionalblocks.stone.data.AbTagsProvider;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -13,18 +13,21 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
-import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.common.world.BiomeModifier;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.registries.RegisterEvent;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created 7/7/2020 by SuperMartijn642
@@ -37,6 +40,7 @@ public class AdditionalBlocks {
     public static final RecipeSerializer<SmeltingRecipe> FURNACE_RECIPE_SERIALIZER = new AdditionalBlocksRecipes.FurnaceSerializer();
     public static final RecipeSerializer<BlastingRecipe> BLASTING_RECIPE_SERIALIZER = new AdditionalBlocksRecipes.BlastFurnaceSerializer();
     public static final RecipeSerializer<StonecutterRecipe> STONE_CUTTING_RECIPE_SERIALIZER = new AdditionalBlocksRecipes.StoneCutterSerializer();
+
 
     private static final CreativeModeTab ITEM_GROUP = new AbItemGroup();
 
@@ -207,7 +211,7 @@ public class AdditionalBlocks {
     public static WallyBlock stone_wall;
 
 
-    public AdditionalBlocks(){
+    public AdditionalBlocks() {
         AdditionalBlocksConfig.create();
     }
 
@@ -215,7 +219,20 @@ public class AdditionalBlocks {
     public static class RegistryEvents {
 
         @SubscribeEvent
-        public static void onBlockRegistry(final RegistryEvent.Register<Block> e){
+        public static void onRegistryEvent(RegisterEvent e) {
+            if (Objects.equals(e.getForgeRegistry(), ForgeRegistries.BLOCKS))
+                onBlockRegistry(e.getForgeRegistry());
+            else if (Objects.equals(e.getForgeRegistry(), ForgeRegistries.ITEMS))
+                onItemRegistry(e.getForgeRegistry());
+            else if (Objects.equals(e.getForgeRegistry(), ForgeRegistries.FEATURES))
+                onFeatureRegistry(e.getForgeRegistry());
+            else if (Objects.equals(e.getForgeRegistry(), ForgeRegistries.RECIPE_SERIALIZERS))
+                onRecipeRegistry(e.getForgeRegistry());
+            else if (Objects.equals(e.getForgeRegistry(), ForgeRegistries.BIOME_MODIFIER_SERIALIZERS))
+                onBiomeModifierRegistry(e.getForgeRegistry());
+        }
+
+        public static void onBlockRegistry(final IForgeRegistry<Block> e) {
 
             marble = registerBlock(e, new BasicBlock("marble", AdditionalBlocksConfig.enableMarble, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_PINK).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(0.8f, 0.8f), IHarvestableBlock.ToolType.PICKAXE, null));
             marble_stairs = registerBlock(e, new StairBlock(marble, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_PINK).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(0.8f, 0.8f), IHarvestableBlock.ToolType.PICKAXE, null));
@@ -347,7 +364,7 @@ public class AdditionalBlocks {
             glowstone_slab = registerBlock(e, new SlabBlock(Blocks.GLOWSTONE, AdditionalBlocksConfig.enableGlowstone, BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_YELLOW).requiresCorrectToolForDrops().sound(SoundType.GLASS).strength(0.2f, 0.8f).lightLevel(state -> 15), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.STONE));
             limestone_bricks_slab = registerBlock(e, new SlabBlock(limestone_bricks, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW).requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS).strength(1.5F, 6.0F), IHarvestableBlock.ToolType.PICKAXE, null));
             smooth_limestone_slab = registerBlock(e, new SlabBlock(smooth_limestone, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW).requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS).strength(1.5F, 6.0F), IHarvestableBlock.ToolType.PICKAXE, null));
-            smooth_smooth_stone = registerBlock(e, new BasicBlock("smooth_smooth_stone", AdditionalBlocksConfig.enableSmoothStone,BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(2.0F, 6.0F), IHarvestableBlock.ToolType.PICKAXE, null));
+            smooth_smooth_stone = registerBlock(e, new BasicBlock("smooth_smooth_stone", AdditionalBlocksConfig.enableSmoothStone, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(2.0F, 6.0F), IHarvestableBlock.ToolType.PICKAXE, null));
             smooth_smooth_stone_slab = registerBlock(e, new SlabBlock(smooth_smooth_stone, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(2.0F, 6.0F), IHarvestableBlock.ToolType.PICKAXE, null));
             smooth_smooth_stone_stairs = registerBlock(e, new StairBlock(smooth_smooth_stone, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(2.0F, 6.0F), IHarvestableBlock.ToolType.PICKAXE, null));
             smooth_smooth_stone_wall = registerBlock(e, new WallyBlock(smooth_smooth_stone, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(2.0F, 6.0F), IHarvestableBlock.ToolType.PICKAXE, null));
@@ -382,62 +399,59 @@ public class AdditionalBlocks {
             stone_wall = registerBlock(e, new WallyBlock(Blocks.STONE, AdditionalBlocksConfig.enableSmoothStoneBricks, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(2.0F, 6.0F), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.STONE));
         }
 
-        @SubscribeEvent
-        public static void onTileRegistry(final RegistryEvent.Register<BlockEntityType<?>> e){
+        public static void onItemRegistry(final IForgeRegistry<Item> registry) {
+            for (Block block : blocks)
+                registerItem(registry, ((RegistryNameHolder) block).getRegistryName(), new BlockItem(block, new Item.Properties().tab(ITEM_GROUP)));
+            registry.register("silver_ingot", new OreItem(AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP)));
+            registry.register("raw_silver", new OreItem(AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP)));
+            registry.register("copper_nugget", new OreItem(AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP)));
+            registry.register("silver_nugget", new OreItem(AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP)));
+            registry.register("silver_axe", new BijlItem(AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 6.0F, -2.5F));
+            registry.register("silver_pickaxe", new HouweelItem(AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 1, -1.8F));
+            registry.register("silver_shovel", new SchepItem(AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 1.5F, -3.0F));
+            registry.register("silver_hoe", new SchoffelItem(AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), -2, 0.0F));
+            registry.register("silver_sword", new ZwaardItem(AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 3, -2.4F));
+
+            registry.register("copper_axe", new BijlItem(AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 6.0F, -2.5F));
+            registry.register("copper_pickaxe", new HouweelItem(AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 1, -1.8F));
+            registry.register("copper_shovel", new SchepItem(AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 1.5F, -3.0F));
+            registry.register("copper_hoe", new SchoffelItem(AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), -2, 0.0F));
+            registry.register("copper_sword", new ZwaardItem(AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 3, -2.4F));
+        }
+
+        public static void onFeatureRegistry(final IForgeRegistry<Feature<?>> registry) {
+            WorldGeneration.onFeatureRegistry(registry);
+        }
+
+        public static void onRecipeRegistry(final IForgeRegistry<RecipeSerializer<?>> registry) {
+            registry.register("shaped", SHAPED_RECIPE_SERIALIZER);
+            registry.register("shapeless", SHAPELESS_RECIPE_SERIALIZER);
+            registry.register("furnace", FURNACE_RECIPE_SERIALIZER);
+            registry.register("blastfurnace", BLASTING_RECIPE_SERIALIZER);
+            registry.register("stonecutting", STONE_CUTTING_RECIPE_SERIALIZER);
+        }
+
+        public static void onBiomeModifierRegistry(final IForgeRegistry<Codec<? extends BiomeModifier>> registry) {
+            registry.register("all", AbBiomeModifier.ALL_BIOME_MODIFIER_CODEC);
         }
 
         @SubscribeEvent
-        public static void onItemRegistry(final RegistryEvent.Register<Item> e){
-            for(Block block : blocks)
-                registerItem(e, new BlockItem(block, new Item.Properties().tab(ITEM_GROUP)).setRegistryName(block.getRegistryName()));
-            e.getRegistry().register(new OreItem("silver_ingot", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP)));
-            e.getRegistry().register(new OreItem("raw_silver", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP)));
-            e.getRegistry().register(new OreItem("copper_nugget", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP)));
-            e.getRegistry().register(new OreItem("silver_nugget", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP)));
-            e.getRegistry().register(new BijlItem("silver_axe", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 6.0F, -2.5F));
-            e.getRegistry().register(new HouweelItem("silver_pickaxe", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 1, -1.8F));
-            e.getRegistry().register(new SchepItem("silver_shovel", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 1.5F, -3.0F));
-            e.getRegistry().register(new SchoffelItem("silver_hoe", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), -2, 0.0F));
-            e.getRegistry().register(new ZwaardItem("silver_sword", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 3, -2.4F));
-
-            e.getRegistry().register(new BijlItem("copper_axe", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 6.0F, -2.5F));
-            e.getRegistry().register(new HouweelItem("copper_pickaxe", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 1, -1.8F));
-            e.getRegistry().register(new SchepItem("copper_shovel", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 1.5F, -3.0F));
-            e.getRegistry().register(new SchoffelItem("copper_hoe", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), -2, 0.0F));
-            e.getRegistry().register(new ZwaardItem("copper_sword", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 3, -2.4F));
-        }
-
-        @SubscribeEvent
-        public static void onFeatureRegistry(final RegistryEvent.Register<Feature<?>> e){
-            WorldGeneration.onFeatureRegistry(e);
-        }
-
-        @SubscribeEvent
-        public static void onRecipeRegistry(final RegistryEvent.Register<RecipeSerializer<?>> e){
-            e.getRegistry().register(SHAPED_RECIPE_SERIALIZER.setRegistryName(new ResourceLocation("abstoneedition", "shaped")));
-            e.getRegistry().register(SHAPELESS_RECIPE_SERIALIZER.setRegistryName(new ResourceLocation("abstoneedition", "shapeless")));
-            e.getRegistry().register(FURNACE_RECIPE_SERIALIZER.setRegistryName(new ResourceLocation("abstoneedition", "furnace")));
-            e.getRegistry().register(BLASTING_RECIPE_SERIALIZER.setRegistryName(new ResourceLocation("abstoneedition", "blastfurnace")));
-            e.getRegistry().register(STONE_CUTTING_RECIPE_SERIALIZER.setRegistryName(new ResourceLocation("abstoneedition", "stonecutting")));
-        }
-
-        @SubscribeEvent
-        public static void onGatherData(GatherDataEvent e){
-            e.getGenerator().addProvider(new AbBlockStateProvider(e.getGenerator(), "abstoneedition", e.getExistingFileHelper()));
-            e.getGenerator().addProvider(new AbTagsProvider(e.getGenerator(), "abstoneedition", e.getExistingFileHelper()));
-            e.getGenerator().addProvider(new AbRecipeProvider(e.getGenerator()));
-            e.getGenerator().addProvider(new AbLootTableProvider(e.getGenerator()));
+        public static void onGatherData(GatherDataEvent e) {
+            e.getGenerator().addProvider(e.includeClient(), new AbBlockStateProvider(e.getGenerator(), "abstoneedition", e.getExistingFileHelper()));
+            e.getGenerator().addProvider(e.includeServer(), new AbTagsProvider(e.getGenerator(), "abstoneedition", e.getExistingFileHelper()));
+            e.getGenerator().addProvider(e.includeServer(), new AbRecipeProvider(e.getGenerator()));
+            e.getGenerator().addProvider(e.includeServer(), new AbLootTableProvider(e.getGenerator()));
         }
     }
 
-    public static <T extends Block> T registerBlock(RegistryEvent.Register<Block> e, T block){
-        e.getRegistry().register(block);
+    public static <T extends Block & RegistryNameHolder> T registerBlock(IForgeRegistry<Block> registry, T block) {
+        registry.register(block.getRegistryName(), block);
         blocks.add(block);
         return block;
     }
 
-    public static <T extends Item> T registerItem(RegistryEvent.Register<Item> e, T item){
-        e.getRegistry().register(item);
+    public static <T extends Item> T registerItem(IForgeRegistry<Item> registry, String registryName, T item) {
+        registry.register(registryName, item);
         items.add(item);
         return item;
     }

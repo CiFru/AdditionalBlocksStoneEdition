@@ -11,23 +11,25 @@ import java.util.function.Supplier;
 /**
  * Created 11/30/2020 by SuperMartijn642
  */
-public class BasicBlock extends Block implements IConfigObject, IItemGroupIndex, IHarvestableBlock {
+public class BasicBlock extends Block implements IConfigObject, IItemGroupIndex, IHarvestableBlock, RegistryNameHolder {
 
     private final Supplier<Boolean> enable;
     private final ToolType toolType;
     private final ToolTier toolTier;
+    private final String registryName;
 
     public BasicBlock(String registryName, Supplier<Boolean> configValue, BlockBehaviour.Properties properties, ToolType toolType, ToolTier toolTier) {
         super(properties);
-        this.setRegistryName(registryName);
+        this.registryName = registryName;
         this.enable = configValue;
         this.toolType = toolType;
         this.toolTier = toolTier;
     }
+
     public BasicBlock(String registryName, BlockBehaviour.Properties properties, ToolType toolType, ToolTier toolTier) {
         super(properties);
-        this.setRegistryName(registryName);
-        this.enable = ()->true;
+        this.registryName = registryName;
+        this.enable = () -> true;
         this.toolType = toolType;
         this.toolTier = toolTier;
     }
@@ -56,5 +58,10 @@ public class BasicBlock extends Block implements IConfigObject, IItemGroupIndex,
     @Override
     public ToolTier getHarvestToolTier() {
         return this.toolTier;
+    }
+
+    @Override
+    public String getRegistryName() {
+        return this.registryName;
     }
 }

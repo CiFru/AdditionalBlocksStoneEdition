@@ -4,22 +4,14 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.features.OreFeatures;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.placement.*;
-import net.minecraftforge.common.BiomeDictionary;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.IForgeRegistry;
 
 import java.util.List;
 
@@ -39,7 +31,7 @@ public class WorldGeneration {
     public static Holder<PlacedFeature> ore_silver;
 
     //
-    public static void onFeatureRegistry(final RegistryEvent.Register<Feature<?>> e) {
+    public static void onFeatureRegistry(final IForgeRegistry<Feature<?>> e) {
         ConfiguredFeature<?, ?> marbleFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OreFeatures.NATURAL_STONE, AdditionalBlocks.marble.defaultBlockState(), 20));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation("abstoneedition", "ore_marble"), marbleFeature);
         ore_marble = Holder.direct(new PlacedFeature(Holder.direct(marbleFeature), commonOrePlacement(2, HeightRangePlacement.uniform(VerticalAnchor.absolute(30), VerticalAnchor.absolute(90)))));
@@ -69,57 +61,15 @@ public class WorldGeneration {
         ore_volcanic_stone_bricks = Holder.direct(new PlacedFeature(Holder.direct(volcanicStoneBricksFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(30), VerticalAnchor.absolute(120)))));
     }
 
-    @SubscribeEvent(priority = EventPriority.LOW)
-    public static void onBiomeLoad(BiomeLoadingEvent e) {
-        ResourceKey<Biome> biomeKey = ResourceKey.create(ForgeRegistries.Keys.BIOMES, e.getName());
-
-        // all overworld biomes
-        if (BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(biomeKey)) {
-            if (AdditionalBlocksConfig.enableSilver.get()) {
-                e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_silver);
-            }
-            if (!(e.getName().getNamespace().equals("minecraft") && (e.getName().getPath().equals("desert") || e.getName().getPath().equals("desert_hills") || e.getName().getPath().equals("desert_lakes")))) {
-                if (AdditionalBlocksConfig.enableMarble.get())
-                    e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_marble);
-            }
-            if (e.getName().getNamespace().equals("minecraft") && (e.getName().getPath().equals("desert") || e.getName().getPath().equals("desert_hills") || e.getName().getPath().equals("desert_lakes"))) {
-                if (AdditionalBlocksConfig.enableLimestone.get())
-                    e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_limestone);
-            }
-            if (e.getName().getNamespace().equals("minecraft") && (e.getName().getPath().equals("dripstone_caves") || e.getName().getPath().equals("jagged_peaks") || e.getName().getPath().equals("stony_peaks") || e.getName().getPath().equals("stony_shore") || e.getName().getPath().equals("windswept_gravelly_hills"))) {
-                if (AdditionalBlocksConfig.enableVolcanicStone.get())
-                    e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_volcanic_stone);
-            }
-        }
-
-        // all nether biomes
-        if (BiomeDictionary.getBiomes(BiomeDictionary.Type.NETHER).contains(biomeKey)) {
-            if (e.getName().getNamespace().equals("minecraft") && (e.getName().getPath().equals("soul_sand_valley") || e.getName().getPath().equals("basalt_deltas"))) {
-                if (AdditionalBlocksConfig.enableBlackMarble.get())
-                    e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_black_marble);
-                if (AdditionalBlocksConfig.enableVolcanicStone.get())
-                    e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_volcanic_stone_bricks);
-            }
-            if (AdditionalBlocksConfig.enableBloodstone.get())
-                e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_bloodstone);
-        }
-
-        // all end biomes
-        if (BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(biomeKey)) {
-
-        }
-
+    private static List<PlacementModifier> orePlacement(PlacementModifier placementChance, PlacementModifier heightModifier) {
+        return List.of(placementChance, InSquarePlacement.spread(), heightModifier, BiomeFilter.biome());
     }
 
-    private static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {
-        return List.of(p_195347_, InSquarePlacement.spread(), p_195348_, BiomeFilter.biome());
+    private static List<PlacementModifier> commonOrePlacement(int p_195344_, PlacementModifier heightModifier) {
+        return orePlacement(CountPlacement.of(p_195344_), heightModifier);
     }
 
-    private static List<PlacementModifier> commonOrePlacement(int p_195344_, PlacementModifier p_195345_) {
-        return orePlacement(CountPlacement.of(p_195344_), p_195345_);
-    }
-
-    private static List<PlacementModifier> rareOrePlacement(int p_195350_, PlacementModifier p_195351_) {
-        return orePlacement(RarityFilter.onAverageOnceEvery(p_195350_), p_195351_);
+    private static List<PlacementModifier> rareOrePlacement(int chance, PlacementModifier p_195351_) {
+        return orePlacement(RarityFilter.onAverageOnceEvery(chance), p_195351_);
     }
 }

@@ -1,13 +1,13 @@
 {
   "variants": {
-    "type=top": {
-      "model": "abstoneedition:block/brown_stone_tiles_slab_top"
-    },
     "type=bottom": {
       "model": "abstoneedition:block/brown_stone_tiles_slab"
     },
     "type=double": {
       "model": "abstoneedition:block/brown_stone_tiles"
+    },
+    "type=top": {
+      "model": "abstoneedition:block/brown_stone_tiles_slab_top"
     }
   }
 }

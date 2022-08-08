@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 1,
   "ingredient": {
     "item": "abstoneedition:charred_planks"
   },
-  "result": "abstoneedition:charred_stairs",
-  "count": 1
+  "result": "abstoneedition:charred_stairs"
 }

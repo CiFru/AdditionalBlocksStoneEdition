@@ -1,0 +1,12 @@
+{
+  "type": "abstoneedition:all",
+  "included_biomes": [
+    "#minecraft:is_mountain",
+    "#minecraft:is_peak",
+    "#minecraft:is_slope"
+  ],
+  "excluded_biomes": [
+  ],
+  "features": "abstoneedition:ore_volcanic_stone",
+  "step": "underground_ores"
+}

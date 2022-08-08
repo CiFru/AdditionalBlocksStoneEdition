@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 1,
   "ingredient": {
     "item": "abstoneedition:brown_bricks"
   },
-  "result": "abstoneedition:brown_bricks_stairs",
-  "count": 1
+  "result": "abstoneedition:brown_bricks_stairs"
 }

@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "  A",
-    " AA",
-    "AAA"
-  ],
   "key": {
     "A": {
       "item": "abstoneedition:stone_path_curved"
     }
   },
+  "pattern": [
+    "  A",
+    " AA",
+    "AAA"
+  ],
   "result": {
-    "item": "abstoneedition:stone_path_curved_stairs",
-    "count": 4
+    "count": 4,
+    "item": "abstoneedition:stone_path_curved_stairs"
   }
 }

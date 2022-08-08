@@ -1,5 +1,6 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 2,
   "ingredient": [
     {
       "item": "minecraft:granite"
@@ -11,6 +12,5 @@
       "item": "abstoneedition:granite_bricks"
     }
   ],
-  "result": "abstoneedition:granite_bricks_slab",
-  "count": 2
+  "result": "abstoneedition:granite_bricks_slab"
 }

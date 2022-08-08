@@ -1,0 +1,10 @@
+{
+  "type": "abstoneedition:all",
+  "included_biomes": [
+    "minecraft:soul_sand_valley",
+    "minecraft:nether_wastes"
+  ],
+  "excluded_biomes": [],
+  "features": "abstoneedition:ore_volcanic_stone",
+  "step": "underground_ores"
+}

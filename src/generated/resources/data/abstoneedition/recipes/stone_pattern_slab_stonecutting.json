@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 2,
   "ingredient": {
     "item": "abstoneedition:stone_pattern"
   },
-  "result": "abstoneedition:stone_pattern_slab",
-  "count": 2
+  "result": "abstoneedition:stone_pattern_slab"
 }

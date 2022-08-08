@@ -8,6 +8,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nullable;
 
@@ -31,7 +32,7 @@ public class AbTagsProvider extends BlockTagsProvider {
                 if (((IHarvestableBlock) block).getHarvestToolTier() != null)
                     this.tag(((IHarvestableBlock) block).getHarvestToolTier().tag).add(block);
             } else
-                System.err.println("Block '" + block.getRegistryName() + "' of class '" + block.getClass() + "' doesn't implement IHarvestableBlock, you idiot!");
+                System.err.println("Block '" + ForgeRegistries.BLOCKS.getKey(block) + "' of class '" + block.getClass() + "' doesn't implement IHarvestableBlock, you idiot!");
         }
     }
 }

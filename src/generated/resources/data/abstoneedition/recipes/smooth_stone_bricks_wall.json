@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "AAA",
-    "AAA"
-  ],
   "key": {
     "A": {
       "item": "abstoneedition:smooth_stone_bricks"
     }
   },
+  "pattern": [
+    "AAA",
+    "AAA"
+  ],
   "result": {
-    "item": "abstoneedition:smooth_stone_bricks_wall",
-    "count": 6
+    "count": 6,
+    "item": "abstoneedition:smooth_stone_bricks_wall"
   }
 }

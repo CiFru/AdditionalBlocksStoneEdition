@@ -1,5 +1,6 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 1,
   "ingredient": [
     {
       "item": "minecraft:glowstone"
@@ -8,6 +9,5 @@
       "item": "abstoneedition:glowstone_bricks"
     }
   ],
-  "result": "abstoneedition:glowstone_bricks_wall",
-  "count": 1
+  "result": "abstoneedition:glowstone_bricks_wall"
 }

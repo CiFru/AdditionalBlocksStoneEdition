@@ -1,5 +1,6 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 1,
   "ingredient": [
     {
       "item": "minecraft:diorite"
@@ -8,6 +9,5 @@
       "item": "minecraft:polished_diorite"
     }
   ],
-  "result": "abstoneedition:diorite_bricks",
-  "count": 1
+  "result": "abstoneedition:diorite_bricks"
 }

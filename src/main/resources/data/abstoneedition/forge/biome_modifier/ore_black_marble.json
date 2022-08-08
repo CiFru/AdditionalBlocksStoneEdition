@@ -1,0 +1,9 @@
+{
+  "type": "abstoneedition:all",
+  "included_biomes": [
+    "#minecraft:is_nether"
+  ],
+  "excluded_biomes": [],
+  "features": "abstoneedition:ore_black_marble",
+  "step": "underground_ores"
+}

@@ -1,6 +1,7 @@
 package com.supermartijn642.additionalblocks.stone.data;
 
 import com.supermartijn642.additionalblocks.stone.AdditionalBlocks;
+import com.supermartijn642.additionalblocks.stone.WallyBlock;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.WallBlock;
@@ -127,9 +128,9 @@ public class AbBlockStateProvider extends BlockStateProvider {
         this.addStoneWallModels(AdditionalBlocks.smooth_smooth_stone_wall, new ResourceLocation("abstoneedition", "smooth_smooth_stone"));
     }
 
-    private void addStoneWallModels(WallBlock block, ResourceLocation texture){
+    private void addStoneWallModels(WallyBlock block, ResourceLocation texture){
         this.wallBlock(block, texture);
-        String name = block.getRegistryName().getPath();
+        String name = block.getRegistryName();
         this.itemModels().wallInventory("block/" + name + "_inventory", texture);
         this.itemModels().withExistingParent("item/" + name, new ResourceLocation("abstoneedition", "block/" + name + "_inventory"));
     }

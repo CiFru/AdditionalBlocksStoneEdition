@@ -1,5 +1,6 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 2,
   "ingredient": [
     {
       "item": "abstoneedition:stone_brick_block"
@@ -8,6 +9,5 @@
       "item": "minecraft:stone"
     }
   ],
-  "result": "abstoneedition:stone_brick_block_slab",
-  "count": 2
+  "result": "abstoneedition:stone_brick_block_slab"
 }

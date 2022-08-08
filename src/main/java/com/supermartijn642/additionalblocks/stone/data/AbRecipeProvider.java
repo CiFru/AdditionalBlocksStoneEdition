@@ -42,7 +42,7 @@ public class AbRecipeProvider extends RecipeProvider {
             .pattern("AAA")
             .define('A', block)
             .unlockedBy("has_item", has(block))
-            .save(recipeConsumer, "abstoneedition:" + stairBlock.getRegistryName().getPath() + "_2");
+            .save(recipeConsumer, "abstoneedition:" + stairBlock.getRegistryName() + "_2");
     }
 
     private void addSlabRecipe(Consumer<FinishedRecipe> recipeConsumer, SlabBlock slabBlock, Block block){

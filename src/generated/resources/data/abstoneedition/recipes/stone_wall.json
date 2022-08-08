@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "AAA",
-    "AAA"
-  ],
   "key": {
     "A": {
       "item": "minecraft:stone"
     }
   },
+  "pattern": [
+    "AAA",
+    "AAA"
+  ],
   "result": {
-    "item": "abstoneedition:stone_wall",
-    "count": 6
+    "count": 6,
+    "item": "abstoneedition:stone_wall"
   }
 }
