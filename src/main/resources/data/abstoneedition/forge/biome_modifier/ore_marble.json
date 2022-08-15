@@ -1,12 +1,8 @@
 {
   "type": "abstoneedition:all",
-  "included_biomes": [
-    "#minecraft:is_overworld"
-  ],
+  "included_biomes": "#minecraft:is_overworld",
   "excluded_biomes": [
-    "minecraft:desert",
-    "minecraft:desert_hills",
-    "minecraft:desert_lakes"
+    "minecraft:desert"
   ],
   "features": "abstoneedition:ore_marble",
   "step": "underground_ores"

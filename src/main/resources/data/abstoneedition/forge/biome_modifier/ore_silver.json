@@ -1,8 +1,6 @@
 {
   "type": "abstoneedition:all",
-  "included_biomes": [
-    "minecraft:is_overworld"
-  ],
+  "included_biomes": "#minecraft:is_overworld",
   "excluded_biomes": [],
   "features": "abstoneedition:ore_silver",
   "step": "underground_ores"

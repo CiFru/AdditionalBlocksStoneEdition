@@ -27,7 +27,6 @@ import net.minecraftforge.registries.RegisterEvent;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * Created 7/7/2020 by SuperMartijn642
@@ -220,15 +219,15 @@ public class AdditionalBlocks {
 
         @SubscribeEvent
         public static void onRegistryEvent(RegisterEvent e) {
-            if (Objects.equals(e.getForgeRegistry(), ForgeRegistries.BLOCKS))
+            if (e.getRegistryKey() == ForgeRegistries.Keys.BLOCKS)
                 onBlockRegistry(e.getForgeRegistry());
-            else if (Objects.equals(e.getForgeRegistry(), ForgeRegistries.ITEMS))
+            else if (e.getRegistryKey() == ForgeRegistries.Keys.ITEMS)
                 onItemRegistry(e.getForgeRegistry());
-            else if (Objects.equals(e.getForgeRegistry(), ForgeRegistries.FEATURES))
+            else if (e.getRegistryKey() == ForgeRegistries.Keys.FEATURES)
                 onFeatureRegistry(e.getForgeRegistry());
-            else if (Objects.equals(e.getForgeRegistry(), ForgeRegistries.RECIPE_SERIALIZERS))
+            else if (e.getRegistryKey() == ForgeRegistries.Keys.RECIPE_SERIALIZERS)
                 onRecipeRegistry(e.getForgeRegistry());
-            else if (Objects.equals(e.getForgeRegistry(), ForgeRegistries.BIOME_MODIFIER_SERIALIZERS))
+            else if (e.getRegistryKey() == ForgeRegistries.Keys.BIOME_MODIFIER_SERIALIZERS)
                 onBiomeModifierRegistry(e.getForgeRegistry());
         }
 

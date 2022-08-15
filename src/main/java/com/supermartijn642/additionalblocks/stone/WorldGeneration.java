@@ -21,44 +21,41 @@ import java.util.List;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class WorldGeneration {
 
-    public static Holder<PlacedFeature> ore_marble;
-    public static Holder<PlacedFeature> ore_limestone;
-    public static Holder<PlacedFeature> ore_bloodstone;
-    public static Holder<PlacedFeature> mud;
-    public static Holder<PlacedFeature> ore_volcanic_stone;
-    public static Holder<PlacedFeature> ore_volcanic_stone_bricks;
-    public static Holder<PlacedFeature> ore_black_marble;
-    public static Holder<PlacedFeature> ore_silver;
-
-    //
-    public static void onFeatureRegistry(final IForgeRegistry<Feature<?>> e) {
+    public static void onFeatureRegistry(final IForgeRegistry<Feature<?>> registry) {
         ConfiguredFeature<?, ?> marbleFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OreFeatures.NATURAL_STONE, AdditionalBlocks.marble.defaultBlockState(), 20));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation("abstoneedition", "ore_marble"), marbleFeature);
-        ore_marble = Holder.direct(new PlacedFeature(Holder.direct(marbleFeature), commonOrePlacement(2, HeightRangePlacement.uniform(VerticalAnchor.absolute(30), VerticalAnchor.absolute(90)))));
+        PlacedFeature marblePlacedFeature = new PlacedFeature(Holder.direct(marbleFeature), commonOrePlacement(2, HeightRangePlacement.uniform(VerticalAnchor.absolute(30), VerticalAnchor.absolute(90))));
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation("abstoneedition", "ore_marble"), marblePlacedFeature);
 
         ConfiguredFeature<?, ?> limestoneFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OreFeatures.NATURAL_STONE, AdditionalBlocks.limestone.defaultBlockState(), 20));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation("abstoneedition", "ore_limestone"), limestoneFeature);
-        ore_limestone = Holder.direct(new PlacedFeature(Holder.direct(limestoneFeature), commonOrePlacement(2, HeightRangePlacement.uniform(VerticalAnchor.absolute(30), VerticalAnchor.absolute(90)))));
+        PlacedFeature limestonePlacedFeature = new PlacedFeature(Holder.direct(limestoneFeature), commonOrePlacement(2, HeightRangePlacement.uniform(VerticalAnchor.absolute(30), VerticalAnchor.absolute(90))));
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation("abstoneedition", "ore_limestone"), limestonePlacedFeature);
 
         ConfiguredFeature<?, ?> silverFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OreFeatures.NATURAL_STONE, AdditionalBlocks.silver_ore.defaultBlockState(), 6));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation("abstoneedition", "ore_silver"), silverFeature);
-        ore_silver = Holder.direct(new PlacedFeature(Holder.direct(silverFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(20), VerticalAnchor.absolute(60)))));
+        PlacedFeature silverPlacedFeature = new PlacedFeature(Holder.direct(silverFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(20), VerticalAnchor.absolute(60))));
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation("abstoneedition", "ore_silver"), silverPlacedFeature);
 
         ConfiguredFeature<?, ?> bloodstoneFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OreFeatures.NETHER_ORE_REPLACEABLES, AdditionalBlocks.bloodstone.defaultBlockState(), 20));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation("abstoneedition", "ore_bloodstone"), bloodstoneFeature);
-        ore_bloodstone = Holder.direct(new PlacedFeature(Holder.direct(bloodstoneFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(0), VerticalAnchor.absolute(100)))));
+        PlacedFeature bloodstonePlacedFeature = new PlacedFeature(Holder.direct(bloodstoneFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(0), VerticalAnchor.absolute(100))));
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation("abstoneedition", "ore_bloodstone"), bloodstonePlacedFeature);
 
         ConfiguredFeature<?, ?> blackMarbleFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OreFeatures.NETHER_ORE_REPLACEABLES, AdditionalBlocks.black_marble.defaultBlockState(), 20));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation("abstoneedition", "ore_black_marble"), blackMarbleFeature);
-        ore_black_marble = Holder.direct(new PlacedFeature(Holder.direct(blackMarbleFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(0), VerticalAnchor.absolute(100)))));
+        PlacedFeature blackMarblePlacedFeature = new PlacedFeature(Holder.direct(blackMarbleFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(0), VerticalAnchor.absolute(100))));
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation("abstoneedition", "ore_black_marble"), blackMarblePlacedFeature);
 
         ConfiguredFeature<?, ?> volcanicStoneFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OreFeatures.NATURAL_STONE, AdditionalBlocks.volcanic_stone.defaultBlockState(), 20));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation("abstoneedition", "ore_volcanic_stone"), volcanicStoneFeature);
-        ore_volcanic_stone = Holder.direct(new PlacedFeature(Holder.direct(volcanicStoneFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(30), VerticalAnchor.absolute(120)))));
+        PlacedFeature volcanicStonePlacedFeature = new PlacedFeature(Holder.direct(volcanicStoneFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(30), VerticalAnchor.absolute(120))));
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation("abstoneedition", "ore_volcanic_stone"), volcanicStonePlacedFeature);
 
         ConfiguredFeature<?, ?> volcanicStoneBricksFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OreFeatures.NATURAL_STONE, AdditionalBlocks.volcanic_stone_bricks.defaultBlockState(), 30));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation("abstoneedition", "ore_volcanic_stone_bricks"), volcanicStoneBricksFeature);
-        ore_volcanic_stone_bricks = Holder.direct(new PlacedFeature(Holder.direct(volcanicStoneBricksFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(30), VerticalAnchor.absolute(120)))));
+        PlacedFeature volcanicStoneBricksPlacedFeature = new PlacedFeature(Holder.direct(volcanicStoneBricksFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(30), VerticalAnchor.absolute(120))));
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation("abstoneedition", "ore_volcanic_stone_bricks"), volcanicStoneBricksPlacedFeature);
     }
 
     private static List<PlacementModifier> orePlacement(PlacementModifier placementChance, PlacementModifier heightModifier) {
