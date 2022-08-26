@@ -112,6 +112,18 @@
   "block.abstoneedition.aztec_tiles": "Aztec Tiles",
   "block.abstoneedition.sunstone": "Aztec Sunstone",
   "block.abstoneedition.aztec_pillar": "Aztec Pillar",
+  "block.abstoneedition.bismuth_ore": "Bismuth Ore",
+  "item.abstoneedition.bismuth_ingot": "Bismuth Ingot",
+  "item.abstoneedition.bismuth_nugget": "Bismuth Nugget",
+  "block.abstoneedition.bismuth_block": "Block of Bismuth",
+  "item.abstoneedition.bismuth_axe": "Bismuth Axe",
+  "item.abstoneedition.bismuth_pickaxe": "Bismuth Pickaxe",
+  "item.abstoneedition.bismuth_shovel": "Bismuth Shovel",
+  "item.abstoneedition.bismuth_hoe": "Bismuth Hoe",
+  "item.abstoneedition.bismuth_sword": "Bismuth Sword",
+  "block.abstoneedition.bismuth_cluster": "Bismuth Cluster",
+  "item.abstoneedition.raw_bismuth_chunk": "Bismuth Crystal",
+
 
   "block.abstoneedition.polished_andesite_wall": "Polished Andesite Wall",
   "block.abstoneedition.andesite_bricks_wall": "Andesite Brick Wall",

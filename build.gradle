@@ -85,7 +85,7 @@ dependencies {
     minecraft 'net.minecraftforge:forge:1.19.2-43.0.0'
 
     // Just Enough Items
-//    runtimeOnly fg.deobf("curse.maven:jei-238222:3104018")
+    runtimeOnly fg.deobf("curse.maven:jei-238222:3944627")
 
     // Block Renderer
 //    runtimeOnly fg.deobf("curse.maven:block-renderer-380456:3149419")

@@ -1,0 +1,16 @@
+{
+  "type": "abstoneedition:shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:nuggets/bismuth"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:bismuth_ingot"
+  }
+}

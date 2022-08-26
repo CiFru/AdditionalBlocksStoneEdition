@@ -1,0 +1,7 @@
+{
+  "type": "abstoneedition:all",
+  "included_biomes": "#minecraft:is_overworld",
+  "excluded_biomes": [],
+  "features": "abstoneedition:ore_bismuth",
+  "step": "underground_ores"
+}
