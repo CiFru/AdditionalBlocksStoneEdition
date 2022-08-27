@@ -37,6 +37,8 @@ public class WorldGeneration {
     public static Holder<PlacedFeature> ore_volcanic_stone_bricks;
     public static Holder<PlacedFeature> ore_black_marble;
     public static Holder<PlacedFeature> ore_silver;
+    public static Holder<PlacedFeature> ore_bismuth;
+
 
     //
     public static void onFeatureRegistry(final RegistryEvent.Register<Feature<?>> e) {
@@ -67,6 +69,11 @@ public class WorldGeneration {
         ConfiguredFeature<?, ?> volcanicStoneBricksFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OreFeatures.NATURAL_STONE, AdditionalBlocks.volcanic_stone_bricks.defaultBlockState(), 30));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation("abstoneedition", "ore_volcanic_stone_bricks"), volcanicStoneBricksFeature);
         ore_volcanic_stone_bricks = Holder.direct(new PlacedFeature(Holder.direct(volcanicStoneBricksFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(30), VerticalAnchor.absolute(120)))));
+
+        ConfiguredFeature<?, ?> bismuthFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OreFeatures.NATURAL_STONE, AdditionalBlocks.bismuth_ore.defaultBlockState(), 4));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation("abstoneedition", "ore_bismuth"), bismuthFeature);
+        ore_bismuth = Holder.direct(new PlacedFeature(Holder.direct(silverFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(10), VerticalAnchor.absolute(50)))));
+
     }
 
     @SubscribeEvent(priority = EventPriority.LOW)
@@ -77,6 +84,9 @@ public class WorldGeneration {
         if (BiomeDictionary.getBiomes(BiomeDictionary.Type.OVERWORLD).contains(biomeKey)) {
             if (AdditionalBlocksConfig.enableSilver.get()) {
                 e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_silver);
+            }
+            if (AdditionalBlocksConfig.enableBismuth.get()) {
+                e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_bismuth);
             }
             if (!(e.getName().getNamespace().equals("minecraft") && (e.getName().getPath().equals("desert") || e.getName().getPath().equals("desert_hills") || e.getName().getPath().equals("desert_lakes")))) {
                 if (AdditionalBlocksConfig.enableMarble.get())

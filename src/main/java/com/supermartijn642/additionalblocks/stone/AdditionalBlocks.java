@@ -135,6 +135,9 @@ public class AdditionalBlocks {
     public static BasicBlock smooth_stone_bricks;
     public static StairBlock smooth_stone_bricks_stairs;
     public static SlabBlock smooth_stone_bricks_slab;
+    public static Block bismuth_ore;
+    public static BasicBlock bismuth_block;
+    public static Block bismuth_cluster;
     public static BasicBlock aztec_pattern;
     public static BasicBlock aztec_patterned_wall;
     public static BasicBlock aztec_tiles;
@@ -316,6 +319,11 @@ public class AdditionalBlocks {
             sunstone = registerBlock(e, new BasicBlock("sunstone", AdditionalBlocksConfig.enableAztec, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW).requiresCorrectToolForDrops().sound(SoundType.GILDED_BLACKSTONE).strength(2.0F, 6.0F), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.STONE));
             aztec_pillar = registerBlock(e, new AxisRotationBlock("aztec_pillar", AdditionalBlocksConfig.enableAztec, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(2.0f, 6.0f), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.STONE));
 
+            bismuth_ore = registerBlock(e, new OorBlock("bismuth_ore", AdditionalBlocksConfig.enableBismuth, BlockBehaviour.Properties.of(Material.STONE).strength(4.5F, 4.5F).requiresCorrectToolForDrops().sound(SoundType.METAL), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.IRON));
+            bismuth_block = registerBlock(e, new BasicBlock("bismuth_block", AdditionalBlocksConfig.enableBismuth, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL).strength(6.0F, 7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.DIAMOND));
+            bismuth_cluster = registerBlock(e, new BasicBlock("bismuth_cluster", AdditionalBlocksConfig.enableBismuth, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL).strength(6.0F, 7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.DIAMOND));
+
+
             brown_stone_path_straight_stairs = registerBlock(e, new StairBlock(brown_stone_path_straight, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BROWN).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(2.0F, 6.0F), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.STONE));
             brown_stone_path_curved_stairs = registerBlock(e, new StairBlock(brown_stone_path_curved, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BROWN).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(2.0F, 6.0F), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.STONE));
             brown_stone_pattern_stairs = registerBlock(e, new StairBlock(brown_stone_pattern, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BROWN).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(2.0F, 6.0F), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.STONE));
@@ -405,6 +413,16 @@ public class AdditionalBlocks {
             e.getRegistry().register(new SchepItem("copper_shovel", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 1.5F, -3.0F));
             e.getRegistry().register(new SchoffelItem("copper_hoe", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), -2, 0.0F));
             e.getRegistry().register(new ZwaardItem("copper_sword", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 3, -2.4F));
+
+            e.getRegistry().register(new OreItem("bismuth_ingot", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP)));
+            e.getRegistry().register(new OreItem("raw_bismuth_chunk", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP)));
+            e.getRegistry().register(new OreItem("bismuth_nugget", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP)));
+            e.getRegistry().register(new BijlItem("bismuth_axe", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), 8.0F, -3.5F));
+            e.getRegistry().register(new HouweelItem("bismuth_pickaxe", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), 2, -2.5F));
+            e.getRegistry().register(new SchepItem("bismuth_shovel", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), 2.5F, -4.0F));
+            e.getRegistry().register(new SchoffelItem("bismuth_hoe", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), -1, 1.0F));
+            e.getRegistry().register(new ZwaardItem("bismuth_sword", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), 6, -3.0F));
+
         }
 
         @SubscribeEvent
