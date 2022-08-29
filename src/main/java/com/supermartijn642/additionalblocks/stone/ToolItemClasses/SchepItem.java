@@ -14,8 +14,8 @@ public class SchepItem extends ShovelItem implements IConfigObject, IItemGroupIn
 
     private final Supplier<Boolean> enable;
 
-    public SchepItem(String registryName, Supplier<Boolean> enable, Properties properties, float attackDamage, float attackSpeed) {
-        super(Tiers.IRON, attackDamage, attackSpeed, properties);
+    public SchepItem(String registryName, Supplier<Boolean> enable, Properties properties, float attackDamage, float attackSpeed, Tiers tier) {
+        super(tier, attackDamage, attackSpeed, properties);
         this.setRegistryName(registryName);
         this.enable = enable;
     }

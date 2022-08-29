@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "abstoneedition:bismuth_ore",
+    "abstoneedition:bismuth_block",
+    "abstoneedition:bismuth_cluster"
+  ]
+}

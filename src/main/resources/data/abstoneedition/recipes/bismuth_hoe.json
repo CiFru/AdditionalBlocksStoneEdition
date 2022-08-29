@@ -1,0 +1,19 @@
+{
+  "type": "abstoneedition:shaped",
+  "pattern": [
+    "XX",
+    " #",
+    " #"
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:rods/wooden"
+    },
+    "X": {
+      "tag": "forge:ingots/bismuth"
+    }
+  },
+  "result": {
+    "item": "abstoneedition:bismuth_hoe"
+  }
+}

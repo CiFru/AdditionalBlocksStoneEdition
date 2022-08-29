@@ -1,0 +1,12 @@
+{
+  "type": "abstoneedition:shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:storage_blocks/bismuth"
+    }
+  ],
+  "result": {
+    "item": "abstoneedition:bismuth_ingot",
+    "count": 9
+  }
+}
