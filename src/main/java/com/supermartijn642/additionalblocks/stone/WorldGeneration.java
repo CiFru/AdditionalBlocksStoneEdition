@@ -32,14 +32,14 @@ public class WorldGeneration {
         PlacedFeature limestonePlacedFeature = new PlacedFeature(Holder.direct(limestoneFeature), commonOrePlacement(2, HeightRangePlacement.uniform(VerticalAnchor.absolute(30), VerticalAnchor.absolute(90))));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation("abstoneedition", "ore_limestone"), limestonePlacedFeature);
 
-        ConfiguredFeature<?, ?> silverFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OreFeatures.NATURAL_STONE, AdditionalBlocks.silver_ore.defaultBlockState(), 6));
+        ConfiguredFeature<?, ?> silverFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OreFeatures.NATURAL_STONE, AdditionalBlocks.silver_ore.defaultBlockState(), 8));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation("abstoneedition", "ore_silver"), silverFeature);
-        PlacedFeature silverPlacedFeature = new PlacedFeature(Holder.direct(silverFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(20), VerticalAnchor.absolute(60))));
+        PlacedFeature silverPlacedFeature = new PlacedFeature(Holder.direct(silverFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(20), VerticalAnchor.absolute(75))));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation("abstoneedition", "ore_silver"), silverPlacedFeature);
 
-        ConfiguredFeature<?, ?> bismuthFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OreFeatures.NATURAL_STONE, AdditionalBlocks.bismuth_ore.defaultBlockState(), 4));
+        ConfiguredFeature<?, ?> bismuthFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OreFeatures.NATURAL_STONE, AdditionalBlocks.bismuth_ore.defaultBlockState(), 5));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation("abstoneedition", "ore_bismuth"), bismuthFeature);
-        PlacedFeature bismuthPlacedFeature = new PlacedFeature(Holder.direct(silverFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(10), VerticalAnchor.absolute(40))));
+        PlacedFeature bismuthPlacedFeature = new PlacedFeature(Holder.direct(bismuthFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(10), VerticalAnchor.absolute(50))));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation("abstoneedition", "ore_bismuth"), bismuthPlacedFeature);
 
         ConfiguredFeature<?, ?> bloodstoneFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OreFeatures.NETHER_ORE_REPLACEABLES, AdditionalBlocks.bloodstone.defaultBlockState(), 20));

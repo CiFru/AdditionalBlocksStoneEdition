@@ -1,5 +1,6 @@
 {
   "credit": "Made with Blockbench",
+  "parent": "minecraft:block/block",
   "textures": {
     "0": "abstoneedition:bismuth_cluster",
     "particle": "abstoneedition:bismuth_cluster"
