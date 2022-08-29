@@ -14,8 +14,8 @@ public class SchepItem extends ShovelItem implements IConfigObject, IItemGroupIn
 
     private final Supplier<Boolean> enable;
 
-    public SchepItem(Supplier<Boolean> enable, Properties properties, float attackDamage, float attackSpeed) {
-        super(Tiers.IRON, attackDamage, attackSpeed, properties);
+    public SchepItem(Supplier<Boolean> enable, Properties properties, float attackDamage, float attackSpeed, Tiers tier) {
+        super(tier, attackDamage, attackSpeed, properties);
         this.enable = enable;
     }
 

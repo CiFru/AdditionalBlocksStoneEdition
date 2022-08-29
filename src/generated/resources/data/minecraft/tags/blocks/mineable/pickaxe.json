@@ -159,6 +159,9 @@
     "abstoneedition:stone_brick_block_wall",
     "abstoneedition:volcanic_stone_wall",
     "abstoneedition:volcanic_stone_bricks_wall",
-    "abstoneedition:stone_wall"
+    "abstoneedition:stone_wall",
+    "abstoneedition:bismuth_ore",
+    "abstoneedition:bismuth_cluster",
+    "abstoneedition:bismuth_block"
   ]
 }
