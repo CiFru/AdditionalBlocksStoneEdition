@@ -1,7 +1,7 @@
 {
   "type": "abstoneedition:furnace",
   "ingredient": {
-    "item": "abstoneedition:raw_silver"
+    "tag": "forge:raw_materials/silver"
   },
   "result": "abstoneedition:silver_ingot",
   "experience": 0.7,

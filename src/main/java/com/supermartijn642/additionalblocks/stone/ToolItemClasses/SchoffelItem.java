@@ -14,8 +14,8 @@ public class SchoffelItem extends HoeItem implements IConfigObject, IItemGroupIn
 
     private final Supplier<Boolean> enable;
 
-    public SchoffelItem(String registryName, Supplier<Boolean> enable, Properties properties, int attackDamage, float attackSpeed) {
-        super(Tiers.IRON, attackDamage, attackSpeed, properties);
+    public SchoffelItem(String registryName, Supplier<Boolean> enable, Properties properties, int attackDamage, float attackSpeed, Tiers tier) {
+        super(tier, attackDamage, attackSpeed, properties);
         this.setRegistryName(registryName);
         this.enable = enable;
     }

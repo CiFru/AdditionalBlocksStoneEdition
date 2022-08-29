@@ -14,8 +14,8 @@ public class BijlItem extends AxeItem implements IConfigObject, IItemGroupIndex 
 
     private final Supplier<Boolean> enable;
 
-    public BijlItem(String registryName, Supplier<Boolean> enable, Properties properties, float attackDamage, float attackSpeed) {
-        super(Tiers.IRON, attackDamage, attackSpeed, properties);
+    public BijlItem(String registryName, Supplier<Boolean> enable, Properties properties, float attackDamage, float attackSpeed, Tiers tier) {
+        super(tier, attackDamage, attackSpeed, properties);
         this.setRegistryName(registryName);
         this.enable = enable;
     }

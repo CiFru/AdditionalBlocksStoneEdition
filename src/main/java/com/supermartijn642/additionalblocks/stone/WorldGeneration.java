@@ -72,7 +72,7 @@ public class WorldGeneration {
 
         ConfiguredFeature<?, ?> bismuthFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OreFeatures.NATURAL_STONE, AdditionalBlocks.bismuth_ore.defaultBlockState(), 4));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation("abstoneedition", "ore_bismuth"), bismuthFeature);
-        ore_bismuth = Holder.direct(new PlacedFeature(Holder.direct(silverFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(10), VerticalAnchor.absolute(50)))));
+        ore_bismuth = Holder.direct(new PlacedFeature(Holder.direct(bismuthFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(10), VerticalAnchor.absolute(50)))));
 
     }
 

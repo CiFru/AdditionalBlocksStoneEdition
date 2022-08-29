@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -209,6 +210,9 @@ public class AdditionalBlocks {
     public static WallyBlock volcanic_stone_bricks_wall;
     public static WallyBlock stone_wall;
 
+    public static OreItem raw_bismuth_chunk;
+    public static OreItem raw_silver;
+
 
     public AdditionalBlocks(){
         AdditionalBlocksConfig.create();
@@ -399,29 +403,29 @@ public class AdditionalBlocks {
             for(Block block : blocks)
                 registerItem(e, new BlockItem(block, new Item.Properties().tab(ITEM_GROUP)).setRegistryName(block.getRegistryName()));
             e.getRegistry().register(new OreItem("silver_ingot", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP)));
-            e.getRegistry().register(new OreItem("raw_silver", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP)));
+            e.getRegistry().register(raw_silver = new OreItem("raw_silver", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP)));
             e.getRegistry().register(new OreItem("copper_nugget", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP)));
             e.getRegistry().register(new OreItem("silver_nugget", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP)));
-            e.getRegistry().register(new BijlItem("silver_axe", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 6.0F, -2.5F));
-            e.getRegistry().register(new HouweelItem("silver_pickaxe", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 1, -1.8F));
-            e.getRegistry().register(new SchepItem("silver_shovel", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 1.5F, -3.0F));
-            e.getRegistry().register(new SchoffelItem("silver_hoe", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), -2, 0.0F));
-            e.getRegistry().register(new ZwaardItem("silver_sword", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 3, -2.4F));
+            e.getRegistry().register(new BijlItem("silver_axe", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 6.0F, -2.5F, Tiers.IRON));
+            e.getRegistry().register(new HouweelItem("silver_pickaxe", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 1, -1.8F, Tiers.IRON));
+            e.getRegistry().register(new SchepItem("silver_shovel", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 1.5F, -3.0F, Tiers.IRON));
+            e.getRegistry().register(new SchoffelItem("silver_hoe", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), -2, 0.0F, Tiers.IRON));
+            e.getRegistry().register(new ZwaardItem("silver_sword", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 3, -2.4F, Tiers.IRON));
 
-            e.getRegistry().register(new BijlItem("copper_axe", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 6.0F, -2.5F));
-            e.getRegistry().register(new HouweelItem("copper_pickaxe", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 1, -1.8F));
-            e.getRegistry().register(new SchepItem("copper_shovel", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 1.5F, -3.0F));
-            e.getRegistry().register(new SchoffelItem("copper_hoe", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), -2, 0.0F));
-            e.getRegistry().register(new ZwaardItem("copper_sword", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 3, -2.4F));
+            e.getRegistry().register(new BijlItem("copper_axe", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 6.0F, -2.5F, Tiers.IRON));
+            e.getRegistry().register(new HouweelItem("copper_pickaxe", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 1, -1.8F, Tiers.IRON));
+            e.getRegistry().register(new SchepItem("copper_shovel", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 1.5F, -3.0F, Tiers.IRON));
+            e.getRegistry().register(new SchoffelItem("copper_hoe", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), -2, -0.5F, Tiers.IRON));
+            e.getRegistry().register(new ZwaardItem("copper_sword", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 3, -2.4F, Tiers.IRON));
 
             e.getRegistry().register(new OreItem("bismuth_ingot", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP)));
-            e.getRegistry().register(new OreItem("raw_bismuth_chunk", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP)));
+            e.getRegistry().register(raw_bismuth_chunk = new OreItem("raw_bismuth_chunk", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP)));
             e.getRegistry().register(new OreItem("bismuth_nugget", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP)));
-            e.getRegistry().register(new BijlItem("bismuth_axe", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), 8.0F, -3.5F));
-            e.getRegistry().register(new HouweelItem("bismuth_pickaxe", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), 2, -2.5F));
-            e.getRegistry().register(new SchepItem("bismuth_shovel", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), 2.5F, -4.0F));
-            e.getRegistry().register(new SchoffelItem("bismuth_hoe", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), -1, 1.0F));
-            e.getRegistry().register(new ZwaardItem("bismuth_sword", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), 6, -3.0F));
+            e.getRegistry().register(new BijlItem("bismuth_axe", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), 8.0F, -3.5F, Tiers.DIAMOND));
+            e.getRegistry().register(new HouweelItem("bismuth_pickaxe", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), 2, -2.5F, Tiers.DIAMOND));
+            e.getRegistry().register(new SchepItem("bismuth_shovel", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), 2.5F, -3.0F, Tiers.DIAMOND));
+            e.getRegistry().register(new SchoffelItem("bismuth_hoe", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), -1, 1.0F, Tiers.DIAMOND));
+            e.getRegistry().register(new ZwaardItem("bismuth_sword", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), 6, -3.0F, Tiers.DIAMOND));
 
         }
 
