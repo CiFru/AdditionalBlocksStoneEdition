@@ -11,30 +11,35 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.ForgeRegistryEntry;
 
 import javax.annotation.Nullable;
+import java.util.function.Predicate;
 
 /**
  * Created 1/29/2021 by SuperMartijn642
  */
 public class AdditionalBlocksRecipes {
 
-    private static boolean checkIngredients(Iterable<Ingredient> ingredients){
-        for(Ingredient ingredient : ingredients){
-            ItemStack[] itemStacks = ingredient.getItems();
-            if(itemStacks.length == 1 && !checkItemStack(itemStacks[0]))
-                return false;
+    private static boolean checkIngredients(Iterable<Ingredient> ingredients) {
+        for (Ingredient ingredient : ingredients) {
+            if (!ingredient.isVanilla())
+                continue;
+            for (Ingredient.Value value : ingredient.values) {
+                if (!(value instanceof Ingredient.ItemValue)) // Trying to load tag values here causes issues
+                    continue;
+
+                if (value.getItems().stream().anyMatch(((Predicate<ItemStack>)AdditionalBlocksRecipes::checkItemStack).negate()))
+                    return false;
+            }
         }
         return true;
     }
 
-    private static boolean checkItemStack(ItemStack stack){
+    private static boolean checkItemStack(ItemStack stack) {
         Item item = stack.getItem();
-        if(item instanceof IConfigObject){
-            if(!((IConfigObject)item).isEnabled())
-                return false;
-        }else if(item instanceof BlockItem){
-            Block block = ((BlockItem)item).getBlock();
-            if(block instanceof IConfigObject && !((IConfigObject)block).isEnabled())
-                return false;
+        if (item instanceof IConfigObject) {
+            return ((IConfigObject)item).isEnabled();
+        } else if (item instanceof BlockItem) {
+            Block block = ((BlockItem) item).getBlock();
+            return !(block instanceof IConfigObject) || ((IConfigObject)block).isEnabled();
         }
         return true;
     }
