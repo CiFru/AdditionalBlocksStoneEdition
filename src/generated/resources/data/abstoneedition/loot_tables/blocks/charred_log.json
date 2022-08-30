@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "abstoneedition:silver_ore"
+          "name": "abstoneedition:charred_log"
         }
       ],
       "conditions": [

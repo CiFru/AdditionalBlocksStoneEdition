@@ -6,8 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:charcoal",
-          "count": 4
+          "name": "abstoneedition:raw_silver_block"
         }
       ],
       "conditions": [

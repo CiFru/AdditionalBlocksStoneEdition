@@ -29,36 +29,36 @@ public class AbRecipeProvider extends RecipeProvider {
 
     private void addStairsRecipe(Consumer<IFinishedRecipe> recipeConsumer, StairBlock stairBlock, Block block) {
         ShapedRecipeBuilder.shaped(stairBlock, 4)
-                .pattern("  A")
-                .pattern(" AA")
-                .pattern("AAA")
-                .define('A', block)
-                .unlockedBy("has_item", has(block))
-                .save(recipeConsumer);
+            .pattern("  A")
+            .pattern(" AA")
+            .pattern("AAA")
+            .define('A', block)
+            .unlockedBy("has_item", has(block))
+            .save(recipeConsumer);
         ShapedRecipeBuilder.shaped(stairBlock, 4)
-                .pattern("A  ")
-                .pattern("AA ")
-                .pattern("AAA")
-                .define('A', block)
-                .unlockedBy("has_item", has(block))
-                .save(recipeConsumer, "abstoneedition:" + stairBlock.getRegistryName().getPath() + "_2");
+            .pattern("A  ")
+            .pattern("AA ")
+            .pattern("AAA")
+            .define('A', block)
+            .unlockedBy("has_item", has(block))
+            .save(recipeConsumer, "abstoneedition:" + stairBlock.getRegistryName().getPath() + "_2");
     }
 
     private void addSlabRecipe(Consumer<IFinishedRecipe> recipeConsumer, SlabBlock slabBlock, Block block) {
         ShapedRecipeBuilder.shaped(slabBlock, 6)
-                .pattern("AAA")
-                .define('A', block)
-                .unlockedBy("has_item", has(block))
-                .save(recipeConsumer);
+            .pattern("AAA")
+            .define('A', block)
+            .unlockedBy("has_item", has(block))
+            .save(recipeConsumer);
     }
 
     private void addWallsRecipe(Consumer<IFinishedRecipe> recipeConsumer, WallBlock wallBlock, Block block) {
         ShapedRecipeBuilder.shaped(wallBlock, 6)
-                .pattern("AAA")
-                .pattern("AAA")
-                .define('A', block)
-                .unlockedBy("has_item", has(block))
-                .save(recipeConsumer);
+            .pattern("AAA")
+            .pattern("AAA")
+            .define('A', block)
+            .unlockedBy("has_item", has(block))
+            .save(recipeConsumer);
     }
 
     private void addStoneStairsRecipes(Consumer<IFinishedRecipe> recipeConsumer) {

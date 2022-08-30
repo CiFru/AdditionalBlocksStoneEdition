@@ -14,8 +14,8 @@ public class HouweelItem extends PickaxeItem implements IConfigObject, IItemGrou
 
     private final Supplier<Boolean> enable;
 
-    public HouweelItem(String registryName, Supplier<Boolean> enable, Properties properties, int attackDamage, float attackSpeed) {
-        super(ItemTier.IRON, attackDamage, attackSpeed, properties);
+    public HouweelItem(String registryName, Supplier<Boolean> enable, Properties properties, int attackDamage, float attackSpeed, ItemTier tier) {
+        super(tier, attackDamage, attackSpeed, properties);
         this.setRegistryName(registryName);
         this.enable = enable;
     }

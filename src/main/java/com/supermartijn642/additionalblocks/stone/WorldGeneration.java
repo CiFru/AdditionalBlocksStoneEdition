@@ -32,6 +32,7 @@ public class WorldGeneration {
     public static ConfiguredFeature<?, ?> ore_black_marble;
     public static ConfiguredFeature<?, ?> ore_silver;
     public static ConfiguredFeature<?, ?> ore_copper;
+    public static ConfiguredFeature<?, ?> ore_bismuth;
 
     //
     public static void onFeatureRegistry(final RegistryEvent.Register<Feature<?>> e) {
@@ -58,6 +59,12 @@ public class WorldGeneration {
         Registry.register(WorldGenRegistries.CONFIGURED_FEATURE,
                 new ResourceLocation("abstoneedition", "ore_silver"),
                 ore_silver
+        );
+        ore_bismuth = Feature.ORE.configured(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, AdditionalBlocks.bismuth_ore.defaultBlockState(), 7));
+        ore_bismuth = ore_bismuth.range(50).squared().count(15);
+        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE,
+            new ResourceLocation("abstoneedition", "ore_bismuth"),
+            ore_bismuth
         );
         ore_bloodstone = Feature.ORE.configured(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHER_ORE_REPLACEABLES, AdditionalBlocks.bloodstone.defaultBlockState(), 25));
         ore_bloodstone = ore_bloodstone.range(60).squared().count(6);
@@ -107,6 +114,8 @@ public class WorldGeneration {
                 e.getGeneration().addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_copper);
             if(AdditionalBlocksConfig.enableSilver.get())
                 e.getGeneration().addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_silver);
+            if(AdditionalBlocksConfig.enableBismuth.get())
+                e.getGeneration().addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_bismuth);
         }
 
         // all nether biomes

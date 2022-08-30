@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "abstoneedition:bismuth_ingot"
+    ]
+  },
+  "criteria": {
+    "has_bismuth_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "abstoneedition:bismuth_ore"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:bismuth_ingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_bismuth_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -12,6 +12,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class AbSCRProvider {
+
     public static void stoneCuttingRecipes(Consumer<IFinishedRecipe> recipeConsumer, Function<IItemProvider, InventoryChangeTrigger.Instance> has) {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.ANDESITE, Blocks.POLISHED_ANDESITE), AdditionalBlocks.polished_andesite_wall).unlocks("has_item", has.apply(Blocks.ANDESITE)).save(recipeConsumer, "abstoneedition:polished_andesite_wall_stonecutting");
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.ANDESITE, Blocks.POLISHED_ANDESITE), AdditionalBlocks.andesite_bricks).unlocks("has_item", has.apply(Blocks.ANDESITE)).save(recipeConsumer, "abstoneedition:andesite_bricks_stonecutting");

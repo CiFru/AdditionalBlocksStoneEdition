@@ -14,6 +14,7 @@ import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemTier;
 import net.minecraft.item.crafting.*;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.ResourceLocation;
@@ -129,6 +130,7 @@ public class AdditionalBlocks {
     public static SlabBlock glowstone_bricks_slab;
     public static Block silver_ore;
     public static Block copper_ore;
+    public static BasicBlock raw_silver_block;
     public static BasicBlock silver_block;
     public static BasicBlock copper_block;
     public static BasicBlock old_stone_path_straight;
@@ -138,6 +140,9 @@ public class AdditionalBlocks {
     public static BasicBlock smooth_stone_bricks;
     public static StairBlock smooth_stone_bricks_stairs;
     public static SlabBlock smooth_stone_bricks_slab;
+    public static Block bismuth_ore;
+    public static BasicBlock bismuth_block;
+    public static Block bismuth_cluster;
     public static BasicBlock aztec_pattern;
     public static BasicBlock aztec_patterned_wall;
     public static BasicBlock aztec_tiles;
@@ -208,8 +213,11 @@ public class AdditionalBlocks {
     public static WallyBlock volcanic_stone_bricks_wall;
     public static WallyBlock stone_wall;
 
+    public static OreItem raw_bismuth_chunk;
+    public static OreItem raw_silver;
 
-    public AdditionalBlocks(){
+
+    public AdditionalBlocks() {
         AdditionalBlocksConfig.create();
     }
 
@@ -217,7 +225,7 @@ public class AdditionalBlocks {
     public static class RegistryEvents {
 
         @SubscribeEvent
-        public static void onBlockRegistry(final RegistryEvent.Register<Block> e){
+        public static void onBlockRegistry(final RegistryEvent.Register<Block> e) {
 
             marble = registerBlock(e, new BasicBlock("marble", AdditionalBlocksConfig.enableMarble, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_PINK).sound(SoundType.STONE).strength(0.8f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
             marble_stairs = registerBlock(e, new StairBlock(marble, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_PINK).sound(SoundType.STONE).strength(0.8f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
@@ -304,8 +312,9 @@ public class AdditionalBlocks {
             glowstone_bricks_slab = registerBlock(e, new SlabBlock(glowstone_bricks, AbstractBlock.Properties.of(Material.GLASS, MaterialColor.COLOR_YELLOW).sound(SoundType.GLASS).strength(0.4f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).lightLevel(state -> 15)));
             copper_ore = registerBlock(e, new OorBlock("copper_ore", AdditionalBlocksConfig.enableCopper, AbstractBlock.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(3.0F, 3.0F)));
             silver_ore = registerBlock(e, new OorBlock("silver_ore", AdditionalBlocksConfig.enableSilver, AbstractBlock.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(3.0F, 3.0F)));
-            copper_block = registerBlock(e, new BasicBlock("copper_block", AdditionalBlocksConfig.enableCopper, AbstractBlock.Properties.of(Material.METAL, MaterialColor.METAL).requiresCorrectToolForDrops().strength(5.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).sound(SoundType.METAL)));
-            silver_block = registerBlock(e, new BasicBlock("silver_block", AdditionalBlocksConfig.enableSilver, AbstractBlock.Properties.of(Material.METAL, MaterialColor.METAL).requiresCorrectToolForDrops().strength(5.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).sound(SoundType.METAL)));
+            copper_block = registerBlock(e, new BasicBlock("copper_block", AdditionalBlocksConfig.enableCopper, AbstractBlock.Properties.of(Material.METAL, MaterialColor.METAL).requiresCorrectToolForDrops().strength(5.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.METAL)));
+            silver_block = registerBlock(e, new BasicBlock("silver_block", AdditionalBlocksConfig.enableSilver, AbstractBlock.Properties.of(Material.METAL, MaterialColor.METAL).requiresCorrectToolForDrops().strength(5.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.METAL)));
+            raw_silver_block = registerBlock(e, new BasicBlock("raw_silver_block", AdditionalBlocksConfig.enableSilver, AbstractBlock.Properties.of(Material.METAL, MaterialColor.METAL).requiresCorrectToolForDrops().strength(5.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).sound(SoundType.METAL)));
             old_stone_path_curved = registerBlock(e, new HorizontalRotationBlock("old_stone_path_curved", AdditionalBlocksConfig.enableStonePath, true, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             old_stone_path_straight = registerBlock(e, new HorizontalRotationBlock("old_stone_path_straight", AdditionalBlocksConfig.enableStonePath, true, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             old_stone_pattern = registerBlock(e, new BasicBlock("old_stone_pattern", AdditionalBlocksConfig.enableStonePattern, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.NETHER_BRICKS).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
@@ -318,6 +327,11 @@ public class AdditionalBlocks {
             aztec_tiles = registerBlock(e, new BasicBlock("aztec_tiles", AdditionalBlocksConfig.enableAztec, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.NETHER_BRICKS).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             sunstone = registerBlock(e, new BasicBlock("sunstone", AdditionalBlocksConfig.enableAztec, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW).sound(SoundType.GILDED_BLACKSTONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             aztec_pillar = registerBlock(e, new AxisRotationBlock("aztec_pillar", AdditionalBlocksConfig.enableAztec, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0f, 6.0f).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
+
+            bismuth_ore = registerBlock(e, new OorBlock("bismuth_ore", AdditionalBlocksConfig.enableBismuth, AbstractBlock.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(4.0F, 4.0F)));
+            bismuth_block = registerBlock(e, new BasicBlock("bismuth_block", AdditionalBlocksConfig.enableBismuth, AbstractBlock.Properties.of(Material.METAL, MaterialColor.METAL).requiresCorrectToolForDrops().strength(6.0F, 7.0F).harvestTool(ToolType.PICKAXE).harvestLevel(2).sound(SoundType.METAL)));
+            bismuth_cluster = registerBlock(e, new BasicBlock("bismuth_cluster", AdditionalBlocksConfig.enableBismuth, AbstractBlock.Properties.of(Material.METAL, MaterialColor.METAL).requiresCorrectToolForDrops().strength(6.0F, 7.0F).harvestTool(ToolType.PICKAXE).harvestLevel(2).sound(SoundType.METAL)));
+
 
             brown_stone_path_straight_stairs = registerBlock(e, new StairBlock(brown_stone_path_straight, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_BROWN).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             brown_stone_path_curved_stairs = registerBlock(e, new StairBlock(brown_stone_path_curved, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_BROWN).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
@@ -350,7 +364,7 @@ public class AdditionalBlocks {
             glowstone_slab = registerBlock(e, new SlabBlock(Blocks.GLOWSTONE, AdditionalBlocksConfig.enableGlowstone, AbstractBlock.Properties.of(Material.GLASS, MaterialColor.COLOR_YELLOW).sound(SoundType.GLASS).strength(0.2f, 0.8f).harvestTool(ToolType.PICKAXE).harvestLevel(0).lightLevel(state -> 15)));
             limestone_bricks_slab = registerBlock(e, new SlabBlock(limestone_bricks, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW).sound(SoundType.NETHER_BRICKS).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
             smooth_limestone_slab = registerBlock(e, new SlabBlock(smooth_limestone, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW).sound(SoundType.NETHER_BRICKS).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
-            smooth_smooth_stone = registerBlock(e, new BasicBlock("smooth_smooth_stone", AdditionalBlocksConfig.enableSmoothStone,AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
+            smooth_smooth_stone = registerBlock(e, new BasicBlock("smooth_smooth_stone", AdditionalBlocksConfig.enableSmoothStone, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             smooth_smooth_stone_slab = registerBlock(e, new SlabBlock(smooth_smooth_stone, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             smooth_smooth_stone_stairs = registerBlock(e, new StairBlock(smooth_smooth_stone, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             smooth_smooth_stone_wall = registerBlock(e, new WallyBlock(smooth_smooth_stone, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
@@ -386,36 +400,46 @@ public class AdditionalBlocks {
         }
 
         @SubscribeEvent
-        public static void onTileRegistry(final RegistryEvent.Register<TileEntityType<?>> e){
+        public static void onTileRegistry(final RegistryEvent.Register<TileEntityType<?>> e) {
         }
 
         @SubscribeEvent
-        public static void onItemRegistry(final RegistryEvent.Register<Item> e){
-            for(Block block : blocks)
+        public static void onItemRegistry(final RegistryEvent.Register<Item> e) {
+            for (Block block : blocks)
                 registerItem(e, new BlockItem(block, new Item.Properties().tab(ITEM_GROUP)).setRegistryName(block.getRegistryName()));
             e.getRegistry().register(new OreItem("copper_ingot", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP)));
             e.getRegistry().register(new OreItem("silver_ingot", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP)));
+            e.getRegistry().register(new OreItem("bismuth_ingot", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP)));
             e.getRegistry().register(new OreItem("copper_nugget", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP)));
             e.getRegistry().register(new OreItem("silver_nugget", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP)));
-            e.getRegistry().register(new BijlItem("copper_axe", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 6.0F, -2.5F));
-            e.getRegistry().register(new BijlItem("silver_axe", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 6.0F, -2.5F));
-            e.getRegistry().register(new HouweelItem("copper_pickaxe", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 1, -1.8F));
-            e.getRegistry().register(new HouweelItem("silver_pickaxe", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 1, -1.8F));
-            e.getRegistry().register(new SchepItem("copper_shovel", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 1.5F, -3.0F));
-            e.getRegistry().register(new SchepItem("silver_shovel", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 1.5F, -3.0F));
-            e.getRegistry().register(new SchoffelItem("copper_hoe", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), -2, 0.0F));
-            e.getRegistry().register(new SchoffelItem("silver_hoe", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), -2, 0.0F));
-            e.getRegistry().register(new ZwaardItem("copper_sword", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 3, -2.4F));
-            e.getRegistry().register(new ZwaardItem("silver_sword", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 3, -2.4F));
+            e.getRegistry().register(new OreItem("bismuth_nugget", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP)));
+            e.getRegistry().register(new BijlItem("copper_axe", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 6.0F, -2.5F, ItemTier.IRON));
+            e.getRegistry().register(new BijlItem("silver_axe", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 6.0F, -2.5F, ItemTier.IRON));
+            e.getRegistry().register(new BijlItem("bismuth_axe", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), 8.0F, -2.5F, ItemTier.DIAMOND));
+            e.getRegistry().register(new HouweelItem("copper_pickaxe", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 1, -1.8F, ItemTier.IRON));
+            e.getRegistry().register(new HouweelItem("silver_pickaxe", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 1, -1.8F, ItemTier.IRON));
+            e.getRegistry().register(new HouweelItem("bismuth_pickaxe", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), 2, -1.8F, ItemTier.DIAMOND));
+            e.getRegistry().register(new SchepItem("copper_shovel", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 1.5F, -3.0F, ItemTier.IRON));
+            e.getRegistry().register(new SchepItem("silver_shovel", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 1.5F, -3.0F, ItemTier.IRON));
+            e.getRegistry().register(new SchepItem("bismuth_shovel", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), 2.5F, -3.0F, ItemTier.DIAMOND));
+            e.getRegistry().register(new SchoffelItem("copper_hoe", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), -2, 0.0F, ItemTier.IRON));
+            e.getRegistry().register(new SchoffelItem("silver_hoe", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), -2, 0.0F, ItemTier.IRON));
+            e.getRegistry().register(new SchoffelItem("bismuth_hoe", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), -1, 0.0F, ItemTier.DIAMOND));
+            e.getRegistry().register(new ZwaardItem("copper_sword", AdditionalBlocksConfig.enableCopper, new Item.Properties().tab(ITEM_GROUP), 3, -2.4F, ItemTier.IRON));
+            e.getRegistry().register(new ZwaardItem("silver_sword", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP), 3, -2.4F, ItemTier.IRON));
+            e.getRegistry().register(new ZwaardItem("bismuth_sword", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP), 5, -2.4F, ItemTier.DIAMOND));
+            e.getRegistry().register(raw_bismuth_chunk = new OreItem("raw_bismuth_chunk", AdditionalBlocksConfig.enableBismuth, new Item.Properties().tab(ITEM_GROUP)));
+            e.getRegistry().register(raw_silver = new OreItem("raw_silver", AdditionalBlocksConfig.enableSilver, new Item.Properties().tab(ITEM_GROUP)));
+
         }
 
         @SubscribeEvent
-        public static void onFeatureRegistry(final RegistryEvent.Register<Feature<?>> e){
+        public static void onFeatureRegistry(final RegistryEvent.Register<Feature<?>> e) {
             WorldGeneration.onFeatureRegistry(e);
         }
 
         @SubscribeEvent
-        public static void onRecipeRegistry(final RegistryEvent.Register<IRecipeSerializer<?>> e){
+        public static void onRecipeRegistry(final RegistryEvent.Register<IRecipeSerializer<?>> e) {
             e.getRegistry().register(SHAPED_RECIPE_SERIALIZER.setRegistryName(new ResourceLocation("abstoneedition", "shaped")));
             e.getRegistry().register(SHAPELESS_RECIPE_SERIALIZER.setRegistryName(new ResourceLocation("abstoneedition", "shapeless")));
             e.getRegistry().register(FURNACE_RECIPE_SERIALIZER.setRegistryName(new ResourceLocation("abstoneedition", "furnace")));
@@ -424,7 +448,7 @@ public class AdditionalBlocks {
         }
 
         @SubscribeEvent
-        public static void onGatherData(GatherDataEvent e){
+        public static void onGatherData(GatherDataEvent e) {
             e.getGenerator().addProvider(new AbBlockStateProvider(e.getGenerator(), "abstoneedition", e.getExistingFileHelper()));
             e.getGenerator().addProvider(new AbTagsProvider(e.getGenerator(), "abstoneedition", e.getExistingFileHelper()));
             e.getGenerator().addProvider(new AbRecipeProvider(e.getGenerator()));
@@ -432,13 +456,13 @@ public class AdditionalBlocks {
         }
     }
 
-    public static <T extends Block> T registerBlock(RegistryEvent.Register<Block> e, T block){
+    public static <T extends Block> T registerBlock(RegistryEvent.Register<Block> e, T block) {
         e.getRegistry().register(block);
         blocks.add(block);
         return block;
     }
 
-    public static <T extends Item> T registerItem(RegistryEvent.Register<Item> e, T item){
+    public static <T extends Item> T registerItem(RegistryEvent.Register<Item> e, T item) {
         e.getRegistry().register(item);
         items.add(item);
         return item;
