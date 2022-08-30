@@ -18,7 +18,7 @@ archivesBaseName = 'abstoneedition'
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
 minecraft {
-    mappings channel: 'official', version: '1.16.2'
+    mappings channel: 'snapshot', version: '20200723-1.16.1'
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 
     runs {
@@ -78,7 +78,7 @@ dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.16.2-33.0.61'
+    minecraft 'net.minecraftforge:forge:1.16.1-32.0.108'
 
     // Config Lib
     implementation fg.deobf("curse.maven:supermartijn642s-config-lib-438332:3862963")

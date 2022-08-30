@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "#forge:storage_blocks/copper",
-    "#forge:storage_blocks/silver"
+    "#forge:storage_blocks/silver",
+    "#forge:storage_blocks/bismuth",
+    "#forge:storage_blocks/raw_bismuth",
+    "#forge:storage_blocks/raw_silver"
   ]
 }

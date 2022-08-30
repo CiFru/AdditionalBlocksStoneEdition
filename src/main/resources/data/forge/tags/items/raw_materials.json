@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:raw_materials/bismuth",
+    "#forge:raw_materials/silver"
+  ]
+}

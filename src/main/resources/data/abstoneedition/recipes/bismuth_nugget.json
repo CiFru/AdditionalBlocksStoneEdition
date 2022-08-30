@@ -1,0 +1,12 @@
+{
+  "type": "abstoneedition:shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:ingots/bismuth"
+    }
+  ],
+  "result": {
+    "item": "abstoneedition:silver_nugget",
+    "count": 9
+  }
+}

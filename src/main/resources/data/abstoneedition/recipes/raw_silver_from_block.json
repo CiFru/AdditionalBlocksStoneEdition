@@ -1,0 +1,12 @@
+{
+  "type": "abstoneedition:shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:storage_blocks/raw_silver"
+    }
+  ],
+  "result": {
+    "item": "abstoneedition:raw_silver",
+    "count": 9
+  }
+}

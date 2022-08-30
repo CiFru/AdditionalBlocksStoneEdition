@@ -29,6 +29,7 @@ public class WorldGeneration {
     public static ConfiguredFeature<?, ?> ore_black_marble;
     public static ConfiguredFeature<?, ?> ore_silver;
     public static ConfiguredFeature<?, ?> ore_copper;
+    public static ConfiguredFeature<?, ?> ore_bismuth;
 
     @SubscribeEvent
     public static void onFeatureRegistry(FMLCommonSetupEvent e) {
@@ -43,6 +44,9 @@ public class WorldGeneration {
 
         ore_silver = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, AdditionalBlocks.silver_ore.getDefaultState(), 9));
         ore_silver = ore_silver.withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(20, 0, 0, 64)));
+
+        ore_bismuth = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, AdditionalBlocks.bismuth_ore.getDefaultState(), 6));
+        ore_bismuth = ore_bismuth.withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(10, 0, 0, 50)));
 
         ore_bloodstone = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, AdditionalBlocks.bloodstone.getDefaultState(), 25));
         ore_bloodstone = ore_bloodstone.withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(8, 5, 0, 90)));
@@ -80,6 +84,8 @@ public class WorldGeneration {
                 e.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_copper);
             if(AdditionalBlocksConfig.enableSilver.get())
                 e.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_silver);
+            if(AdditionalBlocksConfig.enableBismuth.get())
+                e.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore_bismuth);
         }
 
         // all nether biomes
