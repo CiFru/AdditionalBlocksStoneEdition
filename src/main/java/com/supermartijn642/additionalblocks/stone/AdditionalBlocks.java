@@ -325,7 +325,7 @@ public class AdditionalBlocks {
 
             bismuth_ore = registerBlock(e, new OorBlock("bismuth_ore", AdditionalBlocksConfig.enableBismuth, BlockBehaviour.Properties.of(Material.STONE).strength(4.5F, 4.5F).requiresCorrectToolForDrops().sound(SoundType.METAL), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.DIAMOND));
             bismuth_block = registerBlock(e, new BasicBlock("bismuth_block", AdditionalBlocksConfig.enableBismuth, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL).strength(6.0F, 7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.DIAMOND));
-            bismuth_cluster = registerBlock(e, new BasicBlock("bismuth_cluster", AdditionalBlocksConfig.enableBismuth, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL).strength(6.0F, 7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.DIAMOND));
+            bismuth_cluster = registerBlock(e, new ClusterBlock("bismuth_cluster", AdditionalBlocksConfig.enableBismuth, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL).strength(6.0F, 7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.DIAMOND));
 
 
             brown_stone_path_straight_stairs = registerBlock(e, new StairBlock(brown_stone_path_straight, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BROWN).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(2.0F, 6.0F), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.STONE));
