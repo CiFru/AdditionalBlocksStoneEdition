@@ -1,12 +1,10 @@
 buildscript {
     repositories {
-        maven { url = 'https://files.minecraftforge.net/maven' }
-        jcenter()
+        maven { url = "https://files.minecraftforge.net/maven" }
         mavenCentral()
-        maven { url = 'https://plugins.gradle.org/m2'}
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
+        classpath group: "net.minecraftforge.gradle", name: "ForgeGradle", version: "5.1.+", changing: true
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
@@ -101,5 +99,5 @@ dependencies {
 //    runtimeOnly fg.deobf("curse.maven:block-renderer:3149419")
 
     // Config Lib
-    compile fg.deobf("curse.maven:supermartijn642s-config-lib-438332:3862963")
+    implementation fg.deobf("curse.maven:supermartijn642s-config-lib-438332:3862963")
 }
