@@ -216,6 +216,14 @@ public class AdditionalBlocks {
     public static OreItem raw_bismuth_chunk;
     public static OreItem raw_silver;
 
+    public static StairBlock obsidian_stairs;
+    public static SlabBlock obsidian_slab;
+    public static WallyBlock obsidian_wall;
+    public static BasicBlock obsidian_bricks;
+    public static StairBlock obsidian_bricks_stairs;
+    public static SlabBlock obsidian_bricks_slab;
+    public static WallyBlock obsidian_bricks_wall;
+
 
     public AdditionalBlocks() {
         AdditionalBlocksConfig.create();
@@ -368,6 +376,14 @@ public class AdditionalBlocks {
             smooth_smooth_stone_slab = registerBlock(e, new SlabBlock(smooth_smooth_stone, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             smooth_smooth_stone_stairs = registerBlock(e, new StairBlock(smooth_smooth_stone, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
             smooth_smooth_stone_wall = registerBlock(e, new WallyBlock(smooth_smooth_stone, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
+
+            obsidian_stairs = registerBlock(e, new StairBlock(Blocks.OBSIDIAN, AdditionalBlocksConfig.enableObsidian, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK).sound(SoundType.STONE).strength(50.0f, 1200.0f).harvestTool(ToolType.PICKAXE).harvestLevel(3)));
+            obsidian_slab = registerBlock(e, new SlabBlock(Blocks.OBSIDIAN, AdditionalBlocksConfig.enableObsidian, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK).sound(SoundType.STONE).strength(50.0f, 1200.0f).harvestTool(ToolType.PICKAXE).harvestLevel(3)));
+            obsidian_wall = registerBlock(e, new WallyBlock(Blocks.OBSIDIAN, AdditionalBlocksConfig.enableObsidian, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK).sound(SoundType.STONE).strength(50.0f, 1200.0f).harvestTool(ToolType.PICKAXE).harvestLevel(3)));
+            obsidian_bricks = registerBlock(e, new BasicBlock("obsidian_bricks", AdditionalBlocksConfig.enableObsidian, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK).sound(SoundType.STONE).strength(50.0f, 1200.0f).harvestTool(ToolType.PICKAXE).harvestLevel(3)));
+            obsidian_bricks_stairs = registerBlock(e, new StairBlock(obsidian_bricks, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK).sound(SoundType.STONE).strength(50.0f, 1200.0f).harvestTool(ToolType.PICKAXE).harvestLevel(3)));
+            obsidian_bricks_slab = registerBlock(e, new SlabBlock(obsidian_bricks, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK).sound(SoundType.STONE).strength(50.0f, 1200.0f).harvestTool(ToolType.PICKAXE).harvestLevel(3)));
+            obsidian_bricks_wall = registerBlock(e, new WallyBlock(obsidian_bricks, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK).sound(SoundType.STONE).strength(50.0f, 1200.0f).harvestTool(ToolType.PICKAXE).harvestLevel(3)));
 
             polished_andesite_wall = registerBlock(e, new WallyBlock(Blocks.POLISHED_ANDESITE, AdditionalBlocksConfig.enableAndesiteBricks, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(1.5f, 6).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
             andesite_bricks_wall = registerBlock(e, new WallyBlock(andesite_bricks, AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).sound(SoundType.STONE).strength(1.5f, 6).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));

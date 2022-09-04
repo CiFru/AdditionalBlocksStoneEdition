@@ -156,5 +156,12 @@ public class AbSCRProvider {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(AdditionalBlocks.volcanic_stone, AdditionalBlocks.volcanic_stone_bricks), AdditionalBlocks.volcanic_stone_bricks_slab, 2).unlocks("has_item", has.apply(AdditionalBlocks.volcanic_stone)).save(recipeConsumer, "abstoneedition:volcanic_stone_bricks_slab_stonecutting");
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(AdditionalBlocks.volcanic_stone, AdditionalBlocks.volcanic_stone_bricks), AdditionalBlocks.volcanic_stone_bricks_wall).unlocks("has_item", has.apply(AdditionalBlocks.volcanic_stone)).save(recipeConsumer, "abstoneedition:volcanic_stone_bricks_wall_stonecutting");
         
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.OBSIDIAN), AdditionalBlocks.obsidian_stairs).unlocks("has_item", has.apply(Blocks.OBSIDIAN)).save(recipeConsumer, "abstoneedition:obsidian_stairs_stonecutting");
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.OBSIDIAN), AdditionalBlocks.obsidian_slab, 2).unlocks("has_item", has.apply(Blocks.OBSIDIAN)).save(recipeConsumer, "abstoneedition:obsidian_slab_stonecutting");
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.OBSIDIAN), AdditionalBlocks.obsidian_wall).unlocks("has_item", has.apply(Blocks.OBSIDIAN)).save(recipeConsumer, "abstoneedition:obsidian_wall_stonecutting");
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.OBSIDIAN), AdditionalBlocks.obsidian_bricks).unlocks("has_item", has.apply(Blocks.OBSIDIAN)).save(recipeConsumer, "abstoneedition:obsidian_bricks_stonecutting");
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.OBSIDIAN, AdditionalBlocks.obsidian_bricks), AdditionalBlocks.obsidian_bricks_stairs).unlocks("has_item", has.apply(Blocks.OBSIDIAN)).save(recipeConsumer, "abstoneedition:obsidian_bricks_stairs_stonecutting");
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.OBSIDIAN, AdditionalBlocks.obsidian_bricks), AdditionalBlocks.obsidian_bricks_slab, 2).unlocks("has_item", has.apply(Blocks.OBSIDIAN)).save(recipeConsumer, "abstoneedition:obsidian_bricks_slab_stonecutting");
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.OBSIDIAN, AdditionalBlocks.obsidian_bricks), AdditionalBlocks.obsidian_bricks_wall).unlocks("has_item", has.apply(Blocks.OBSIDIAN)).save(recipeConsumer, "abstoneedition:obsidian_bricks_wall_stonecutting");
     }
 }

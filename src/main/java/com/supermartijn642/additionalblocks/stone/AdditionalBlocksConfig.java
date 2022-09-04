@@ -55,6 +55,7 @@ public class AdditionalBlocksConfig {
     public static final Supplier<Boolean> enableAztec;
     public static final Supplier<Boolean> enableSmoothStone;
     public static final Supplier<Boolean> enableBismuth;
+    public static final Supplier<Boolean> enableObsidian;
 
     static {
         IConfigBuilder config = ConfigBuilders.newTomlConfig("abstoneedition", null, false);
@@ -87,6 +88,7 @@ public class AdditionalBlocksConfig {
         enableAztec = config.comment("if true, Aztec Blocks are enabled").define("enableAztec", true);
         enableSmoothStone = config.comment("if true, Smooth Stone Blocks are enabled").define("enableSmoothStone", true);
         enableBismuth = config.comment("if true, Bismuth Blocks are enabled").define("enableBismuth", true);
+        enableObsidian = config.comment("if true, Obsidian Blocks are enabled").define("enableObsidian", true);
         config.pop();
 
         config.build();
