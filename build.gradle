@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the code above adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
 
-version = '2.0.9-mc1.16.1-16.2'
+version = '2.0.10-mc1.16.1-16.2'
 group = 'com.supermartijn642.additionalblocks.stone' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'abstoneedition'
 
