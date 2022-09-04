@@ -39,6 +39,8 @@ public class AbBlockStateProvider extends BlockStateProvider {
         this.stairsBlock(AdditionalBlocks.smooth_limestone_stairs, "smooth_limestone", new ResourceLocation("abstoneedition", "smooth_limestone"));
         this.stairsBlock(AdditionalBlocks.smooth_stone_stairs, "smooth_stone", new ResourceLocation("minecraft", "block/smooth_stone"));
         this.stairsBlock(AdditionalBlocks.smooth_smooth_stone_stairs, "smooth_smooth_stone", new ResourceLocation("abstoneedition", "smooth_smooth_stone"));
+        this.stairsBlock(AdditionalBlocks.obsidian_stairs, "obsidian", new ResourceLocation("minecraft", "block/obsidian"));
+        this.stairsBlock(AdditionalBlocks.obsidian_bricks_stairs, "obsidian_bricks", new ResourceLocation("abstoneedition", "obsidian_bricks"));
 
         this.itemModels().withExistingParent("item/brown_stone_path_straight_stairs", new ResourceLocation("abstoneedition", "block/brown_stone_path_straight_stairs"));
         this.itemModels().withExistingParent("item/brown_stone_path_curved_stairs", new ResourceLocation("abstoneedition", "block/brown_stone_path_curved_stairs"));
@@ -57,7 +59,8 @@ public class AbBlockStateProvider extends BlockStateProvider {
         this.itemModels().withExistingParent("item/smooth_limestone_stairs", new ResourceLocation("abstoneedition", "block/smooth_limestone_stairs"));
         this.itemModels().withExistingParent("item/smooth_stone_stairs", new ResourceLocation("abstoneedition", "block/smooth_stone_stairs"));
         this.itemModels().withExistingParent("item/smooth_smooth_stone_stairs", new ResourceLocation("abstoneedition", "block/smooth_smooth_stone_stairs"));
-
+        this.itemModels().withExistingParent("item/obsidian_stairs", new ResourceLocation("abstoneedition", "block/obsidian_stairs"));
+        this.itemModels().withExistingParent("item/obsidian_bricks_stairs", new ResourceLocation("abstoneedition", "block/obsidian_bricks_stairs"));
     }
 
     private void addStoneSlabModels() {
@@ -77,6 +80,8 @@ public class AbBlockStateProvider extends BlockStateProvider {
         this.slabBlock(AdditionalBlocks.limestone_bricks_slab, new ResourceLocation("abstoneedition", "block/limestone_bricks"), new ResourceLocation("abstoneedition", "limestone_bricks"));
         this.slabBlock(AdditionalBlocks.smooth_limestone_slab, new ResourceLocation("abstoneedition", "block/smooth_limestone"), new ResourceLocation("abstoneedition", "smooth_limestone"));
         this.slabBlock(AdditionalBlocks.smooth_smooth_stone_slab, new ResourceLocation("abstoneedition", "block/smooth_smooth_stone"), new ResourceLocation("abstoneedition", "smooth_smooth_stone"));
+        this.slabBlock(AdditionalBlocks.obsidian_slab, new ResourceLocation("minecraft", "block/obsidian"), new ResourceLocation("minecraft", "block/obsidian"));
+        this.slabBlock(AdditionalBlocks.obsidian_bricks_slab, new ResourceLocation("abstoneedition", "block/obsidian_bricks"), new ResourceLocation("abstoneedition", "obsidian_bricks"));
 
         this.itemModels().withExistingParent("item/brown_stone_path_straight_slab", new ResourceLocation("abstoneedition", "block/brown_stone_path_straight_slab"));
         this.itemModels().withExistingParent("item/brown_stone_path_curved_slab", new ResourceLocation("abstoneedition", "block/brown_stone_path_curved_slab"));
@@ -94,6 +99,8 @@ public class AbBlockStateProvider extends BlockStateProvider {
         this.itemModels().withExistingParent("item/limestone_bricks_slab", new ResourceLocation("abstoneedition", "block/limestone_bricks_slab"));
         this.itemModels().withExistingParent("item/smooth_limestone_slab", new ResourceLocation("abstoneedition", "block/smooth_limestone_slab"));
         this.itemModels().withExistingParent("item/smooth_smooth_stone_slab", new ResourceLocation("abstoneedition", "block/smooth_smooth_stone_slab"));
+        this.itemModels().withExistingParent("item/obsidian_slab", new ResourceLocation("abstoneedition", "block/obsidian_slab"));
+        this.itemModels().withExistingParent("item/obsidian_bricks_slab", new ResourceLocation("abstoneedition", "block/obsidian_bricks_slab"));
     }
 
     private void addStoneWalls() {
@@ -126,6 +133,8 @@ public class AbBlockStateProvider extends BlockStateProvider {
         this.addStoneWallModels(AdditionalBlocks.volcanic_stone_bricks_wall, new ResourceLocation("abstoneedition", "volcanic_stone_bricks"));
         this.addStoneWallModels(AdditionalBlocks.stone_wall, new ResourceLocation("minecraft", "block/stone"));
         this.addStoneWallModels(AdditionalBlocks.smooth_smooth_stone_wall, new ResourceLocation("abstoneedition", "smooth_smooth_stone"));
+        this.addStoneWallModels(AdditionalBlocks.obsidian_wall, new ResourceLocation("minecraft", "block/obsidian"));
+        this.addStoneWallModels(AdditionalBlocks.obsidian_bricks_wall, new ResourceLocation("abstoneedition", "obsidian_bricks"));
     }
 
     private void addStoneWallModels(WallyBlock block, ResourceLocation texture){

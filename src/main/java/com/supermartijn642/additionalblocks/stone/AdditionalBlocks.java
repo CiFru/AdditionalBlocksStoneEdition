@@ -217,6 +217,13 @@ public class AdditionalBlocks {
     public static OreItem raw_silver;
     public static OreItem raw_bismuth_chunk;
 
+    public static StairBlock obsidian_stairs;
+    public static SlabBlock obsidian_slab;
+    public static WallyBlock obsidian_wall;
+    public static BasicBlock obsidian_bricks;
+    public static StairBlock obsidian_bricks_stairs;
+    public static SlabBlock obsidian_bricks_slab;
+    public static WallyBlock obsidian_bricks_wall;
 
 
     public AdditionalBlocks() {
@@ -410,6 +417,13 @@ public class AdditionalBlocks {
             bismuth_cluster = registerBlock(e, new ClusterBlock("bismuth_cluster", AdditionalBlocksConfig.enableBismuth, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL).strength(6.0F, 7.0F).requiresCorrectToolForDrops().sound(SoundType.GLASS), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.DIAMOND));
             bismuth_block = registerBlock(e, new BasicBlock("bismuth_block", AdditionalBlocksConfig.enableBismuth, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL).strength(6.0F, 7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.DIAMOND));
 
+            obsidian_stairs = registerBlock(e, new StairBlock(Blocks.OBSIDIAN, AdditionalBlocksConfig.enableObsidian, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(50.0F, 1200.0F), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.DIAMOND));
+            obsidian_slab = registerBlock(e, new SlabBlock(Blocks.OBSIDIAN, AdditionalBlocksConfig.enableObsidian, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(50.0F, 1200.0F), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.DIAMOND));
+            obsidian_wall = registerBlock(e, new WallyBlock(Blocks.OBSIDIAN, AdditionalBlocksConfig.enableObsidian, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(50.0F, 1200.0F), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.DIAMOND));
+            obsidian_bricks = registerBlock(e, new BasicBlock("obsidian_bricks", AdditionalBlocksConfig.enableObsidian, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(50.0f, 1200.0f), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.DIAMOND));
+            obsidian_bricks_stairs = registerBlock(e, new StairBlock(obsidian_bricks, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(50.0F, 1200.0F), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.DIAMOND));
+            obsidian_bricks_slab = registerBlock(e, new SlabBlock(obsidian_bricks, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(50.0F, 1200.0F), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.DIAMOND));
+            obsidian_bricks_wall = registerBlock(e, new WallyBlock(obsidian_bricks, BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK).requiresCorrectToolForDrops().sound(SoundType.STONE).strength(50.0F, 1200.0F), IHarvestableBlock.ToolType.PICKAXE, IHarvestableBlock.ToolTier.DIAMOND));
         }
 
         public static void onItemRegistry(final IForgeRegistry<Item> registry) {

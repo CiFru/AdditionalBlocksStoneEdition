@@ -80,6 +80,8 @@ public class AbRecipeProvider extends RecipeProvider {
         this.addStairsRecipe(recipeConsumer, AdditionalBlocks.smooth_limestone_stairs, AdditionalBlocks.smooth_limestone);
         this.addStairsRecipe(recipeConsumer, AdditionalBlocks.smooth_stone_stairs, Blocks.SMOOTH_STONE);
         this.addStairsRecipe(recipeConsumer, AdditionalBlocks.smooth_smooth_stone_stairs, AdditionalBlocks.smooth_smooth_stone);
+        this.addStairsRecipe(recipeConsumer, AdditionalBlocks.obsidian_stairs, Blocks.OBSIDIAN);
+        this.addStairsRecipe(recipeConsumer, AdditionalBlocks.obsidian_bricks_stairs, AdditionalBlocks.obsidian_bricks);
     }
 
     private void addStoneSlabsRecipes(Consumer<FinishedRecipe> recipeConsumer){
@@ -99,6 +101,8 @@ public class AbRecipeProvider extends RecipeProvider {
         this.addSlabRecipe(recipeConsumer, AdditionalBlocks.limestone_bricks_slab, AdditionalBlocks.limestone_bricks);
         this.addSlabRecipe(recipeConsumer, AdditionalBlocks.smooth_limestone_slab, AdditionalBlocks.smooth_limestone);
         this.addSlabRecipe(recipeConsumer, AdditionalBlocks.smooth_smooth_stone_slab, AdditionalBlocks.smooth_smooth_stone);
+        this.addSlabRecipe(recipeConsumer, AdditionalBlocks.obsidian_slab, Blocks.OBSIDIAN);
+        this.addSlabRecipe(recipeConsumer, AdditionalBlocks.obsidian_bricks_slab, AdditionalBlocks.obsidian_bricks);
     }
 
     private void addStoneWallsRecipes(Consumer<FinishedRecipe> recipeConsumer){
@@ -130,5 +134,7 @@ public class AbRecipeProvider extends RecipeProvider {
         this.addWallsRecipe(recipeConsumer, AdditionalBlocks.volcanic_stone_bricks_wall, AdditionalBlocks.volcanic_stone_bricks);
         this.addWallsRecipe(recipeConsumer, AdditionalBlocks.stone_wall, Blocks.STONE);
         this.addWallsRecipe(recipeConsumer, AdditionalBlocks.smooth_smooth_stone_wall, AdditionalBlocks.smooth_smooth_stone);
+        this.addWallsRecipe(recipeConsumer, AdditionalBlocks.obsidian_wall, Blocks.OBSIDIAN);
+        this.addWallsRecipe(recipeConsumer, AdditionalBlocks.obsidian_bricks_wall, AdditionalBlocks.obsidian_bricks);
     }
 }

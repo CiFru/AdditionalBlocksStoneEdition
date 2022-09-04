@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "abstoneedition:obsidian_bricks",
+    "side": "abstoneedition:obsidian_bricks",
+    "top": "abstoneedition:obsidian_bricks"
+  }
+}

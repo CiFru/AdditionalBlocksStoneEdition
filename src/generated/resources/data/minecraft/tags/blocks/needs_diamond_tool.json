@@ -2,6 +2,13 @@
   "values": [
     "abstoneedition:bismuth_ore",
     "abstoneedition:bismuth_cluster",
-    "abstoneedition:bismuth_block"
+    "abstoneedition:bismuth_block",
+    "abstoneedition:obsidian_stairs",
+    "abstoneedition:obsidian_slab",
+    "abstoneedition:obsidian_wall",
+    "abstoneedition:obsidian_bricks",
+    "abstoneedition:obsidian_bricks_stairs",
+    "abstoneedition:obsidian_bricks_slab",
+    "abstoneedition:obsidian_bricks_wall"
   ]
 }
