@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "abstoneedition:obsidian_bricks"
+    }
+  ],
+  "result": "abstoneedition:obsidian_bricks_slab",
+  "count": 2
+}

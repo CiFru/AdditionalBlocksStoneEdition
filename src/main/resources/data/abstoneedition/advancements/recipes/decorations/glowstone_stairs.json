@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "abstoneedition:glowstone_bricks_stairs"
+      "abstoneedition:glowstone_stairs"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "abstoneedition:glowstone_bricks_stairs"
+        "recipe": "abstoneedition:glowstone_stairs"
       }
     }
   },
