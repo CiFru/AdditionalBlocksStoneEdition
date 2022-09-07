@@ -12,7 +12,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply from: 'https://raw.githubusercontent.com/SizableShrimp/Forge-Class-Remapper/main/classremapper.gradle'
 
-version = '2.0.10-mc1.19'
+version = '2.0.10a-mc1.19'
 group = 'com.cifru.additionalblocks.stone' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'abstoneedition'
 
