@@ -123,6 +123,14 @@
   "item.abstoneedition.bismuth_sword": "Bismuth Sword",
   "block.abstoneedition.bismuth_cluster": "Bismuth Cluster",
   "item.abstoneedition.raw_bismuth_chunk": "Bismuth Crystal",
+  "block.abstoneedition.obsidian_slab": "Obsidian Brick Slab",
+  "block.abstoneedition.obsidian_stairs": "Obsidian Stairs",
+  "block.abstoneedition.obsidian_wall": "Obsidian Wall",
+  "block.abstoneedition.obsidian_bricks": "Obsidian Bricks",
+  "block.abstoneedition.obsidian_bricks_slab": "Obsidian Brick Slab",
+  "block.abstoneedition.obsidian_bricks_stairs": "Obsidian Brick Stairs",
+  "block.abstoneedition.obsidian_bricks_wall": "Obsidian Brick Wall",
+
 
 
   "block.abstoneedition.polished_andesite_wall": "Polished Andesite Wall",
