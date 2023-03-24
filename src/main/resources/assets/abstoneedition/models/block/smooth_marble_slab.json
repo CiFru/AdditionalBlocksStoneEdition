@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "abstoneedition:smooth_marble",
-    "top": "abstoneedition:smooth_marble",
-    "side": "abstoneedition:smooth_marble"
-  }
-}

@@ -1,13 +1,25 @@
 {
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": [
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
     {
-      "item": "abstoneedition:volcanic_stone"
+      "block": "abstoneedition:volcanic_stone_bricks_wall",
+      "type": "abstoneedition:block_enabled"
     },
     {
-      "item": "abstoneedition:volcanic_stone_bricks"
+      "block": "abstoneedition:volcanic_stone_bricks",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:volcanic_stone",
+      "type": "abstoneedition:block_enabled"
     }
   ],
-  "result": "abstoneedition:volcanic_stone_bricks_wall"
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "abstoneedition:volcanic_stone"
+    },
+    "result": "abstoneedition:volcanic_stone_bricks_wall",
+    "count": 1
+  }
 }

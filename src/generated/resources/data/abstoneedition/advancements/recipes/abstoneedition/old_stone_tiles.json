@@ -1,0 +1,55 @@
+{
+  "conditions": [
+    {
+      "block": "abstoneedition:old_stone_tiles",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:old_stone_tiles"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/old_stone_tiles.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/old_stone_tiles.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:old_stone_tiles"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stone_bricks"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:old_stone_tiles"
+    ]
+  }
+}

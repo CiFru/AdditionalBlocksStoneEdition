@@ -11,8 +11,17 @@
     {
       "apply": {
         "model": "abstoneedition:block/gray_bricks_wall_side",
-        "uvlock": true,
-        "y": 90
+        "uvlock": true
+      },
+      "when": {
+        "north": "low"
+      }
+    },
+    {
+      "apply": {
+        "model": "abstoneedition:block/gray_bricks_wall_side",
+        "y": 90,
+        "uvlock": true
       },
       "when": {
         "east": "low"
@@ -20,21 +29,22 @@
     },
     {
       "apply": {
-        "model": "abstoneedition:block/gray_bricks_wall_side_tall",
-        "uvlock": true,
-        "y": 90
+        "model": "abstoneedition:block/gray_bricks_wall_side",
+        "y": 180,
+        "uvlock": true
       },
       "when": {
-        "east": "tall"
+        "south": "low"
       }
     },
     {
       "apply": {
         "model": "abstoneedition:block/gray_bricks_wall_side",
+        "y": 270,
         "uvlock": true
       },
       "when": {
-        "north": "low"
+        "west": "low"
       }
     },
     {
@@ -48,19 +58,19 @@
     },
     {
       "apply": {
-        "model": "abstoneedition:block/gray_bricks_wall_side",
-        "uvlock": true,
-        "y": 180
+        "model": "abstoneedition:block/gray_bricks_wall_side_tall",
+        "y": 90,
+        "uvlock": true
       },
       "when": {
-        "south": "low"
+        "east": "tall"
       }
     },
     {
       "apply": {
         "model": "abstoneedition:block/gray_bricks_wall_side_tall",
-        "uvlock": true,
-        "y": 180
+        "y": 180,
+        "uvlock": true
       },
       "when": {
         "south": "tall"
@@ -68,19 +78,9 @@
     },
     {
       "apply": {
-        "model": "abstoneedition:block/gray_bricks_wall_side",
-        "uvlock": true,
-        "y": 270
-      },
-      "when": {
-        "west": "low"
-      }
-    },
-    {
-      "apply": {
         "model": "abstoneedition:block/gray_bricks_wall_side_tall",
-        "uvlock": true,
-        "y": 270
+        "y": 270,
+        "uvlock": true
       },
       "when": {
         "west": "tall"

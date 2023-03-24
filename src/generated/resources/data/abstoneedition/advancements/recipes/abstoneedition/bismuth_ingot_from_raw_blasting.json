@@ -1,0 +1,59 @@
+{
+  "conditions": [
+    {
+      "item": "abstoneedition:bismuth_ingot",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "item": "abstoneedition:raw_bismuth_chunk",
+      "type": "abstoneedition:item_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:bismuth_ingot"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/bismuth_ingot_from_raw_blasting.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/bismuth_ingot_from_raw_blasting.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:bismuth_ingot_from_raw"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "abstoneedition:raw_bismuth_chunk"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:bismuth_ingot_from_raw"
+    ]
+  }
+}

@@ -1,3 +1,6 @@
 {
-  "parent": "abstoneedition:block/polished_andesite_wall_inventory"
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "minecraft:block/polished_andesite"
+  }
 }

@@ -1,8 +1,6 @@
 {
-  "parent": "minecraft:block/slab",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "bottom": "abstoneedition:smooth_limestone",
-    "side": "abstoneedition:smooth_limestone",
-    "top": "abstoneedition:smooth_limestone"
+    "all": "abstoneedition:smooth_limestone"
   }
 }

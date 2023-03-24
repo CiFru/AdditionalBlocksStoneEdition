@@ -1,17 +1,26 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "A": {
-      "item": "minecraft:glowstone"
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:glowstone_stairs",
+      "type": "abstoneedition:block_enabled"
     }
-  },
-  "pattern": [
-    "  A",
-    " AA",
-    "AAA"
   ],
-  "result": {
-    "count": 4,
-    "item": "abstoneedition:glowstone_stairs"
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "  A",
+      " AA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:glowstone"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:glowstone_stairs",
+      "count": 4
+    }
   }
 }

@@ -1,0 +1,29 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:limestone",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "ABA",
+      "BAB",
+      "ABA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:sandstone"
+      },
+      "B": {
+        "item": "minecraft:quartz_block"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:limestone",
+      "count": 9
+    }
+  }
+}

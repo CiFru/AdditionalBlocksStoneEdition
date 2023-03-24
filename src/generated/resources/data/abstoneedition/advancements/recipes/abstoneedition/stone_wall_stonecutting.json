@@ -1,28 +1,36 @@
 {
+  "conditions": [
+    {
+      "block": "abstoneedition:stone_wall",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
   "parent": "minecraft:recipes/root",
-  "criteria": {
-    "has_item": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:stone"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
+  "display": {
+    "icon": {
+      "item": "abstoneedition:stone_wall"
     },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/stone_wall_stonecutting.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/stone_wall_stonecutting.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
     "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
       "conditions": {
         "recipe": "abstoneedition:stone_wall_stonecutting"
-      },
-      "trigger": "minecraft:recipe_unlocked"
+      }
     }
   },
   "requirements": [
     [
-      "has_item",
       "has_the_recipe"
     ]
   ],

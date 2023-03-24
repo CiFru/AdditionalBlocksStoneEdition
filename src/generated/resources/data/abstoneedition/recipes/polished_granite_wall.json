@@ -1,16 +1,25 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "A": {
-      "item": "minecraft:polished_granite"
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:polished_granite_wall",
+      "type": "abstoneedition:block_enabled"
     }
-  },
-  "pattern": [
-    "AAA",
-    "AAA"
   ],
-  "result": {
-    "count": 6,
-    "item": "abstoneedition:polished_granite_wall"
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:polished_granite"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:polished_granite_wall",
+      "count": 6
+    }
   }
 }

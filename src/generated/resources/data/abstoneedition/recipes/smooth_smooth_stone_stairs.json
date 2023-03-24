@@ -1,17 +1,26 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "A": {
-      "item": "abstoneedition:smooth_smooth_stone"
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:smooth_smooth_stone_stairs",
+      "type": "abstoneedition:block_enabled"
     }
-  },
-  "pattern": [
-    "  A",
-    " AA",
-    "AAA"
   ],
-  "result": {
-    "count": 4,
-    "item": "abstoneedition:smooth_smooth_stone_stairs"
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "  A",
+      " AA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "abstoneedition:smooth_smooth_stone"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:smooth_smooth_stone_stairs",
+      "count": 4
+    }
   }
 }

@@ -1,28 +1,36 @@
 {
+  "conditions": [
+    {
+      "block": "abstoneedition:obsidian_slab",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
   "parent": "minecraft:recipes/root",
-  "criteria": {
-    "has_item": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:obsidian"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
+  "display": {
+    "icon": {
+      "item": "abstoneedition:obsidian_slab"
     },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/obsidian_slab_stonecutting.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/obsidian_slab_stonecutting.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
     "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
       "conditions": {
         "recipe": "abstoneedition:obsidian_slab_stonecutting"
-      },
-      "trigger": "minecraft:recipe_unlocked"
+      }
     }
   },
   "requirements": [
     [
-      "has_item",
       "has_the_recipe"
     ]
   ],

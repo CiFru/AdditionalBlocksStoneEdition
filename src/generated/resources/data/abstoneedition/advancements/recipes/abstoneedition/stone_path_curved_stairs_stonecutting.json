@@ -1,28 +1,40 @@
 {
-  "parent": "minecraft:recipes/root",
-  "criteria": {
-    "has_item": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "abstoneedition:stone_path_curved"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
+  "conditions": [
+    {
+      "block": "abstoneedition:stone_path_curved_stairs",
+      "type": "abstoneedition:block_enabled"
     },
+    {
+      "block": "abstoneedition:stone_path_curved",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:stone_path_curved_stairs"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/stone_path_curved_stairs_stonecutting.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/stone_path_curved_stairs_stonecutting.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
     "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
       "conditions": {
         "recipe": "abstoneedition:stone_path_curved_stairs_stonecutting"
-      },
-      "trigger": "minecraft:recipe_unlocked"
+      }
     }
   },
   "requirements": [
     [
-      "has_item",
       "has_the_recipe"
     ]
   ],

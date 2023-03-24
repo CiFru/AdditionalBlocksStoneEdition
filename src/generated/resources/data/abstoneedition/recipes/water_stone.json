@@ -1,0 +1,29 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:water_stone",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "X#X",
+      "#X#",
+      "X#X"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:blue_ice"
+      },
+      "X": {
+        "tag": "forge:cobblestone"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:water_stone",
+      "count": 4
+    }
+  }
+}

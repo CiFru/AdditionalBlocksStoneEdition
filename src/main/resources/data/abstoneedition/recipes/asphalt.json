@@ -1,9 +1,0 @@
-{
-  "type": "abstoneedition:furnace",
-  "ingredient": {
-    "tag": "forge:dyes/black"
-  },
-  "result": "abstoneedition:asphalt",
-  "experience": 0.2,
-  "cookingtime": 500
-}

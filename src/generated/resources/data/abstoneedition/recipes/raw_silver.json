@@ -1,0 +1,25 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "item": "abstoneedition:raw_silver",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "block": "abstoneedition:raw_silver_block",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "abstoneedition:raw_silver_block"
+      }
+    ],
+    "result": {
+      "item": "abstoneedition:raw_silver",
+      "count": 9
+    }
+  }
+}

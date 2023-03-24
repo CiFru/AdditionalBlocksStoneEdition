@@ -1,0 +1,32 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:watery_pebbles",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:pebbles",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "SC",
+      "CS"
+    ],
+    "key": {
+      "S": {
+        "item": "abstoneedition:pebbles"
+      },
+      "C": {
+        "item": "minecraft:ice"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:watery_pebbles",
+      "count": 4
+    }
+  }
+}

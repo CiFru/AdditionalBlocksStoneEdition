@@ -1,0 +1,32 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:aztec_pattern",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "ACA",
+      "ASA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:stone"
+      },
+      "C": {
+        "item": "minecraft:gray_dye"
+      },
+      "S": {
+        "item": "minecraft:vine"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:aztec_pattern",
+      "count": 6
+    }
+  }
+}

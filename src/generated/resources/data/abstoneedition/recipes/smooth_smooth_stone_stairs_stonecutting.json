@@ -1,8 +1,21 @@
 {
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "abstoneedition:smooth_smooth_stone"
-  },
-  "result": "abstoneedition:smooth_smooth_stone_stairs"
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:smooth_smooth_stone_stairs",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:smooth_smooth_stone",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "abstoneedition:smooth_smooth_stone"
+    },
+    "result": "abstoneedition:smooth_smooth_stone_stairs",
+    "count": 1
+  }
 }

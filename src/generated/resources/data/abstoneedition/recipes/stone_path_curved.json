@@ -1,0 +1,33 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:stone_path_curved",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:smooth_stone_bricks",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "XXX",
+      "X##",
+      "X#X"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:smooth_stone"
+      },
+      "X": {
+        "item": "abstoneedition:smooth_stone_bricks"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:stone_path_curved",
+      "count": 6
+    }
+  }
+}

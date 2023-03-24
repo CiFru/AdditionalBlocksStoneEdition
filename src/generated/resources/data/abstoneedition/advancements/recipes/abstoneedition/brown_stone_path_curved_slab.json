@@ -1,7 +1,35 @@
 {
+  "conditions": [
+    {
+      "block": "abstoneedition:brown_stone_path_curved_slab",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
   "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:brown_stone_path_curved_slab"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/brown_stone_path_curved_slab.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/brown_stone_path_curved_slab.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
   "criteria": {
-    "has_item": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:brown_stone_path_curved_slab"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -10,20 +38,13 @@
             ]
           }
         ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "abstoneedition:brown_stone_path_curved_slab"
-      },
-      "trigger": "minecraft:recipe_unlocked"
+      }
     }
   },
   "requirements": [
     [
-      "has_item",
-      "has_the_recipe"
+      "has_the_recipe",
+      "recipe_condition"
     ]
   ],
   "rewards": {

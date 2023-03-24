@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "abstoneedition:block/diorite_bricks_slab_top"
+    },
+    "type=double": {
+      "model": "abstoneedition:block/diorite_bricks_slab"
+    },
+    "type=bottom": {
+      "model": "abstoneedition:block/diorite_bricks_slab_bottom"
+    }
+  }
+}

@@ -1,13 +1,21 @@
 {
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": [
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
     {
-      "item": "minecraft:glowstone"
+      "block": "abstoneedition:glowstone_bricks_stairs",
+      "type": "abstoneedition:block_enabled"
     },
     {
-      "item": "abstoneedition:glowstone_bricks"
+      "block": "abstoneedition:glowstone_bricks",
+      "type": "abstoneedition:block_enabled"
     }
   ],
-  "result": "abstoneedition:glowstone_bricks_stairs"
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "minecraft:glowstone"
+    },
+    "result": "abstoneedition:glowstone_bricks_stairs",
+    "count": 1
+  }
 }

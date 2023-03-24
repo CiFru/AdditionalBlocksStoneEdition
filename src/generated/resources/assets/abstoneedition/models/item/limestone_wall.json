@@ -1,3 +1,6 @@
 {
-  "parent": "abstoneedition:block/limestone_wall_inventory"
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "abstoneedition:limestone"
+  }
 }

@@ -1,15 +1,24 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "A": {
-      "item": "minecraft:obsidian"
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:obsidian_slab",
+      "type": "abstoneedition:block_enabled"
     }
-  },
-  "pattern": [
-    "AAA"
   ],
-  "result": {
-    "count": 6,
-    "item": "abstoneedition:obsidian_slab"
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:obsidian"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:obsidian_slab",
+      "count": 6
+    }
   }
 }

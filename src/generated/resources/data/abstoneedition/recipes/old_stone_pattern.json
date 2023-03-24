@@ -1,0 +1,29 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:old_stone_pattern",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "X#X",
+      "#X#",
+      "X#X"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:stone"
+      },
+      "X": {
+        "item": "minecraft:stone_bricks"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:old_stone_pattern",
+      "count": 9
+    }
+  }
+}

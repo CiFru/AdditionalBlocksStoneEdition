@@ -1,16 +1,25 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "A": {
-      "item": "abstoneedition:gray_bricks"
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:gray_bricks_wall",
+      "type": "abstoneedition:block_enabled"
     }
-  },
-  "pattern": [
-    "AAA",
-    "AAA"
   ],
-  "result": {
-    "count": 6,
-    "item": "abstoneedition:gray_bricks_wall"
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "abstoneedition:gray_bricks"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:gray_bricks_wall",
+      "count": 6
+    }
   }
 }
