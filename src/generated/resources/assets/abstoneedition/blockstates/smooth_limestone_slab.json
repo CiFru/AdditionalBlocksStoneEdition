@@ -1,13 +1,13 @@
 {
   "variants": {
-    "type=top": {
-      "model": "abstoneedition:block/smooth_limestone_slab_top"
-    },
-    "type=bottom": {
+    "type=double": {
       "model": "abstoneedition:block/smooth_limestone_slab"
     },
-    "type=double": {
-      "model": "abstoneedition:block/smooth_limestone"
+    "type=bottom": {
+      "model": "abstoneedition:block/smooth_limestone_slab_bottom"
+    },
+    "type=top": {
+      "model": "abstoneedition:block/smooth_limestone_slab_top"
     }
   }
 }

@@ -1,32 +1,55 @@
 {
+  "conditions": [
+    {
+      "block": "abstoneedition:gray_bricks_wall",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
   "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "abstoneedition:gray_bricks_wall"
-    ]
+  "display": {
+    "icon": {
+      "item": "abstoneedition:gray_bricks_wall"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/gray_bricks_wall.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/gray_bricks_wall.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
   },
   "criteria": {
-    "has_item": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "abstoneedition:gray_bricks"
-          }
-        ]
-      }
-    },
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
         "recipe": "abstoneedition:gray_bricks_wall"
       }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "abstoneedition:gray_bricks"
+            ]
+          }
+        ]
+      }
     }
   },
   "requirements": [
     [
-      "has_item",
-      "has_the_recipe"
+      "has_the_recipe",
+      "recipe_condition"
     ]
-  ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:gray_bricks_wall"
+    ]
+  }
 }

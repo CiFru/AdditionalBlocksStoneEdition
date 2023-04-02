@@ -1,0 +1,28 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "item": "abstoneedition:bismuth_hoe",
+      "type": "abstoneedition:item_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AA",
+      " B",
+      " B"
+    ],
+    "key": {
+      "A": {
+        "tag": "forge:ingots/bismuth"
+      },
+      "B": {
+        "tag": "forge:rods/wooden"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:bismuth_hoe"
+    }
+  }
+}

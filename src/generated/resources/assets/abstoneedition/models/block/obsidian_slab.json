@@ -1,8 +1,6 @@
 {
-  "parent": "minecraft:block/slab",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "side": "minecraft:block/obsidian",
-    "bottom": "minecraft:block/obsidian",
-    "top": "minecraft:block/obsidian"
+    "all": "minecraft:block/obsidian"
   }
 }

@@ -1,13 +1,25 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": [
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
     {
-      "item": "abstoneedition:bloodstone"
+      "block": "abstoneedition:bloodstone_bricks_wall",
+      "type": "abstoneedition:block_enabled"
     },
     {
-      "item": "abstoneedition:bloodstone_bricks"
+      "block": "abstoneedition:bloodstone_bricks",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:bloodstone",
+      "type": "abstoneedition:block_enabled"
     }
   ],
-  "result": "abstoneedition:bloodstone_bricks_wall",
-  "count": 1
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "abstoneedition:bloodstone"
+    },
+    "result": "abstoneedition:bloodstone_bricks_wall",
+    "count": 1
+  }
 }

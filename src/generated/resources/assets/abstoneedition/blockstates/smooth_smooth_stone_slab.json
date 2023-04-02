@@ -3,11 +3,11 @@
     "type=top": {
       "model": "abstoneedition:block/smooth_smooth_stone_slab_top"
     },
-    "type=bottom": {
+    "type=double": {
       "model": "abstoneedition:block/smooth_smooth_stone_slab"
     },
-    "type=double": {
-      "model": "abstoneedition:block/smooth_smooth_stone"
+    "type=bottom": {
+      "model": "abstoneedition:block/smooth_smooth_stone_slab_bottom"
     }
   }
 }

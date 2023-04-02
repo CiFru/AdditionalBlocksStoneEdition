@@ -1,0 +1,64 @@
+{
+  "conditions": [
+    {
+      "item": "abstoneedition:silver_ingot",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "block": "abstoneedition:silver_block",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:silver_ingot"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/silver_ingot.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/silver_ingot.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:silver_ingot"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "abstoneedition:silver_ingot"
+            ]
+          },
+          {
+            "items": [
+              "abstoneedition:silver_block"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:silver_ingot"
+    ]
+  }
+}

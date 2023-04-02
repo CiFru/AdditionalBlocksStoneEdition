@@ -1,8 +1,21 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "abstoneedition:limestone"
-  },
-  "result": "abstoneedition:limestone_wall",
-  "count": 1
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:limestone_wall",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:limestone",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "abstoneedition:limestone"
+    },
+    "result": "abstoneedition:limestone_wall",
+    "count": 1
+  }
 }

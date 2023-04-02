@@ -1,0 +1,29 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "item": "abstoneedition:bismuth_nugget",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "item": "abstoneedition:bismuth_ingot",
+      "type": "abstoneedition:item_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "abstoneedition:bismuth_nugget"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:bismuth_ingot"
+    }
+  }
+}

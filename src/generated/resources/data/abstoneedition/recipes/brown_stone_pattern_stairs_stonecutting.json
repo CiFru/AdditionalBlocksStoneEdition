@@ -1,8 +1,21 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "abstoneedition:brown_stone_pattern"
-  },
-  "result": "abstoneedition:brown_stone_pattern_stairs",
-  "count": 1
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:brown_stone_pattern_stairs",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:brown_stone_pattern",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "abstoneedition:brown_stone_pattern"
+    },
+    "result": "abstoneedition:brown_stone_pattern_stairs",
+    "count": 1
+  }
 }

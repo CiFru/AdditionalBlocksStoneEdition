@@ -2,7 +2,7 @@
   "parent": "minecraft:block/inner_stairs",
   "textures": {
     "side": "abstoneedition:brown_stone_path_straight",
-    "bottom": "abstoneedition:brown_stone_path_straight",
-    "top": "abstoneedition:brown_stone_path_straight"
+    "top": "abstoneedition:brown_stone_path_straight",
+    "bottom": "abstoneedition:brown_stone_path_straight"
   }
 }

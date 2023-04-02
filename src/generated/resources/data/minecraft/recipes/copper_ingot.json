@@ -1,0 +1,25 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "item": "abstoneedition:copper_nugget",
+      "type": "abstoneedition:item_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "abstoneedition:copper_nugget"
+      }
+    },
+    "result": {
+      "item": "minecraft:copper_ingot"
+    }
+  }
+}

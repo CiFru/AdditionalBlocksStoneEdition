@@ -1,0 +1,28 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "item": "abstoneedition:silver_shovel",
+      "type": "abstoneedition:item_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "A",
+      "B",
+      "B"
+    ],
+    "key": {
+      "A": {
+        "tag": "forge:ingots/silver"
+      },
+      "B": {
+        "tag": "forge:rods/wooden"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:silver_shovel"
+    }
+  }
+}

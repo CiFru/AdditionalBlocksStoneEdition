@@ -1,16 +1,25 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "AAA",
-    "AAA"
-  ],
-  "key": {
-    "A": {
-      "item": "minecraft:polished_andesite"
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:polished_andesite_wall",
+      "type": "abstoneedition:block_enabled"
     }
-  },
-  "result": {
-    "item": "abstoneedition:polished_andesite_wall",
-    "count": 6
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:polished_andesite"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:polished_andesite_wall",
+      "count": 6
+    }
   }
 }

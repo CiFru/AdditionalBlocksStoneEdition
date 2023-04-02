@@ -2,7 +2,7 @@
   "parent": "minecraft:block/slab_top",
   "textures": {
     "side": "abstoneedition:stone_path_straight",
-    "bottom": "abstoneedition:stone_path_straight",
-    "top": "abstoneedition:stone_path_straight"
+    "top": "abstoneedition:stone_path_straight",
+    "bottom": "abstoneedition:stone_path_straight"
   }
 }

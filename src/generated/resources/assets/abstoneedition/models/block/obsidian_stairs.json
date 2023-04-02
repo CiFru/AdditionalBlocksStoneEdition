@@ -2,7 +2,7 @@
   "parent": "minecraft:block/stairs",
   "textures": {
     "side": "minecraft:block/obsidian",
-    "bottom": "minecraft:block/obsidian",
-    "top": "minecraft:block/obsidian"
+    "top": "minecraft:block/obsidian",
+    "bottom": "minecraft:block/obsidian"
   }
 }

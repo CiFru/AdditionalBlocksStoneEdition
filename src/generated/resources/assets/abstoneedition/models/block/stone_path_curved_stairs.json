@@ -2,7 +2,7 @@
   "parent": "minecraft:block/stairs",
   "textures": {
     "side": "abstoneedition:stone_path_curved",
-    "bottom": "abstoneedition:stone_path_curved",
-    "top": "abstoneedition:stone_path_curved"
+    "top": "abstoneedition:stone_path_curved",
+    "bottom": "abstoneedition:stone_path_curved"
   }
 }

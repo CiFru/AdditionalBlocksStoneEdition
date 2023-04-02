@@ -1,13 +1,13 @@
 {
   "variants": {
+    "type=double": {
+      "model": "abstoneedition:block/limestone_bricks_slab"
+    },
     "type=top": {
       "model": "abstoneedition:block/limestone_bricks_slab_top"
     },
     "type=bottom": {
-      "model": "abstoneedition:block/limestone_bricks_slab"
-    },
-    "type=double": {
-      "model": "abstoneedition:block/limestone_bricks"
+      "model": "abstoneedition:block/limestone_bricks_slab_bottom"
     }
   }
 }

@@ -3,11 +3,11 @@
     "type=top": {
       "model": "abstoneedition:block/brown_stone_path_curved_slab_top"
     },
-    "type=bottom": {
+    "type=double": {
       "model": "abstoneedition:block/brown_stone_path_curved_slab"
     },
-    "type=double": {
-      "model": "abstoneedition:block/brown_stone_path_curved"
+    "type=bottom": {
+      "model": "abstoneedition:block/brown_stone_path_curved_slab_bottom"
     }
   }
 }

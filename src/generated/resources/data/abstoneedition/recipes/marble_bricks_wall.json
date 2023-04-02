@@ -1,16 +1,25 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "AAA",
-    "AAA"
-  ],
-  "key": {
-    "A": {
-      "item": "abstoneedition:marble_bricks"
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:marble_bricks_wall",
+      "type": "abstoneedition:block_enabled"
     }
-  },
-  "result": {
-    "item": "abstoneedition:marble_bricks_wall",
-    "count": 6
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "abstoneedition:marble_bricks"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:marble_bricks_wall",
+      "count": 6
+    }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:marble",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:black_marble",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "CA",
+      "AC"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:coal_block"
+      },
+      "C": {
+        "item": "abstoneedition:marble"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:black_marble",
+      "count": 4
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:silver_block",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "abstoneedition:silver_ingot"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:silver_block"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:brown_stone_tiles",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:stone_tiles",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:smelting",
+    "ingredient": {
+      "item": "abstoneedition:stone_tiles"
+    },
+    "result": "abstoneedition:brown_stone_tiles",
+    "experience": 2
+  }
+}

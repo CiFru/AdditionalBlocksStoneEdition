@@ -1,0 +1,25 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:diorite_bricks",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AA",
+      "AA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:polished_diorite"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:diorite_bricks",
+      "count": 4
+    }
+  }
+}

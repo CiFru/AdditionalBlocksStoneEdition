@@ -1,0 +1,24 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:andesite_bricks_slab",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "abstoneedition:andesite_bricks"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:andesite_bricks_slab",
+      "count": 6
+    }
+  }
+}

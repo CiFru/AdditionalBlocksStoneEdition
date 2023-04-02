@@ -1,0 +1,29 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:aztec_pillar",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:aztec_tiles",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "#",
+      "#"
+    ],
+    "key": {
+      "#": {
+        "item": "abstoneedition:aztec_tiles"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:aztec_pillar",
+      "count": 2
+    }
+  }
+}

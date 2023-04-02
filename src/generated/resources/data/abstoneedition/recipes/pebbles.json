@@ -1,0 +1,25 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:pebbles",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "##",
+      "##"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:cobblestone"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:pebbles",
+      "count": 4
+    }
+  }
+}

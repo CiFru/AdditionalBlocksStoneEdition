@@ -1,0 +1,28 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:gray_bricks",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "CA",
+      "AC"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:gray_dye"
+      },
+      "C": {
+        "item": "minecraft:bricks"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:gray_bricks",
+      "count": 2
+    }
+  }
+}

@@ -1,32 +1,55 @@
 {
+  "conditions": [
+    {
+      "block": "abstoneedition:polished_andesite_wall",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
   "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "abstoneedition:polished_andesite_wall"
-    ]
+  "display": {
+    "icon": {
+      "item": "abstoneedition:polished_andesite_wall"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/polished_andesite_wall.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/polished_andesite_wall.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
   },
   "criteria": {
-    "has_item": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:polished_andesite"
-          }
-        ]
-      }
-    },
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
         "recipe": "abstoneedition:polished_andesite_wall"
       }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:polished_andesite"
+            ]
+          }
+        ]
+      }
     }
   },
   "requirements": [
     [
-      "has_item",
-      "has_the_recipe"
+      "has_the_recipe",
+      "recipe_condition"
     ]
-  ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:polished_andesite_wall"
+    ]
+  }
 }
