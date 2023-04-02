@@ -1,0 +1,55 @@
+{
+  "conditions": [
+    {
+      "block": "abstoneedition:diorite_bricks",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:diorite_bricks"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/misc/diorite_bricks.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/misc/diorite_bricks.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:diorite_bricks"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:diorite"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:diorite_bricks"
+    ]
+  }
+}

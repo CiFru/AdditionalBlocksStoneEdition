@@ -1,0 +1,59 @@
+{
+  "conditions": [
+    {
+      "block": "abstoneedition:marble",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:marble_pillar",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:marble_pillar"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/misc/marble_pillar.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/misc/marble_pillar.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:marble_pillar"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "abstoneedition:marble"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:marble_pillar"
+    ]
+  }
+}

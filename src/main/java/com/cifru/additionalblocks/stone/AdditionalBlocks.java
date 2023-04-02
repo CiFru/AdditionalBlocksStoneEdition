@@ -10,7 +10,6 @@ import com.supermartijn642.core.item.CreativeItemGroup;
 import com.supermartijn642.core.registry.GeneratorRegistrationHandler;
 import com.supermartijn642.core.registry.RegistrationHandler;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -56,14 +55,8 @@ public class AdditionalBlocks {
 
         @SubscribeEvent
         public static void onRegistryEvent(RegisterEvent e){
-            if(e.getRegistryKey() == ForgeRegistries.Keys.FEATURES)
-                onFeatureRegistry(e.getForgeRegistry());
-            else if(e.getRegistryKey() == ForgeRegistries.Keys.BIOME_MODIFIER_SERIALIZERS)
+            if(e.getRegistryKey() == ForgeRegistries.Keys.BIOME_MODIFIER_SERIALIZERS)
                 onBiomeModifierRegistry(e.getForgeRegistry());
-        }
-
-        public static void onFeatureRegistry(final IForgeRegistry<Feature<?>> registry){
-            WorldGeneration.onFeatureRegistry(registry);
         }
 
         public static void onBiomeModifierRegistry(final IForgeRegistry<Codec<? extends BiomeModifier>> registry){

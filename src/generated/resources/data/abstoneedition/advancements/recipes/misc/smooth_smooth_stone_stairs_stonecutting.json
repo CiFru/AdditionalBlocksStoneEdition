@@ -1,0 +1,46 @@
+{
+  "conditions": [
+    {
+      "block": "abstoneedition:smooth_smooth_stone_stairs",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:smooth_smooth_stone",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:smooth_smooth_stone_stairs"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/misc/smooth_smooth_stone_stairs_stonecutting.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/misc/smooth_smooth_stone_stairs_stonecutting.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:smooth_smooth_stone_stairs_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:smooth_smooth_stone_stairs_stonecutting"
+    ]
+  }
+}

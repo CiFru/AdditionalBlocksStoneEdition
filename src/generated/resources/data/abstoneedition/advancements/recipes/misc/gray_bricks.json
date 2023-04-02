@@ -1,0 +1,60 @@
+{
+  "conditions": [
+    {
+      "block": "abstoneedition:gray_bricks",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:gray_bricks"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/misc/gray_bricks.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/misc/gray_bricks.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:gray_bricks"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bricks"
+            ]
+          },
+          {
+            "items": [
+              "minecraft:gray_dye"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:gray_bricks"
+    ]
+  }
+}

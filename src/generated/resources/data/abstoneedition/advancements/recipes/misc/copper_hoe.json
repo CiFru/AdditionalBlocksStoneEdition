@@ -1,0 +1,53 @@
+{
+  "conditions": [
+    {
+      "item": "abstoneedition:copper_hoe",
+      "type": "abstoneedition:item_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:copper_hoe"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/misc/copper_hoe.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/misc/copper_hoe.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:copper_hoe"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/copper"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:copper_hoe"
+    ]
+  }
+}

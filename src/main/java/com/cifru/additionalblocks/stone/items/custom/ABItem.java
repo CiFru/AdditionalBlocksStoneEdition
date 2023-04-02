@@ -4,8 +4,6 @@ import com.supermartijn642.core.item.BaseItem;
 import com.supermartijn642.core.item.ItemProperties;
 import net.minecraft.world.item.CreativeModeTab;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.function.Supplier;
 
 /**
@@ -21,7 +19,7 @@ public class ABItem extends BaseItem {
     }
 
     @Override
-    public Collection<CreativeModeTab> getCreativeTabs(){
-        return this.enabled.get() ? super.getCreativeTabs() : Collections.emptyList();
+    public boolean isInCreativeGroup(CreativeModeTab tab){
+        return this.enabled.get() && super.isInCreativeGroup(tab);
     }
 }

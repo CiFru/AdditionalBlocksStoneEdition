@@ -1,0 +1,64 @@
+{
+  "conditions": [
+    {
+      "block": "abstoneedition:sunstone",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:sunstone"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/misc/sunstone.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/misc/sunstone.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "recipe_condition2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/gold"
+          }
+        ]
+      }
+    },
+    "recipe_condition1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/copper"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:sunstone"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition1",
+      "recipe_condition2"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:sunstone"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "conditions": [
+    {
+      "item": "abstoneedition:copper_nugget",
+      "type": "abstoneedition:item_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:copper_nugget"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/misc/copper_nugget.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/misc/copper_nugget.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:copper_nugget"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/copper"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:copper_nugget"
+    ]
+  }
+}

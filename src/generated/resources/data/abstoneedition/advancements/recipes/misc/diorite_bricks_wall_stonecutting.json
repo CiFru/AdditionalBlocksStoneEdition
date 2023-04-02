@@ -1,0 +1,46 @@
+{
+  "conditions": [
+    {
+      "block": "abstoneedition:diorite_bricks_wall",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:diorite_bricks",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:diorite_bricks_wall"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/misc/diorite_bricks_wall_stonecutting.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/misc/diorite_bricks_wall_stonecutting.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:diorite_bricks_wall_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:diorite_bricks_wall_stonecutting"
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "conditions": [
+    {
+      "block": "abstoneedition:aztec_patterned_wall",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:aztec_patterned_wall"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/misc/aztec_patterned_wall.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/misc/aztec_patterned_wall.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:aztec_patterned_wall"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stone"
+            ]
+          },
+          {
+            "items": [
+              "minecraft:smooth_stone"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:aztec_patterned_wall"
+    ]
+  }
+}

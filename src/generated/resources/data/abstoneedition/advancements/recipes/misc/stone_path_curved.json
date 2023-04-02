@@ -1,0 +1,64 @@
+{
+  "conditions": [
+    {
+      "block": "abstoneedition:stone_path_curved",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:smooth_stone_bricks",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:stone_path_curved"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/misc/stone_path_curved.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/misc/stone_path_curved.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:stone_path_curved"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "abstoneedition:smooth_stone_bricks"
+            ]
+          },
+          {
+            "items": [
+              "minecraft:smooth_stone"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:stone_path_curved"
+    ]
+  }
+}
