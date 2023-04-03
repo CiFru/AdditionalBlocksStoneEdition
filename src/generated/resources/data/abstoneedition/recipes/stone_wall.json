@@ -1,16 +1,25 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "AAA",
-    "AAA"
-  ],
-  "key": {
-    "A": {
-      "item": "minecraft:stone"
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:stone_wall",
+      "type": "abstoneedition:block_enabled"
     }
-  },
-  "result": {
-    "item": "abstoneedition:stone_wall",
-    "count": 6
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:stone"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:stone_wall",
+      "count": 6
+    }
   }
 }

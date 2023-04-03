@@ -2,7 +2,7 @@
   "parent": "minecraft:block/inner_stairs",
   "textures": {
     "side": "abstoneedition:stone_pattern",
-    "bottom": "abstoneedition:stone_pattern",
-    "top": "abstoneedition:stone_pattern"
+    "top": "abstoneedition:stone_pattern",
+    "bottom": "abstoneedition:stone_pattern"
   }
 }

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "abstoneedition:smooth_bloodstone",
-    "top": "abstoneedition:smooth_bloodstone",
-    "side": "abstoneedition:smooth_bloodstone"
-  }
-}

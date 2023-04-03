@@ -1,0 +1,21 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:brown_stone_path_curved",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:stone_path_curved",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:smelting",
+    "ingredient": {
+      "item": "abstoneedition:stone_path_curved"
+    },
+    "result": "abstoneedition:brown_stone_path_curved",
+    "experience": 2
+  }
+}

@@ -1,16 +1,21 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": [
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
     {
-      "item": "minecraft:diorite"
+      "block": "abstoneedition:diorite_bricks_stairs",
+      "type": "abstoneedition:block_enabled"
     },
     {
-      "item": "minecraft:polished_diorite"
-    },
-    {
-      "item": "abstoneedition:diorite_bricks"
+      "block": "abstoneedition:diorite_bricks",
+      "type": "abstoneedition:block_enabled"
     }
   ],
-  "result": "abstoneedition:diorite_bricks_stairs",
-  "count": 1
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "minecraft:polished_diorite"
+    },
+    "result": "abstoneedition:diorite_bricks_stairs",
+    "count": 1
+  }
 }

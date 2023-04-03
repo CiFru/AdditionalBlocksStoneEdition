@@ -1,21 +1,27 @@
 {
+  "conditions": [
+    {
+      "block": "abstoneedition:andesite_bricks",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
   "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "abstoneedition:andesite_bricks_stonecutting"
-    ]
+  "display": {
+    "icon": {
+      "item": "abstoneedition:andesite_bricks"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/andesite_bricks_stonecutting.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/andesite_bricks_stonecutting.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
   },
   "criteria": {
-    "has_item": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:andesite"
-          }
-        ]
-      }
-    },
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
@@ -25,8 +31,12 @@
   },
   "requirements": [
     [
-      "has_item",
       "has_the_recipe"
     ]
-  ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:andesite_bricks_stonecutting"
+    ]
+  }
 }

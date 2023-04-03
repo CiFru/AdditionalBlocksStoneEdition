@@ -1,8 +1,17 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:stone"
-  },
-  "result": "abstoneedition:stone_wall",
-  "count": 1
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:stone_wall",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "minecraft:stone"
+    },
+    "result": "abstoneedition:stone_wall",
+    "count": 1
+  }
 }

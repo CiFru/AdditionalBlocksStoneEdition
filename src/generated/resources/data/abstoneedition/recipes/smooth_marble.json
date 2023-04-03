@@ -1,0 +1,21 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:smooth_marble",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:marble",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:smelting",
+    "ingredient": {
+      "item": "abstoneedition:marble"
+    },
+    "result": "abstoneedition:smooth_marble",
+    "experience": 2
+  }
+}

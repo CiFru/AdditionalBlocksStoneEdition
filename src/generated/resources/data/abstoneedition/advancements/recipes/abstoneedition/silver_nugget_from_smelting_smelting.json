@@ -1,0 +1,95 @@
+{
+  "conditions": [
+    {
+      "item": "abstoneedition:silver_nugget",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "item": "abstoneedition:silver_axe",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "item": "abstoneedition:silver_pickaxe",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "item": "abstoneedition:silver_shovel",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "item": "abstoneedition:silver_hoe",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "item": "abstoneedition:silver_sword",
+      "type": "abstoneedition:item_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:silver_nugget"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/silver_nugget_from_smelting_smelting.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/silver_nugget_from_smelting_smelting.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:silver_nugget_from_smelting"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "abstoneedition:silver_axe"
+            ]
+          },
+          {
+            "items": [
+              "abstoneedition:silver_pickaxe"
+            ]
+          },
+          {
+            "items": [
+              "abstoneedition:silver_shovel"
+            ]
+          },
+          {
+            "items": [
+              "abstoneedition:silver_hoe"
+            ]
+          },
+          {
+            "items": [
+              "abstoneedition:silver_sword"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:silver_nugget_from_smelting"
+    ]
+  }
+}

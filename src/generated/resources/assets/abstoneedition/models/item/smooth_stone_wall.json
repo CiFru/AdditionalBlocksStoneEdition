@@ -1,3 +1,6 @@
 {
-  "parent": "abstoneedition:block/smooth_stone_wall_inventory"
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "minecraft:block/smooth_stone"
+  }
 }

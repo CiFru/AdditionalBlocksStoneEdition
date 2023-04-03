@@ -1,0 +1,20 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "item": "abstoneedition:silver_ingot",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "item": "abstoneedition:raw_silver",
+      "type": "abstoneedition:item_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:blasting",
+    "ingredient": {
+      "item": "abstoneedition:raw_silver"
+    },
+    "result": "abstoneedition:silver_ingot"
+  }
+}

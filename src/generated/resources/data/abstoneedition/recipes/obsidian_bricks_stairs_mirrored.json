@@ -1,0 +1,26 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:obsidian_bricks_stairs",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "A  ",
+      "AA ",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "abstoneedition:obsidian_bricks"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:obsidian_bricks_stairs",
+      "count": 4
+    }
+  }
+}

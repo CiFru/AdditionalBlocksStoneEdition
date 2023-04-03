@@ -2,7 +2,7 @@
   "parent": "minecraft:block/outer_stairs",
   "textures": {
     "side": "abstoneedition:smooth_smooth_stone",
-    "bottom": "abstoneedition:smooth_smooth_stone",
-    "top": "abstoneedition:smooth_smooth_stone"
+    "top": "abstoneedition:smooth_smooth_stone",
+    "bottom": "abstoneedition:smooth_smooth_stone"
   }
 }

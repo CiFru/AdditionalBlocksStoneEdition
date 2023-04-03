@@ -1,0 +1,29 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:stone_tiles",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:smooth_stone_bricks",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "##",
+      "##"
+    ],
+    "key": {
+      "#": {
+        "item": "abstoneedition:smooth_stone_bricks"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:stone_tiles",
+      "count": 4
+    }
+  }
+}

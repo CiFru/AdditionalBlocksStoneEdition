@@ -1,0 +1,29 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:marble",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "ABA",
+      "BAB",
+      "ABA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:diorite"
+      },
+      "B": {
+        "item": "minecraft:quartz_block"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:marble",
+      "count": 6
+    }
+  }
+}

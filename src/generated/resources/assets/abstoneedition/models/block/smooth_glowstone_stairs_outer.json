@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "side": "abstoneedition:smooth_glowstone",
+    "top": "abstoneedition:smooth_glowstone",
+    "bottom": "abstoneedition:smooth_glowstone"
+  }
+}

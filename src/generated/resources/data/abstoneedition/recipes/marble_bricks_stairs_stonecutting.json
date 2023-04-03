@@ -1,13 +1,25 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": [
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
     {
-      "item": "abstoneedition:marble"
+      "block": "abstoneedition:marble_bricks_stairs",
+      "type": "abstoneedition:block_enabled"
     },
     {
-      "item": "abstoneedition:marble_bricks"
+      "block": "abstoneedition:marble_bricks",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:marble",
+      "type": "abstoneedition:block_enabled"
     }
   ],
-  "result": "abstoneedition:marble_bricks_stairs",
-  "count": 1
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "abstoneedition:marble"
+    },
+    "result": "abstoneedition:marble_bricks_stairs",
+    "count": 1
+  }
 }

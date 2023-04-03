@@ -1,8 +1,21 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "abstoneedition:gray_bricks"
-  },
-  "result": "abstoneedition:gray_bricks_slab",
-  "count": 2
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:gray_bricks_slab",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:gray_bricks",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "abstoneedition:gray_bricks"
+    },
+    "result": "abstoneedition:gray_bricks_slab",
+    "count": 2
+  }
 }

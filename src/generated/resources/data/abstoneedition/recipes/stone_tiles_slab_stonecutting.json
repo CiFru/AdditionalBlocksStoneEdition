@@ -1,8 +1,21 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "abstoneedition:stone_tiles"
-  },
-  "result": "abstoneedition:stone_tiles_slab",
-  "count": 2
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:stone_tiles_slab",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:stone_tiles",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "abstoneedition:stone_tiles"
+    },
+    "result": "abstoneedition:stone_tiles_slab",
+    "count": 2
+  }
 }

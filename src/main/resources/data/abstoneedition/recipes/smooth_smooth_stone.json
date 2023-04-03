@@ -1,9 +1,0 @@
-{
-  "type": "abstoneedition:furnace",
-  "ingredient": {
-    "item": "minecraft:smooth_stone"
-  },
-  "result": "abstoneedition:smooth_smooth_stone",
-  "experience": 0.2,
-  "cookingtime": 250
-}

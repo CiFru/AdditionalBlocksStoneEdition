@@ -2,7 +2,7 @@
   "parent": "minecraft:block/stairs",
   "textures": {
     "side": "abstoneedition:smooth_limestone",
-    "bottom": "abstoneedition:smooth_limestone",
-    "top": "abstoneedition:smooth_limestone"
+    "top": "abstoneedition:smooth_limestone",
+    "bottom": "abstoneedition:smooth_limestone"
   }
 }

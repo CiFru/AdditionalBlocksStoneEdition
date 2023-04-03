@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "side": "abstoneedition:diorite_bricks",
+    "top": "abstoneedition:diorite_bricks",
+    "bottom": "abstoneedition:diorite_bricks"
+  }
+}

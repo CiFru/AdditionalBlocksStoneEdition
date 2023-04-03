@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "abstoneedition:charred_planks",
-    "top": "abstoneedition:charred_planks",
-    "side": "abstoneedition:charred_planks"
-  }
-}

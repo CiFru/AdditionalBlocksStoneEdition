@@ -3,19 +3,17 @@
   "pools": [
     {
       "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "abstoneedition:old_stone_path_curved"
-        }
-      ],
       "conditions": [
         {
           "condition": "minecraft:survives_explosion"
         }
       ],
-      "functions": []
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "abstoneedition:old_stone_path_curved"
+        }
+      ]
     }
   ]
 }

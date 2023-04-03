@@ -1,0 +1,29 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:bloodstone",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "ABA",
+      "BAB",
+      "ABA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:coal"
+      },
+      "B": {
+        "item": "minecraft:redstone"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:bloodstone",
+      "count": 9
+    }
+  }
+}
