@@ -1,3 +1,6 @@
 {
-  "parent": "abstoneedition:block/polished_diorite_wall_inventory"
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "minecraft:block/polished_diorite"
+  }
 }

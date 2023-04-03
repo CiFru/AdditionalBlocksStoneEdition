@@ -1,15 +1,24 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "AAA"
-  ],
-  "key": {
-    "A": {
-      "item": "abstoneedition:old_stone_pattern"
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:old_stone_pattern_slab",
+      "type": "abstoneedition:block_enabled"
     }
-  },
-  "result": {
-    "item": "abstoneedition:old_stone_pattern_slab",
-    "count": 6
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "abstoneedition:old_stone_pattern"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:old_stone_pattern_slab",
+      "count": 6
+    }
   }
 }

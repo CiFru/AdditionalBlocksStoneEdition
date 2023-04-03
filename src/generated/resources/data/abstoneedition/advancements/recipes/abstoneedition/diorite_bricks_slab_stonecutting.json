@@ -1,21 +1,31 @@
 {
+  "conditions": [
+    {
+      "block": "abstoneedition:diorite_bricks_slab",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:diorite_bricks",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
   "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "abstoneedition:diorite_bricks_slab_stonecutting"
-    ]
+  "display": {
+    "icon": {
+      "item": "abstoneedition:diorite_bricks_slab"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/diorite_bricks_slab_stonecutting.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/diorite_bricks_slab_stonecutting.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
   },
   "criteria": {
-    "has_item": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:diorite"
-          }
-        ]
-      }
-    },
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
@@ -25,8 +35,12 @@
   },
   "requirements": [
     [
-      "has_item",
       "has_the_recipe"
     ]
-  ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:diorite_bricks_slab_stonecutting"
+    ]
+  }
 }

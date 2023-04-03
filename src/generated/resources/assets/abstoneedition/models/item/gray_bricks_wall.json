@@ -1,3 +1,6 @@
 {
-  "parent": "abstoneedition:block/gray_bricks_wall_inventory"
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "abstoneedition:gray_bricks"
+  }
 }

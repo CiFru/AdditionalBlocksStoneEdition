@@ -1,8 +1,21 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "abstoneedition:asphalt"
-  },
-  "result": "abstoneedition:asphalt_slab",
-  "count": 2
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:asphalt_slab",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:asphalt",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "abstoneedition:asphalt"
+    },
+    "result": "abstoneedition:asphalt_slab",
+    "count": 2
+  }
 }

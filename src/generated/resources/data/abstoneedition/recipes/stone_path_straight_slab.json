@@ -1,15 +1,24 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "AAA"
-  ],
-  "key": {
-    "A": {
-      "item": "abstoneedition:stone_path_straight"
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:stone_path_straight_slab",
+      "type": "abstoneedition:block_enabled"
     }
-  },
-  "result": {
-    "item": "abstoneedition:stone_path_straight_slab",
-    "count": 6
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "abstoneedition:stone_path_straight"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:stone_path_straight_slab",
+      "count": 6
+    }
   }
 }

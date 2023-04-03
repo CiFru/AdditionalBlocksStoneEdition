@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "abstoneedition:volcanic_stone",
-    "top": "abstoneedition:volcanic_stone",
-    "side": "abstoneedition:volcanic_stone"
-  }
-}

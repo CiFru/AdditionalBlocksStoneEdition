@@ -1,17 +1,26 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "  A",
-    " AA",
-    "AAA"
-  ],
-  "key": {
-    "A": {
-      "item": "abstoneedition:stone_tiles"
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:stone_tiles_stairs",
+      "type": "abstoneedition:block_enabled"
     }
-  },
-  "result": {
-    "item": "abstoneedition:stone_tiles_stairs",
-    "count": 4
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "  A",
+      " AA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "abstoneedition:stone_tiles"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:stone_tiles_stairs",
+      "count": 4
+    }
   }
 }

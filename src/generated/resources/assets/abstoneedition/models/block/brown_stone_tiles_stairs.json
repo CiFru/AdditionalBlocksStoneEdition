@@ -2,7 +2,7 @@
   "parent": "minecraft:block/stairs",
   "textures": {
     "side": "abstoneedition:brown_stone_tiles",
-    "bottom": "abstoneedition:brown_stone_tiles",
-    "top": "abstoneedition:brown_stone_tiles"
+    "top": "abstoneedition:brown_stone_tiles",
+    "bottom": "abstoneedition:brown_stone_tiles"
   }
 }

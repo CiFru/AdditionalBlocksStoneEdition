@@ -1,0 +1,20 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "item": "abstoneedition:copper_ingot",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "block": "abstoneedition:copper_ore",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:blasting",
+    "ingredient": {
+      "item": "abstoneedition:copper_ore"
+    },
+    "result": "abstoneedition:copper_ingot"
+  }
+}

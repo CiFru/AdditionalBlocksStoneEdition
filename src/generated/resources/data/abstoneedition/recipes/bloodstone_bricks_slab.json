@@ -1,0 +1,24 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:bloodstone_bricks_slab",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "abstoneedition:bloodstone_bricks"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:bloodstone_bricks_slab",
+      "count": 6
+    }
+  }
+}

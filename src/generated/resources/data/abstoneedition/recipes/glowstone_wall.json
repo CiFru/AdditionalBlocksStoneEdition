@@ -1,16 +1,25 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "AAA",
-    "AAA"
-  ],
-  "key": {
-    "A": {
-      "item": "minecraft:glowstone"
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:glowstone_wall",
+      "type": "abstoneedition:block_enabled"
     }
-  },
-  "result": {
-    "item": "abstoneedition:glowstone_wall",
-    "count": 6
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:glowstone"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:glowstone_wall",
+      "count": 6
+    }
   }
 }

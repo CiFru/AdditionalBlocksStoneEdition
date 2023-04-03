@@ -1,0 +1,29 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:smooth_limestone",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:limestone",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "##",
+      "##"
+    ],
+    "key": {
+      "#": {
+        "item": "abstoneedition:limestone"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:smooth_limestone",
+      "count": 4
+    }
+  }
+}

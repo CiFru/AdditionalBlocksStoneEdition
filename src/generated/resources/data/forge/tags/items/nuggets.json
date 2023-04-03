@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "abstoneedition:copper_nugget",
+    "abstoneedition:silver_nugget",
+    "abstoneedition:bismuth_nugget"
+  ]
+}

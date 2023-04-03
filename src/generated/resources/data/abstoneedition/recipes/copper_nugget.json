@@ -1,0 +1,21 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "item": "abstoneedition:copper_nugget",
+      "type": "abstoneedition:item_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "tag": "forge:ingots/copper"
+      }
+    ],
+    "result": {
+      "item": "abstoneedition:copper_nugget",
+      "count": 9
+    }
+  }
+}

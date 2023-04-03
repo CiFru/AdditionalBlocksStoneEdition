@@ -1,13 +1,21 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": [
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
     {
-      "item": "minecraft:smooth_stone"
+      "block": "abstoneedition:smooth_stone_bricks_slab",
+      "type": "abstoneedition:block_enabled"
     },
     {
-      "item": "abstoneedition:smooth_stone_bricks"
+      "block": "abstoneedition:smooth_stone_bricks",
+      "type": "abstoneedition:block_enabled"
     }
   ],
-  "result": "abstoneedition:smooth_stone_bricks_slab",
-  "count": 2
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "minecraft:smooth_stone"
+    },
+    "result": "abstoneedition:smooth_stone_bricks_slab",
+    "count": 2
+  }
 }

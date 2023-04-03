@@ -1,12 +1,34 @@
 {
+  "conditions": [
+    {
+      "block": "abstoneedition:smooth_limestone_slab",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
   "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "abstoneedition:smooth_limestone_slab"
-    ]
+  "display": {
+    "icon": {
+      "item": "abstoneedition:smooth_limestone_slab"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/smooth_limestone_slab.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/smooth_limestone_slab.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
   },
   "criteria": {
-    "has_item": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:smooth_limestone_slab"
+      }
+    },
+    "recipe_condition": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -15,18 +37,17 @@
           }
         ]
       }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "abstoneedition:smooth_limestone_slab"
-      }
     }
   },
   "requirements": [
     [
-      "has_item",
-      "has_the_recipe"
+      "has_the_recipe",
+      "recipe_condition"
     ]
-  ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:smooth_limestone_slab"
+    ]
+  }
 }

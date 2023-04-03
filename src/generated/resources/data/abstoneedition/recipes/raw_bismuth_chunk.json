@@ -1,0 +1,25 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "item": "abstoneedition:raw_bismuth_chunk",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "block": "abstoneedition:bismuth_cluster",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "abstoneedition:bismuth_cluster"
+      }
+    ],
+    "result": {
+      "item": "abstoneedition:raw_bismuth_chunk",
+      "count": 9
+    }
+  }
+}

@@ -1,3 +1,6 @@
 {
-  "parent": "abstoneedition:block/glowstone_wall_inventory"
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "minecraft:block/glowstone"
+  }
 }

@@ -1,9 +1,0 @@
-{
-  "type": "abstoneedition:furnace",
-  "ingredient": {
-    "tag": "forge:raw_materials/bismuth"
-  },
-  "result": "abstoneedition:bismuth_ingot",
-  "experience": 1.2,
-  "cookingtime": 360
-}

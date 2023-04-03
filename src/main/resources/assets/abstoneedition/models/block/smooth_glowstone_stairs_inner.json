@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "abstoneedition:smooth_glowstone",
-    "top": "abstoneedition:smooth_glowstone",
-    "side": "abstoneedition:smooth_glowstone"
-  }
-}

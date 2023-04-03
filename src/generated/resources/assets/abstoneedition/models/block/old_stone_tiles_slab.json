@@ -1,8 +1,6 @@
 {
-  "parent": "minecraft:block/slab",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "side": "abstoneedition:old_stone_tiles",
-    "bottom": "abstoneedition:old_stone_tiles",
-    "top": "abstoneedition:old_stone_tiles"
+    "all": "abstoneedition:old_stone_tiles"
   }
 }

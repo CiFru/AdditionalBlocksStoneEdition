@@ -1,13 +1,25 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": [
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
     {
-      "item": "abstoneedition:limestone"
+      "block": "abstoneedition:limestone_bricks_stairs",
+      "type": "abstoneedition:block_enabled"
     },
     {
-      "item": "abstoneedition:limestone_bricks"
+      "block": "abstoneedition:limestone_bricks",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:limestone",
+      "type": "abstoneedition:block_enabled"
     }
   ],
-  "result": "abstoneedition:limestone_bricks_stairs",
-  "count": 1
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "abstoneedition:limestone"
+    },
+    "result": "abstoneedition:limestone_bricks_stairs",
+    "count": 1
+  }
 }

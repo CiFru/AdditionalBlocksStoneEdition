@@ -1,0 +1,18 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:asphalt",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:smelting",
+    "ingredient": {
+      "item": "minecraft:black_dye"
+    },
+    "result": "abstoneedition:asphalt",
+    "experience": 2,
+    "cookingtime": 500
+  }
+}

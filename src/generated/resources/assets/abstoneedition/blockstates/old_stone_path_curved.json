@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "abstoneedition:block/old_stone_path_curved"
+    },
+    "facing=east": {
+      "model": "abstoneedition:block/old_stone_path_curved",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "abstoneedition:block/old_stone_path_curved",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "abstoneedition:block/old_stone_path_curved",
+      "y": 90
+    }
+  }
+}

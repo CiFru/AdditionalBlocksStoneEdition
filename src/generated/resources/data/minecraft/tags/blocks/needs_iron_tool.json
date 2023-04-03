@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "abstoneedition:asphalt_slab",
+    "abstoneedition:smooth_bloodstone_wall",
+    "abstoneedition:silver_block",
+    "abstoneedition:raw_silver_block",
+    "abstoneedition:bloodstone_stairs",
+    "abstoneedition:bloodstone_bricks_slab",
+    "abstoneedition:bloodstone_slab",
+    "abstoneedition:bloodstone_bricks_stairs",
+    "abstoneedition:bloodstone",
+    "abstoneedition:bloodstone_bricks_wall",
+    "abstoneedition:asphalt_stairs",
+    "abstoneedition:smooth_bloodstone_slab",
+    "abstoneedition:smooth_bloodstone_stairs",
+    "abstoneedition:smooth_bloodstone",
+    "abstoneedition:silver_ore",
+    "abstoneedition:bloodstone_wall",
+    "abstoneedition:asphalt",
+    "abstoneedition:bloodstone_bricks"
+  ]
+}

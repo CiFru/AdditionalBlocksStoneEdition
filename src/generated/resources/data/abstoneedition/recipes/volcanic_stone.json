@@ -1,0 +1,28 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:volcanic_stone",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "SC",
+      "CS"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:basalt"
+      },
+      "C": {
+        "item": "minecraft:stone"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:volcanic_stone",
+      "count": 4
+    }
+  }
+}

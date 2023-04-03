@@ -2,7 +2,7 @@
   "parent": "minecraft:block/slab_top",
   "textures": {
     "side": "abstoneedition:old_stone_tiles",
-    "bottom": "abstoneedition:old_stone_tiles",
-    "top": "abstoneedition:old_stone_tiles"
+    "top": "abstoneedition:old_stone_tiles",
+    "bottom": "abstoneedition:old_stone_tiles"
   }
 }

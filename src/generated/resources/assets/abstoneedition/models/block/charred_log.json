@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "east": "abstoneedition:charred_log",
+    "south": "abstoneedition:charred_log",
+    "north": "abstoneedition:charred_log",
+    "west": "abstoneedition:charred_log",
+    "up": "abstoneedition:charred_log",
+    "down": "abstoneedition:charred_log"
+  }
+}

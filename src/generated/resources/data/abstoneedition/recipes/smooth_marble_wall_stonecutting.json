@@ -1,8 +1,21 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "abstoneedition:smooth_marble"
-  },
-  "result": "abstoneedition:smooth_marble_wall",
-  "count": 1
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:smooth_marble_wall",
+      "type": "abstoneedition:block_enabled"
+    },
+    {
+      "block": "abstoneedition:smooth_marble",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "abstoneedition:smooth_marble"
+    },
+    "result": "abstoneedition:smooth_marble_wall",
+    "count": 1
+  }
 }

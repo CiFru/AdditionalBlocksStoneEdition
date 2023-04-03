@@ -1,0 +1,50 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "item": "abstoneedition:copper_nugget",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "item": "abstoneedition:copper_axe",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "item": "abstoneedition:copper_pickaxe",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "item": "abstoneedition:copper_shovel",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "item": "abstoneedition:copper_hoe",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "item": "abstoneedition:copper_sword",
+      "type": "abstoneedition:item_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:blasting",
+    "ingredient": [
+      {
+        "item": "abstoneedition:copper_axe"
+      },
+      {
+        "item": "abstoneedition:copper_pickaxe"
+      },
+      {
+        "item": "abstoneedition:copper_shovel"
+      },
+      {
+        "item": "abstoneedition:copper_hoe"
+      },
+      {
+        "item": "abstoneedition:copper_sword"
+      }
+    ],
+    "result": "abstoneedition:copper_nugget"
+  }
+}

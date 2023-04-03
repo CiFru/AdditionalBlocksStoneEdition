@@ -2,7 +2,7 @@
   "parent": "minecraft:block/outer_stairs",
   "textures": {
     "side": "abstoneedition:old_stone_path_curved",
-    "bottom": "abstoneedition:old_stone_path_curved",
-    "top": "abstoneedition:old_stone_path_curved"
+    "top": "abstoneedition:old_stone_path_curved",
+    "bottom": "abstoneedition:old_stone_path_curved"
   }
 }
