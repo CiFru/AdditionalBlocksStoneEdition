@@ -5,7 +5,8 @@
     "south": "abstoneedition:marble_pillar",
     "north": "abstoneedition:marble_pillar",
     "west": "abstoneedition:marble_pillar",
-    "up": "abstoneedition:marble_pillar",
-    "down": "abstoneedition:marble_pillar"
+    "particle": "abstoneedition:marble_pillar",
+    "up": "abstoneedition:marble_pillar_top",
+    "down": "abstoneedition:marble_pillar_top"
   }
 }

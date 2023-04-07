@@ -5,7 +5,8 @@
     "south": "abstoneedition:charred_log",
     "north": "abstoneedition:charred_log",
     "west": "abstoneedition:charred_log",
-    "up": "abstoneedition:charred_log",
-    "down": "abstoneedition:charred_log"
+    "particle": "abstoneedition:charred_log",
+    "up": "abstoneedition:charred_log_top",
+    "down": "abstoneedition:charred_log_top"
   }
 }

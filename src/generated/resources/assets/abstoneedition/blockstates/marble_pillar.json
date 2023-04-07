@@ -1,5 +1,9 @@
 {
   "variants": {
+    "axis=z": {
+      "model": "abstoneedition:block/marble_pillar",
+      "x": 90
+    },
     "axis=x": {
       "model": "abstoneedition:block/marble_pillar",
       "x": 90,
@@ -7,10 +11,6 @@
     },
     "axis=y": {
       "model": "abstoneedition:block/marble_pillar"
-    },
-    "axis=z": {
-      "model": "abstoneedition:block/marble_pillar",
-      "x": 90
     }
   }
 }
