@@ -4,13 +4,13 @@
       "model": "abstoneedition:block/old_stone_path_curved",
       "y": 180
     },
-    "facing=east": {
-      "model": "abstoneedition:block/old_stone_path_curved",
-      "y": 270
-    },
     "facing=west": {
       "model": "abstoneedition:block/old_stone_path_curved",
       "y": 90
+    },
+    "facing=east": {
+      "model": "abstoneedition:block/old_stone_path_curved",
+      "y": 270
     },
     "facing=south": {
       "model": "abstoneedition:block/old_stone_path_curved"

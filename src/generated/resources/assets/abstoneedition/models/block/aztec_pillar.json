@@ -5,7 +5,8 @@
     "south": "abstoneedition:aztec_pillar",
     "north": "abstoneedition:aztec_pillar",
     "west": "abstoneedition:aztec_pillar",
-    "up": "abstoneedition:aztec_pillar",
-    "down": "abstoneedition:aztec_pillar"
+    "particle": "abstoneedition:aztec_pillar",
+    "up": "abstoneedition:aztec_pillar_top",
+    "down": "abstoneedition:aztec_pillar_top"
   }
 }

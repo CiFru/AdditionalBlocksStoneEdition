@@ -1,4 +1,4 @@
-// 1.19.4	2023-04-02T23:28:59.5640853	Resource Generator 2
+// 1.19.4	2023-04-07T23:27:25.3926733	Resource Generator 2
 1b21583b19b5ad4b0c8e587777649e7b30299945 assets/abstoneedition/models/block/andesite_bricks.json
 1b21583b19b5ad4b0c8e587777649e7b30299945 assets/abstoneedition/models/block/andesite_bricks_slab.json
 29bd0602fa1610ce9be40b2f0d1856c298df077c assets/abstoneedition/models/block/andesite_bricks_slab_bottom.json
@@ -18,7 +18,7 @@ bfd28d1328324de67aaea6237eb6dcd4ea0403e1 assets/abstoneedition/models/block/asph
 5e849ba66957c565cfdeafd938dcbfe86cb25da5 assets/abstoneedition/models/block/asphalt_stairs_outer.json
 d4f2d84d693c96af90db1ab7048fe787f39ae81a assets/abstoneedition/models/block/aztec_pattern.json
 9c83e881c7aac99bd9c2d5b696241ff4c4bbb30c assets/abstoneedition/models/block/aztec_patterned_wall.json
-884079d056fd6adc0b0e8642148229e4459dc6ca assets/abstoneedition/models/block/aztec_pillar.json
+9b8e549f60a5e1a98bdf76781c426b3c9e3848d5 assets/abstoneedition/models/block/aztec_pillar.json
 feb93058f262f839677635caecf0443ee2cb5a20 assets/abstoneedition/models/block/aztec_tiles.json
 eb7802324f061d078d3a99b6d4417dd4d23cb591 assets/abstoneedition/models/block/bismuth_block.json
 112c0203b49364cfeec254a86f290e66cb2b33c4 assets/abstoneedition/models/block/bismuth_ore.json
@@ -97,7 +97,7 @@ e133a8bc8ea14c3b2c63938e4bc147982f63fc01 assets/abstoneedition/models/block/brow
 cf911bcbb9e8f7b64d7b5ad5209346148670abab assets/abstoneedition/models/block/brown_stone_tiles_stairs.json
 4aee7f406d746706f69c576fd39653b6a4749f0e assets/abstoneedition/models/block/brown_stone_tiles_stairs_inner.json
 9cff602f5f83db2b3617226c8f4342106821d567 assets/abstoneedition/models/block/brown_stone_tiles_stairs_outer.json
-dcc3b48926bf0a4996223149882e4e0ec72c78b6 assets/abstoneedition/models/block/charred_log.json
+b7044b314c2c41fe71c4b69d59dd8c961d688cf7 assets/abstoneedition/models/block/charred_log.json
 cadc0a3f343b3c906775036cc264f3dfa82db501 assets/abstoneedition/models/block/charred_planks.json
 cadc0a3f343b3c906775036cc264f3dfa82db501 assets/abstoneedition/models/block/charred_slab.json
 85900a7195cc4af1522b032e3c5237f1141cbf00 assets/abstoneedition/models/block/charred_slab_bottom.json
@@ -186,7 +186,7 @@ cd54215aa4d7a47b7b8e20a7a565996ebd04793f assets/abstoneedition/models/block/marb
 4a5cc507d0a42f87e18b73edb6f7bcb32d820fbb assets/abstoneedition/models/block/marble_bricks_wall_post.json
 2880164b239e152ecbf58d4c0691a12239cbdfa4 assets/abstoneedition/models/block/marble_bricks_wall_side.json
 055855fb61fb8b0f65774d98a0d0bd92822bd36a assets/abstoneedition/models/block/marble_bricks_wall_side_tall.json
-000dd78cc027359fb02ab1495352a9535647f615 assets/abstoneedition/models/block/marble_pillar.json
+a5564fc86a96cd14a47edeff0b11ab853a41f063 assets/abstoneedition/models/block/marble_pillar.json
 d6c76d0390d37ceef05dacb53906c0594d3684ef assets/abstoneedition/models/block/marble_slab.json
 21f6c64644bb1b8d9f99970f7c15c1f4410cd655 assets/abstoneedition/models/block/marble_slab_bottom.json
 4f3e064bf1dd25c6a4e1e19441ad421445815087 assets/abstoneedition/models/block/marble_slab_top.json
@@ -590,4 +590,4 @@ ba6b72eb2e19599ef85e9f261516853081ef05d7 assets/abstoneedition/models/item/volca
 6092e5fbe076f78780230b04a3eb201df35c7d05 assets/abstoneedition/models/item/volcanic_stone_wall.json
 fc82f3b61b08b7ae23d14ea1c756362ebd160106 assets/abstoneedition/models/item/watery_pebbles.json
 336ac73594f5fc97e04536e7915e551323d3f99e assets/abstoneedition/models/item/water_stone.json
-ba388dcbe065319da722e023f668487b9f3eb9f0 assets/minecraft/atlases/blocks.json
+ce24b7923ef4f34deeaa8ac568fc223ee866f719 assets/minecraft/atlases/blocks.json

@@ -201,8 +201,8 @@ public class ABModelGenerator extends ModelGenerator {
             String namespace = blockType.getIdentifier().getNamespace();
             String identifier = blockType.getIdentifier().getPath();
             ResourceLocation side = this.sideTexture.apply(blockType);
-            ResourceLocation end = this.sideTexture.apply(blockType);
-            generator.cube(namespace, "block/" + identifier, end, end, side, side, side, side);
+            ResourceLocation end = this.endTexture.apply(blockType);
+            generator.cube(namespace, "block/" + identifier, end, end, side, side, side, side).particleTexture(side);
             generator.model(namespace, "item/" + identifier).parent(namespace, "block/" + identifier);
         }
 

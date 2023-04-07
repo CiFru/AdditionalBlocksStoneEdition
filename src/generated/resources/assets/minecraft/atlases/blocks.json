@@ -26,6 +26,10 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "abstoneedition:marble_pillar_top"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:silver_ore"
     },
     {
@@ -107,6 +111,10 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:bismuth_axe"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:charred_log_top"
     },
     {
       "type": "minecraft:single",
@@ -275,6 +283,10 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:old_stone_path_curved"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:aztec_pillar_top"
     },
     {
       "type": "minecraft:single",
