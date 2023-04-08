@@ -1,9 +1,10 @@
 package com.cifru.additionalblocks.stone;
 
+import com.cifru.additionalblocks.stone.entities.AdditionalBlocksEntities;
+import com.cifru.additionalblocks.stone.entities.NuclearTntEntityRenderer;
+import com.supermartijn642.core.registry.ClientRegistrationHandler;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 /**
  * Created 7/11/2020 by SuperMartijn642
@@ -11,7 +12,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 @Mod.EventBusSubscriber(value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AdditionalBlocksClient {
 
-    @SubscribeEvent
-    public static void setup(FMLClientSetupEvent e){
+    public static void init(){
+        ClientRegistrationHandler handler = ClientRegistrationHandler.get("abstoneedition");
+        handler.registerEntityRenderer(() -> AdditionalBlocksEntities.NUCLEAR_TNT, NuclearTntEntityRenderer::new);
     }
 }
