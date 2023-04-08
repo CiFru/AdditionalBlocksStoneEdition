@@ -3,9 +3,11 @@ package com.cifru.additionalblocks.stone;
 import com.cifru.additionalblocks.stone.blocks.AdditionalBlocksBlocks;
 import com.cifru.additionalblocks.stone.condition.BlockEnabledResourceCondition;
 import com.cifru.additionalblocks.stone.condition.ItemEnabledResourceCondition;
+import com.cifru.additionalblocks.stone.entities.AdditionalBlocksEntities;
 import com.cifru.additionalblocks.stone.generators.*;
 import com.cifru.additionalblocks.stone.items.AdditionalBlocksItems;
 import com.mojang.serialization.Codec;
+import com.supermartijn642.core.CommonUtils;
 import com.supermartijn642.core.item.CreativeItemGroup;
 import com.supermartijn642.core.registry.GeneratorRegistrationHandler;
 import com.supermartijn642.core.registry.RegistrationHandler;
@@ -30,6 +32,9 @@ public class AdditionalBlocks {
         AdditionalBlocksConfig.create();
         AdditionalBlocksItems.init();
         AdditionalBlocksBlocks.init();
+        AdditionalBlocksEntities.init();
+        if(CommonUtils.getEnvironmentSide().isClient())
+            AdditionalBlocksClient.init();
         registerConditions();
         registerGenerators();
     }
