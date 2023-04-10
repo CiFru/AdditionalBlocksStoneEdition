@@ -29,7 +29,7 @@ public class ABToolItem extends ABItem {
     private final Multimap<Attribute,AttributeModifier> defaultModifiers;
 
     public ABToolItem(ItemProperties properties, Supplier<Boolean> enabled, ABToolMaterial toolMaterial, ToolType toolType){
-        super(properties, enabled);
+        super(properties.maxStackSize(1), enabled);
         this.toolMaterial = toolMaterial;
         this.toolType = toolType;
         ImmutableMultimap.Builder<Attribute,AttributeModifier> builder = ImmutableMultimap.builder();
@@ -68,7 +68,7 @@ public class ABToolItem extends ABItem {
 
     @Override
     public Multimap<Attribute,AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot slot){
-        return super.getDefaultAttributeModifiers(slot);
+        return slot == EquipmentSlot.MAINHAND ? this.defaultModifiers : super.getDefaultAttributeModifiers(slot);
     }
 
     @Override
@@ -79,5 +79,15 @@ public class ABToolItem extends ABItem {
     @Override
     public boolean canPerformAction(ItemStack stack, ToolAction toolAction){
         return this.toolType.getToolActions().contains(toolAction);
+    }
+
+    @Override
+    public int getMaxDamage(ItemStack stack){
+        return this.toolMaterial.getDurability();
+    }
+
+    @Override
+    public boolean canBeDepleted(){
+        return true;
     }
 }
