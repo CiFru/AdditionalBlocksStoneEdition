@@ -1,5 +1,8 @@
 {
   "variants": {
+    "axis=y": {
+      "model": "abstoneedition:block/charred_log"
+    },
     "axis=z": {
       "model": "abstoneedition:block/charred_log",
       "x": 90
@@ -8,9 +11,6 @@
       "model": "abstoneedition:block/charred_log",
       "x": 90,
       "y": 90
-    },
-    "axis=y": {
-      "model": "abstoneedition:block/charred_log"
     }
   }
 }

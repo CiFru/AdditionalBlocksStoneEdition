@@ -1,6 +1,7 @@
 package com.cifru.additionalblocks.stone.items;
 
 import com.cifru.additionalblocks.stone.AdditionalBlocksConfig;
+import com.cifru.additionalblocks.stone.generators.ABModelGenerator;
 import com.cifru.additionalblocks.stone.items.custom.*;
 import com.cifru.additionalblocks.stone.tools.ABToolMaterial;
 import com.supermartijn642.core.item.BaseItem;
@@ -45,11 +46,16 @@ public class AdditionalBlocksItems {
     public static final ItemType<BaseItem> BISMUTH_INGOT = ItemBuilder.create("bismuth_ingot").translation("Bismuth Ingot").configOption(AdditionalBlocksConfig.enableBismuth).tag("forge", "ingots").tag("forge", "ingots/bismuth").buildRegular(COLLECTOR);
     public static final ItemType<BaseItem> RAW_BISMUTH = ItemBuilder.create("raw_bismuth_chunk").translation("Bismuth Crystal").configOption(AdditionalBlocksConfig.enableBismuth).tag("forge", "raw_materials").tag("forge", "raw_materials/bismuth").buildRegular(COLLECTOR);
     public static final ItemType<BaseItem> BISMUTH_NUGGET = ItemBuilder.create("bismuth_nugget").translation("Bismuth Nugget").configOption(AdditionalBlocksConfig.enableBismuth).tag("forge", "nuggets").tag("forge", "nuggets/bismuth").buildRegular(COLLECTOR);
-    public static final ItemType<BaseItem> BISMUTH_AXE = ItemBuilder.create("bismuth_axe").translation("Bismuth Axe").configOption(AdditionalBlocksConfig.enableBismuth).buildCustom((properties, enabled) -> new ABAxeItem(properties, enabled, ABToolMaterial.BISMUTH), COLLECTOR);
-    public static final ItemType<BaseItem> BISMUTH_PICKAXE = ItemBuilder.create("bismuth_pickaxe").translation("Bismuth Pickaxe").configOption(AdditionalBlocksConfig.enableBismuth).buildCustom((properties, enabled) -> new ABPickaxeItem(properties, enabled, ABToolMaterial.BISMUTH), COLLECTOR);
-    public static final ItemType<BaseItem> BISMUTH_SHOVEL = ItemBuilder.create("bismuth_shovel").translation("Bismuth Shovel").configOption(AdditionalBlocksConfig.enableBismuth).buildCustom((properties, enabled) -> new ABShovelItem(properties, enabled, ABToolMaterial.BISMUTH), COLLECTOR);
-    public static final ItemType<BaseItem> BISMUTH_HOE = ItemBuilder.create("bismuth_hoe").translation("Bismuth Hoe").configOption(AdditionalBlocksConfig.enableBismuth).buildCustom((properties, enabled) -> new ABHoeItem(properties, enabled, ABToolMaterial.BISMUTH), COLLECTOR);
-    public static final ItemType<BaseItem> BISMUTH_SWORD = ItemBuilder.create("bismuth_sword").translation("Bismuth Sword").configOption(AdditionalBlocksConfig.enableBismuth).buildCustom((properties, enabled) -> new ABSwordItem(properties, enabled, ABToolMaterial.BISMUTH), COLLECTOR);
+    public static final ItemType<BaseItem> BISMUTH_AXE = ItemBuilder.create("bismuth_axe").translation("Bismuth Axe").configOption(AdditionalBlocksConfig.enableBismuth).modelPreset(ABModelGenerator.HANDHELD).buildCustom((properties, enabled) -> new ABAxeItem(properties, enabled, ABToolMaterial.BISMUTH), COLLECTOR);
+    public static final ItemType<BaseItem> BISMUTH_PICKAXE = ItemBuilder.create("bismuth_pickaxe").translation("Bismuth Pickaxe").configOption(AdditionalBlocksConfig.enableBismuth).modelPreset(ABModelGenerator.HANDHELD).buildCustom((properties, enabled) -> new ABPickaxeItem(properties, enabled, ABToolMaterial.BISMUTH), COLLECTOR);
+    public static final ItemType<BaseItem> BISMUTH_SHOVEL = ItemBuilder.create("bismuth_shovel").translation("Bismuth Shovel").configOption(AdditionalBlocksConfig.enableBismuth).modelPreset(ABModelGenerator.HANDHELD).buildCustom((properties, enabled) -> new ABShovelItem(properties, enabled, ABToolMaterial.BISMUTH), COLLECTOR);
+    public static final ItemType<BaseItem> BISMUTH_HOE = ItemBuilder.create("bismuth_hoe").translation("Bismuth Hoe").configOption(AdditionalBlocksConfig.enableBismuth).modelPreset(ABModelGenerator.HANDHELD).buildCustom((properties, enabled) -> new ABHoeItem(properties, enabled, ABToolMaterial.BISMUTH), COLLECTOR);
+    public static final ItemType<BaseItem> BISMUTH_SWORD = ItemBuilder.create("bismuth_sword").translation("Bismuth Sword").configOption(AdditionalBlocksConfig.enableBismuth).modelPreset(ABModelGenerator.HANDHELD).buildCustom((properties, enabled) -> new ABSwordItem(properties, enabled, ABToolMaterial.BISMUTH), COLLECTOR);
+    // Uranium
+    public static final ItemType<BaseItem> RAW_URANIUM = ItemBuilder.create("raw_uranium").translation("Raw Uranium").configOption(AdditionalBlocksConfig.enableUranium).tag("forge", "raw_materials").tag("forge", "raw_materials/uranium").buildRegular(COLLECTOR);
+    public static final ItemType<BaseItem> REFINED_URANIUM = ItemBuilder.create("refined_uranium").translation("Refined Uranium").configOption(AdditionalBlocksConfig.enableUranium).tag("forge", "ingots").tag("forge", "ingots/uranium").buildCustom(ABNuclearItem::new, COLLECTOR);
+    public static final ItemType<BaseItem> URANIUM_NUGGET = ItemBuilder.create("uranium_nugget").translation("Refined Uranium Shard").configOption(AdditionalBlocksConfig.enableUranium).tag("forge", "nuggets").tag("forge", "nuggets/uranium").buildCustom(ABNuclearItem::new, COLLECTOR);
+    public static final ItemType<BaseItem> URANIUM_SWORD = ItemBuilder.create("uranium_sword").translation("Uranium Sword").configOption(AdditionalBlocksConfig.enableUranium).modelPreset(ABModelGenerator.GENERATED).buildCustom((properties, enabled) -> new ABSwordItem(properties, enabled, ABToolMaterial.URANIUM), COLLECTOR);
 
     public static void init(){
         // Cause the class to be loaded

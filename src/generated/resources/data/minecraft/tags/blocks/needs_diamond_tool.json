@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "abstoneedition:bismuth_ore",
+    "abstoneedition:uranium_ore",
     "abstoneedition:obsidian_bricks",
     "abstoneedition:obsidian_bricks_slab",
     "abstoneedition:bismuth_block",
@@ -9,6 +10,7 @@
     "abstoneedition:obsidian_wall",
     "abstoneedition:obsidian_slab",
     "abstoneedition:obsidian_bricks_wall",
+    "abstoneedition:uranium_block",
     "abstoneedition:obsidian_stairs",
     "abstoneedition:obsidian_bricks_stairs"
   ]

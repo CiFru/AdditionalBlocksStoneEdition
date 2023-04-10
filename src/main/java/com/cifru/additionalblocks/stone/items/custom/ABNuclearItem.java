@@ -20,11 +20,11 @@ public class ABNuclearItem extends ABItem {
     }
 
     @Override
-    public void inventoryUpdate(ItemStack stack, Level level, Entity entity, int itemSlot, boolean isSelected){
-        if(entity instanceof LivingEntity){
-            MobEffectInstance currentEffect = ((LivingEntity)entity).getEffect(MobEffects.POISON);
-            if(currentEffect == null || (!currentEffect.isInfiniteDuration() && currentEffect.getDuration() < 2))
-                ((LivingEntity)entity).addEffect(new MobEffectInstance(MobEffects.POISON, 10, 2, true, true, true));
+    public void inventoryUpdate(ItemStack stack, Level level, Entity entity, int itemSlot, boolean isSelected) {
+        if (entity instanceof LivingEntity) {
+            MobEffectInstance currentEffect = ((LivingEntity) entity).getEffect(MobEffects.POISON);
+            if (currentEffect == null || (!currentEffect.isInfiniteDuration() && currentEffect.getDuration() < 2))
+                ((LivingEntity) entity).addEffect(new MobEffectInstance(MobEffects.POISON, 10, 2, true, true, true));
         }
     }
 }

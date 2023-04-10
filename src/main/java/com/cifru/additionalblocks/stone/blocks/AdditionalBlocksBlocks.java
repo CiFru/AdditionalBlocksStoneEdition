@@ -2,6 +2,7 @@ package com.cifru.additionalblocks.stone.blocks;
 
 import com.cifru.additionalblocks.stone.AdditionalBlocksConfig;
 import com.cifru.additionalblocks.stone.blocks.custom.*;
+import com.cifru.additionalblocks.stone.entities.NuclearTntEntity;
 import com.cifru.additionalblocks.stone.generators.ABBlockStateGenerator;
 import com.cifru.additionalblocks.stone.generators.ABLootTableGenerator;
 import com.cifru.additionalblocks.stone.generators.ABModelGenerator;
@@ -12,6 +13,7 @@ import com.cifru.additionalblocks.stone.tools.ToolType;
 import com.supermartijn642.core.block.BaseBlock;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.Material;
 
@@ -269,6 +271,12 @@ public class AdditionalBlocksBlocks {
     public static final BlockType<BaseBlock> OBSIDIAN_BRICKS_STAIRS = BlockBuilder.create("obsidian_bricks_stairs").translation("Obsidian Brick Stairs").configure(OBSIDIAN_PROPERTIES).configure(STAIR_PROPERTIES).modelPreset(ABModelGenerator.STAIRS.withTexture("obsidian_bricks")).recipePreset(ABRecipeGenerator.STAIRS.from(() -> OBSIDIAN_BRICKS)).buildCustom(ABStairBlock::new, COLLECTOR);
     public static final BlockType<BaseBlock> OBSIDIAN_BRICKS_SLAB = BlockBuilder.create("obsidian_bricks_slab").translation("Obsidian Brick Slab").configure(OBSIDIAN_PROPERTIES).configure(SLAB_PROPERTIES).modelPreset(ABModelGenerator.SLAB.withTexture("obsidian_bricks")).recipePreset(ABRecipeGenerator.SLAB.from(() -> OBSIDIAN_BRICKS)).buildCustom(ABSlabBlock::new, COLLECTOR);
     public static final BlockType<BaseBlock> OBSIDIAN_BRICKS_WALL = BlockBuilder.create("obsidian_bricks_wall").translation("Obsidian Brick Wall").configure(OBSIDIAN_PROPERTIES).configure(WALL_PROPERTIES).modelPreset(ABModelGenerator.WALL.withTexture("obsidian_bricks")).recipePreset(ABRecipeGenerator.WALL.from(() -> OBSIDIAN_BRICKS)).buildCustom(ABWallBlock::new, COLLECTOR);
+    // Uranium
+    public static final BlockType<BaseBlock> URANIUM_ORE = BlockBuilder.create("uranium_ore").translation("Uranium Ore").material(Material.STONE).configOption(AdditionalBlocksConfig.enableUranium).destroyTime(4.0f).explosionResistance(4.0f).requireCorrectToolForDrops().sound(SoundType.METAL).harvestTool(ToolType.PICKAXE, ToolTier.DIAMOND).lootTablePreset(ABLootTableGenerator.orePreset(AdditionalBlocksItems.RAW_URANIUM::getItem)).buildCustom(properties -> new ABExperienceBlock(properties, 4), COLLECTOR);
+    public static final BlockType<BaseBlock> URANIUM_BLOCK = BlockBuilder.create("uranium_block").translation("Block of Uranium").material(Material.METAL).configOption(AdditionalBlocksConfig.enableUranium).destroyTime(6).explosionResistance(6).requireCorrectToolForDrops().sound(SoundType.METAL).harvestTool(ToolType.PICKAXE, ToolTier.DIAMOND).buildRegular(COLLECTOR);
+    public static final BlockType<BaseBlock> URANIUM_GLASS = BlockBuilder.create("uranium_glass").translation("Uranium Glass Block").material(Material.GLASS).configOption(AdditionalBlocksConfig.enableUranium).destroyTime(0.3f).explosionResistance(0.3f).requireCorrectToolForDrops().sound(SoundType.GLASS).buildRegular(COLLECTOR);
+    public static final BlockType<BaseBlock> URANIUM_GLASS_PANE = BlockBuilder.create("uranium_glass_pane").translation("Uranium Glass Pane").material(Material.GLASS).configOption(AdditionalBlocksConfig.enableUranium).destroyTime(0.3f).explosionResistance(0.3f).requireCorrectToolForDrops().sound(SoundType.GLASS).buildRegular(COLLECTOR);
+    public static final BlockType<BaseBlock> NUCLEAR_TNT = BlockBuilder.create("nuclear_tnt").translation("Nuclear TNT").material(Material.EXPLOSIVE).configOption(AdditionalBlocksConfig.enableUranium).destroyTime(0.2f).explosionResistance(0.3f).sound(SoundType.GRASS).buildCustom(NuclearTntBlock::new, COLLECTOR);
 
     public static void init(){
         // Cause the class to be loaded

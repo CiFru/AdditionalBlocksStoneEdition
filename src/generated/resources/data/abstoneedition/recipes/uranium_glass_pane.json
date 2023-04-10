@@ -1,0 +1,25 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:uranium_glass_pane",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "XXX",
+      "XXX"
+    ],
+    "key": {
+      "X": {
+        "item": "abstoneedition:uranium_glass"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:uranium_glass_pane",
+      "count": 16
+    }
+  }
+}
