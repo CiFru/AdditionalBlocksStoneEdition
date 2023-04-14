@@ -81,6 +81,33 @@ public class ABModelGenerator extends ModelGenerator {
         }
     };
     public static final PillarBlockPreset PILLAR = new PillarBlockPreset();
+    public static final SingleTextureBlockPreset PANES = new SingleTextureBlockPreset() {
+        @Override
+        protected void createModels(ABModelGenerator generator, BlockType<?> blockType, ResourceLocation texture){
+            String namespace = blockType.getIdentifier().getNamespace();
+            String identifier = blockType.getIdentifier().getPath();
+            ResourceLocation edgeTexture = new ResourceLocation(namespace, texture.getPath() + "_edge");
+            generator.model(namespace, "block/" + identifier + "_post")
+                .parent("minecraft", "block/template_glass_pane_post")
+                .texture("pane", texture)
+                .texture("edge", edgeTexture);
+            generator.model(namespace, "block/" + identifier + "_side")
+                .parent("minecraft", "block/template_glass_pane_side")
+                .texture("pane", texture)
+                .texture("edge", edgeTexture);
+            generator.model(namespace, "block/" + identifier + "_side_alt")
+                .parent("minecraft", "block/template_glass_pane_side_alt")
+                .texture("pane", texture)
+                .texture("edge", edgeTexture);
+            generator.model(namespace, "block/" + identifier + "_noside")
+                .parent("minecraft", "block/template_glass_pane_noside")
+                .texture("pane", texture);
+            generator.model(namespace, "block/" + identifier + "_noside_alt")
+                .parent("minecraft", "block/template_glass_pane_noside_alt")
+                .texture("pane", texture);
+            generator.itemGenerated(blockType, texture);
+        }
+    };
     public static final SingleTextureItemPreset GENERATED = new SingleTextureItemPreset() {
         @Override
         protected void createModels(ABModelGenerator generator, ItemType<?> itemType, ResourceLocation texture){

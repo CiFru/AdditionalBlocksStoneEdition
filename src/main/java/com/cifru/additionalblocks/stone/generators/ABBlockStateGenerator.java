@@ -87,6 +87,20 @@ public class ABBlockStateGenerator extends BlockStateGenerator {
                 variant.model(namespace, "block/" + identifier, 0, (int)rotation.toYRot());
             });
     };
+    public static final BlockPreset PANES = (generator, blockType) -> {
+        String namespace = blockType.getIdentifier().getNamespace();
+        String identifier = blockType.getIdentifier().getPath();
+        generator.blockState(blockType.getBlock())
+            .unconditionalMultipart(variant -> variant.model(namespace, "block/" + identifier + "_post"))
+            .multipart(condition -> condition.requireProperty(ABBlockProperties.CONNECTION_NORTH, true), variant -> variant.model(namespace, "block/" + identifier + "_side"))
+            .multipart(condition -> condition.requireProperty(ABBlockProperties.CONNECTION_NORTH, false), variant -> variant.model(namespace, "block/" + identifier + "_noside"))
+            .multipart(condition -> condition.requireProperty(ABBlockProperties.CONNECTION_EAST, true), variant -> variant.model(namespace, "block/" + identifier + "_side", 0, 90))
+            .multipart(condition -> condition.requireProperty(ABBlockProperties.CONNECTION_EAST, false), variant -> variant.model(namespace, "block/" + identifier + "_noside_alt"))
+            .multipart(condition -> condition.requireProperty(ABBlockProperties.CONNECTION_SOUTH, true), variant -> variant.model(namespace, "block/" + identifier + "_side_alt"))
+            .multipart(condition -> condition.requireProperty(ABBlockProperties.CONNECTION_SOUTH, false), variant -> variant.model(namespace, "block/" + identifier + "_noside_alt", 0, 90))
+            .multipart(condition -> condition.requireProperty(ABBlockProperties.CONNECTION_WEST, true), variant -> variant.model(namespace, "block/" + identifier + "_side_alt", 0, 90))
+            .multipart(condition -> condition.requireProperty(ABBlockProperties.CONNECTION_WEST, false), variant -> variant.model(namespace, "block/" + identifier + "_noside", 0, 270));
+    };
 
     private final Map<BlockType<?>,Consumer<BlockType<?>>> builders = new HashMap<>();
 
