@@ -1,4 +1,4 @@
-// 1.19.4	2023-04-10T02:36:20.4646186	Resource Generator 5
+// 1.19.4	2023-04-14T16:38:33.8714494	Resource Generator 5
 28a01523b1c860d7c27b3fa0b602d8aed124097b data/abstoneedition/loot_tables/blocks/andesite_bricks.json
 100236f647ce46da0391b76029a5bbc1f5c01cb3 data/abstoneedition/loot_tables/blocks/andesite_bricks_slab.json
 217dbf692fd2832296de029c27704213395fcd14 data/abstoneedition/loot_tables/blocks/andesite_bricks_stairs.json
@@ -163,7 +163,9 @@ d1672344e9f4777779299980c8f10f024dd4f776 data/abstoneedition/loot_tables/blocks/
 1f4d109e3c2343a15771d5dff2e5badda15101b2 data/abstoneedition/loot_tables/blocks/sunstone.json
 3108fcc6774b368493a263519a9c748044c1678c data/abstoneedition/loot_tables/blocks/uranium_block.json
 4160f6c4c2b2c8ad9c78b3dc2e923e0b607900ef data/abstoneedition/loot_tables/blocks/uranium_glass.json
+2ba42c6c4edf35c66ae94f3b3d71c520920747ea data/abstoneedition/loot_tables/blocks/uranium_glass2.json
 84ef24765992b46d69f0134b00f10c809646b901 data/abstoneedition/loot_tables/blocks/uranium_glass_pane.json
+b12571b994e92c571075107d8ba331f5537ffd73 data/abstoneedition/loot_tables/blocks/uranium_glass_pane2.json
 7fe74c0fd789807b180fafaeddd80736d679c5a0 data/abstoneedition/loot_tables/blocks/uranium_ore.json
 c8d9cefce25693cdaf8b8171f2813720f392c0ac data/abstoneedition/loot_tables/blocks/volcanic_stone.json
 81bfa0bab229c71655a9c454397388143427d99c data/abstoneedition/loot_tables/blocks/volcanic_stone_bricks.json

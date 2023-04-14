@@ -1,3 +1,6 @@
 {
-  "parent": "abstoneedition:block/uranium_glass_pane"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "abstoneedition:uranium_glass_pane"
+  }
 }

@@ -51,6 +51,7 @@ public class BlockBuilder {
     private ToolType harvestTool;
     private ToolTier harvestTier;
     private Integer lightLevel;
+    private boolean hasTransparentTextures = false;
 
     private ABBlockStateGenerator.BlockPreset blockStatePreset = ABBlockStateGenerator.SIMPLE;
     private ABLootTableGenerator.BlockPreset lootTablePreset = ABLootTableGenerator.DROP_SELF;
@@ -117,6 +118,11 @@ public class BlockBuilder {
 
     public BlockBuilder lightLevel(int light){
         this.lightLevel = light;
+        return this;
+    }
+
+    public BlockBuilder transparentTextures(){
+        this.hasTransparentTextures = true;
         return this;
     }
 
@@ -213,7 +219,7 @@ public class BlockBuilder {
         handler.registerItem(this.identifier.getPath(), item::get);
 
         // Create the block type
-        BlockType<T> blockType = new BlockType<>(this.identifier, this.configOption, block, item, this.blockTags, this.blockStatePreset, this.lootTablePreset, this.modelPreset, this.recipePreset, stoneCuttingInputs, this.englishTranslation);
+        BlockType<T> blockType = new BlockType<>(this.identifier, this.configOption, block, item, this.blockTags, this.hasTransparentTextures, this.blockStatePreset, this.lootTablePreset, this.modelPreset, this.recipePreset, stoneCuttingInputs, this.englishTranslation);
         output.accept(blockType);
         return blockType;
     }

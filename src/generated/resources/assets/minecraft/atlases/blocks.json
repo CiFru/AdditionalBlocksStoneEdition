@@ -134,6 +134,10 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "abstoneedition:uranium_glass_pane_edge"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:diorite_bricks"
     },
     {
@@ -175,6 +179,10 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:silver_hoe"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:uranium_glass_pane2"
     },
     {
       "type": "minecraft:single",
@@ -227,6 +235,10 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:old_stone_tiles"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:uranium_glass_pane2_edge"
     },
     {
       "type": "minecraft:single",
@@ -294,11 +306,11 @@
     },
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:charred_log"
+      "resource": "abstoneedition:uranium_glass_pane"
     },
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:uranium_glass_pane"
+      "resource": "abstoneedition:charred_log"
     },
     {
       "type": "minecraft:single",
@@ -335,6 +347,10 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:raw_silver_block"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:uranium_glass2"
     },
     {
       "type": "minecraft:single",
