@@ -79,8 +79,9 @@ public class ABRecipeGenerator extends RecipeGenerator {
         @Override
         protected void createRecipes(ABRecipeGenerator generator, BlockType<?> blockType, Ingredient ingredient){
             generator.shaped(blockType.getBlock(), 6)
-                .pattern("AA")
-                .pattern("AA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
                 .input('A', ingredient)
                 .unlockedBy(ingredient.getItems()[0].getItem())
                 .condition(new BlockEnabledResourceCondition(blockType));

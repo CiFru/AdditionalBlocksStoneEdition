@@ -24,6 +24,7 @@ public class BlockType<T extends BaseBlock> implements IItemProvider {
     private final Supplier<T> block;
     private final Supplier<? extends BlockItem> item;
     private final Set<ResourceLocation> blockTags;
+    private final boolean hasTransparentTextures;
 
     private final ABBlockStateGenerator.BlockPreset blockStatePreset;
     private final ABLootTableGenerator.BlockPreset lootTablePreset;
@@ -32,12 +33,13 @@ public class BlockType<T extends BaseBlock> implements IItemProvider {
     private final Set<Supplier<IItemProvider>> stoneCuttingInputs;
     private final String englishTranslation;
 
-    public BlockType(ResourceLocation identifier, Supplier<Boolean> configOption, Supplier<T> block, Supplier<? extends BlockItem> item, Set<ResourceLocation> blockTags, ABBlockStateGenerator.BlockPreset blockStatePreset, ABLootTableGenerator.BlockPreset lootTablePreset, ABModelGenerator.BlockPreset modelPreset, ABRecipeGenerator.BlockPreset recipePreset, Set<Supplier<IItemProvider>> stoneCuttingInputs, String englishTranslation){
+    public BlockType(ResourceLocation identifier, Supplier<Boolean> configOption, Supplier<T> block, Supplier<? extends BlockItem> item, Set<ResourceLocation> blockTags, boolean hasTransparentTextures, ABBlockStateGenerator.BlockPreset blockStatePreset, ABLootTableGenerator.BlockPreset lootTablePreset, ABModelGenerator.BlockPreset modelPreset, ABRecipeGenerator.BlockPreset recipePreset, Set<Supplier<IItemProvider>> stoneCuttingInputs, String englishTranslation){
         this.identifier = identifier;
         this.configOption = configOption;
         this.block = block;
         this.item = item;
         this.blockTags = blockTags;
+        this.hasTransparentTextures = hasTransparentTextures;
         this.blockStatePreset = blockStatePreset;
         this.lootTablePreset = lootTablePreset;
         this.modelPreset = modelPreset;
@@ -64,6 +66,10 @@ public class BlockType<T extends BaseBlock> implements IItemProvider {
 
     public Set<ResourceLocation> getBlockTags(){
         return this.blockTags;
+    }
+
+    public boolean hasTransparentTextures(){
+        return this.hasTransparentTextures;
     }
 
     public ABBlockStateGenerator.BlockPreset getBlockStatePreset(){

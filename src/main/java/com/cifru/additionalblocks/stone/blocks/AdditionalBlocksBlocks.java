@@ -40,6 +40,7 @@ public class AdditionalBlocksBlocks {
     private static final BlockBuilder.Configurator WALL_PROPERTIES = builder -> builder.blockTag("minecraft", "walls").blockStatePreset(ABBlockStateGenerator.WALL).modelPreset(ABModelGenerator.WALL);
     private static final BlockBuilder.Configurator PILLAR_PROPERTIES = builder -> builder.blockStatePreset(ABBlockStateGenerator.PILLAR).modelPreset(ABModelGenerator.PILLAR);
     private static final BlockBuilder.Configurator HORIZONTAL_ROTATION_PROPERTIES = builder -> builder.blockStatePreset(ABBlockStateGenerator.HORIZONTAL_ROTATION);
+    private static final BlockBuilder.Configurator PANE_PROPERTIES = builder -> builder.blockStatePreset(ABBlockStateGenerator.PANES).modelPreset(ABModelGenerator.PANES);
 
     // ---- BLOCKS ----
     // Marble
