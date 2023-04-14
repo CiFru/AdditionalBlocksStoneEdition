@@ -20,4 +20,8 @@ public class ABBlockProperties {
     public static final EnumProperty<WallSide> WALL_EAST = BlockStateProperties.EAST_WALL;
     public static final EnumProperty<WallSide> WALL_SOUTH = BlockStateProperties.SOUTH_WALL;
     public static final EnumProperty<WallSide> WALL_WEST = BlockStateProperties.WEST_WALL;
+    public static final BooleanProperty CONNECTION_NORTH = BlockStateProperties.NORTH;
+    public static final BooleanProperty CONNECTION_EAST = BlockStateProperties.EAST;
+    public static final BooleanProperty CONNECTION_SOUTH = BlockStateProperties.SOUTH;
+    public static final BooleanProperty CONNECTION_WEST = BlockStateProperties.WEST;
 }
