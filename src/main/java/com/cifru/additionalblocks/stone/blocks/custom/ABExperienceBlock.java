@@ -3,7 +3,10 @@ package com.cifru.additionalblocks.stone.blocks.custom;
 import com.supermartijn642.core.block.BaseBlock;
 import com.supermartijn642.core.block.BlockProperties;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.LevelReader;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.Random;
@@ -23,7 +26,12 @@ public class ABExperienceBlock extends BaseBlock {
     }
 
     @Override
-    public int getExpDrop(BlockState state, LevelReader level, BlockPos pos, int fortuneLevel, int silkTouchLevel){
-        return silkTouchLevel == 0 ? RANDOM.nextInt(this.maxExperience) : 0;
+    public void spawnAfterBreak(BlockState state, ServerLevel level, BlockPos pos, ItemStack stack){
+        super.spawnAfterBreak(state, level, pos, stack);
+        if(EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, stack) == 0){
+            int xp = RANDOM.nextInt(this.maxExperience);
+            if(xp > 0)
+                this.popExperience(level, pos, xp);
+        }
     }
 }

@@ -1,16 +1,16 @@
 {
-  "conditions": [
+  "fabric:load_conditions": [
     {
-      "block": "abstoneedition:bloodstone_bricks_stairs",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:bloodstone_bricks_stairs"
     },
     {
-      "block": "abstoneedition:bloodstone_bricks",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:bloodstone_bricks"
     },
     {
-      "block": "abstoneedition:bloodstone",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:bloodstone"
     }
   ],
   "parent": "minecraft:recipes/root",

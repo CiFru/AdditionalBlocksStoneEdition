@@ -2,8 +2,8 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
-      "block": "abstoneedition:sunstone",
-      "type": "abstoneedition:block_enabled"
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:sunstone"
     }
   ],
   "recipe": {
@@ -18,10 +18,10 @@
         "item": "minecraft:stone"
       },
       "C": {
-        "tag": "forge:ingots/copper"
+        "tag": "c:copper_ingots"
       },
       "S": {
-        "tag": "forge:ingots/gold"
+        "tag": "c:gold_ingots"
       }
     },
     "result": {

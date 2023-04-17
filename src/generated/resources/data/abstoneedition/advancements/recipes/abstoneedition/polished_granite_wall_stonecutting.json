@@ -1,8 +1,8 @@
 {
-  "conditions": [
+  "fabric:load_conditions": [
     {
-      "block": "abstoneedition:polished_granite_wall",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:polished_granite_wall"
     }
   ],
   "parent": "minecraft:recipes/root",

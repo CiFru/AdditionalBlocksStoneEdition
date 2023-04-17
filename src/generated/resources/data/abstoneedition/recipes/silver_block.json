@@ -2,8 +2,8 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
-      "block": "abstoneedition:silver_block",
-      "type": "abstoneedition:block_enabled"
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:silver_block"
     }
   ],
   "recipe": {

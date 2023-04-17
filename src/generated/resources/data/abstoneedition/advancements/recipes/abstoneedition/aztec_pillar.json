@@ -1,12 +1,12 @@
 {
-  "conditions": [
+  "fabric:load_conditions": [
     {
-      "block": "abstoneedition:aztec_pillar",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:aztec_pillar"
     },
     {
-      "block": "abstoneedition:aztec_tiles",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:aztec_tiles"
     }
   ],
   "parent": "minecraft:recipes/root",

@@ -1,12 +1,12 @@
 {
-  "conditions": [
+  "fabric:load_conditions": [
     {
-      "block": "abstoneedition:charred_wood",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:charred_wood"
     },
     {
-      "block": "abstoneedition:charred_log",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:charred_log"
     }
   ],
   "parent": "minecraft:recipes/root",

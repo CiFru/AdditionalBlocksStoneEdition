@@ -4,8 +4,6 @@ import com.supermartijn642.core.block.BaseBlock;
 import com.supermartijn642.core.block.BlockProperties;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.BeaconBeamBlock;
@@ -41,10 +39,5 @@ public class ABGlassBlock extends BaseBlock implements BeaconBeamBlock {
     @Override
     public DyeColor getColor(){
         return DyeColor.GREEN;
-    }
-
-    @Override
-    public boolean isValidSpawn(BlockState state, BlockGetter level, BlockPos pos, SpawnPlacements.Type type, EntityType<?> entityType){
-        return false;
     }
 }

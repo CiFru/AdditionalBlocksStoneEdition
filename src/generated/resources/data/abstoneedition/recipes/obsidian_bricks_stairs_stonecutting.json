@@ -2,12 +2,12 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
-      "block": "abstoneedition:obsidian_bricks_stairs",
-      "type": "abstoneedition:block_enabled"
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:obsidian_bricks_stairs"
     },
     {
-      "block": "abstoneedition:obsidian_bricks",
-      "type": "abstoneedition:block_enabled"
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:obsidian_bricks"
     }
   ],
   "recipe": {

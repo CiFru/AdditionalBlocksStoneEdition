@@ -1,16 +1,16 @@
 {
-  "conditions": [
+  "fabric:load_conditions": [
     {
-      "block": "abstoneedition:limestone_bricks_stairs",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:limestone_bricks_stairs"
     },
     {
-      "block": "abstoneedition:limestone_bricks",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:limestone_bricks"
     },
     {
-      "block": "abstoneedition:limestone",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:limestone"
     }
   ],
   "parent": "minecraft:recipes/root",

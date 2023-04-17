@@ -1,12 +1,12 @@
 {
-  "conditions": [
+  "fabric:load_conditions": [
     {
-      "block": "abstoneedition:limestone_bricks",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:limestone_bricks"
     },
     {
-      "block": "abstoneedition:smooth_limestone",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:smooth_limestone"
     }
   ],
   "parent": "minecraft:recipes/root",

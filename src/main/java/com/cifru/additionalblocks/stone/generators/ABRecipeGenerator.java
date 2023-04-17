@@ -8,13 +8,13 @@ import com.cifru.additionalblocks.stone.items.AdditionalBlocksItems;
 import com.supermartijn642.core.generator.RecipeGenerator;
 import com.supermartijn642.core.generator.ResourceCache;
 import com.supermartijn642.core.registry.Registries;
+import net.fabricmc.fabric.api.tag.convention.v1.ConventionalItemTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
-import net.minecraftforge.common.Tags;
 
 import java.util.Set;
 import java.util.function.Function;
@@ -109,7 +109,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .unlockedBy(Items.BLACK_DYE)
             .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.ASPHALT));
         // Aztec Pattern
-        this.shaped(AdditionalBlocksBlocks.AZTEC_PATTERN,6)
+        this.shaped(AdditionalBlocksBlocks.AZTEC_PATTERN, 6)
             .pattern("ACA")
             .pattern("ASA")
             .pattern("AAA")
@@ -176,7 +176,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.BLACK_MARBLE_BRICKS))
             .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.BLACK_MARBLE));
         // Bloodstone
-        this.shaped(AdditionalBlocksBlocks.BLOODSTONE,9)
+        this.shaped(AdditionalBlocksBlocks.BLOODSTONE, 9)
             .pattern("ABA")
             .pattern("BAB")
             .pattern("ABA")
@@ -281,7 +281,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .unlockedBy(Items.BRICKS, Items.GRAY_DYE)
             .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.GRAY_BRICKS));
         // Limestone
-        this.shaped(AdditionalBlocksBlocks.LIMESTONE,9)
+        this.shaped(AdditionalBlocksBlocks.LIMESTONE, 9)
             .pattern("ABA")
             .pattern("BAB")
             .pattern("ABA")
@@ -298,7 +298,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.LIMESTONE_BRICKS))
             .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.SMOOTH_LIMESTONE));
         // Marble
-        this.shaped(AdditionalBlocksBlocks.MARBLE,6)
+        this.shaped(AdditionalBlocksBlocks.MARBLE, 6)
             .pattern("ABA")
             .pattern("BAB")
             .pattern("ABA")
@@ -480,10 +480,10 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .pattern("SCS")
             .pattern("ACA")
             .input('A', Items.STONE)
-            .input('C', Tags.Items.INGOTS_COPPER)
-            .input('S', Tags.Items.INGOTS_GOLD)
-            .unlockedBy(Tags.Items.INGOTS_COPPER)
-            .unlockedBy(Tags.Items.INGOTS_GOLD)
+            .input('C', ConventionalItemTags.COPPER_INGOTS)
+            .input('S', ConventionalItemTags.GOLD_INGOTS)
+            .unlockedBy(ConventionalItemTags.COPPER_INGOTS)
+            .unlockedBy(ConventionalItemTags.GOLD_INGOTS)
             .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.SUNSTONE));
         // Volcanic stone
         this.shaped(AdditionalBlocksBlocks.VOLCANIC_STONE, 4)
@@ -506,7 +506,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .pattern("X#X")
             .pattern("#X#")
             .pattern("X#X")
-            .input('X', Tags.Items.COBBLESTONE)
+            .input('X', Items.COBBLESTONE)
             .input('#', Items.BLUE_ICE)
             .unlockedBy(Items.BLUE_ICE)
             .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.WATER_STONE));
@@ -522,8 +522,8 @@ public class ABRecipeGenerator extends RecipeGenerator {
 
         // Copper nuggets
         this.shapeless(AdditionalBlocksItems.COPPER_NUGGET, 9)
-            .input(Tags.Items.INGOTS_COPPER)
-            .unlockedBy(Tags.Items.INGOTS_COPPER)
+            .input(ConventionalItemTags.COPPER_INGOTS)
+            .unlockedBy(ConventionalItemTags.COPPER_INGOTS)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.COPPER_NUGGET));
         this.shaped(Items.COPPER_INGOT)
             .pattern("AAA")
@@ -547,45 +547,45 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .pattern("AA")
             .pattern("AB")
             .pattern(" B")
-            .input('A', Tags.Items.INGOTS_COPPER)
-            .input('B', Tags.Items.RODS_WOODEN)
-            .unlockedBy(Tags.Items.INGOTS_COPPER)
+            .input('A', ConventionalItemTags.COPPER_INGOTS)
+            .input('B', Items.STICK)
+            .unlockedBy(ConventionalItemTags.COPPER_INGOTS)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.COPPER_AXE));
         // Copper pickaxe
         this.shaped(AdditionalBlocksItems.COPPER_PICKAXE)
             .pattern("AAA")
             .pattern(" B ")
             .pattern(" B ")
-            .input('A', Tags.Items.INGOTS_COPPER)
-            .input('B', Tags.Items.RODS_WOODEN)
-            .unlockedBy(Tags.Items.INGOTS_COPPER)
+            .input('A', ConventionalItemTags.COPPER_INGOTS)
+            .input('B', Items.STICK)
+            .unlockedBy(ConventionalItemTags.COPPER_INGOTS)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.COPPER_PICKAXE));
         // Copper shovel
         this.shaped(AdditionalBlocksItems.COPPER_SHOVEL)
             .pattern("A")
             .pattern("B")
             .pattern("B")
-            .input('A', Tags.Items.INGOTS_COPPER)
-            .input('B', Tags.Items.RODS_WOODEN)
-            .unlockedBy(Tags.Items.INGOTS_COPPER)
+            .input('A', ConventionalItemTags.COPPER_INGOTS)
+            .input('B', Items.STICK)
+            .unlockedBy(ConventionalItemTags.COPPER_INGOTS)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.COPPER_SHOVEL));
         // Copper hoe
         this.shaped(AdditionalBlocksItems.COPPER_HOE)
             .pattern("AA")
             .pattern(" B")
             .pattern(" B")
-            .input('A', Tags.Items.INGOTS_COPPER)
-            .input('B', Tags.Items.RODS_WOODEN)
-            .unlockedBy(Tags.Items.INGOTS_COPPER)
+            .input('A', ConventionalItemTags.COPPER_INGOTS)
+            .input('B', Items.STICK)
+            .unlockedBy(ConventionalItemTags.COPPER_INGOTS)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.COPPER_HOE));
         // Copper sword
         this.shaped(AdditionalBlocksItems.COPPER_SWORD)
             .pattern("AAA")
             .pattern(" B ")
             .pattern(" B ")
-            .input('A', Tags.Items.INGOTS_COPPER)
-            .input('B', Tags.Items.RODS_WOODEN)
-            .unlockedBy(Tags.Items.INGOTS_COPPER)
+            .input('A', ConventionalItemTags.COPPER_INGOTS)
+            .input('B', Items.STICK)
+            .unlockedBy(ConventionalItemTags.COPPER_INGOTS)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.COPPER_SWORD));
 
         // Silver ingots
@@ -643,7 +643,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .pattern("AB")
             .pattern(" B")
             .input('A', silverIngots)
-            .input('B', Tags.Items.RODS_WOODEN)
+            .input('B', Items.STICK)
             .unlockedBy(silverIngots)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.SILVER_AXE));
         // Silver pickaxe
@@ -652,7 +652,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .pattern(" B ")
             .pattern(" B ")
             .input('A', silverIngots)
-            .input('B', Tags.Items.RODS_WOODEN)
+            .input('B', Items.STICK)
             .unlockedBy(silverIngots)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.SILVER_PICKAXE));
         // Silver shovel
@@ -661,7 +661,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .pattern("B")
             .pattern("B")
             .input('A', silverIngots)
-            .input('B', Tags.Items.RODS_WOODEN)
+            .input('B', Items.STICK)
             .unlockedBy(silverIngots)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.SILVER_SHOVEL));
         // Silver hoe
@@ -670,7 +670,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .pattern(" B")
             .pattern(" B")
             .input('A', silverIngots)
-            .input('B', Tags.Items.RODS_WOODEN)
+            .input('B', Items.STICK)
             .unlockedBy(silverIngots)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.SILVER_HOE));
         // Silver sword
@@ -679,7 +679,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .pattern(" B ")
             .pattern(" B ")
             .input('A', silverIngots)
-            .input('B', Tags.Items.RODS_WOODEN)
+            .input('B', Items.STICK)
             .unlockedBy(silverIngots)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.SILVER_SWORD));
 
@@ -738,7 +738,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .pattern("AB")
             .pattern(" B")
             .input('A', bismuthIngots)
-            .input('B', Tags.Items.RODS_WOODEN)
+            .input('B', Items.STICK)
             .unlockedBy(bismuthIngots)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.BISMUTH_AXE));
         // Bismuth pickaxe
@@ -747,7 +747,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .pattern(" B ")
             .pattern(" B ")
             .input('A', bismuthIngots)
-            .input('B', Tags.Items.RODS_WOODEN)
+            .input('B', Items.STICK)
             .unlockedBy(bismuthIngots)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.BISMUTH_PICKAXE));
         // Bismuth shovel
@@ -756,7 +756,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .pattern("B")
             .pattern("B")
             .input('A', bismuthIngots)
-            .input('B', Tags.Items.RODS_WOODEN)
+            .input('B', Items.STICK)
             .unlockedBy(bismuthIngots)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.BISMUTH_SHOVEL));
         // Bismuth hoe
@@ -765,7 +765,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .pattern(" B")
             .pattern(" B")
             .input('A', bismuthIngots)
-            .input('B', Tags.Items.RODS_WOODEN)
+            .input('B', Items.STICK)
             .unlockedBy(bismuthIngots)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.BISMUTH_HOE));
         // Bismuth sword
@@ -774,7 +774,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .pattern(" B ")
             .pattern(" B ")
             .input('A', bismuthIngots)
-            .input('B', Tags.Items.RODS_WOODEN)
+            .input('B', Items.STICK)
             .unlockedBy(bismuthIngots)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.BISMUTH_SWORD));
     }

@@ -1,12 +1,12 @@
 {
-  "conditions": [
+  "fabric:load_conditions": [
     {
-      "block": "abstoneedition:gray_bricks_stairs",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:gray_bricks_stairs"
     },
     {
-      "block": "abstoneedition:gray_bricks",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:gray_bricks"
     }
   ],
   "parent": "minecraft:recipes/root",

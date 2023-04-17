@@ -99,7 +99,7 @@ public class ABWallBlock extends BaseBlock implements SimpleWaterloggedBlock {
     }
 
     @Override
-    public BlockState rotate(BlockState state, LevelAccessor level, BlockPos pos, Rotation rotation){
+    public BlockState rotate(BlockState state, Rotation rotation){
         switch(rotation){
             case CLOCKWISE_180:
                 return state.setValue(ABBlockProperties.WALL_NORTH, state.getValue(ABBlockProperties.WALL_SOUTH)).setValue(ABBlockProperties.WALL_EAST, state.getValue(ABBlockProperties.WALL_WEST)).setValue(ABBlockProperties.WALL_SOUTH, state.getValue(ABBlockProperties.WALL_NORTH)).setValue(ABBlockProperties.WALL_WEST, state.getValue(ABBlockProperties.WALL_EAST));

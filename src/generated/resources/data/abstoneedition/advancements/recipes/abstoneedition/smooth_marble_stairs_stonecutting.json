@@ -1,12 +1,12 @@
 {
-  "conditions": [
+  "fabric:load_conditions": [
     {
-      "block": "abstoneedition:smooth_marble_stairs",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:smooth_marble_stairs"
     },
     {
-      "block": "abstoneedition:smooth_marble",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:smooth_marble"
     }
   ],
   "parent": "minecraft:recipes/root",

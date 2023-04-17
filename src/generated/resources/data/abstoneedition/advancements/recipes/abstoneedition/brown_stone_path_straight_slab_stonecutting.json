@@ -1,12 +1,12 @@
 {
-  "conditions": [
+  "fabric:load_conditions": [
     {
-      "block": "abstoneedition:brown_stone_path_straight_slab",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:brown_stone_path_straight_slab"
     },
     {
-      "block": "abstoneedition:brown_stone_path_straight",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:brown_stone_path_straight"
     }
   ],
   "parent": "minecraft:recipes/root",

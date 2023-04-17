@@ -1,0 +1,50 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:bismuth_nugget"
+    },
+    {
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:bismuth_axe"
+    },
+    {
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:bismuth_pickaxe"
+    },
+    {
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:bismuth_shovel"
+    },
+    {
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:bismuth_hoe"
+    },
+    {
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:bismuth_sword"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:blasting",
+    "ingredient": [
+      {
+        "item": "abstoneedition:bismuth_axe"
+      },
+      {
+        "item": "abstoneedition:bismuth_pickaxe"
+      },
+      {
+        "item": "abstoneedition:bismuth_shovel"
+      },
+      {
+        "item": "abstoneedition:bismuth_hoe"
+      },
+      {
+        "item": "abstoneedition:bismuth_sword"
+      }
+    ],
+    "result": "abstoneedition:bismuth_nugget"
+  }
+}

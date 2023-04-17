@@ -2,12 +2,12 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
-      "block": "abstoneedition:smooth_bloodstone_wall",
-      "type": "abstoneedition:block_enabled"
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:smooth_bloodstone_wall"
     },
     {
-      "block": "abstoneedition:smooth_bloodstone",
-      "type": "abstoneedition:block_enabled"
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:smooth_bloodstone"
     }
   ],
   "recipe": {

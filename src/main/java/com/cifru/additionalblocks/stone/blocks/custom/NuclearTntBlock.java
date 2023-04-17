@@ -17,7 +17,6 @@ import net.minecraft.world.item.FlintAndSteelItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -27,7 +26,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
-import org.jetbrains.annotations.Nullable;
 
 /**
  * Created 08/04/2023 by SuperMartijn642
@@ -71,11 +69,6 @@ public class NuclearTntBlock extends BaseBlock {
     }
 
     @Override
-    public void onCaughtFire(BlockState state, Level level, BlockPos pos, @Nullable Direction direction, @Nullable LivingEntity igniter){
-        this.ignite(level, pos, state, igniter, false);
-    }
-
-    @Override
     public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean bl){
         if(!oldState.is(state.getBlock()) && level.hasNeighborSignal(pos))
             this.ignite(level, pos, state, null, false);
@@ -105,7 +98,7 @@ public class NuclearTntBlock extends BaseBlock {
     }
 
     @Override
-    public boolean canDropFromExplosion(BlockState state, BlockGetter level, BlockPos pos, Explosion explosion){
+    public boolean dropFromExplosion(Explosion explosion){
         return false;
     }
 }

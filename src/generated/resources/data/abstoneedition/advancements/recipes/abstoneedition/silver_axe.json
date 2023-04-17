@@ -1,8 +1,8 @@
 {
-  "conditions": [
+  "fabric:load_conditions": [
     {
-      "item": "abstoneedition:silver_axe",
-      "type": "abstoneedition:item_enabled"
+      "condition": "abstoneedition:item_enabled",
+      "item": "abstoneedition:silver_axe"
     }
   ],
   "parent": "minecraft:recipes/root",

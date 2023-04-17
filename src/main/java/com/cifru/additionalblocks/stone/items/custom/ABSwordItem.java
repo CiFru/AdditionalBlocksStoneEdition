@@ -56,7 +56,7 @@ public class ABSwordItem extends ABToolItem {
     }
 
     @Override
-    public boolean isCorrectToolForDrops(ItemStack stack, BlockState state){
-        return state.is(Blocks.COBWEB) || super.isCorrectToolForDrops(stack, state);
+    public boolean isCorrectToolForDrops(BlockState state){
+        return state.is(Blocks.COBWEB) || super.isCorrectToolForDrops(state);
     }
 }

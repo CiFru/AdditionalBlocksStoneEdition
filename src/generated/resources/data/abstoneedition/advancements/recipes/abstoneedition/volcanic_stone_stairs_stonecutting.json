@@ -1,12 +1,12 @@
 {
-  "conditions": [
+  "fabric:load_conditions": [
     {
-      "block": "abstoneedition:volcanic_stone_stairs",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:volcanic_stone_stairs"
     },
     {
-      "block": "abstoneedition:volcanic_stone",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:volcanic_stone"
     }
   ],
   "parent": "minecraft:recipes/root",

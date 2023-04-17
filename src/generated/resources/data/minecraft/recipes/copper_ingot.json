@@ -2,8 +2,8 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
-      "item": "abstoneedition:copper_nugget",
-      "type": "abstoneedition:item_enabled"
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:copper_nugget"
     }
   ],
   "recipe": {

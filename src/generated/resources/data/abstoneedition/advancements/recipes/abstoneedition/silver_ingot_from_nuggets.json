@@ -1,12 +1,12 @@
 {
-  "conditions": [
+  "fabric:load_conditions": [
     {
-      "item": "abstoneedition:silver_nugget",
-      "type": "abstoneedition:item_enabled"
+      "condition": "abstoneedition:item_enabled",
+      "item": "abstoneedition:silver_nugget"
     },
     {
-      "item": "abstoneedition:silver_ingot",
-      "type": "abstoneedition:item_enabled"
+      "condition": "abstoneedition:item_enabled",
+      "item": "abstoneedition:silver_ingot"
     }
   ],
   "parent": "minecraft:recipes/root",

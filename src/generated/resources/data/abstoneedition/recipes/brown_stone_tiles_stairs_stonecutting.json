@@ -2,12 +2,12 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
-      "block": "abstoneedition:brown_stone_tiles_stairs",
-      "type": "abstoneedition:block_enabled"
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:brown_stone_tiles_stairs"
     },
     {
-      "block": "abstoneedition:brown_stone_tiles",
-      "type": "abstoneedition:block_enabled"
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:brown_stone_tiles"
     }
   ],
   "recipe": {

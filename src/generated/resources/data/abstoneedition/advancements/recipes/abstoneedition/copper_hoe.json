@@ -1,8 +1,8 @@
 {
-  "conditions": [
+  "fabric:load_conditions": [
     {
-      "item": "abstoneedition:copper_hoe",
-      "type": "abstoneedition:item_enabled"
+      "condition": "abstoneedition:item_enabled",
+      "item": "abstoneedition:copper_hoe"
     }
   ],
   "parent": "minecraft:recipes/root",
@@ -33,7 +33,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "forge:ingots/copper"
+            "tag": "c:copper_ingots"
           }
         ]
       }

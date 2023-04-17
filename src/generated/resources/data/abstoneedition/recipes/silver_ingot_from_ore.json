@@ -2,16 +2,16 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
-      "item": "abstoneedition:silver_ingot",
-      "type": "abstoneedition:item_enabled"
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:silver_ingot"
     },
     {
-      "block": "abstoneedition:silver_ore",
-      "type": "abstoneedition:block_enabled"
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:silver_ore"
     }
   ],
   "recipe": {
-    "type": "minecraft:blasting",
+    "type": "minecraft:smelting",
     "ingredient": {
       "item": "abstoneedition:silver_ore"
     },

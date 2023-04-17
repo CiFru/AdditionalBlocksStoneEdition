@@ -2,12 +2,12 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
-      "item": "abstoneedition:raw_bismuth_chunk",
-      "type": "abstoneedition:item_enabled"
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:raw_bismuth_chunk"
     },
     {
-      "block": "abstoneedition:bismuth_cluster",
-      "type": "abstoneedition:block_enabled"
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:bismuth_cluster"
     }
   ],
   "recipe": {

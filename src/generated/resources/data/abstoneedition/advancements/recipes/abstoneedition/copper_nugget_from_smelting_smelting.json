@@ -1,28 +1,28 @@
 {
-  "conditions": [
+  "fabric:load_conditions": [
     {
-      "item": "abstoneedition:copper_nugget",
-      "type": "abstoneedition:item_enabled"
+      "condition": "abstoneedition:item_enabled",
+      "item": "abstoneedition:copper_nugget"
     },
     {
-      "item": "abstoneedition:copper_axe",
-      "type": "abstoneedition:item_enabled"
+      "condition": "abstoneedition:item_enabled",
+      "item": "abstoneedition:copper_axe"
     },
     {
-      "item": "abstoneedition:copper_pickaxe",
-      "type": "abstoneedition:item_enabled"
+      "condition": "abstoneedition:item_enabled",
+      "item": "abstoneedition:copper_pickaxe"
     },
     {
-      "item": "abstoneedition:copper_shovel",
-      "type": "abstoneedition:item_enabled"
+      "condition": "abstoneedition:item_enabled",
+      "item": "abstoneedition:copper_shovel"
     },
     {
-      "item": "abstoneedition:copper_hoe",
-      "type": "abstoneedition:item_enabled"
+      "condition": "abstoneedition:item_enabled",
+      "item": "abstoneedition:copper_hoe"
     },
     {
-      "item": "abstoneedition:copper_sword",
-      "type": "abstoneedition:item_enabled"
+      "condition": "abstoneedition:item_enabled",
+      "item": "abstoneedition:copper_sword"
     }
   ],
   "parent": "minecraft:recipes/root",

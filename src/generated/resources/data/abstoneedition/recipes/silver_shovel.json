@@ -2,8 +2,8 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
-      "item": "abstoneedition:silver_shovel",
-      "type": "abstoneedition:item_enabled"
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:silver_shovel"
     }
   ],
   "recipe": {
@@ -18,7 +18,7 @@
         "tag": "forge:ingots/silver"
       },
       "B": {
-        "tag": "forge:rods/wooden"
+        "item": "minecraft:stick"
       }
     },
     "result": {

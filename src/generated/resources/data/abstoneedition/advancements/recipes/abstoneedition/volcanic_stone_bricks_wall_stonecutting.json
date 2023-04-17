@@ -1,16 +1,16 @@
 {
-  "conditions": [
+  "fabric:load_conditions": [
     {
-      "block": "abstoneedition:volcanic_stone_bricks_wall",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:volcanic_stone_bricks_wall"
     },
     {
-      "block": "abstoneedition:volcanic_stone_bricks",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:volcanic_stone_bricks"
     },
     {
-      "block": "abstoneedition:volcanic_stone",
-      "type": "abstoneedition:block_enabled"
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:volcanic_stone"
     }
   ],
   "parent": "minecraft:recipes/root",

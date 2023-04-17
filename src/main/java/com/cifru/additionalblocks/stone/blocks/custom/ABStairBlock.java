@@ -51,7 +51,7 @@ public class ABStairBlock extends BaseBlock implements SimpleWaterloggedBlock {
     }
 
     @Override
-    public BlockState rotate(BlockState state, LevelAccessor level, BlockPos pos, Rotation rotation){
+    public BlockState rotate(BlockState state, Rotation rotation){
         return state.setValue(ABBlockProperties.HORIZONTAL_FACING, rotation.rotate(state.getValue(ABBlockProperties.HORIZONTAL_FACING)));
     }
 

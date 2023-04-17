@@ -2,32 +2,32 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
-      "item": "abstoneedition:bismuth_nugget",
-      "type": "abstoneedition:item_enabled"
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:bismuth_nugget"
     },
     {
-      "item": "abstoneedition:bismuth_axe",
-      "type": "abstoneedition:item_enabled"
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:bismuth_axe"
     },
     {
-      "item": "abstoneedition:bismuth_pickaxe",
-      "type": "abstoneedition:item_enabled"
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:bismuth_pickaxe"
     },
     {
-      "item": "abstoneedition:bismuth_shovel",
-      "type": "abstoneedition:item_enabled"
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:bismuth_shovel"
     },
     {
-      "item": "abstoneedition:bismuth_hoe",
-      "type": "abstoneedition:item_enabled"
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:bismuth_hoe"
     },
     {
-      "item": "abstoneedition:bismuth_sword",
-      "type": "abstoneedition:item_enabled"
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:bismuth_sword"
     }
   ],
   "recipe": {
-    "type": "minecraft:blasting",
+    "type": "minecraft:smelting",
     "ingredient": [
       {
         "item": "abstoneedition:bismuth_axe"

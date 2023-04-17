@@ -6,6 +6,7 @@ import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 import com.supermartijn642.core.item.ItemProperties;
 import net.minecraft.core.BlockPos;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
@@ -14,8 +15,6 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.TierSortingRegistry;
-import net.minecraftforge.common.ToolAction;
 
 import java.util.function.Supplier;
 
@@ -72,17 +71,16 @@ public class ABToolItem extends ABItem {
     }
 
     @Override
-    public boolean isCorrectToolForDrops(ItemStack stack, BlockState state){
-        return this.toolType.getMineableTag() != null && state.is(this.toolType.getMineableTag()) && TierSortingRegistry.isCorrectTierForDrops(this.toolMaterial.getMiningTier().getVanillaTier(), state);
+    public boolean isCorrectToolForDrops(BlockState state){
+        if(state.is(this.toolType.getMineableTag())){
+            int level = this.toolMaterial.getMiningTier().getVanillaTier().getLevel();
+            return level >= 3 || (!state.is(BlockTags.NEEDS_DIAMOND_TOOL) && (level >= 2 || (!state.is(BlockTags.NEEDS_IRON_TOOL) && (level >= 1 || !state.is(BlockTags.NEEDS_STONE_TOOL)))));
+        }
+        return false;
     }
 
     @Override
-    public boolean canPerformAction(ItemStack stack, ToolAction toolAction){
-        return this.toolType.getToolActions().contains(toolAction);
-    }
-
-    @Override
-    public int getMaxDamage(ItemStack stack){
+    public int getMaxDamage(){
         return this.toolMaterial.getDurability();
     }
 

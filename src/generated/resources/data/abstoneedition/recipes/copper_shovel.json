@@ -2,8 +2,8 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
-      "item": "abstoneedition:copper_shovel",
-      "type": "abstoneedition:item_enabled"
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:copper_shovel"
     }
   ],
   "recipe": {
@@ -15,10 +15,10 @@
     ],
     "key": {
       "A": {
-        "tag": "forge:ingots/copper"
+        "tag": "c:copper_ingots"
       },
       "B": {
-        "tag": "forge:rods/wooden"
+        "item": "minecraft:stick"
       }
     },
     "result": {

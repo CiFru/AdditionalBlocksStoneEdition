@@ -6,33 +6,28 @@ import com.cifru.additionalblocks.stone.condition.ItemEnabledResourceCondition;
 import com.cifru.additionalblocks.stone.entities.AdditionalBlocksEntities;
 import com.cifru.additionalblocks.stone.generators.*;
 import com.cifru.additionalblocks.stone.items.AdditionalBlocksItems;
-import com.supermartijn642.core.CommonUtils;
 import com.supermartijn642.core.item.CreativeItemGroup;
 import com.supermartijn642.core.registry.GeneratorRegistrationHandler;
 import com.supermartijn642.core.registry.RegistrationHandler;
+import net.fabricmc.api.ModInitializer;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 
 /**
  * Created 7/7/2020 by SuperMartijn642
  */
-@Mod("abstoneedition")
-public class AdditionalBlocks {
+public class AdditionalBlocks implements ModInitializer {
 
     public static final CreativeModeTab ITEM_GROUP = CreativeItemGroup.create("abstoneedition", () -> AdditionalBlocksBlocks.MARBLE_BRICKS.getItem()).sortAlphabetically();
 
-    public AdditionalBlocks(){
+    @Override
+    public void onInitialize(){
         AdditionalBlocksConfig.create();
         AdditionalBlocksItems.init();
         AdditionalBlocksBlocks.init();
         AdditionalBlocksEntities.init();
-        if(CommonUtils.getEnvironmentSide().isClient())
-            AdditionalBlocksClient.init();
         registerConditions();
         registerGenerators();
+        WorldGeneration.registerFeatures();
     }
 
     private static void registerConditions(){
@@ -50,14 +45,5 @@ public class AdditionalBlocks {
         handler.addGenerator(ABTagGenerator::new);
         handler.addGenerator(ABRecipeGenerator::new);
         handler.addGenerator(ABStoneCuttingRecipeGenerator::new);
-    }
-
-    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class RegistryEvents {
-
-        @SubscribeEvent
-        public static void onFeatureRegistry(final RegistryEvent.Register<Feature<?>> e){
-            WorldGeneration.onFeatureRegistry(e);
-        }
     }
 }

@@ -1,0 +1,18 @@
+accessWidener v1 named
+
+# AxeItem
+accessible field net/minecraft/world/item/AxeItem STRIPPABLES Ljava/util/Map;
+# FireBlock
+accessible method net/minecraft/world/level/block/FireBlock setFlammable (Lnet/minecraft/world/level/block/Block;II)V
+# HoeItem
+accessible field net/minecraft/world/item/HoeItem TILLABLES Ljava/util/Map;
+# Ingredient
+accessible field net/minecraft/world/item/crafting/Ingredient values [Lnet/minecraft/world/item/crafting/Ingredient$Value;
+# Item
+extendable method net/minecraft/world/item/Item getMaxDamage ()I
+# ShovelItem
+accessible field net/minecraft/world/item/ShovelItem FLATTENABLES Ljava/util/Map;
+# StairBlock
+accessible field net/minecraft/world/level/block/StairBlock BOTTOM_SHAPES [Lnet/minecraft/world/phys/shapes/VoxelShape;
+accessible field net/minecraft/world/level/block/StairBlock SHAPE_BY_STATE [I
+accessible field net/minecraft/world/level/block/StairBlock TOP_SHAPES [Lnet/minecraft/world/phys/shapes/VoxelShape;

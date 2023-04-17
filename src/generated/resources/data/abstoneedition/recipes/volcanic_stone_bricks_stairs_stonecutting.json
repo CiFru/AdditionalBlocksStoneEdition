@@ -2,16 +2,16 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
-      "block": "abstoneedition:volcanic_stone_bricks_stairs",
-      "type": "abstoneedition:block_enabled"
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:volcanic_stone_bricks_stairs"
     },
     {
-      "block": "abstoneedition:volcanic_stone_bricks",
-      "type": "abstoneedition:block_enabled"
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:volcanic_stone_bricks"
     },
     {
-      "block": "abstoneedition:volcanic_stone",
-      "type": "abstoneedition:block_enabled"
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:volcanic_stone"
     }
   ],
   "recipe": {

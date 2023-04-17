@@ -1,12 +1,12 @@
 {
-  "conditions": [
+  "fabric:load_conditions": [
     {
-      "item": "abstoneedition:bismuth_ingot",
-      "type": "abstoneedition:item_enabled"
+      "condition": "abstoneedition:item_enabled",
+      "item": "abstoneedition:bismuth_ingot"
     },
     {
-      "item": "abstoneedition:raw_bismuth_chunk",
-      "type": "abstoneedition:item_enabled"
+      "condition": "abstoneedition:item_enabled",
+      "item": "abstoneedition:raw_bismuth_chunk"
     }
   ],
   "parent": "minecraft:recipes/root",

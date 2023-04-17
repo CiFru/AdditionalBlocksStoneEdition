@@ -144,7 +144,7 @@ public class ABGlassPaneBlock extends BaseBlock implements BeaconBeamBlock, Simp
     }
 
     @Override
-    public BlockState rotate(BlockState state, LevelAccessor level, BlockPos pos, Rotation rotation){
+    public BlockState rotate(BlockState state, Rotation rotation){
         if(rotation == Rotation.NONE)
             return state;
         BlockState newState = state;

@@ -2,16 +2,16 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
-      "block": "abstoneedition:black_marble_bricks_slab",
-      "type": "abstoneedition:block_enabled"
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:black_marble_bricks_slab"
     },
     {
-      "block": "abstoneedition:black_marble_bricks",
-      "type": "abstoneedition:block_enabled"
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:black_marble_bricks"
     },
     {
-      "block": "abstoneedition:black_marble",
-      "type": "abstoneedition:block_enabled"
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:black_marble"
     }
   ],
   "recipe": {
