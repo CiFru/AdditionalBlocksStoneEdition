@@ -26,9 +26,9 @@ public class ABExperienceBlock extends BaseBlock {
     }
 
     @Override
-    public void spawnAfterBreak(BlockState state, ServerLevel level, BlockPos pos, ItemStack stack){
-        super.spawnAfterBreak(state, level, pos, stack);
-        if(EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, stack) == 0){
+    public void spawnAfterBreak(BlockState state, ServerLevel level, BlockPos pos, ItemStack stack, boolean bl){
+        super.spawnAfterBreak(state, level, pos, stack, bl);
+        if(bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, stack) == 0){
             int xp = RANDOM.nextInt(this.maxExperience);
             if(xp > 0)
                 this.popExperience(level, pos, xp);

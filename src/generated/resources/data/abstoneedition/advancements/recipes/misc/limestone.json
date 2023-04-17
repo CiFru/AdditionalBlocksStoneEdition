@@ -1,0 +1,60 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:limestone"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:limestone"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/misc/limestone.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/misc/limestone.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:limestone"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:sandstone"
+            ]
+          },
+          {
+            "items": [
+              "minecraft:quartz_block"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:limestone"
+    ]
+  }
+}

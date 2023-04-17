@@ -1,9 +1,10 @@
 package com.cifru.additionalblocks.stone.entities;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Vector3f;
+import com.mojang.math.Axis;
 import com.supermartijn642.core.render.TextureAtlases;
 import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.block.BlockRenderDispatcher;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.TntMinecartRenderer;
@@ -15,9 +16,12 @@ import net.minecraft.util.Mth;
  */
 public class NuclearTntEntityRenderer extends EntityRenderer<NuclearTntEntity> {
 
+    private final BlockRenderDispatcher blockRenderer;
+
     public NuclearTntEntityRenderer(EntityRendererProvider.Context context){
         super(context);
         this.shadowRadius = 0.5f;
+        this.blockRenderer = context.getBlockRenderDispatcher();
     }
 
     @Override
@@ -34,10 +38,10 @@ public class NuclearTntEntityRenderer extends EntityRenderer<NuclearTntEntity> {
             poseStack.scale(scale, scale, scale);
         }
 
-        poseStack.mulPose(Vector3f.YP.rotationDegrees(-90));
+        poseStack.mulPose(Axis.YP.rotationDegrees(-90));
         poseStack.translate(-0.5, -0.5, 0.5);
-        poseStack.mulPose(Vector3f.YP.rotationDegrees(90));
-        TntMinecartRenderer.renderWhiteSolidBlock(entity.getBlockState(), poseStack, bufferSource, combinedLight, fuse / 5 % 2 == 0);
+        poseStack.mulPose(Axis.YP.rotationDegrees(90));
+        TntMinecartRenderer.renderWhiteSolidBlock(this.blockRenderer, entity.getBlockState(), poseStack, bufferSource, combinedLight, fuse / 5 % 2 == 0);
         poseStack.popPose();
         super.render(entity, rotation, partialTicks, poseStack, bufferSource, combinedLight);
     }

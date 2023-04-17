@@ -1,0 +1,59 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:brown_stone_pattern"
+    },
+    {
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:stone_pattern"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:brown_stone_pattern"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/misc/brown_stone_pattern_smelting.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/misc/brown_stone_pattern_smelting.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:brown_stone_pattern"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "abstoneedition:stone_pattern"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:brown_stone_pattern"
+    ]
+  }
+}

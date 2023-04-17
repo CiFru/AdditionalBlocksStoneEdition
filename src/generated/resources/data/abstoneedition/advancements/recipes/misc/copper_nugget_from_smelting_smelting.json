@@ -1,0 +1,95 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "abstoneedition:item_enabled",
+      "item": "abstoneedition:copper_nugget"
+    },
+    {
+      "condition": "abstoneedition:item_enabled",
+      "item": "abstoneedition:copper_axe"
+    },
+    {
+      "condition": "abstoneedition:item_enabled",
+      "item": "abstoneedition:copper_pickaxe"
+    },
+    {
+      "condition": "abstoneedition:item_enabled",
+      "item": "abstoneedition:copper_shovel"
+    },
+    {
+      "condition": "abstoneedition:item_enabled",
+      "item": "abstoneedition:copper_hoe"
+    },
+    {
+      "condition": "abstoneedition:item_enabled",
+      "item": "abstoneedition:copper_sword"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:copper_nugget"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/misc/copper_nugget_from_smelting_smelting.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/misc/copper_nugget_from_smelting_smelting.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:copper_nugget_from_smelting"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "abstoneedition:copper_axe"
+            ]
+          },
+          {
+            "items": [
+              "abstoneedition:copper_pickaxe"
+            ]
+          },
+          {
+            "items": [
+              "abstoneedition:copper_shovel"
+            ]
+          },
+          {
+            "items": [
+              "abstoneedition:copper_hoe"
+            ]
+          },
+          {
+            "items": [
+              "abstoneedition:copper_sword"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:copper_nugget_from_smelting"
+    ]
+  }
+}

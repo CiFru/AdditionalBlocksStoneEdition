@@ -2,31 +2,27 @@ package com.cifru.additionalblocks.stone.entities;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtUtils;
-import net.minecraft.nbt.Tag;
-import net.minecraft.network.protocol.Packet;
-import net.minecraft.network.protocol.game.ClientboundAddEntityPacket;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
-import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-
-import java.util.Optional;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Created 08/04/2023 by SuperMartijn642
  */
-public class NuclearTntEntity extends Entity {
+public class NuclearTntEntity extends Entity implements TraceableEntity {
 
     private static final EntityDataAccessor<Integer> DATA_FUSE = SynchedEntityData.defineId(NuclearTntEntity.class, EntityDataSerializers.INT);
-    private static final EntityDataAccessor<Optional<BlockState>> DATA_BLOCK_STATE = SynchedEntityData.defineId(NuclearTntEntity.class, EntityDataSerializers.BLOCK_STATE);
+    private static final EntityDataAccessor<BlockState> DATA_BLOCK_STATE = SynchedEntityData.defineId(NuclearTntEntity.class, EntityDataSerializers.BLOCK_STATE);
 
     private final LivingEntity igniter;
 
@@ -37,7 +33,7 @@ public class NuclearTntEntity extends Entity {
 
     public NuclearTntEntity(Level level, BlockPos pos, BlockState state, LivingEntity igniter){
         super(AdditionalBlocksEntities.NUCLEAR_TNT, level);
-        this.entityData.set(DATA_BLOCK_STATE, Optional.of(state));
+        this.entityData.set(DATA_BLOCK_STATE, state);
         this.igniter = igniter;
         this.setPos(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5);
         double momentum = level.random.nextDouble() * Math.PI * 2;
@@ -59,13 +55,13 @@ public class NuclearTntEntity extends Entity {
         if(fuse <= 0){
             this.discard();
             if(!this.level.isClientSide){
-                this.level.explode(this.igniter, this.getX(), this.getY(0.0625), this.getZ(), 10, Explosion.BlockInteraction.BREAK);
+                this.level.explode(this, this.getX(), this.getY(0.0625), this.getZ(), 10, Level.ExplosionInteraction.TNT);
                 AreaEffectCloud cloud = new AreaEffectCloud(this.level, this.getX(), this.getY(), this.getZ());
                 cloud.setOwner(this.igniter);
                 cloud.setRadius(5);
-                cloud.setRadiusPerTick(0.02f);
+                cloud.setRadiusPerTick(0.03f);
                 cloud.setWaitTime(4);
-                cloud.addEffect(new MobEffectInstance(MobEffects.POISON, 100, 2, false, false, true));
+                cloud.addEffect(new MobEffectInstance(MobEffects.POISON, 200, 2, false, false, true));
                 this.level.addFreshEntity(cloud);
             }
         }else{
@@ -78,7 +74,7 @@ public class NuclearTntEntity extends Entity {
     @Override
     protected void defineSynchedData(){
         this.entityData.define(DATA_FUSE, 80);
-        this.entityData.define(DATA_BLOCK_STATE, Optional.empty());
+        this.entityData.define(DATA_BLOCK_STATE, Blocks.AIR.defaultBlockState());
     }
 
     @Override
@@ -94,26 +90,24 @@ public class NuclearTntEntity extends Entity {
     @Override
     protected void readAdditionalSaveData(CompoundTag data){
         this.entityData.set(DATA_FUSE, data.getInt("fuse"));
-        if(data.contains("block_state", Tag.TAG_COMPOUND))
-            this.entityData.set(DATA_BLOCK_STATE, Optional.of(NbtUtils.readBlockState(data.getCompound("block_state"))));
-        else
-            this.entityData.set(DATA_BLOCK_STATE, Optional.empty());
+        this.entityData.set(DATA_BLOCK_STATE, NbtUtils.readBlockState(this.level.holderLookup(Registries.BLOCK), data.getCompound("block_state")));
     }
 
     @Override
     protected void addAdditionalSaveData(CompoundTag data){
         data.putInt("fuse", this.entityData.get(DATA_FUSE));
-        this.entityData.get(DATA_BLOCK_STATE).ifPresent(state -> data.put("block_state", NbtUtils.writeBlockState(state)));
+        data.put("block_state", NbtUtils.writeBlockState(this.entityData.get(DATA_BLOCK_STATE)));
+    }
+
+    @Nullable
+    @Override
+    public Entity getOwner(){
+        return this.igniter;
     }
 
     @Override
     protected float getEyeHeight(Pose pos, EntityDimensions dimensions){
         return 0.15f;
-    }
-
-    @Override
-    public Packet<?> getAddEntityPacket(){
-        return new ClientboundAddEntityPacket(this, 0);
     }
 
     public int getFuse(){
@@ -125,6 +119,6 @@ public class NuclearTntEntity extends Entity {
     }
 
     public BlockState getBlockState(){
-        return this.entityData.get(DATA_BLOCK_STATE).orElseGet(Blocks.AIR::defaultBlockState);
+        return this.entityData.get(DATA_BLOCK_STATE);
     }
 }

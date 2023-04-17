@@ -83,7 +83,7 @@ public class NuclearTntBlock extends BaseBlock {
 
     @Override
     public void wasExploded(Level level, BlockPos pos, Explosion explosion){
-        this.ignite(level, pos, this.defaultBlockState(), explosion.getSourceMob(), true);
+        this.ignite(level, pos, this.defaultBlockState(), explosion.getIndirectSourceEntity(), true);
     }
 
     @Override
