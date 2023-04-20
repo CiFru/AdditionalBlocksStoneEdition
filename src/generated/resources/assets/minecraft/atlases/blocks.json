@@ -174,6 +174,10 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "abstoneedition:nuclear_tnt_bottom"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:smooth_black_marble"
     },
     {
@@ -295,6 +299,10 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:stone_path_curved"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:nuclear_tnt_top"
     },
     {
       "type": "minecraft:single",

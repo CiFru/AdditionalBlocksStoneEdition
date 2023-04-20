@@ -1,6 +1,11 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "abstoneedition:nuclear_tnt"
+    "east": "abstoneedition:nuclear_tnt",
+    "south": "abstoneedition:nuclear_tnt",
+    "north": "abstoneedition:nuclear_tnt",
+    "west": "abstoneedition:nuclear_tnt",
+    "up": "abstoneedition:nuclear_tnt_top",
+    "down": "abstoneedition:nuclear_tnt_bottom"
   }
 }
