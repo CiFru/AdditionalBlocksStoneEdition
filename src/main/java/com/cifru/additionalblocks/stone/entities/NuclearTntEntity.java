@@ -63,9 +63,9 @@ public class NuclearTntEntity extends Entity {
                 AreaEffectCloud cloud = new AreaEffectCloud(this.level, this.getX(), this.getY(), this.getZ());
                 cloud.setOwner(this.igniter);
                 cloud.setRadius(5);
-                cloud.setRadiusPerTick(0.02f);
+                cloud.setRadiusPerTick(0.03f);
                 cloud.setWaitTime(4);
-                cloud.addEffect(new MobEffectInstance(MobEffects.POISON, 100, 2, false, false, true));
+                cloud.addEffect(new MobEffectInstance(MobEffects.POISON, 200, 2, false, false, true));
                 this.level.addFreshEntity(cloud);
             }
         }else{
