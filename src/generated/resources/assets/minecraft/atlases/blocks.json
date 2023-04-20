@@ -182,10 +182,6 @@
     },
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:uranium_glass_pane2"
-    },
-    {
-      "type": "minecraft:single",
       "resource": "abstoneedition:raw_silver"
     },
     {
@@ -235,10 +231,6 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:old_stone_tiles"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:uranium_glass_pane2_edge"
     },
     {
       "type": "minecraft:single",
@@ -347,10 +339,6 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:raw_silver_block"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:uranium_glass2"
     },
     {
       "type": "minecraft:single",

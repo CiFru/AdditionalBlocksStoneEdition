@@ -55,7 +55,7 @@ public class AdditionalBlocksItems {
     public static final ItemType<BaseItem> RAW_URANIUM = ItemBuilder.create("raw_uranium").translation("Raw Uranium").configOption(AdditionalBlocksConfig.enableUranium).tag("forge", "raw_materials").tag("forge", "raw_materials/uranium").buildRegular(COLLECTOR);
     public static final ItemType<BaseItem> REFINED_URANIUM = ItemBuilder.create("refined_uranium").translation("Refined Uranium").configOption(AdditionalBlocksConfig.enableUranium).tag("forge", "ingots").tag("forge", "ingots/uranium").buildCustom(ABNuclearItem::new, COLLECTOR);
     public static final ItemType<BaseItem> URANIUM_NUGGET = ItemBuilder.create("uranium_nugget").translation("Refined Uranium Shard").configOption(AdditionalBlocksConfig.enableUranium).tag("forge", "nuggets").tag("forge", "nuggets/uranium").buildCustom(ABNuclearItem::new, COLLECTOR);
-    public static final ItemType<BaseItem> URANIUM_SWORD = ItemBuilder.create("uranium_sword").translation("Uranium Sword").configOption(AdditionalBlocksConfig.enableUranium).modelPreset(ABModelGenerator.GENERATED).buildCustom((properties, enabled) -> new ABSwordItem(properties, enabled, ABToolMaterial.URANIUM), COLLECTOR);
+    public static final ItemType<BaseItem> URANIUM_SWORD = ItemBuilder.create("uranium_sword").translation("Uranium Sword").configOption(AdditionalBlocksConfig.enableUranium).modelPreset(ABModelGenerator.HANDHELD).buildCustom((properties, enabled) -> new ABSwordItem(properties, enabled, ABToolMaterial.URANIUM), COLLECTOR);
 
     public static void init(){
         // Cause the class to be loaded

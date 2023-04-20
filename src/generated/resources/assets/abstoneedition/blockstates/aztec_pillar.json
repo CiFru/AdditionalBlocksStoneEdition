@@ -1,8 +1,5 @@
 {
   "variants": {
-    "axis=y": {
-      "model": "abstoneedition:block/aztec_pillar"
-    },
     "axis=x": {
       "model": "abstoneedition:block/aztec_pillar",
       "x": 90,
@@ -11,6 +8,9 @@
     "axis=z": {
       "model": "abstoneedition:block/aztec_pillar",
       "x": 90
+    },
+    "axis=y": {
+      "model": "abstoneedition:block/aztec_pillar"
     }
   }
 }
