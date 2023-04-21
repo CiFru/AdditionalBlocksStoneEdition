@@ -2,21 +2,21 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
-      "item": "abstoneedition:bismuth_ingot",
+      "item": "abstoneedition:silver_ingot",
       "type": "abstoneedition:item_enabled"
     },
     {
-      "item": "abstoneedition:raw_bismuth_chunk",
+      "item": "abstoneedition:raw_silver",
       "type": "abstoneedition:item_enabled"
     }
   ],
   "recipe": {
-    "type": "minecraft:smelting",
+    "type": "minecraft:blasting",
     "ingredient": {
-      "item": "abstoneedition:raw_bismuth_chunk"
+      "item": "abstoneedition:raw_silver"
     },
-    "result": "abstoneedition:bismuth_ingot",
+    "result": "abstoneedition:silver_ingot",
     "experience": 4,
-    "cookingtime": 600
+    "cookingtime": 300
   }
 }

@@ -7,7 +7,7 @@
     }
   ],
   "recipe": {
-    "type": "minecraft:blasting",
+    "type": "minecraft:smelting",
     "ingredient": {
       "item": "abstoneedition:uranium_sword"
     },

@@ -27,7 +27,7 @@
     }
   ],
   "recipe": {
-    "type": "minecraft:smelting",
+    "type": "minecraft:blasting",
     "ingredient": [
       {
         "item": "abstoneedition:bismuth_axe"

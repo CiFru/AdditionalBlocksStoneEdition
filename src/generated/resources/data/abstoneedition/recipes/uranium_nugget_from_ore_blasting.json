@@ -7,12 +7,12 @@
     }
   ],
   "recipe": {
-    "type": "minecraft:smelting",
+    "type": "minecraft:blasting",
     "ingredient": {
       "item": "abstoneedition:uranium_ore"
     },
     "result": "abstoneedition:uranium_nugget",
     "experience": 4,
-    "cookingtime": 600
+    "cookingtime": 300
   }
 }
