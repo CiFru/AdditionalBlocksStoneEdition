@@ -1,0 +1,18 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "item": "abstoneedition:uranium_nugget",
+      "type": "abstoneedition:item_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:blasting",
+    "ingredient": {
+      "item": "abstoneedition:raw_uranium"
+    },
+    "result": "abstoneedition:uranium_nugget",
+    "experience": 4,
+    "cookingtime": 300
+  }
+}

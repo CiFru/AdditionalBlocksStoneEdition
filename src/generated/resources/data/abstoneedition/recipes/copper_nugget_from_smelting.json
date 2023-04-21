@@ -45,6 +45,8 @@
         "item": "abstoneedition:copper_sword"
       }
     ],
-    "result": "abstoneedition:copper_nugget"
+    "result": "abstoneedition:copper_nugget",
+    "experience": 4,
+    "cookingtime": 300
   }
 }

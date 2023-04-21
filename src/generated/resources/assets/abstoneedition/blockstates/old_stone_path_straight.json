@@ -1,5 +1,12 @@
 {
   "variants": {
+    "facing=south": {
+      "model": "abstoneedition:block/old_stone_path_straight"
+    },
+    "facing=north": {
+      "model": "abstoneedition:block/old_stone_path_straight",
+      "y": 180
+    },
     "facing=west": {
       "model": "abstoneedition:block/old_stone_path_straight",
       "y": 90
@@ -7,13 +14,6 @@
     "facing=east": {
       "model": "abstoneedition:block/old_stone_path_straight",
       "y": 270
-    },
-    "facing=south": {
-      "model": "abstoneedition:block/old_stone_path_straight"
-    },
-    "facing=north": {
-      "model": "abstoneedition:block/old_stone_path_straight",
-      "y": 180
     }
   }
 }

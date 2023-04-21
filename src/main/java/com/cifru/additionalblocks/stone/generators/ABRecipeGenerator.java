@@ -104,6 +104,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
         // Asphalt
         this.smelting(AdditionalBlocksBlocks.ASPHALT)
             .input(Items.BLACK_DYE)
+            .includeSmelting()
             .durationSeconds(25)
             .experience(2)
             .unlockedBy(Items.BLACK_DYE)
@@ -195,6 +196,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
         // Brown Bricks
         this.smelting(AdditionalBlocksBlocks.BROWN_BRICKS)
             .input(Items.BRICKS)
+            .includeSmelting()
             .durationSeconds(10)
             .experience(2)
             .unlockedBy(Items.BRICKS)
@@ -202,6 +204,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
         // Brown Stone Path Curved
         this.smelting(AdditionalBlocksBlocks.BROWN_STONE_PATH_CURVED)
             .input(AdditionalBlocksBlocks.STONE_PATH_CURVED)
+            .includeSmelting()
             .durationSeconds(10)
             .experience(2)
             .unlockedBy(AdditionalBlocksBlocks.STONE_PATH_CURVED)
@@ -210,6 +213,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
         // Brown Stone Path Straight
         this.smelting(AdditionalBlocksBlocks.BROWN_STONE_PATH_STRAIGHT)
             .input(AdditionalBlocksBlocks.STONE_PATH_STRAIGHT)
+            .includeSmelting()
             .durationSeconds(10)
             .experience(2)
             .unlockedBy(AdditionalBlocksBlocks.STONE_PATH_STRAIGHT)
@@ -218,6 +222,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
         // Brown Stone Pattern
         this.smelting(AdditionalBlocksBlocks.BROWN_STONE_PATTERN)
             .input(AdditionalBlocksBlocks.STONE_PATTERN)
+            .includeSmelting()
             .durationSeconds(10)
             .experience(2)
             .unlockedBy(AdditionalBlocksBlocks.STONE_PATTERN)
@@ -226,6 +231,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
         // Brown Stone Tiles
         this.smelting(AdditionalBlocksBlocks.BROWN_STONE_TILES)
             .input(AdditionalBlocksBlocks.STONE_TILES)
+            .includeSmelting()
             .durationSeconds(10)
             .experience(2)
             .unlockedBy(AdditionalBlocksBlocks.STONE_TILES)
@@ -389,6 +395,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
         // Smooth Black Marble
         this.smelting(AdditionalBlocksBlocks.SMOOTH_BLACK_MARBLE)
             .input(AdditionalBlocksBlocks.BLACK_MARBLE)
+            .includeSmelting()
             .experience(2)
             .unlockedBy(AdditionalBlocksBlocks.BLACK_MARBLE)
             .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.SMOOTH_BLACK_MARBLE))
@@ -396,6 +403,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
         // Smooth Bloodstone
         this.smelting(AdditionalBlocksBlocks.SMOOTH_BLOODSTONE)
             .input(AdditionalBlocksBlocks.BLOODSTONE)
+            .includeSmelting()
             .experience(2)
             .unlockedBy(AdditionalBlocksBlocks.BLOODSTONE)
             .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.SMOOTH_BLOODSTONE))
@@ -403,6 +411,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
         // Smooth glowstone
         this.smelting(AdditionalBlocksBlocks.SMOOTH_GLOWSTONE)
             .input(Items.GLOWSTONE)
+            .includeSmelting()
             .experience(5)
             .unlockedBy(Items.GLOWSTONE)
             .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.SMOOTH_GLOWSTONE));
@@ -417,6 +426,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
         // Smooth marble bricks
         this.smelting(AdditionalBlocksBlocks.SMOOTH_MARBLE)
             .input(AdditionalBlocksBlocks.MARBLE)
+            .includeSmelting()
             .experience(2)
             .unlockedBy(AdditionalBlocksBlocks.MARBLE)
             .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.SMOOTH_MARBLE))
@@ -536,6 +546,9 @@ public class ABRecipeGenerator extends RecipeGenerator {
         this.smelting("copper_nugget_from_smelting", AdditionalBlocksItems.COPPER_NUGGET)
             .input(AdditionalBlocksItems.COPPER_AXE, AdditionalBlocksItems.COPPER_PICKAXE, AdditionalBlocksItems.COPPER_SHOVEL, AdditionalBlocksItems.COPPER_HOE, AdditionalBlocksItems.COPPER_SWORD)
             .includeBlasting()
+            .includeSmelting()
+            .durationSeconds(30)
+            .experience(4)
             .unlockedBy(AdditionalBlocksItems.COPPER_AXE, AdditionalBlocksItems.COPPER_PICKAXE, AdditionalBlocksItems.COPPER_SHOVEL, AdditionalBlocksItems.COPPER_HOE, AdditionalBlocksItems.COPPER_SWORD)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.COPPER_NUGGET))
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.COPPER_AXE))
@@ -594,12 +607,18 @@ public class ABRecipeGenerator extends RecipeGenerator {
         this.smelting("silver_ingot_from_raw", AdditionalBlocksItems.SILVER_INGOT)
             .input(AdditionalBlocksItems.RAW_SILVER)
             .includeBlasting()
+            .includeSmelting()
+            .durationSeconds(30)
+            .experience(4)
             .unlockedBy(AdditionalBlocksItems.RAW_SILVER)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.SILVER_INGOT))
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.RAW_SILVER));
         this.smelting("silver_ingot_from_ore", AdditionalBlocksItems.SILVER_INGOT)
             .input(AdditionalBlocksBlocks.SILVER_ORE)
             .includeBlasting()
+            .includeSmelting()
+            .durationSeconds(30)
+            .experience(4)
             .unlockedBy(AdditionalBlocksBlocks.SILVER_ORE)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.SILVER_INGOT))
             .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.SILVER_ORE));
@@ -625,6 +644,9 @@ public class ABRecipeGenerator extends RecipeGenerator {
         this.smelting("silver_nugget_from_smelting", AdditionalBlocksItems.SILVER_NUGGET)
             .input(AdditionalBlocksItems.SILVER_AXE, AdditionalBlocksItems.SILVER_PICKAXE, AdditionalBlocksItems.SILVER_SHOVEL, AdditionalBlocksItems.SILVER_HOE, AdditionalBlocksItems.SILVER_SWORD)
             .includeBlasting()
+            .includeSmelting()
+            .durationSeconds(10)
+            .experience(1)
             .unlockedBy(AdditionalBlocksItems.SILVER_AXE, AdditionalBlocksItems.SILVER_PICKAXE, AdditionalBlocksItems.SILVER_SHOVEL, AdditionalBlocksItems.SILVER_HOE, AdditionalBlocksItems.SILVER_SWORD)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.SILVER_NUGGET))
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.SILVER_AXE))
@@ -689,12 +711,18 @@ public class ABRecipeGenerator extends RecipeGenerator {
         this.smelting("bismuth_ingot_from_raw", AdditionalBlocksItems.BISMUTH_INGOT)
             .input(AdditionalBlocksItems.RAW_BISMUTH)
             .includeBlasting()
+            .includeSmelting()
+            .durationSeconds(30)
+            .experience(4)
             .unlockedBy(AdditionalBlocksItems.RAW_BISMUTH)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.BISMUTH_INGOT))
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.RAW_BISMUTH));
         this.smelting("bismuth_ingot_from_ore", AdditionalBlocksItems.BISMUTH_INGOT)
             .input(AdditionalBlocksBlocks.BISMUTH_ORE)
             .includeBlasting()
+            .includeSmelting()
+            .durationSeconds(30)
+            .experience(4)
             .unlockedBy(AdditionalBlocksBlocks.BISMUTH_ORE)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.BISMUTH_INGOT))
             .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.BISMUTH_ORE));
@@ -720,6 +748,9 @@ public class ABRecipeGenerator extends RecipeGenerator {
         this.smelting("bismuth_nugget_from_smelting", AdditionalBlocksItems.BISMUTH_NUGGET)
             .input(AdditionalBlocksItems.BISMUTH_AXE, AdditionalBlocksItems.BISMUTH_PICKAXE, AdditionalBlocksItems.BISMUTH_SHOVEL, AdditionalBlocksItems.BISMUTH_HOE, AdditionalBlocksItems.BISMUTH_SWORD)
             .includeBlasting()
+            .includeSmelting()
+            .durationSeconds(10)
+            .experience(1)
             .unlockedBy(AdditionalBlocksItems.BISMUTH_AXE, AdditionalBlocksItems.BISMUTH_PICKAXE, AdditionalBlocksItems.BISMUTH_SHOVEL, AdditionalBlocksItems.BISMUTH_HOE, AdditionalBlocksItems.BISMUTH_SWORD)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.BISMUTH_NUGGET))
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.BISMUTH_AXE))
@@ -771,13 +802,104 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.BISMUTH_HOE));
         // Bismuth sword
         this.shaped(AdditionalBlocksItems.BISMUTH_SWORD)
-            .pattern("AAA")
-            .pattern(" B ")
+            .pattern(" A ")
+            .pattern(" A ")
             .pattern(" B ")
             .input('A', bismuthIngots)
             .input('B', Tags.Items.RODS_WOODEN)
             .unlockedBy(bismuthIngots)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.BISMUTH_SWORD));
+
+        // Uranium block
+        this.shaped(AdditionalBlocksBlocks.URANIUM_BLOCK)
+            .pattern("AAA")
+            .pattern("AAA")
+            .pattern("AAA")
+            .input('A', AdditionalBlocksItems.REFINED_URANIUM)
+            .unlockedBy(AdditionalBlocksItems.REFINED_URANIUM)
+            .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.URANIUM_BLOCK));
+        // Refined Uranium Shard (nugget)
+        this.shapeless(AdditionalBlocksItems.URANIUM_NUGGET, 4)
+            .input(AdditionalBlocksItems.REFINED_URANIUM)
+            .unlockedBy(AdditionalBlocksItems.REFINED_URANIUM, AdditionalBlocksItems.URANIUM_NUGGET)
+            .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.URANIUM_NUGGET))
+            .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.REFINED_URANIUM));
+        this.shaped("refined_uranium_from_nuggets", AdditionalBlocksItems.REFINED_URANIUM)
+            .pattern("AA")
+            .pattern("AA")
+            .input('A', AdditionalBlocksItems.URANIUM_NUGGET)
+            .unlockedBy(AdditionalBlocksItems.REFINED_URANIUM, AdditionalBlocksItems.URANIUM_NUGGET)
+            .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.URANIUM_NUGGET))
+            .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.REFINED_URANIUM));
+        this.smelting("uranium_nugget_from_ore", AdditionalBlocksItems.URANIUM_NUGGET)
+            .input(AdditionalBlocksBlocks.URANIUM_ORE)
+            .includeBlasting()
+            .includeSmelting()
+            .durationSeconds(30)
+            .experience(4)
+            .unlockedBy(AdditionalBlocksItems.RAW_URANIUM)
+            .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.URANIUM_NUGGET));
+        this.smelting("uranium_nugget_from_smelting", AdditionalBlocksItems.URANIUM_NUGGET)
+            .input(AdditionalBlocksItems.URANIUM_SWORD)
+            .includeBlasting()
+            .includeSmelting()
+            .durationSeconds(10)
+            .experience(1)
+            .unlockedBy(AdditionalBlocksItems.RAW_URANIUM)
+            .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.URANIUM_NUGGET));
+        this.smelting("uranium_nugget_from_raw", AdditionalBlocksItems.URANIUM_NUGGET)
+            .input(AdditionalBlocksItems.RAW_URANIUM)
+            .includeSmelting()
+            .includeBlasting()
+            .durationSeconds(30)
+            .experience(4)
+            .unlockedBy(AdditionalBlocksItems.RAW_URANIUM)
+            .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.URANIUM_NUGGET));
+        // Refined Uranium (ingot)
+        Tag<Item> uraniumIngots = ItemTags.createOptional(new ResourceLocation("forge", "ingots/uranium"));
+        this.shapeless(AdditionalBlocksItems.REFINED_URANIUM, 4)
+            .input(AdditionalBlocksBlocks.URANIUM_BLOCK)
+            .unlockedBy(AdditionalBlocksItems.REFINED_URANIUM, AdditionalBlocksBlocks.URANIUM_BLOCK)
+            .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.REFINED_URANIUM))
+            .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.URANIUM_BLOCK));
+        // Uranium Glass
+        this.shaped(AdditionalBlocksBlocks.URANIUM_GLASS, 8)
+            .pattern("XXX")
+            .pattern("X#X")
+            .pattern("XXX")
+            .input('X', Items.GLASS)
+            .input('#', AdditionalBlocksItems.REFINED_URANIUM)
+            .unlockedBy(Items.GLASS)
+            .unlockedBy(AdditionalBlocksItems.RAW_URANIUM)
+            .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.URANIUM_GLASS));
+        // Uranium Glass Pane
+        this.shaped(AdditionalBlocksBlocks.URANIUM_GLASS_PANE, 16)
+            .pattern("XXX")
+            .pattern("XXX")
+            .input('X', AdditionalBlocksBlocks.URANIUM_GLASS)
+            .unlockedBy(AdditionalBlocksItems.RAW_URANIUM)
+            .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.URANIUM_GLASS_PANE));
+        // Nuclear TNT
+        this.shaped(AdditionalBlocksBlocks.NUCLEAR_TNT, 1)
+            .pattern("CBC")
+            .pattern("BAB")
+            .pattern("CBC")
+            .input('A', Items.TNT)
+            .input('B', AdditionalBlocksItems.REFINED_URANIUM)
+            .input('C', Items.GUNPOWDER)
+            .unlockedBy(Items.TNT)
+            .unlockedBy(Items.GUNPOWDER)
+            .unlockedBy(AdditionalBlocksItems.RAW_URANIUM)
+            .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.NUCLEAR_TNT));
+        // Uranium Sword
+        this.shaped(AdditionalBlocksItems.URANIUM_SWORD)
+            .pattern(" A ")
+            .pattern(" A ")
+            .pattern(" B ")
+            .input('A', uraniumIngots)
+            .input('B', Tags.Items.RODS_WOODEN)
+            .unlockedBy(uraniumIngots)
+            .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.URANIUM_SWORD));
     }
 
     @Override
