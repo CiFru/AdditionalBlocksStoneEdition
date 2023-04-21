@@ -39,6 +39,7 @@ public class WorldGeneration {
     public static Holder<PlacedFeature> ore_black_marble;
     public static Holder<PlacedFeature> ore_silver;
     public static Holder<PlacedFeature> ore_bismuth;
+    public static Holder<PlacedFeature> ore_uranium;
 
     public static void onFeatureRegistry(final RegistryEvent.Register<Feature<?>> e){
         ConfiguredFeature<?,?> marbleFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OreFeatures.NATURAL_STONE, AdditionalBlocksBlocks.MARBLE.getBlock().defaultBlockState(), 20));
@@ -73,6 +74,9 @@ public class WorldGeneration {
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation("abstoneedition", "ore_bismuth"), bismuthFeature);
         ore_bismuth = Holder.direct(new PlacedFeature(Holder.direct(bismuthFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(10), VerticalAnchor.absolute(50)))));
 
+        ConfiguredFeature<?,?> uraniumFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OreFeatures.NATURAL_STONE, AdditionalBlocksBlocks.URANIUM_ORE.getBlock().defaultBlockState(), 4));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation("abstoneedition", "ore_uranium"), uraniumFeature);
+        ore_uranium = Holder.direct(new PlacedFeature(Holder.direct(uraniumFeature), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(0), VerticalAnchor.absolute(30)))));
     }
 
     @SubscribeEvent(priority = EventPriority.LOW)
@@ -86,6 +90,9 @@ public class WorldGeneration {
             }
             if(AdditionalBlocksConfig.enableBismuth.get()){
                 e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_bismuth);
+            }
+            if(AdditionalBlocksConfig.enableUranium.get()){
+                e.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore_uranium);
             }
             if(!(e.getName().getNamespace().equals("minecraft") && (e.getName().getPath().equals("desert") || e.getName().getPath().equals("desert_hills") || e.getName().getPath().equals("desert_lakes")))){
                 if(AdditionalBlocksConfig.enableMarble.get())

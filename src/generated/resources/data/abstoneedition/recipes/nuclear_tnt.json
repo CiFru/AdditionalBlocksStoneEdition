@@ -1,0 +1,31 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:nuclear_tnt",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "CBC",
+      "BAB",
+      "CBC"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:tnt"
+      },
+      "B": {
+        "item": "abstoneedition:refined_uranium"
+      },
+      "C": {
+        "item": "minecraft:gunpowder"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:nuclear_tnt"
+    }
+  }
+}
