@@ -1,0 +1,51 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "item": "abstoneedition:silver_nugget",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "item": "abstoneedition:silver_axe",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "item": "abstoneedition:silver_pickaxe",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "item": "abstoneedition:silver_shovel",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "item": "abstoneedition:silver_hoe",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "item": "abstoneedition:silver_sword",
+      "type": "abstoneedition:item_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:blasting",
+    "ingredient": [
+      {
+        "item": "abstoneedition:silver_axe"
+      },
+      {
+        "item": "abstoneedition:silver_pickaxe"
+      },
+      {
+        "item": "abstoneedition:silver_shovel"
+      },
+      {
+        "item": "abstoneedition:silver_hoe"
+      },
+      {
+        "item": "abstoneedition:silver_sword"
+      }
+    ],
+    "result": "abstoneedition:silver_nugget",
+    "experience": 1
+  }
+}

@@ -1,138 +1,18 @@
 {
   "variants": {
-    "facing=north,half=bottom,shape=straight": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs",
-      "y": 270,
-      "uvlock": true
-    },
-    "facing=east,half=bottom,shape=outer_right": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_outer"
-    },
-    "facing=north,half=bottom,shape=outer_left": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
-      "y": 180,
-      "uvlock": true
-    },
-    "facing=east,half=top,shape=outer_right": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
-      "x": 180,
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=east,half=top,shape=inner_left": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
-      "x": 180,
-      "uvlock": true
-    },
-    "facing=south,half=top,shape=outer_left": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
-      "x": 180,
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=west,half=bottom,shape=outer_right": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
-      "y": 180,
-      "uvlock": true
-    },
-    "facing=east,half=top,shape=inner_right": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
-      "x": 180,
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=west,half=top,shape=inner_left": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
-      "x": 180,
-      "y": 180,
-      "uvlock": true
-    },
-    "facing=north,half=top,shape=straight": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs",
-      "x": 180,
-      "y": 270,
-      "uvlock": true
-    },
-    "facing=south,half=top,shape=outer_right": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
-      "x": 180,
-      "y": 180,
-      "uvlock": true
-    },
-    "facing=east,half=bottom,shape=inner_right": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner"
-    },
     "facing=east,half=top,shape=outer_left": {
       "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
       "x": 180,
       "uvlock": true
     },
-    "facing=west,half=bottom,shape=inner_right": {
+    "facing=north,half=top,shape=inner_right": {
       "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
-      "y": 180,
-      "uvlock": true
-    },
-    "facing=east,half=bottom,shape=outer_left": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
-      "y": 270,
+      "x": 180,
       "uvlock": true
     },
     "facing=west,half=bottom,shape=outer_left": {
       "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
       "y": 90,
-      "uvlock": true
-    },
-    "facing=south,half=bottom,shape=straight": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs",
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=west,half=bottom,shape=inner_left": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=east,half=bottom,shape=inner_left": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
-      "y": 270,
-      "uvlock": true
-    },
-    "facing=south,half=top,shape=inner_left": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
-      "x": 180,
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=south,half=bottom,shape=inner_right": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=south,half=top,shape=inner_right": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
-      "x": 180,
-      "y": 180,
-      "uvlock": true
-    },
-    "facing=north,half=top,shape=inner_left": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
-      "x": 180,
-      "y": 270,
-      "uvlock": true
-    },
-    "facing=east,half=top,shape=straight": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs",
-      "x": 180,
-      "uvlock": true
-    },
-    "facing=south,half=bottom,shape=outer_right": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=north,half=top,shape=inner_right": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
-      "x": 180,
       "uvlock": true
     },
     "facing=west,half=bottom,shape=straight": {
@@ -145,9 +25,10 @@
       "y": 270,
       "uvlock": true
     },
-    "facing=north,half=bottom,shape=inner_left": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
-      "y": 180,
+    "facing=east,half=top,shape=outer_right": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
+      "x": 180,
+      "y": 90,
       "uvlock": true
     },
     "facing=west,half=top,shape=outer_left": {
@@ -156,14 +37,44 @@
       "y": 180,
       "uvlock": true
     },
-    "facing=north,half=top,shape=outer_right": {
+    "facing=west,half=bottom,shape=inner_left": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=straight": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=outer_left": {
       "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=inner_left": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
       "x": 180,
       "uvlock": true
     },
-    "facing=north,half=bottom,shape=outer_right": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
-      "y": 270,
+    "facing=west,half=bottom,shape=inner_right": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=inner_left": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=straight": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs"
+    },
+    "facing=east,half=top,shape=inner_right": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
+      "x": 180,
+      "y": 90,
       "uvlock": true
     },
     "facing=west,half=top,shape=inner_right": {
@@ -172,12 +83,11 @@
       "y": 270,
       "uvlock": true
     },
-    "facing=south,half=bottom,shape=inner_left": {
+    "facing=east,half=bottom,shape=inner_right": {
       "model": "abstoneedition:block/smooth_bloodstone_stairs_inner"
     },
-    "facing=north,half=top,shape=outer_left": {
+    "facing=north,half=bottom,shape=outer_right": {
       "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
-      "x": 180,
       "y": 270,
       "uvlock": true
     },
@@ -187,8 +97,77 @@
       "y": 180,
       "uvlock": true
     },
-    "facing=south,half=bottom,shape=outer_left": {
+    "facing=east,half=top,shape=straight": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=straight": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=inner_left": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=inner_left": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=outer_right": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=outer_left": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=outer_right": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=inner_left": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=straight": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=inner_left": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=inner_right": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=outer_right": {
       "model": "abstoneedition:block/smooth_bloodstone_stairs_outer"
+    },
+    "facing=north,half=top,shape=outer_left": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=inner_left": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner"
     },
     "facing=south,half=top,shape=straight": {
       "model": "abstoneedition:block/smooth_bloodstone_stairs",
@@ -196,14 +175,35 @@
       "y": 90,
       "uvlock": true
     },
-    "facing=east,half=bottom,shape=straight": {
-      "model": "abstoneedition:block/smooth_bloodstone_stairs"
-    },
-    "facing=west,half=top,shape=outer_right": {
+    "facing=east,half=bottom,shape=outer_left": {
       "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
-      "x": 180,
       "y": 270,
       "uvlock": true
+    },
+    "facing=south,half=top,shape=outer_right": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=inner_right": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=outer_right": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,half=bottom,shape=outer_right": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=outer_left": {
+      "model": "abstoneedition:block/smooth_bloodstone_stairs_outer"
     }
   }
 }

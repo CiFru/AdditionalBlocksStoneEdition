@@ -27,7 +27,7 @@
     }
   ],
   "recipe": {
-    "type": "minecraft:blasting",
+    "type": "minecraft:smelting",
     "ingredient": [
       {
         "item": "abstoneedition:copper_axe"
@@ -47,6 +47,6 @@
     ],
     "result": "abstoneedition:copper_nugget",
     "experience": 4,
-    "cookingtime": 300
+    "cookingtime": 600
   }
 }

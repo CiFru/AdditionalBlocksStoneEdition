@@ -856,7 +856,7 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.URANIUM_NUGGET));
         // Refined Uranium (ingot)
         TagKey<Item> uraniumIngots = TagKey.create(Registries.ITEMS.getVanillaRegistry().key(), new ResourceLocation("forge", "ingots/uranium"));
-        this.shapeless(AdditionalBlocksItems.REFINED_URANIUM, 4)
+        this.shapeless(AdditionalBlocksItems.REFINED_URANIUM, 9)
             .input(AdditionalBlocksBlocks.URANIUM_BLOCK)
             .unlockedBy(AdditionalBlocksItems.REFINED_URANIUM, AdditionalBlocksBlocks.URANIUM_BLOCK)
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.REFINED_URANIUM))
