@@ -12,7 +12,8 @@ public enum ABToolMaterial {
 
     COPPER(ToolTier.IRON, 6, 2, 250, 14, AdditionalBlocksItems.COPPER_INGOT::getItem),
     SILVER(ToolTier.IRON, 6, 2, 250, 14, AdditionalBlocksItems.SILVER_INGOT::getItem),
-    BISMUTH(ToolTier.DIAMOND, 8, 3, 1561, 10, AdditionalBlocksItems.BISMUTH_INGOT::getItem);
+    BISMUTH(ToolTier.DIAMOND, 8, 3, 1561, 10, AdditionalBlocksItems.BISMUTH_INGOT::getItem),
+    URANIUM(ToolTier.DIAMOND, 8, 4, 200, 10, AdditionalBlocksItems.REFINED_URANIUM::getItem);
 
     private final ToolTier miningTier;
     private final int miningSpeed;

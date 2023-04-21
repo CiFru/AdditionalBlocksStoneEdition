@@ -1,0 +1,60 @@
+{
+  "conditions": [
+    {
+      "item": "abstoneedition:refined_uranium",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "block": "abstoneedition:uranium_block",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:refined_uranium"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/refined_uranium.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/refined_uranium.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:refined_uranium"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "abstoneedition:refined_uranium"
+          },
+          {
+            "item": "abstoneedition:uranium_block"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:refined_uranium"
+    ]
+  }
+}

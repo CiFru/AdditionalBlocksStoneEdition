@@ -1,0 +1,64 @@
+{
+  "conditions": [
+    {
+      "block": "abstoneedition:uranium_glass",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:uranium_glass"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/uranium_glass.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/uranium_glass.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "recipe_condition2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "abstoneedition:raw_uranium"
+          }
+        ]
+      }
+    },
+    "recipe_condition1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:glass"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:uranium_glass"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition1",
+      "recipe_condition2"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:uranium_glass"
+    ]
+  }
+}

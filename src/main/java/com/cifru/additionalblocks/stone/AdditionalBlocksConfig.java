@@ -42,6 +42,7 @@ public class AdditionalBlocksConfig {
     public static final Supplier<Boolean> enableSmoothStone;
     public static final Supplier<Boolean> enableBismuth;
     public static final Supplier<Boolean> enableObsidian;
+    public static final Supplier<Boolean> enableUranium;
 
     static {
         IConfigBuilder config = ConfigBuilders.newTomlConfig("abstoneedition", null, false);
@@ -75,6 +76,7 @@ public class AdditionalBlocksConfig {
         enableSmoothStone = config.comment("if true, Smooth Stone Blocks are enabled").define("enableSmoothStone", true);
         enableBismuth = config.comment("if true, Bismuth Blocks and Items are enabled").define("enableBismuth", true);
         enableObsidian = config.comment("if true, Obsidian Blocks and Items are enabled").define("enableObsidian", true);
+        enableUranium = config.comment("if true, Uranium Blocks and Items are enabled").define("enableUranium", true);
         config.pop();
 
         config.build();

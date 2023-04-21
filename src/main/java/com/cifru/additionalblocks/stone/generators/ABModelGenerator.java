@@ -137,6 +137,16 @@ public class ABModelGenerator extends ModelGenerator {
             this.model(namespace, "item/" + identifier)
                 .parent(namespace, "block/" + identifier);
         });
+        this.blockBuilders.put(AdditionalBlocksBlocks.NUCLEAR_TNT, blockType -> {
+            String namespace = blockType.getIdentifier().getNamespace();
+            String identifier = blockType.getIdentifier().getPath();
+            ResourceLocation side = new ResourceLocation(namespace, identifier);
+            ResourceLocation top = new ResourceLocation(namespace, identifier + "_top");
+            ResourceLocation bottom = new ResourceLocation(namespace, identifier + "_bottom");
+            this.cube(namespace, "block/" + identifier, top, bottom, side, side, side, side);
+            this.model(namespace, "item/" + identifier)
+                .parent(namespace, "block/" + identifier);
+        });
     }
 
     @Override
