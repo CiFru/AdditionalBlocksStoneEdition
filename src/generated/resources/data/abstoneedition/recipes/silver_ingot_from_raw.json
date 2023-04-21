@@ -11,12 +11,12 @@
     }
   ],
   "recipe": {
-    "type": "minecraft:blasting",
+    "type": "minecraft:smelting",
     "ingredient": {
       "item": "abstoneedition:raw_silver"
     },
     "result": "abstoneedition:silver_ingot",
     "experience": 4,
-    "cookingtime": 300
+    "cookingtime": 600
   }
 }

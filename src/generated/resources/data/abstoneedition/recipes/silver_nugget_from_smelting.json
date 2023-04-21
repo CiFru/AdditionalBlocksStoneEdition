@@ -27,7 +27,7 @@
     }
   ],
   "recipe": {
-    "type": "minecraft:blasting",
+    "type": "minecraft:smelting",
     "ingredient": [
       {
         "item": "abstoneedition:silver_axe"
