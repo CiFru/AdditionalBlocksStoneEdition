@@ -15,6 +15,8 @@
     "ingredient": {
       "item": "abstoneedition:bismuth_ore"
     },
-    "result": "abstoneedition:bismuth_ingot"
+    "result": "abstoneedition:bismuth_ingot",
+    "experience": 4,
+    "cookingtime": 600
   }
 }

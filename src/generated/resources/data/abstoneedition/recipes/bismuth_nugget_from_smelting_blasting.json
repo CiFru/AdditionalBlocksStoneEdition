@@ -45,6 +45,7 @@
         "item": "abstoneedition:bismuth_sword"
       }
     ],
-    "result": "abstoneedition:bismuth_nugget"
+    "result": "abstoneedition:bismuth_nugget",
+    "experience": 1
   }
 }

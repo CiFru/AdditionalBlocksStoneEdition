@@ -1,0 +1,25 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:refined_uranium"
+    },
+    {
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:uranium_block"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "abstoneedition:uranium_block"
+      }
+    ],
+    "result": {
+      "item": "abstoneedition:refined_uranium",
+      "count": 9
+    }
+  }
+}

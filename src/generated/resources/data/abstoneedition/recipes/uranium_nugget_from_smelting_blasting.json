@@ -1,0 +1,17 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:uranium_nugget"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:blasting",
+    "ingredient": {
+      "item": "abstoneedition:uranium_sword"
+    },
+    "result": "abstoneedition:uranium_nugget",
+    "experience": 1
+  }
+}

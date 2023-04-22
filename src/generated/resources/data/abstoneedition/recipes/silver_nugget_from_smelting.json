@@ -45,6 +45,7 @@
         "item": "abstoneedition:silver_sword"
       }
     ],
-    "result": "abstoneedition:silver_nugget"
+    "result": "abstoneedition:silver_nugget",
+    "experience": 1
   }
 }

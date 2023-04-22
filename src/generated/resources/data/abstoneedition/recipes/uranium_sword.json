@@ -1,0 +1,28 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:uranium_sword"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " A ",
+      " A ",
+      " B "
+    ],
+    "key": {
+      "A": {
+        "tag": "forge:ingots/uranium"
+      },
+      "B": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:uranium_sword"
+    }
+  }
+}
