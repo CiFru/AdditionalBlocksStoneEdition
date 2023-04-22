@@ -1,0 +1,55 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "abstoneedition:item_enabled",
+      "item": "abstoneedition:uranium_nugget"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:uranium_nugget"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/misc/uranium_nugget_from_ore_smelting.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/misc/uranium_nugget_from_ore_smelting.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:uranium_nugget_from_ore"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "abstoneedition:raw_uranium"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:uranium_nugget_from_ore"
+    ]
+  }
+}

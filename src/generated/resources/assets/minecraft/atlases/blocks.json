@@ -2,31 +2,11 @@
   "sources": [
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:brown_stone_tiles"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:stone_pattern"
-    },
-    {
-      "type": "minecraft:single",
       "resource": "abstoneedition:aztec_pillar"
     },
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:copper_pickaxe"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "minecraft:block/glowstone"
-    },
-    {
-      "type": "minecraft:single",
       "resource": "abstoneedition:mud"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:marble_pillar_top"
     },
     {
       "type": "minecraft:single",
@@ -42,23 +22,7 @@
     },
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:stone_tiles"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:aztec_patterned_wall"
-    },
-    {
-      "type": "minecraft:single",
       "resource": "abstoneedition:copper_axe"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:silver_nugget"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:old_stone_tiles"
     },
     {
       "type": "minecraft:single",
@@ -67,6 +31,10 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:silver_block"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:uranium_sword"
     },
     {
       "type": "minecraft:single",
@@ -82,19 +50,7 @@
     },
     {
       "type": "minecraft:single",
-      "resource": "minecraft:block/polished_granite"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:bismuth_shovel"
-    },
-    {
-      "type": "minecraft:single",
       "resource": "abstoneedition:brown_stone_path_curved"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:pebbles"
     },
     {
       "type": "minecraft:single",
@@ -102,35 +58,11 @@
     },
     {
       "type": "minecraft:single",
-      "resource": "minecraft:block/obsidian"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:marble_pillar"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:bismuth_axe"
-    },
-    {
-      "type": "minecraft:single",
       "resource": "abstoneedition:charred_log_top"
     },
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:copper_sword"
-    },
-    {
-      "type": "minecraft:single",
       "resource": "abstoneedition:bismuth_sword"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:smooth_bloodstone"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:bismuth_block"
     },
     {
       "type": "minecraft:single",
@@ -147,10 +79,6 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:andesite_bricks"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:watery_pebbles"
     },
     {
       "type": "minecraft:single",
@@ -174,15 +102,11 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "abstoneedition:raw_uranium"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:granite_bricks"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:smooth_stone_bricks"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:smooth_glowstone"
     },
     {
       "type": "minecraft:single",
@@ -190,19 +114,7 @@
     },
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:glowstone_bricks"
-    },
-    {
-      "type": "minecraft:single",
       "resource": "abstoneedition:silver_ingot"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "minecraft:block/stone"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:stone_path_curved"
     },
     {
       "type": "minecraft:single",
@@ -210,23 +122,11 @@
     },
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:charred_log"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:bismuth_ore"
-    },
-    {
-      "type": "minecraft:single",
       "resource": "abstoneedition:gray_bricks"
     },
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:bismuth_ingot"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:bismuth_pickaxe"
+      "resource": "abstoneedition:uranium_ore"
     },
     {
       "type": "minecraft:single",
@@ -234,11 +134,7 @@
     },
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:bloodstone"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:old_stone_pattern"
+      "resource": "abstoneedition:uranium_glass_pane_edge"
     },
     {
       "type": "minecraft:single",
@@ -258,19 +154,7 @@
     },
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:asphalt"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:raw_bismuth_chunk"
-    },
-    {
-      "type": "minecraft:single",
       "resource": "minecraft:block/smooth_stone"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:raw_silver_block"
     },
     {
       "type": "minecraft:single",
@@ -278,19 +162,7 @@
     },
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:stone_path_straight"
-    },
-    {
-      "type": "minecraft:single",
       "resource": "abstoneedition:old_stone_path_curved"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:aztec_pillar_top"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:black_marble"
     },
     {
       "type": "minecraft:single",
@@ -302,27 +174,15 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "abstoneedition:nuclear_tnt_bottom"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:smooth_black_marble"
     },
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:silver_hoe"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:water_stone"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:silver_pickaxe"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:marble_bricks"
-    },
-    {
-      "type": "minecraft:single",
-      "resource": "abstoneedition:brown_stone_path_straight"
     },
     {
       "type": "minecraft:single",
@@ -342,7 +202,191 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "abstoneedition:brown_stone_tiles"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:stone_pattern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:copper_pickaxe"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/glowstone"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:marble_pillar_top"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:stone_tiles"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:aztec_patterned_wall"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:silver_nugget"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:old_stone_tiles"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/polished_granite"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:bismuth_shovel"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:pebbles"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/obsidian"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:marble_pillar"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:bismuth_axe"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:uranium_block"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:copper_sword"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:smooth_bloodstone"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:bismuth_block"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:watery_pebbles"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:smooth_stone_bricks"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:smooth_glowstone"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:glowstone_bricks"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/stone"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:stone_path_curved"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:nuclear_tnt_top"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:uranium_glass_pane"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:charred_log"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:uranium_glass"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:bismuth_ore"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:bismuth_ingot"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:bismuth_pickaxe"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:bloodstone"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:old_stone_pattern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:asphalt"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:raw_bismuth_chunk"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:raw_silver_block"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:stone_path_straight"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:aztec_pillar_top"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:black_marble"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:water_stone"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:silver_pickaxe"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:marble_bricks"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:brown_stone_path_straight"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:refined_uranium"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:bismuth_cluster"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:nuclear_tnt"
     },
     {
       "type": "minecraft:single",
@@ -351,6 +395,10 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:bismuth_nugget"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:uranium_nugget"
     }
   ]
 }

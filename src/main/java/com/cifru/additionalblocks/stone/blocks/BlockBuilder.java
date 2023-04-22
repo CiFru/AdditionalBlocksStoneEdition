@@ -121,6 +121,11 @@ public class BlockBuilder {
         return this;
     }
 
+    public BlockBuilder transparentTextures(){
+        this.hasTransparentTextures = true;
+        return this;
+    }
+
     public BlockBuilder blockStatePreset(ABBlockStateGenerator.BlockPreset preset){
         this.blockStatePreset = preset;
         return this;

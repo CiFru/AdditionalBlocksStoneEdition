@@ -1,0 +1,18 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:uranium_nugget"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:smelting",
+    "ingredient": {
+      "item": "abstoneedition:raw_uranium"
+    },
+    "result": "abstoneedition:uranium_nugget",
+    "experience": 4,
+    "cookingtime": 600
+  }
+}

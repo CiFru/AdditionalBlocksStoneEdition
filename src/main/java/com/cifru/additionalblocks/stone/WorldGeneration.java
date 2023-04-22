@@ -20,6 +20,7 @@ public class WorldGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld().and(BiomeSelectors.tag(ConventionalBiomeTags.DESERT)), GenerationStep.Decoration.UNDERGROUND_ORES, key("ore_limestone"));
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Decoration.UNDERGROUND_ORES, key("ore_silver"));
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Decoration.UNDERGROUND_ORES, key("ore_bismuth"));
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Decoration.UNDERGROUND_ORES, key("ore_uranium"));
         BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Decoration.UNDERGROUND_ORES, key("ore_bloodstone"));
         BiomeModifications.addFeature(BiomeSelectors.foundInTheNether().and(BiomeSelectors.includeByKey(Biomes.SOUL_SAND_VALLEY, Biomes.BASALT_DELTAS)), GenerationStep.Decoration.UNDERGROUND_ORES, key("ore_black_marble"));
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld().and(BiomeSelectors.tag(ConventionalBiomeTags.MOUNTAIN_PEAK).or(BiomeSelectors.tag(ConventionalBiomeTags.MOUNTAIN))), GenerationStep.Decoration.UNDERGROUND_ORES, key("ore_volcanic_stone"));

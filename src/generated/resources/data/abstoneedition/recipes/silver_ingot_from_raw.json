@@ -15,6 +15,8 @@
     "ingredient": {
       "item": "abstoneedition:raw_silver"
     },
-    "result": "abstoneedition:silver_ingot"
+    "result": "abstoneedition:silver_ingot",
+    "experience": 4,
+    "cookingtime": 600
   }
 }

@@ -1,0 +1,28 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:uranium_nugget"
+    },
+    {
+      "type": "abstoneedition:item_enabled",
+      "item": "abstoneedition:refined_uranium"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AA",
+      "AA"
+    ],
+    "key": {
+      "A": {
+        "item": "abstoneedition:uranium_nugget"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:refined_uranium"
+    }
+  }
+}
