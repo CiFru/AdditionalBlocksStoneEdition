@@ -1,0 +1,22 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "item": "abstoneedition:bismuth_ingot",
+      "type": "abstoneedition:item_enabled"
+    },
+    {
+      "block": "abstoneedition:bismuth_ore",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:blasting",
+    "ingredient": {
+      "item": "abstoneedition:bismuth_ore"
+    },
+    "result": "abstoneedition:bismuth_ingot",
+    "experience": 4,
+    "cookingtime": 300
+  }
+}
