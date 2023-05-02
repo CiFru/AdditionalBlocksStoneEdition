@@ -1,3 +1,11 @@
+### Additional Blocks: Stone Edition V2.1.0a
+1.19+ Update
+- Reinforced Deepslate variants
+- Froglight variants
+- (Packed) mud variants
+- Sculk variants
+- Compatibility with AB: Vertical Edition
+
 ### Additional Blocks: Stone Edition V2.1.0
 Uranium Update:
 - Uranium Ore

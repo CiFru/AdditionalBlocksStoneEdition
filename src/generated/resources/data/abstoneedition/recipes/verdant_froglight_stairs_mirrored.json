@@ -1,0 +1,26 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:verdant_froglight_stairs"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "A  ",
+      "AA ",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:verdant_froglight"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:verdant_froglight_stairs",
+      "count": 4
+    }
+  }
+}

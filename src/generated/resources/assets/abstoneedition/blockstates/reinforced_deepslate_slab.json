@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=double": {
+      "model": "abstoneedition:block/reinforced_deepslate_slab"
+    },
+    "type=bottom": {
+      "model": "abstoneedition:block/reinforced_deepslate_slab_bottom"
+    },
+    "type=top": {
+      "model": "abstoneedition:block/reinforced_deepslate_slab_top"
+    }
+  }
+}

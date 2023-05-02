@@ -1,0 +1,24 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:ochre_froglight_slab"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:ochre_froglight"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:ochre_froglight_slab",
+      "count": 6
+    }
+  }
+}

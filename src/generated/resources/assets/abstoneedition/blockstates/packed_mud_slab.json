@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "abstoneedition:block/packed_mud_slab_bottom"
+    },
+    "type=double": {
+      "model": "abstoneedition:block/packed_mud_slab"
+    },
+    "type=top": {
+      "model": "abstoneedition:block/packed_mud_slab_top"
+    }
+  }
+}

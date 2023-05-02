@@ -1,0 +1,17 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:reinforced_deepslate_wall"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "minecraft:reinforced_deepslate"
+    },
+    "result": "abstoneedition:reinforced_deepslate_wall",
+    "count": 1
+  }
+}

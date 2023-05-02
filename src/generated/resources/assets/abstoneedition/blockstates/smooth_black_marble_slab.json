@@ -1,10 +1,10 @@
 {
   "variants": {
-    "type=double": {
-      "model": "abstoneedition:block/smooth_black_marble_slab"
-    },
     "type=bottom": {
       "model": "abstoneedition:block/smooth_black_marble_slab_bottom"
+    },
+    "type=double": {
+      "model": "abstoneedition:block/smooth_black_marble_slab"
     },
     "type=top": {
       "model": "abstoneedition:block/smooth_black_marble_slab_top"

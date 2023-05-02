@@ -175,6 +175,10 @@ public class ABStoneCuttingRecipeGenerator extends RecipeGenerator {
         this.create(AdditionalBlocksBlocks.OBSIDIAN_BRICKS_STAIRS, 1, AdditionalBlocksBlocks.OBSIDIAN_BRICKS, Blocks.OBSIDIAN);
         this.create(AdditionalBlocksBlocks.OBSIDIAN_BRICKS_SLAB, 2, AdditionalBlocksBlocks.OBSIDIAN_BRICKS, Blocks.OBSIDIAN);
         this.create(AdditionalBlocksBlocks.OBSIDIAN_BRICKS_WALL, 1, AdditionalBlocksBlocks.OBSIDIAN_BRICKS, Blocks.OBSIDIAN);
+        // 1.19
+        this.create(AdditionalBlocksBlocks.REINFORCED_DEEPSLATE_STAIRS, 1, Blocks.REINFORCED_DEEPSLATE);
+        this.create(AdditionalBlocksBlocks.REINFORCED_DEEPSLATE_SLAB, 2, Blocks.REINFORCED_DEEPSLATE);
+        this.create(AdditionalBlocksBlocks.REINFORCED_DEEPSLATE_WALL, 1, Blocks.REINFORCED_DEEPSLATE);
     }
 
     private void create(BlockType<?> output, int count, ItemLike... inputs){

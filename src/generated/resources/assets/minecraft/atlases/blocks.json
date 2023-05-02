@@ -6,10 +6,6 @@
     },
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:mud"
-    },
-    {
-      "type": "minecraft:single",
       "resource": "abstoneedition:silver_ore"
     },
     {
@@ -31,6 +27,10 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:silver_block"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/packed_mud"
     },
     {
       "type": "minecraft:single",
@@ -71,6 +71,10 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:smooth_smooth_stone"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/pearlescent_froglight_side"
     },
     {
       "type": "minecraft:single",
@@ -119,6 +123,10 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:smooth_marble"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/ochre_froglight_side"
     },
     {
       "type": "minecraft:single",
@@ -186,6 +194,10 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "minecraft:block/mud"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:raw_silver"
     },
     {
@@ -242,6 +254,10 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "minecraft:block/verdant_froglight_side"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:bismuth_shovel"
     },
     {
@@ -259,6 +275,10 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:bismuth_axe"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/reinforced_deepslate_side"
     },
     {
       "type": "minecraft:single",
@@ -343,6 +363,10 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:raw_bismuth_chunk"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/sculk"
     },
     {
       "type": "minecraft:single",
