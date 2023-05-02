@@ -1,4 +1,4 @@
-// 1.19.4	2023-04-10T02:36:20.4685792	Resource Generator 6
+// 1.19.4	2023-05-02T15:34:42.6906764	Resource Generator 6
 44170f4566a382006970cdfeb9781158f546320c data/forge/tags/items/ingots.json
 f4b42f0106b4af85991a5ead0bb5a16d20993504 data/forge/tags/items/ingots/bismuth.json
 5e55c62f958119f5b9496249bee6a510a2ec4376 data/forge/tags/items/ingots/silver.json
@@ -12,15 +12,13 @@ b9f6a1d5213bf8540443abc462d03caa7b2cb0a2 data/forge/tags/items/nuggets/uranium.j
 5dc3aeb96db2bd725bc2f1143c2223a57d65488b data/forge/tags/items/raw_materials/bismuth.json
 20dab9d06193f771103fbe670f2cdba79d080c53 data/forge/tags/items/raw_materials/silver.json
 53b6fa664927c0d3380868532399fda6d1c2da3e data/forge/tags/items/raw_materials/uranium.json
-ac8297ab28478ed30059ad93026c840d0254312e data/minecraft/tags/blocks/mineable/pickaxe.json
-9531fd227f16bf3edf8decc2b2cb21b57de50030 data/minecraft/tags/blocks/mineable/shovel.json
-31524901fe1ce5c96d1f52d8b8c3b9054469242c data/minecraft/tags/blocks/needs_diamond_tool.json
+882e9951902dc27a73ae8f36f925428106be6abc data/minecraft/tags/blocks/mineable/pickaxe.json
+9f19df1e0793b1f19798ce304a47c7210c23566c data/minecraft/tags/blocks/needs_diamond_tool.json
 796475c6013bf01802f1856f448086c1952f0b8b data/minecraft/tags/blocks/needs_iron_tool.json
-9d63ddb7c21ec725ad373f7ee791903345b7bcb4 data/minecraft/tags/blocks/needs_stone_tool.json
-82e10d5d0d039eb103c8b8acc218d8c715a8422d data/minecraft/tags/blocks/walls.json
-ac8297ab28478ed30059ad93026c840d0254312e data/minecraft/tags/items/mineable/pickaxe.json
-9531fd227f16bf3edf8decc2b2cb21b57de50030 data/minecraft/tags/items/mineable/shovel.json
-31524901fe1ce5c96d1f52d8b8c3b9054469242c data/minecraft/tags/items/needs_diamond_tool.json
+c0d1c7346c1ceff9d4ab5418d336edee7e7c82a8 data/minecraft/tags/blocks/needs_stone_tool.json
+59029d5b6069b4f304afabbd3b6c492e2549c4a2 data/minecraft/tags/blocks/walls.json
+882e9951902dc27a73ae8f36f925428106be6abc data/minecraft/tags/items/mineable/pickaxe.json
+9f19df1e0793b1f19798ce304a47c7210c23566c data/minecraft/tags/items/needs_diamond_tool.json
 796475c6013bf01802f1856f448086c1952f0b8b data/minecraft/tags/items/needs_iron_tool.json
-9d63ddb7c21ec725ad373f7ee791903345b7bcb4 data/minecraft/tags/items/needs_stone_tool.json
-82e10d5d0d039eb103c8b8acc218d8c715a8422d data/minecraft/tags/items/walls.json
+c0d1c7346c1ceff9d4ab5418d336edee7e7c82a8 data/minecraft/tags/items/needs_stone_tool.json
+59029d5b6069b4f304afabbd3b6c492e2549c4a2 data/minecraft/tags/items/walls.json

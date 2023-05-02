@@ -8,12 +8,12 @@
       "model": "abstoneedition:block/brown_stone_path_straight",
       "y": 90
     },
+    "facing=south": {
+      "model": "abstoneedition:block/brown_stone_path_straight"
+    },
     "facing=east": {
       "model": "abstoneedition:block/brown_stone_path_straight",
       "y": 270
-    },
-    "facing=south": {
-      "model": "abstoneedition:block/brown_stone_path_straight"
     }
   }
 }
