@@ -1,19 +1,19 @@
 {
   "variants": {
-    "facing=west": {
-      "model": "abstoneedition:block/brown_stone_path_straight",
-      "y": 90
-    },
     "facing=north": {
       "model": "abstoneedition:block/brown_stone_path_straight",
       "y": 180
     },
+    "facing=south": {
+      "model": "abstoneedition:block/brown_stone_path_straight"
+    },
+    "facing=west": {
+      "model": "abstoneedition:block/brown_stone_path_straight",
+      "y": 90
+    },
     "facing=east": {
       "model": "abstoneedition:block/brown_stone_path_straight",
       "y": 270
-    },
-    "facing=south": {
-      "model": "abstoneedition:block/brown_stone_path_straight"
     }
   }
 }

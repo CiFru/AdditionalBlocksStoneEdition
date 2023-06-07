@@ -22,14 +22,10 @@
     "hidden": false
   },
   "criteria": {
-    "recipe_condition2": {
-      "trigger": "minecraft:inventory_changed",
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "items": [
-          {
-            "tag": "c:gold_ingots"
-          }
-        ]
+        "recipe": "abstoneedition:sunstone"
       }
     },
     "recipe_condition1": {
@@ -42,10 +38,14 @@
         ]
       }
     },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
+    "recipe_condition2": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "recipe": "abstoneedition:sunstone"
+        "items": [
+          {
+            "tag": "c:gold_ingots"
+          }
+        ]
       }
     }
   },
