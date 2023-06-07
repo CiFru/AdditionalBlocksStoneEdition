@@ -197,4 +197,9 @@ public class ABStoneCuttingRecipeGenerator extends RecipeGenerator {
                 builder.condition(new ItemEnabledResourceCondition(((ItemType<?>)input)));
         }
     }
+
+    @Override
+    public String getName(){
+        return this.modName + "Stone Cutting Recipe Generator";
+    }
 }

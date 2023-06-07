@@ -18,7 +18,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MapColor;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -42,8 +42,7 @@ public class BlockBuilder {
     private final ResourceLocation identifier;
     private final Set<ResourceLocation> blockTags = new HashSet<>();
     private Supplier<Boolean> configOption = () -> true;
-    private Material material;
-    private DyeColor mapColor;
+    private MapColor mapColor;
     private boolean requireCorrectTool = false;
     private SoundType soundType;
     private Float destroyTime;
@@ -71,14 +70,13 @@ public class BlockBuilder {
         return this;
     }
 
-    public BlockBuilder material(Material material){
-        this.material = material;
+    public BlockBuilder mapColor(MapColor color){
+        this.mapColor = color;
         return this;
     }
 
     public BlockBuilder mapColor(DyeColor color){
-        this.mapColor = color;
-        return this;
+        return this.mapColor(color.getMapColor());
     }
 
     public BlockBuilder requireCorrectToolForDrops(){
@@ -166,10 +164,6 @@ public class BlockBuilder {
             throw new IllegalStateException("Block has already been build!");
         this.hasBeenBuild = true;
 
-        // Validate mandatory properties
-        if(this.material == null)
-            throw new IllegalStateException("Block builder for '" + this.identifier + "' is missing a material!");
-
         // Add harvest tags
         if(this.harvestTool != null && this.harvestTool.getMineableTag() != null)
             this.blockTags.add(this.harvestTool.getMineableTag().location());
@@ -177,7 +171,9 @@ public class BlockBuilder {
             this.blockTags.add(this.harvestTier.getMaterialTag().location());
 
         // Create the block properties
-        BlockProperties properties = this.mapColor == null ? BlockProperties.create(this.material) : BlockProperties.create(this.material, this.mapColor);
+        BlockProperties properties = BlockProperties.create();
+        if(this.mapColor != null)
+            properties.mapColor(this.mapColor);
         if(this.requireCorrectTool)
             properties.requiresCorrectTool();
         if(this.soundType != null)

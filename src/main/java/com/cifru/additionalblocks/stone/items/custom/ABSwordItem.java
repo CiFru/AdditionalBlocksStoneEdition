@@ -4,7 +4,6 @@ import com.cifru.additionalblocks.stone.tools.ABToolMaterial;
 import com.cifru.additionalblocks.stone.tools.ToolType;
 import com.supermartijn642.core.item.ItemProperties;
 import net.minecraft.core.BlockPos;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -12,7 +11,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
 
 import java.util.function.Supplier;
 
@@ -32,13 +30,8 @@ public class ABSwordItem extends ABToolItem {
 
     @Override
     public float getDestroySpeed(ItemStack stack, BlockState state){
-        if(state.is(Blocks.COBWEB)){
+        if(state.is(Blocks.COBWEB))
             return 15.0F;
-        }else{
-            Material material = state.getMaterial();
-            if(material == Material.PLANT || material == Material.REPLACEABLE_PLANT || state.is(BlockTags.LEAVES) || material == Material.VEGETABLE)
-                return 1.5F;
-        }
         return super.getDestroySpeed(stack, state);
     }
 

@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.Block;
  */
 public enum ToolType {
 
-    SWORD(null, 3, -2.4f), PICKAXE(BlockTags.MINEABLE_WITH_PICKAXE, 1, -2.8f), SHOVEL(BlockTags.MINEABLE_WITH_SHOVEL, 1.5f, -3), AXE(BlockTags.MINEABLE_WITH_AXE, 6, -3.1f), HOE(BlockTags.MINEABLE_WITH_HOE, -2, -1.5f);
+    SWORD(BlockTags.SWORD_EFFICIENT, 3, -2.4f), PICKAXE(BlockTags.MINEABLE_WITH_PICKAXE, 1, -2.8f), SHOVEL(BlockTags.MINEABLE_WITH_SHOVEL, 1.5f, -3), AXE(BlockTags.MINEABLE_WITH_AXE, 6, -3.1f), HOE(BlockTags.MINEABLE_WITH_HOE, -2, -1.5f);
 
     private final TagKey<Block> mineableTag;
     private final float baseAttackDamage;
