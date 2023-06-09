@@ -47,27 +47,27 @@ public class NuclearTntEntity extends Entity implements TraceableEntity {
 
         this.move(MoverType.SELF, this.getDeltaMovement());
         this.setDeltaMovement(this.getDeltaMovement().scale(0.98));
-        if(this.onGround)
+        if(this.onGround())
             this.setDeltaMovement(this.getDeltaMovement().multiply(0.7, -0.5, 0.7));
 
         int fuse = this.getFuse() - 1;
         this.setFuse(fuse);
         if(fuse <= 0){
             this.discard();
-            if(!this.level.isClientSide){
-                this.level.explode(this, this.getX(), this.getY(0.0625), this.getZ(), 10, Level.ExplosionInteraction.TNT);
-                AreaEffectCloud cloud = new AreaEffectCloud(this.level, this.getX(), this.getY(), this.getZ());
+            if(!this.level().isClientSide){
+                this.level().explode(this, this.getX(), this.getY(0.0625), this.getZ(), 10, Level.ExplosionInteraction.TNT);
+                AreaEffectCloud cloud = new AreaEffectCloud(this.level(), this.getX(), this.getY(), this.getZ());
                 cloud.setOwner(this.igniter);
                 cloud.setRadius(5);
                 cloud.setRadiusPerTick(0.03f);
                 cloud.setWaitTime(4);
                 cloud.addEffect(new MobEffectInstance(MobEffects.POISON, 200, 2, false, false, true));
-                this.level.addFreshEntity(cloud);
+                this.level().addFreshEntity(cloud);
             }
         }else{
             this.updateInWaterStateAndDoFluidPushing();
-            if(this.level.isClientSide)
-                this.level.addParticle(ParticleTypes.SMOKE, this.getX(), this.getY() + 0.5, this.getZ(), 0, 0, 0);
+            if(this.level().isClientSide)
+                this.level().addParticle(ParticleTypes.SMOKE, this.getX(), this.getY() + 0.5, this.getZ(), 0, 0, 0);
         }
     }
 
@@ -90,7 +90,7 @@ public class NuclearTntEntity extends Entity implements TraceableEntity {
     @Override
     protected void readAdditionalSaveData(CompoundTag data){
         this.entityData.set(DATA_FUSE, data.getInt("fuse"));
-        this.entityData.set(DATA_BLOCK_STATE, NbtUtils.readBlockState(this.level.holderLookup(Registries.BLOCK), data.getCompound("block_state")));
+        this.entityData.set(DATA_BLOCK_STATE, NbtUtils.readBlockState(this.level().holderLookup(Registries.BLOCK), data.getCompound("block_state")));
     }
 
     @Override

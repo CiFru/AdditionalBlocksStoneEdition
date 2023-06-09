@@ -13,7 +13,7 @@ import java.util.Set;
  */
 public enum ToolType {
 
-    SWORD(null, ToolActions.DEFAULT_SWORD_ACTIONS, 3, -2.4f), PICKAXE(BlockTags.MINEABLE_WITH_PICKAXE, ToolActions.DEFAULT_PICKAXE_ACTIONS, 1, -2.8f), SHOVEL(BlockTags.MINEABLE_WITH_SHOVEL, ToolActions.DEFAULT_SHOVEL_ACTIONS, 1.5f, -3), AXE(BlockTags.MINEABLE_WITH_AXE, ToolActions.DEFAULT_AXE_ACTIONS, 6, -3.1f), HOE(BlockTags.MINEABLE_WITH_HOE, ToolActions.DEFAULT_HOE_ACTIONS, -2, -1.5f);
+    SWORD(BlockTags.SWORD_EFFICIENT, ToolActions.DEFAULT_SWORD_ACTIONS, 3, -2.4f), PICKAXE(BlockTags.MINEABLE_WITH_PICKAXE, ToolActions.DEFAULT_PICKAXE_ACTIONS, 1, -2.8f), SHOVEL(BlockTags.MINEABLE_WITH_SHOVEL, ToolActions.DEFAULT_SHOVEL_ACTIONS, 1.5f, -3), AXE(BlockTags.MINEABLE_WITH_AXE, ToolActions.DEFAULT_AXE_ACTIONS, 6, -3.1f), HOE(BlockTags.MINEABLE_WITH_HOE, ToolActions.DEFAULT_HOE_ACTIONS, -2, -1.5f);
 
     private final TagKey<Block> mineableTag;
     private final Set<ToolAction> toolActions;
