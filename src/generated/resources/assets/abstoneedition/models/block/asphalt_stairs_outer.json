@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/outer_stairs",
   "textures": {
+    "bottom": "abstoneedition:asphalt",
     "side": "abstoneedition:asphalt",
-    "top": "abstoneedition:asphalt",
-    "bottom": "abstoneedition:asphalt"
+    "top": "abstoneedition:asphalt"
   }
 }

@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/template_glass_pane_side_alt",
   "textures": {
-    "edge": "abstoneedition:uranium_glass_pane_edge",
-    "pane": "abstoneedition:uranium_glass_pane"
+    "pane": "abstoneedition:uranium_glass_pane",
+    "edge": "abstoneedition:uranium_glass_pane_edge"
   }
 }

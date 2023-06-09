@@ -3,11 +3,11 @@
     "type=top": {
       "model": "abstoneedition:block/charred_slab_top"
     },
-    "type=double": {
-      "model": "abstoneedition:block/charred_slab"
-    },
     "type=bottom": {
       "model": "abstoneedition:block/charred_slab_bottom"
+    },
+    "type=double": {
+      "model": "abstoneedition:block/charred_slab"
     }
   }
 }
