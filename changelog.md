@@ -1,3 +1,8 @@
+### Additional Blocks: Stone Edition V2.1.0b
+1.20 Update
+1.20 features will be added soon.
+
+
 ### Additional Blocks: Stone Edition V2.1.0a
 1.19+ Update
 - Reinforced Deepslate variants
