@@ -1,73 +1,42 @@
 {
   "variants": {
-    "facing=east,shape=inner_right,half=bottom": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_inner"
-    },
-    "facing=west,shape=outer_right,half=bottom": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
-      "y": 180,
-      "uvlock": true
+    "facing=east,shape=straight,half=bottom": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs"
     },
     "facing=west,shape=inner_right,half=bottom": {
       "model": "abstoneedition:block/brown_stone_pattern_stairs_inner",
       "y": 180,
       "uvlock": true
     },
-    "facing=south,shape=straight,half=top": {
+    "facing=west,shape=straight,half=bottom": {
       "model": "abstoneedition:block/brown_stone_pattern_stairs",
-      "x": 180,
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=south,shape=inner_left,half=bottom": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_inner"
-    },
-    "facing=east,shape=outer_left,half=top": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
-      "x": 180,
-      "uvlock": true
-    },
-    "facing=south,shape=outer_right,half=bottom": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=south,shape=inner_left,half=top": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_inner",
-      "x": 180,
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=east,shape=outer_right,half=top": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
-      "x": 180,
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=west,shape=inner_left,half=bottom": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_inner",
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=north,shape=inner_right,half=top": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_inner",
-      "x": 180,
-      "uvlock": true
-    },
-    "facing=north,shape=inner_left,half=bottom": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_inner",
       "y": 180,
       "uvlock": true
     },
-    "facing=east,shape=outer_right,half=bottom": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer"
+    "facing=north,shape=outer_left,half=bottom": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
+      "y": 180,
+      "uvlock": true
     },
-    "facing=east,shape=straight,half=bottom": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs"
-    },
-    "facing=north,shape=outer_right,half=top": {
+    "facing=south,shape=outer_right,half=top": {
       "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
       "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,shape=inner_left,half=top": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=south,shape=inner_right,half=bottom": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,shape=outer_right,half=bottom": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
+      "y": 270,
       "uvlock": true
     },
     "facing=east,shape=inner_right,half=top": {
@@ -82,6 +51,81 @@
       "y": 270,
       "uvlock": true
     },
+    "facing=north,shape=straight,half=top": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,shape=outer_right,half=top": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=east,shape=outer_right,half=bottom": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer"
+    },
+    "facing=east,shape=inner_right,half=bottom": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_inner"
+    },
+    "facing=east,shape=outer_left,half=top": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=north,shape=inner_right,half=top": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=east,shape=straight,half=top": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,shape=inner_right,half=top": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,shape=straight,half=top": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,shape=straight,half=bottom": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=west,shape=straight,half=top": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,shape=outer_right,half=top": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,shape=inner_left,half=top": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=west,shape=outer_left,half=bottom": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,shape=outer_left,half=bottom": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer"
+    },
     "facing=south,shape=inner_right,half=top": {
       "model": "abstoneedition:block/brown_stone_pattern_stairs_inner",
       "x": 180,
@@ -93,10 +137,15 @@
       "y": 270,
       "uvlock": true
     },
-    "facing=west,shape=inner_right,half=top": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_inner",
+    "facing=west,shape=outer_left,half=top": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
       "x": 180,
-      "y": 270,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,shape=outer_right,half=bottom": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
+      "y": 180,
       "uvlock": true
     },
     "facing=east,shape=inner_left,half=bottom": {
@@ -110,62 +159,8 @@
       "y": 270,
       "uvlock": true
     },
-    "facing=east,shape=straight,half=top": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs",
-      "x": 180,
-      "uvlock": true
-    },
-    "facing=west,shape=straight,half=top": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs",
-      "x": 180,
-      "y": 180,
-      "uvlock": true
-    },
-    "facing=south,shape=outer_right,half=top": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
-      "x": 180,
-      "y": 180,
-      "uvlock": true
-    },
-    "facing=north,shape=outer_right,half=bottom": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
-      "y": 270,
-      "uvlock": true
-    },
-    "facing=north,shape=straight,half=top": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs",
-      "x": 180,
-      "y": 270,
-      "uvlock": true
-    },
-    "facing=west,shape=straight,half=bottom": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs",
-      "y": 180,
-      "uvlock": true
-    },
-    "facing=east,shape=inner_left,half=top": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_inner",
-      "x": 180,
-      "uvlock": true
-    },
-    "facing=east,shape=outer_left,half=bottom": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
-      "y": 270,
-      "uvlock": true
-    },
-    "facing=north,shape=straight,half=bottom": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs",
-      "y": 270,
-      "uvlock": true
-    },
-    "facing=south,shape=outer_left,half=bottom": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer"
-    },
-    "facing=west,shape=outer_left,half=top": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
-      "x": 180,
-      "y": 180,
-      "uvlock": true
+    "facing=south,shape=inner_left,half=bottom": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_inner"
     },
     "facing=west,shape=inner_left,half=top": {
       "model": "abstoneedition:block/brown_stone_pattern_stairs_inner",
@@ -173,19 +168,24 @@
       "y": 180,
       "uvlock": true
     },
-    "facing=north,shape=outer_left,half=bottom": {
+    "facing=south,shape=outer_right,half=bottom": {
       "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,shape=inner_left,half=bottom": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_inner",
       "y": 180,
       "uvlock": true
     },
-    "facing=west,shape=outer_left,half=bottom": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
+    "facing=west,shape=inner_left,half=bottom": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_inner",
       "y": 90,
       "uvlock": true
     },
-    "facing=south,shape=straight,half=bottom": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs",
-      "y": 90,
+    "facing=east,shape=outer_left,half=bottom": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs_outer",
+      "y": 270,
       "uvlock": true
     },
     "facing=south,shape=outer_left,half=top": {
@@ -194,15 +194,15 @@
       "y": 90,
       "uvlock": true
     },
-    "facing=south,shape=inner_right,half=bottom": {
+    "facing=south,shape=inner_left,half=top": {
       "model": "abstoneedition:block/brown_stone_pattern_stairs_inner",
+      "x": 180,
       "y": 90,
       "uvlock": true
     },
-    "facing=north,shape=inner_left,half=top": {
-      "model": "abstoneedition:block/brown_stone_pattern_stairs_inner",
-      "x": 180,
-      "y": 270,
+    "facing=south,shape=straight,half=bottom": {
+      "model": "abstoneedition:block/brown_stone_pattern_stairs",
+      "y": 90,
       "uvlock": true
     }
   }
