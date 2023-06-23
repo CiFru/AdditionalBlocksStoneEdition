@@ -50,7 +50,7 @@ public class ABToolItem extends ABItem {
 
     @Override
     public float getDestroySpeed(ItemStack stack, BlockState state){
-        return state.is(this.toolType.getMineableTag()) ? this.toolMaterial.getMiningSpeed() : 1;
+        return this.toolType.getMineableTag() != null && state.is(this.toolType.getMineableTag()) ? this.toolMaterial.getMiningSpeed() : 1;
     }
 
     @Override
