@@ -20,6 +20,10 @@ public class ABStoneCuttingRecipeGenerator extends RecipeGenerator {
     }
 
     @Override
+    public String getName(){
+        return this.modName + " Stone Cutting Generator";
+    }
+    @Override
     public void generate(){
         // Marble
         this.create(AdditionalBlocksBlocks.MARBLE_STAIRS, 1, AdditionalBlocksBlocks.MARBLE);
