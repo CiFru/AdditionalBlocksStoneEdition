@@ -3,11 +3,11 @@
     "type=bottom": {
       "model": "abstoneedition:block/old_stone_tiles_slab_bottom"
     },
-    "type=top": {
-      "model": "abstoneedition:block/old_stone_tiles_slab_top"
-    },
     "type=double": {
       "model": "abstoneedition:block/old_stone_tiles_slab"
+    },
+    "type=top": {
+      "model": "abstoneedition:block/old_stone_tiles_slab_top"
     }
   }
 }

@@ -594,8 +594,8 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.COPPER_HOE));
         // Copper sword
         this.shaped(AdditionalBlocksItems.COPPER_SWORD)
-            .pattern("AAA")
-            .pattern(" B ")
+            .pattern(" A ")
+            .pattern(" A ")
             .pattern(" B ")
             .input('A', copperIngots)
             .input('B', Tags.Items.RODS_WOODEN)
@@ -698,8 +698,8 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .condition(new ItemEnabledResourceCondition(AdditionalBlocksItems.SILVER_HOE));
         // Silver sword
         this.shaped(AdditionalBlocksItems.SILVER_SWORD)
-            .pattern("AAA")
-            .pattern(" B ")
+            .pattern(" A ")
+            .pattern(" A ")
             .pattern(" B ")
             .input('A', silverIngots)
             .input('B', Tags.Items.RODS_WOODEN)

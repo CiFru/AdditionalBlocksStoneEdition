@@ -1,13 +1,13 @@
 {
   "variants": {
-    "type=top": {
-      "model": "abstoneedition:block/bloodstone_slab_top"
+    "type=bottom": {
+      "model": "abstoneedition:block/bloodstone_slab_bottom"
     },
     "type=double": {
       "model": "abstoneedition:block/bloodstone_slab"
     },
-    "type=bottom": {
-      "model": "abstoneedition:block/bloodstone_slab_bottom"
+    "type=top": {
+      "model": "abstoneedition:block/bloodstone_slab_top"
     }
   }
 }
