@@ -9,8 +9,8 @@
   "recipe": {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-      "AAA",
-      " B ",
+      " A ",
+      " A ",
       " B "
     ],
     "key": {

@@ -1,208 +1,208 @@
 {
   "variants": {
-    "half=top,shape=straight,facing=north": {
+    "shape=straight,facing=north,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
-    "half=top,shape=inner_left,facing=north": {
+    "shape=inner_left,facing=north,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs_inner",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
-    "half=top,shape=inner_right,facing=north": {
+    "shape=inner_right,facing=north,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs_inner",
       "x": 180,
       "uvlock": true
     },
-    "half=top,shape=outer_left,facing=north": {
+    "shape=outer_left,facing=north,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs_outer",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
-    "half=top,shape=outer_right,facing=north": {
+    "shape=outer_right,facing=north,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs_outer",
       "x": 180,
       "uvlock": true
     },
-    "half=bottom,shape=straight,facing=north": {
+    "shape=straight,facing=north,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs",
       "y": 270,
       "uvlock": true
     },
-    "half=bottom,shape=inner_left,facing=north": {
+    "shape=inner_left,facing=north,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs_inner",
       "y": 180,
       "uvlock": true
     },
-    "half=bottom,shape=inner_right,facing=north": {
+    "shape=inner_right,facing=north,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs_inner",
       "y": 270,
       "uvlock": true
     },
-    "half=bottom,shape=outer_left,facing=north": {
+    "shape=outer_left,facing=north,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs_outer",
       "y": 180,
       "uvlock": true
     },
-    "half=bottom,shape=outer_right,facing=north": {
+    "shape=outer_right,facing=north,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs_outer",
       "y": 270,
       "uvlock": true
     },
-    "half=top,shape=straight,facing=south": {
+    "shape=straight,facing=south,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
-    "half=top,shape=inner_left,facing=south": {
+    "shape=inner_left,facing=south,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs_inner",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
-    "half=top,shape=inner_right,facing=south": {
+    "shape=inner_right,facing=south,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs_inner",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
-    "half=top,shape=outer_left,facing=south": {
+    "shape=outer_left,facing=south,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs_outer",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
-    "half=top,shape=outer_right,facing=south": {
+    "shape=outer_right,facing=south,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs_outer",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
-    "half=bottom,shape=straight,facing=south": {
+    "shape=straight,facing=south,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs",
       "y": 90,
       "uvlock": true
     },
-    "half=bottom,shape=inner_left,facing=south": {
+    "shape=inner_left,facing=south,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs_inner"
     },
-    "half=bottom,shape=inner_right,facing=south": {
+    "shape=inner_right,facing=south,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs_inner",
       "y": 90,
       "uvlock": true
     },
-    "half=bottom,shape=outer_left,facing=south": {
+    "shape=outer_left,facing=south,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs_outer"
     },
-    "half=bottom,shape=outer_right,facing=south": {
+    "shape=outer_right,facing=south,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs_outer",
       "y": 90,
       "uvlock": true
     },
-    "half=top,shape=straight,facing=west": {
+    "shape=straight,facing=west,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
-    "half=top,shape=inner_left,facing=west": {
+    "shape=inner_left,facing=west,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs_inner",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
-    "half=top,shape=inner_right,facing=west": {
+    "shape=inner_right,facing=west,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs_inner",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
-    "half=top,shape=outer_left,facing=west": {
+    "shape=outer_left,facing=west,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs_outer",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
-    "half=top,shape=outer_right,facing=west": {
+    "shape=outer_right,facing=west,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs_outer",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
-    "half=bottom,shape=straight,facing=west": {
+    "shape=straight,facing=west,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs",
       "y": 180,
       "uvlock": true
     },
-    "half=bottom,shape=inner_left,facing=west": {
+    "shape=inner_left,facing=west,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs_inner",
       "y": 90,
       "uvlock": true
     },
-    "half=bottom,shape=inner_right,facing=west": {
+    "shape=inner_right,facing=west,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs_inner",
       "y": 180,
       "uvlock": true
     },
-    "half=bottom,shape=outer_left,facing=west": {
+    "shape=outer_left,facing=west,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs_outer",
       "y": 90,
       "uvlock": true
     },
-    "half=bottom,shape=outer_right,facing=west": {
+    "shape=outer_right,facing=west,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs_outer",
       "y": 180,
       "uvlock": true
     },
-    "half=top,shape=straight,facing=east": {
+    "shape=straight,facing=east,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs",
       "x": 180,
       "uvlock": true
     },
-    "half=top,shape=inner_left,facing=east": {
+    "shape=inner_left,facing=east,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs_inner",
       "x": 180,
       "uvlock": true
     },
-    "half=top,shape=inner_right,facing=east": {
+    "shape=inner_right,facing=east,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs_inner",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
-    "half=top,shape=outer_left,facing=east": {
+    "shape=outer_left,facing=east,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs_outer",
       "x": 180,
       "uvlock": true
     },
-    "half=top,shape=outer_right,facing=east": {
+    "shape=outer_right,facing=east,half=top": {
       "model": "abstoneedition:block/ochre_froglight_stairs_outer",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
-    "half=bottom,shape=straight,facing=east": {
+    "shape=straight,facing=east,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs"
     },
-    "half=bottom,shape=inner_left,facing=east": {
+    "shape=inner_left,facing=east,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs_inner",
       "y": 270,
       "uvlock": true
     },
-    "half=bottom,shape=inner_right,facing=east": {
+    "shape=inner_right,facing=east,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs_inner"
     },
-    "half=bottom,shape=outer_left,facing=east": {
+    "shape=outer_left,facing=east,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs_outer",
       "y": 270,
       "uvlock": true
     },
-    "half=bottom,shape=outer_right,facing=east": {
+    "shape=outer_right,facing=east,half=bottom": {
       "model": "abstoneedition:block/ochre_froglight_stairs_outer"
     }
   }
