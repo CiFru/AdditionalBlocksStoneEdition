@@ -1,3 +1,7 @@
+### Additional Blocks: Stone Edition V2.1.1
+Fixed crash related to tools
+Fixed recipes related to wrong tools
+
 ### Additional Blocks: Stone Edition V2.1.0b
 1.20 Update
 1.20 features will be added soon.
