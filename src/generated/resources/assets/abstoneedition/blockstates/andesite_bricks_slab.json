@@ -1,13 +1,13 @@
 {
   "variants": {
-    "type=bottom": {
-      "model": "abstoneedition:block/andesite_bricks_slab_bottom"
+    "type=double": {
+      "model": "abstoneedition:block/andesite_bricks_slab"
     },
     "type=top": {
       "model": "abstoneedition:block/andesite_bricks_slab_top"
     },
-    "type=double": {
-      "model": "abstoneedition:block/andesite_bricks_slab"
+    "type=bottom": {
+      "model": "abstoneedition:block/andesite_bricks_slab_bottom"
     }
   }
 }

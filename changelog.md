@@ -1,3 +1,7 @@
+### Additional Blocks: Stone Edition V2.1.1
+Fixed crash related to tools
+Fixed recipes related to wrong tools
+
 ### Additional Blocks: Stone Edition V2.1.0
 Uranium Update:
 - Uranium Ore
