@@ -1,0 +1,26 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:pearlescent_froglight_stairs",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "A  ",
+      "AA ",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:pearlescent_froglight"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:pearlescent_froglight_stairs",
+      "count": 4
+    }
+  }
+}

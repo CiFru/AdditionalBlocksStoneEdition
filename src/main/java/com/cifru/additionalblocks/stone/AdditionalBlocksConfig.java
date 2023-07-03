@@ -43,6 +43,7 @@ public class AdditionalBlocksConfig {
     public static final Supplier<Boolean> enableBismuth;
     public static final Supplier<Boolean> enableObsidian;
     public static final Supplier<Boolean> enableUranium;
+    public static final Supplier<Boolean> enableMinecraft19;
 
     static {
         IConfigBuilder config = ConfigBuilders.newTomlConfig("abstoneedition", null, false);
@@ -77,6 +78,7 @@ public class AdditionalBlocksConfig {
         enableBismuth = config.comment("if true, Bismuth Blocks and Items are enabled").define("enableBismuth", true);
         enableObsidian = config.comment("if true, Obsidian Blocks and Items are enabled").define("enableObsidian", true);
         enableUranium = config.comment("if true, Uranium Blocks and Items are enabled").define("enableUranium", true);
+        enableMinecraft19 = config.comment("if true, new blocks added in 1.19+ are enabled").define("enableMinecraft19", true);
         config.pop();
 
         config.build();
