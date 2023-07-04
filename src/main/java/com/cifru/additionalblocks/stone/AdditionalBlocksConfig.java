@@ -43,6 +43,8 @@ public class AdditionalBlocksConfig {
     public static final Supplier<Boolean> enableBismuth;
     public static final Supplier<Boolean> enableObsidian;
     public static final Supplier<Boolean> enableUranium;
+    public static final Supplier<Boolean> enableConcrete;
+    public static final Supplier<Boolean> enableTerracotta;
 
     static {
         IConfigBuilder config = ConfigBuilders.newTomlConfig("abstoneedition", null, false);
@@ -77,6 +79,8 @@ public class AdditionalBlocksConfig {
         enableBismuth = config.comment("if true, Bismuth Blocks and Items are enabled").define("enableBismuth", true);
         enableObsidian = config.comment("if true, Obsidian Blocks and Items are enabled").define("enableObsidian", true);
         enableUranium = config.comment("if true, Uranium Blocks and Items are enabled").define("enableUranium", true);
+        enableConcrete = config.comment("if true, concrete slab, stair and wall blocks are enabled").define("enableConcrete", true);
+        enableTerracotta = config.comment("if true, terracotta slab, stair and wall blocks are enabled").define("enableTerracotta", true);
         config.pop();
 
         config.build();
