@@ -1,3 +1,6 @@
+### Additional Blocks: Stone Edition V2.1.2
+Added concrete and terracotta slabs, stairs and walls
+
 ### Additional Blocks: Stone Edition V2.1.1
 Fixed crash related to tools
 Fixed recipes related to wrong tools

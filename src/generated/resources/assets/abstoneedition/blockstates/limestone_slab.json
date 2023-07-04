@@ -3,11 +3,11 @@
     "type=top": {
       "model": "abstoneedition:block/limestone_slab_top"
     },
-    "type=double": {
-      "model": "abstoneedition:block/limestone_slab"
-    },
     "type=bottom": {
       "model": "abstoneedition:block/limestone_slab_bottom"
+    },
+    "type=double": {
+      "model": "abstoneedition:block/limestone_slab"
     }
   }
 }
