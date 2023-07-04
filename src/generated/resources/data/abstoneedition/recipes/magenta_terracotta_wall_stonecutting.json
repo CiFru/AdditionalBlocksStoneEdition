@@ -1,0 +1,17 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:magenta_terracotta_wall"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "minecraft:magenta_terracotta"
+    },
+    "result": "abstoneedition:magenta_terracotta_wall",
+    "count": 1
+  }
+}

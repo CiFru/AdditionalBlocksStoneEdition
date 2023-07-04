@@ -1,0 +1,55 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:pink_terracotta_wall"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:pink_terracotta_wall"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/pink_terracotta_wall.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/pink_terracotta_wall.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:pink_terracotta_wall"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:pink_terracotta"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:pink_terracotta_wall"
+    ]
+  }
+}

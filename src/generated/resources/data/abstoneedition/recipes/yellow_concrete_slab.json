@@ -1,0 +1,24 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:yellow_concrete_slab"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:yellow_concrete"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:yellow_concrete_slab",
+      "count": 6
+    }
+  }
+}

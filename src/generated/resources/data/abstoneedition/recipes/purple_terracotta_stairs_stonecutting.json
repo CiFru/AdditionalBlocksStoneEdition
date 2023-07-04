@@ -1,0 +1,17 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:purple_terracotta_stairs"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "minecraft:purple_terracotta"
+    },
+    "result": "abstoneedition:purple_terracotta_stairs",
+    "count": 1
+  }
+}

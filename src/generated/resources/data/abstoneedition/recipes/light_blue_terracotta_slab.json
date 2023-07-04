@@ -1,0 +1,24 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:light_blue_terracotta_slab"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:light_blue_terracotta"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:light_blue_terracotta_slab",
+      "count": 6
+    }
+  }
+}

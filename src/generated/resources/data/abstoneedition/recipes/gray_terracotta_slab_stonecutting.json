@@ -1,0 +1,17 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:gray_terracotta_slab"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "minecraft:gray_terracotta"
+    },
+    "result": "abstoneedition:gray_terracotta_slab",
+    "count": 2
+  }
+}
