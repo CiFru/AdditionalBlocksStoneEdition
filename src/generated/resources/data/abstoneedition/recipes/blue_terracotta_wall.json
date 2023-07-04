@@ -1,0 +1,25 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:blue_terracotta_wall",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:blue_terracotta"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:blue_terracotta_wall",
+      "count": 6
+    }
+  }
+}

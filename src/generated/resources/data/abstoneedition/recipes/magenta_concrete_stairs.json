@@ -1,0 +1,26 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:magenta_concrete_stairs",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "  A",
+      " AA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:magenta_concrete"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:magenta_concrete_stairs",
+      "count": 4
+    }
+  }
+}

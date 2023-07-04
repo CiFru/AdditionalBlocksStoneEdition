@@ -1,0 +1,42 @@
+{
+  "conditions": [
+    {
+      "block": "abstoneedition:pink_concrete_stairs",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:pink_concrete_stairs"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/pink_concrete_stairs_stonecutting.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/pink_concrete_stairs_stonecutting.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:pink_concrete_stairs_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:pink_concrete_stairs_stonecutting"
+    ]
+  }
+}
