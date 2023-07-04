@@ -1,0 +1,17 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:orange_concrete_wall"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "minecraft:orange_concrete"
+    },
+    "result": "abstoneedition:orange_concrete_wall",
+    "count": 1
+  }
+}

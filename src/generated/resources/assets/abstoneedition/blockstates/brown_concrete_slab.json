@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "abstoneedition:block/brown_concrete_slab_top"
+    },
+    "type=bottom": {
+      "model": "abstoneedition:block/brown_concrete_slab_bottom"
+    },
+    "type=double": {
+      "model": "abstoneedition:block/brown_concrete_slab"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:magenta_concrete_slab"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "minecraft:magenta_concrete"
+    },
+    "result": "abstoneedition:magenta_concrete_slab",
+    "count": 2
+  }
+}

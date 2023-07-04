@@ -1,0 +1,26 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:green_concrete_stairs"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "A  ",
+      "AA ",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:green_concrete"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:green_concrete_stairs",
+      "count": 4
+    }
+  }
+}

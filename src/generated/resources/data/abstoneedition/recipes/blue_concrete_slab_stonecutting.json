@@ -1,0 +1,17 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:blue_concrete_slab"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "minecraft:blue_concrete"
+    },
+    "result": "abstoneedition:blue_concrete_slab",
+    "count": 2
+  }
+}
