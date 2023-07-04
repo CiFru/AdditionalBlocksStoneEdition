@@ -1,0 +1,42 @@
+{
+  "conditions": [
+    {
+      "block": "abstoneedition:brown_concrete_slab",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:brown_concrete_slab"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/misc/brown_concrete_slab_stonecutting.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/misc/brown_concrete_slab_stonecutting.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:brown_concrete_slab_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:brown_concrete_slab_stonecutting"
+    ]
+  }
+}

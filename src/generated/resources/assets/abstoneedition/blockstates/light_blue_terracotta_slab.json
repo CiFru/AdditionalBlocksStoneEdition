@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "abstoneedition:block/light_blue_terracotta_slab_bottom"
+    },
+    "type=top": {
+      "model": "abstoneedition:block/light_blue_terracotta_slab_top"
+    },
+    "type=double": {
+      "model": "abstoneedition:block/light_blue_terracotta_slab"
+    }
+  }
+}
