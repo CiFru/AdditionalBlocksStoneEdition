@@ -1,13 +1,13 @@
 {
   "variants": {
+    "type=top": {
+      "model": "abstoneedition:block/asphalt_slab_top"
+    },
     "type=bottom": {
       "model": "abstoneedition:block/asphalt_slab_bottom"
     },
     "type=double": {
       "model": "abstoneedition:block/asphalt_slab"
-    },
-    "type=top": {
-      "model": "abstoneedition:block/asphalt_slab_top"
     }
   }
 }

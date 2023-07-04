@@ -1,0 +1,53 @@
+{
+  "conditions": [
+    {
+      "block": "abstoneedition:lime_terracotta_stairs",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:lime_terracotta_stairs"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/lime_terracotta_stairs_mirrored.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/lime_terracotta_stairs_mirrored.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:lime_terracotta_stairs_mirrored"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:lime_terracotta"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:lime_terracotta_stairs_mirrored"
+    ]
+  }
+}

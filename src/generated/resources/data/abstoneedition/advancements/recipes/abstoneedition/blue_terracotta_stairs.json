@@ -1,0 +1,53 @@
+{
+  "conditions": [
+    {
+      "block": "abstoneedition:blue_terracotta_stairs",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:blue_terracotta_stairs"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/blue_terracotta_stairs.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/blue_terracotta_stairs.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:blue_terracotta_stairs"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:blue_terracotta"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:blue_terracotta_stairs"
+    ]
+  }
+}
