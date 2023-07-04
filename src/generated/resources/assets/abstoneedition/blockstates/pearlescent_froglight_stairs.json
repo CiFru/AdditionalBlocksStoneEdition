@@ -1,18 +1,31 @@
 {
   "variants": {
-    "facing=north,shape=inner_right,half=top": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs_inner",
-      "x": 180,
+    "facing=west,shape=straight,half=bottom": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs",
+      "y": 180,
       "uvlock": true
     },
-    "facing=east,shape=inner_left,half=top": {
+    "facing=east,shape=inner_right,half=top": {
       "model": "abstoneedition:block/pearlescent_froglight_stairs_inner",
       "x": 180,
+      "y": 90,
       "uvlock": true
     },
-    "facing=south,shape=straight,half=top": {
+    "facing=east,shape=outer_right,half=bottom": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs_outer"
+    },
+    "facing=east,shape=inner_left,half=bottom": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,shape=straight,half=top": {
       "model": "abstoneedition:block/pearlescent_froglight_stairs",
       "x": 180,
+      "uvlock": true
+    },
+    "facing=west,shape=inner_left,half=bottom": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs_inner",
       "y": 90,
       "uvlock": true
     },
@@ -30,10 +43,32 @@
       "y": 180,
       "uvlock": true
     },
-    "facing=south,shape=outer_left,half=top": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs_outer",
+    "facing=north,shape=straight,half=top": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,shape=inner_left,half=top": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs_inner",
       "x": 180,
       "y": 90,
+      "uvlock": true
+    },
+    "facing=north,shape=straight,half=bottom": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,shape=straight,half=bottom": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,shape=outer_right,half=top": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs_outer",
+      "x": 180,
+      "y": 180,
       "uvlock": true
     },
     "facing=south,shape=inner_right,half=top": {
@@ -47,10 +82,14 @@
       "y": 180,
       "uvlock": true
     },
-    "facing=south,shape=inner_left,half=top": {
+    "facing=north,shape=inner_right,half=bottom": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,shape=inner_left,half=top": {
       "model": "abstoneedition:block/pearlescent_froglight_stairs_inner",
       "x": 180,
-      "y": 90,
       "uvlock": true
     },
     "facing=west,shape=outer_left,half=bottom": {
@@ -58,16 +97,39 @@
       "y": 90,
       "uvlock": true
     },
-    "facing=west,shape=outer_right,half=top": {
+    "facing=south,shape=straight,half=top": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=east,shape=outer_left,half=top": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=north,shape=inner_left,half=top": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,shape=outer_right,half=top": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,shape=outer_left,half=top": {
       "model": "abstoneedition:block/pearlescent_froglight_stairs_outer",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
-    "facing=east,shape=inner_right,half=top": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs_inner",
+    "facing=west,shape=outer_right,half=top": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs_outer",
       "x": 180,
-      "y": 90,
+      "y": 270,
       "uvlock": true
     },
     "facing=east,shape=straight,half=bottom": {
@@ -78,15 +140,19 @@
       "y": 180,
       "uvlock": true
     },
-    "facing=north,shape=inner_left,half=top": {
+    "facing=north,shape=inner_right,half=top": {
       "model": "abstoneedition:block/pearlescent_froglight_stairs_inner",
       "x": 180,
-      "y": 270,
       "uvlock": true
     },
-    "facing=south,shape=inner_right,half=bottom": {
+    "facing=west,shape=inner_right,half=bottom": {
       "model": "abstoneedition:block/pearlescent_froglight_stairs_inner",
-      "y": 90,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=north,shape=outer_right,half=bottom": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs_outer",
+      "y": 270,
       "uvlock": true
     },
     "facing=south,shape=outer_right,half=bottom": {
@@ -94,22 +160,31 @@
       "y": 90,
       "uvlock": true
     },
+    "facing=south,shape=outer_left,half=bottom": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs_outer"
+    },
+    "facing=east,shape=inner_right,half=bottom": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs_inner"
+    },
     "facing=west,shape=outer_left,half=top": {
       "model": "abstoneedition:block/pearlescent_froglight_stairs_outer",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
-    "facing=south,shape=straight,half=bottom": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs",
+    "facing=south,shape=inner_right,half=bottom": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs_inner",
       "y": 90,
       "uvlock": true
     },
-    "facing=east,shape=outer_right,half=bottom": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs_outer"
+    "facing=south,shape=outer_left,half=top": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
     },
-    "facing=east,shape=inner_left,half=bottom": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs_inner",
+    "facing=east,shape=outer_left,half=bottom": {
+      "model": "abstoneedition:block/pearlescent_froglight_stairs_outer",
       "y": 270,
       "uvlock": true
     },
@@ -124,85 +199,10 @@
       "y": 180,
       "uvlock": true
     },
-    "facing=south,shape=outer_left,half=bottom": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs_outer"
-    },
-    "facing=south,shape=outer_right,half=top": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs_outer",
-      "x": 180,
-      "y": 180,
-      "uvlock": true
-    },
-    "facing=north,shape=outer_left,half=top": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs_outer",
-      "x": 180,
-      "y": 270,
-      "uvlock": true
-    },
-    "facing=east,shape=outer_left,half=top": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs_outer",
-      "x": 180,
-      "uvlock": true
-    },
-    "facing=east,shape=straight,half=top": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs",
-      "x": 180,
-      "uvlock": true
-    },
-    "facing=east,shape=inner_right,half=bottom": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs_inner"
-    },
-    "facing=north,shape=outer_right,half=bottom": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs_outer",
-      "y": 270,
-      "uvlock": true
-    },
-    "facing=north,shape=inner_right,half=bottom": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs_inner",
-      "y": 270,
-      "uvlock": true
-    },
-    "facing=east,shape=outer_right,half=top": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs_outer",
-      "x": 180,
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=west,shape=straight,half=bottom": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs",
-      "y": 180,
-      "uvlock": true
-    },
-    "facing=west,shape=inner_right,half=bottom": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs_inner",
-      "y": 180,
-      "uvlock": true
-    },
-    "facing=east,shape=outer_left,half=bottom": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs_outer",
-      "y": 270,
-      "uvlock": true
-    },
     "facing=west,shape=straight,half=top": {
       "model": "abstoneedition:block/pearlescent_froglight_stairs",
       "x": 180,
       "y": 180,
-      "uvlock": true
-    },
-    "facing=north,shape=straight,half=bottom": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs",
-      "y": 270,
-      "uvlock": true
-    },
-    "facing=north,shape=straight,half=top": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs",
-      "x": 180,
-      "y": 270,
-      "uvlock": true
-    },
-    "facing=west,shape=inner_left,half=bottom": {
-      "model": "abstoneedition:block/pearlescent_froglight_stairs_inner",
-      "y": 90,
       "uvlock": true
     }
   }

@@ -44,6 +44,8 @@ public class AdditionalBlocksConfig {
     public static final Supplier<Boolean> enableObsidian;
     public static final Supplier<Boolean> enableUranium;
     public static final Supplier<Boolean> enableMinecraft19;
+    public static final Supplier<Boolean> enableConcrete;
+    public static final Supplier<Boolean> enableTerracotta;
 
     static {
         IConfigBuilder config = ConfigBuilders.newTomlConfig("abstoneedition", null, false);
@@ -79,6 +81,8 @@ public class AdditionalBlocksConfig {
         enableObsidian = config.comment("if true, Obsidian Blocks and Items are enabled").define("enableObsidian", true);
         enableUranium = config.comment("if true, Uranium Blocks and Items are enabled").define("enableUranium", true);
         enableMinecraft19 = config.comment("if true, new blocks added in 1.19+ are enabled").define("enableMinecraft19", true);
+        enableConcrete = config.comment("if true, concrete slab, stair and wall blocks are enabled").define("enableConcrete", true);
+        enableTerracotta = config.comment("if true, terracotta slab, stair and wall blocks are enabled").define("enableTerracotta", true);
         config.pop();
 
         config.build();

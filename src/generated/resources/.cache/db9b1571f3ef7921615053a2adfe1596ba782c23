@@ -1,4 +1,4 @@
-// 1.19.4	2023-05-02T15:34:42.6906764	Resource Generator 6
+// 1.19.4	2023-07-04T17:39:44.938667	Resource Generator 6
 44170f4566a382006970cdfeb9781158f546320c data/forge/tags/items/ingots.json
 f4b42f0106b4af85991a5ead0bb5a16d20993504 data/forge/tags/items/ingots/bismuth.json
 5e55c62f958119f5b9496249bee6a510a2ec4376 data/forge/tags/items/ingots/silver.json
@@ -12,13 +12,13 @@ b9f6a1d5213bf8540443abc462d03caa7b2cb0a2 data/forge/tags/items/nuggets/uranium.j
 5dc3aeb96db2bd725bc2f1143c2223a57d65488b data/forge/tags/items/raw_materials/bismuth.json
 20dab9d06193f771103fbe670f2cdba79d080c53 data/forge/tags/items/raw_materials/silver.json
 53b6fa664927c0d3380868532399fda6d1c2da3e data/forge/tags/items/raw_materials/uranium.json
-882e9951902dc27a73ae8f36f925428106be6abc data/minecraft/tags/blocks/mineable/pickaxe.json
+4ff9a64695b7942b18c7e9f4506c57d838d5ba3c data/minecraft/tags/blocks/mineable/pickaxe.json
 9f19df1e0793b1f19798ce304a47c7210c23566c data/minecraft/tags/blocks/needs_diamond_tool.json
-796475c6013bf01802f1856f448086c1952f0b8b data/minecraft/tags/blocks/needs_iron_tool.json
+f2242692d52e5461b4022bc2baca1510950cc50a data/minecraft/tags/blocks/needs_iron_tool.json
 c0d1c7346c1ceff9d4ab5418d336edee7e7c82a8 data/minecraft/tags/blocks/needs_stone_tool.json
-59029d5b6069b4f304afabbd3b6c492e2549c4a2 data/minecraft/tags/blocks/walls.json
-882e9951902dc27a73ae8f36f925428106be6abc data/minecraft/tags/items/mineable/pickaxe.json
+042ba1ec5c1af1d35acb34847048a5651dc4d0ad data/minecraft/tags/blocks/walls.json
+4ff9a64695b7942b18c7e9f4506c57d838d5ba3c data/minecraft/tags/items/mineable/pickaxe.json
 9f19df1e0793b1f19798ce304a47c7210c23566c data/minecraft/tags/items/needs_diamond_tool.json
-796475c6013bf01802f1856f448086c1952f0b8b data/minecraft/tags/items/needs_iron_tool.json
+f2242692d52e5461b4022bc2baca1510950cc50a data/minecraft/tags/items/needs_iron_tool.json
 c0d1c7346c1ceff9d4ab5418d336edee7e7c82a8 data/minecraft/tags/items/needs_stone_tool.json
-59029d5b6069b4f304afabbd3b6c492e2549c4a2 data/minecraft/tags/items/walls.json
+042ba1ec5c1af1d35acb34847048a5651dc4d0ad data/minecraft/tags/items/walls.json

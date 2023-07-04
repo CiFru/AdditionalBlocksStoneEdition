@@ -1,13 +1,13 @@
 {
   "variants": {
+    "type=double": {
+      "model": "abstoneedition:block/ochre_froglight_slab"
+    },
     "type=top": {
       "model": "abstoneedition:block/ochre_froglight_slab_top"
     },
     "type=bottom": {
       "model": "abstoneedition:block/ochre_froglight_slab_bottom"
-    },
-    "type=double": {
-      "model": "abstoneedition:block/ochre_froglight_slab"
     }
   }
 }
