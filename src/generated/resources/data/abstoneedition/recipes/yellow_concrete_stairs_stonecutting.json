@@ -1,0 +1,17 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:yellow_concrete_stairs"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "minecraft:yellow_concrete"
+    },
+    "result": "abstoneedition:yellow_concrete_stairs",
+    "count": 1
+  }
+}

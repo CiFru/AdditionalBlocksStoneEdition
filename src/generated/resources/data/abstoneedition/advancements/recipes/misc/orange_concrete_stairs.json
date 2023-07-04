@@ -1,0 +1,55 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "abstoneedition:block_enabled",
+      "block": "abstoneedition:orange_concrete_stairs"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:orange_concrete_stairs"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/misc/orange_concrete_stairs.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/misc/orange_concrete_stairs.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:orange_concrete_stairs"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:orange_concrete"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:orange_concrete_stairs"
+    ]
+  }
+}

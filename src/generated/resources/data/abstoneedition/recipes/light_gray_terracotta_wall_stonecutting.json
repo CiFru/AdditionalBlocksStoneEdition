@@ -1,0 +1,17 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "abstoneedition:block_enabled",
+      "block": "abstoneedition:light_gray_terracotta_wall"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "minecraft:light_gray_terracotta"
+    },
+    "result": "abstoneedition:light_gray_terracotta_wall",
+    "count": 1
+  }
+}
