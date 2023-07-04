@@ -4,16 +4,16 @@
       "model": "abstoneedition:block/old_stone_path_straight",
       "y": 90
     },
-    "facing=north": {
-      "model": "abstoneedition:block/old_stone_path_straight",
-      "y": 180
-    },
     "facing=east": {
       "model": "abstoneedition:block/old_stone_path_straight",
       "y": 270
     },
     "facing=south": {
       "model": "abstoneedition:block/old_stone_path_straight"
+    },
+    "facing=north": {
+      "model": "abstoneedition:block/old_stone_path_straight",
+      "y": 180
     }
   }
 }
