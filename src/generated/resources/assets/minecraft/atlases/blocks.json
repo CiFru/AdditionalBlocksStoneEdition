@@ -6,6 +6,14 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "minecraft:block/brown_concrete"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/cyan_concrete"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:silver_ore"
     },
     {
@@ -42,11 +50,19 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "minecraft:block/lime_concrete"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:bloodstone_bricks"
     },
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:aztec_pattern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/orange_terracotta"
     },
     {
       "type": "minecraft:single",
@@ -62,6 +78,10 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "minecraft:block/orange_concrete"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:bismuth_sword"
     },
     {
@@ -74,15 +94,19 @@
     },
     {
       "type": "minecraft:single",
-      "resource": "minecraft:block/pearlescent_froglight_side"
-    },
-    {
-      "type": "minecraft:single",
       "resource": "minecraft:block/polished_andesite"
     },
     {
       "type": "minecraft:single",
+      "resource": "minecraft:block/pearlescent_froglight_side"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:andesite_bricks"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/white_terracotta"
     },
     {
       "type": "minecraft:single",
@@ -126,11 +150,15 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "minecraft:block/magenta_terracotta"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "minecraft:block/ochre_froglight_side"
     },
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:gray_bricks"
+      "resource": "minecraft:block/gray_terracotta"
     },
     {
       "type": "minecraft:single",
@@ -138,7 +166,7 @@
     },
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:limestone_bricks"
+      "resource": "abstoneedition:gray_bricks"
     },
     {
       "type": "minecraft:single",
@@ -146,7 +174,15 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "abstoneedition:limestone_bricks"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:diorite_bricks"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/red_terracotta"
     },
     {
       "type": "minecraft:single",
@@ -162,6 +198,10 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "minecraft:block/white_concrete"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "minecraft:block/smooth_stone"
     },
     {
@@ -171,6 +211,10 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:old_stone_path_curved"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/pink_terracotta"
     },
     {
       "type": "minecraft:single",
@@ -190,6 +234,10 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "minecraft:block/blue_concrete"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:silver_hoe"
     },
     {
@@ -206,11 +254,31 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "minecraft:block/magenta_concrete"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:stone_brick_block"
     },
     {
       "type": "minecraft:single",
+      "resource": "minecraft:block/light_blue_concrete"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:old_stone_path_straight"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/pink_concrete"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/light_gray_terracotta"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/green_concrete"
     },
     {
       "type": "minecraft:single",
@@ -223,6 +291,10 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:copper_pickaxe"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/blue_terracotta"
     },
     {
       "type": "minecraft:single",
@@ -242,11 +314,23 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "abstoneedition:old_stone_tiles"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:silver_nugget"
     },
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:old_stone_tiles"
+      "resource": "minecraft:block/brown_terracotta"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/green_terracotta"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/yellow_terracotta"
     },
     {
       "type": "minecraft:single",
@@ -270,11 +354,11 @@
     },
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:marble_pillar"
+      "resource": "abstoneedition:bismuth_axe"
     },
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:bismuth_axe"
+      "resource": "abstoneedition:marble_pillar"
     },
     {
       "type": "minecraft:single",
@@ -302,11 +386,19 @@
     },
     {
       "type": "minecraft:single",
-      "resource": "abstoneedition:smooth_stone_bricks"
+      "resource": "minecraft:block/gray_concrete"
     },
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:smooth_glowstone"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "abstoneedition:smooth_stone_bricks"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/lime_terracotta"
     },
     {
       "type": "minecraft:single",
@@ -354,7 +446,15 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "minecraft:block/light_gray_concrete"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:old_stone_pattern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/purple_concrete"
     },
     {
       "type": "minecraft:single",
@@ -363,6 +463,10 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:raw_bismuth_chunk"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/black_concrete"
     },
     {
       "type": "minecraft:single",
@@ -382,7 +486,19 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "minecraft:block/light_blue_terracotta"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/black_terracotta"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:black_marble"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/purple_terracotta"
     },
     {
       "type": "minecraft:single",
@@ -402,7 +518,15 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "minecraft:block/cyan_terracotta"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "abstoneedition:refined_uranium"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/red_concrete"
     },
     {
       "type": "minecraft:single",
@@ -423,6 +547,10 @@
     {
       "type": "minecraft:single",
       "resource": "abstoneedition:uranium_nugget"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/yellow_concrete"
     }
   ]
 }
