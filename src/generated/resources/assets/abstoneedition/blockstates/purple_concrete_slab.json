@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "abstoneedition:block/purple_concrete_slab_top"
+    },
+    "type=double": {
+      "model": "abstoneedition:block/purple_concrete_slab"
+    },
+    "type=bottom": {
+      "model": "abstoneedition:block/purple_concrete_slab_bottom"
+    }
+  }
+}

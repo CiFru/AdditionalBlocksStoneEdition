@@ -1,0 +1,26 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "block": "abstoneedition:lime_terracotta_stairs",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "A  ",
+      "AA ",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:lime_terracotta"
+      }
+    },
+    "result": {
+      "item": "abstoneedition:lime_terracotta_stairs",
+      "count": 4
+    }
+  }
+}
