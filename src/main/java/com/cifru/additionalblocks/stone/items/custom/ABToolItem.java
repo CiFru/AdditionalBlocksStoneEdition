@@ -32,7 +32,7 @@ public class ABToolItem extends ABItem {
     private final Set<net.minecraftforge.common.ToolType> forgeToolTypes;
 
     public ABToolItem(ItemProperties properties, Supplier<Boolean> enabled, ABToolMaterial toolMaterial, ToolType toolType){
-        super(properties.maxStackSize(1), enabled);
+        super(properties.maxStackSize(1).durability(toolMaterial.getDurability()), enabled);
         this.toolMaterial = toolMaterial;
         this.toolType = toolType;
         ImmutableMultimap.Builder<Attribute,AttributeModifier> builder = ImmutableMultimap.builder();
@@ -93,15 +93,5 @@ public class ABToolItem extends ABItem {
     @Override
     public int getHarvestLevel(ItemStack stack, net.minecraftforge.common.ToolType tool, @Nullable PlayerEntity player, @Nullable BlockState blockState){
         return this.forgeToolTypes.contains(tool) ? this.toolMaterial.getMiningTier().getVanillaTier().getLevel() : -1;
-    }
-
-    @Override
-    public int getMaxDamage(ItemStack stack){
-        return this.toolMaterial.getDurability();
-    }
-
-    @Override
-    public boolean canBeDepleted(){
-        return true;
     }
 }
