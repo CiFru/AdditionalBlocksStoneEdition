@@ -28,7 +28,7 @@ public class ABToolItem extends ABItem {
     private final Multimap<Attribute,AttributeModifier> defaultModifiers;
 
     public ABToolItem(ItemProperties properties, Supplier<Boolean> enabled, ABToolMaterial toolMaterial, ToolType toolType){
-        super(properties.maxStackSize(1), enabled);
+        super(properties.maxStackSize(1).durability(toolMaterial.getDurability()), enabled);
         this.toolMaterial = toolMaterial;
         this.toolType = toolType;
         ImmutableMultimap.Builder<Attribute,AttributeModifier> builder = ImmutableMultimap.builder();
@@ -77,15 +77,5 @@ public class ABToolItem extends ABItem {
             return level >= 3 || (!state.is(BlockTags.NEEDS_DIAMOND_TOOL) && (level >= 2 || (!state.is(BlockTags.NEEDS_IRON_TOOL) && (level >= 1 || !state.is(BlockTags.NEEDS_STONE_TOOL)))));
         }
         return false;
-    }
-
-    @Override
-    public int getMaxDamage(){
-        return this.toolMaterial.getDurability();
-    }
-
-    @Override
-    public boolean canBeDepleted(){
-        return true;
     }
 }
