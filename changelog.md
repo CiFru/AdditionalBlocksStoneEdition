@@ -1,3 +1,7 @@
+### Additional Blocks: Stone Edition V2.1.3
+- Fixed durability bug
+- Added Italian translations (thanks to Roby1164)
+
 ### Additional Blocks: Stone Edition V2.1.2
 Added concrete and terracotta slabs, stairs and walls
 
