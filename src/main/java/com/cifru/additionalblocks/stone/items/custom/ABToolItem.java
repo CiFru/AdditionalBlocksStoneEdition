@@ -5,13 +5,18 @@ import com.cifru.additionalblocks.stone.tools.ToolType;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 import com.supermartijn642.core.item.ItemProperties;
+import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.TierSortingRegistry;
@@ -36,6 +41,30 @@ public class ABToolItem extends ABItem {
         builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", toolType.getBaseAttackDamage() + toolMaterial.getAttackDamage(), AttributeModifier.Operation.ADDITION));
         builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", toolType.getBaseAttackSpeed(), AttributeModifier.Operation.ADDITION));
         this.defaultModifiers = builder.build();
+    }
+
+    @Override
+    public InteractionResult useOn(UseOnContext context){
+        Level level = context.getLevel();
+        BlockPos clickedPos = context.getClickedPos();
+        BlockState state = level.getBlockState(clickedPos);
+        // Loop over all tool actions this tool can perform
+        for(ToolAction action : this.toolType.getToolActions()){
+            BlockState modifiedState = state.getToolModifiedState(level, clickedPos, context.getPlayer(), context.getItemInHand(), action);
+            // If a tool action can be applied, do so and return success
+            if(modifiedState != null){
+                Player player = context.getPlayer();
+                ItemStack stack = context.getItemInHand();
+                if(player instanceof ServerPlayer)
+                    CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer)player, clickedPos, stack);
+
+                level.setBlock(clickedPos, modifiedState, 1 | 2 | 8);
+                if(player != null)
+                    stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(context.getHand()));
+                return level.isClientSide ? InteractionResult.SUCCESS : InteractionResult.CONSUME;
+            }
+        }
+        return super.useOn(context);
     }
 
     @Override
