@@ -1,0 +1,53 @@
+{
+  "conditions": [
+    {
+      "block": "abstoneedition:smooth_smooth_stone",
+      "type": "abstoneedition:block_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "abstoneedition:smooth_smooth_stone"
+    },
+    "title": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/smooth_smooth_stone_smelting.title"
+    },
+    "description": {
+      "translate": "abstoneedition.advancement.recipes/abstoneedition/smooth_smooth_stone_smelting.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "abstoneedition:smooth_smooth_stone"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:smooth_stone"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abstoneedition:smooth_smooth_stone"
+    ]
+  }
+}

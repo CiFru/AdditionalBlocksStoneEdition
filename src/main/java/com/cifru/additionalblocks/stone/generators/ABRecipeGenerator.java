@@ -7,6 +7,7 @@ import com.cifru.additionalblocks.stone.condition.ItemEnabledResourceCondition;
 import com.cifru.additionalblocks.stone.items.AdditionalBlocksItems;
 import com.supermartijn642.core.generator.RecipeGenerator;
 import com.supermartijn642.core.generator.ResourceCache;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
@@ -430,6 +431,13 @@ public class ABRecipeGenerator extends RecipeGenerator {
             .unlockedBy(AdditionalBlocksBlocks.MARBLE)
             .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.SMOOTH_MARBLE))
             .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.MARBLE));
+        // Smooth smooth stone
+        this.smelting(AdditionalBlocksBlocks.SMOOTH_SMOOTH_STONE)
+            .input(Blocks.SMOOTH_STONE)
+            .includeSmelting()
+            .experience(2)
+            .unlockedBy(Blocks.SMOOTH_STONE)
+            .condition(new BlockEnabledResourceCondition(AdditionalBlocksBlocks.SMOOTH_SMOOTH_STONE));
         // Smooth stone bricks
         this.shaped(AdditionalBlocksBlocks.SMOOTH_STONE_BRICKS, 4)
             .pattern("##")

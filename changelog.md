@@ -1,3 +1,7 @@
+### Additional Blocks: Stone Edition V2.1.4
+- Fixed tool functionalities
+- Fixed Very Smooth Stone recipe
+
 ### Additional Blocks: Stone Edition V2.1.3
 - Fixed durability bug
 - Added Italian translations (thanks to Roby1164)
